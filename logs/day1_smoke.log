@@ -1,0 +1,32 @@
+GPU: NVIDIA GeForce RTX 4090
+Loading BANKING77...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+steps: 629
+hidden boundaries: [92, 190, 276, 358, 454, 542]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5876.02it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 novelty=+0.0129 conflict=-0.5709 virtualI=-0.000659
+step=  20 phase(eval)=0 novelty=+0.0119 conflict=-0.5437 virtualI=-0.000878
+step=  30 phase(eval)=0 novelty=+0.0065 conflict=+0.2897 virtualI=+0.000756
+step=  40 phase(eval)=0 novelty=+0.0099 conflict=-0.2991 virtualI=-0.000807
+step=  50 phase(eval)=0 novelty=+0.0162 conflict=-0.0614 virtualI=-0.000127
+step=  60 phase(eval)=0 novelty=+0.0134 conflict=-0.0245 virtualI=-0.000056
+Reached max-steps.
+
+DONE
+saved: results/smoke_seed2026/signals.csv

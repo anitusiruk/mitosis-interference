@@ -1,0 +1,51 @@
+{
+  "n_controlled_pairs": 16,
+  "controlled_effects": {
+    "safe_novelty_effect": {
+      "mean": 0.024574283044785258,
+      "ci95_low": 0.011076438031159335,
+      "ci95_high": 0.03881450047483667
+    },
+    "familiar_conflict_effect": {
+      "mean": 0.9468401898629963,
+      "ci95_low": 0.7492762819398194,
+      "ci95_high": 1.142654044635128
+    },
+    "novel_conflict_effect": {
+      "mean": 0.13648420106619594,
+      "ci95_low": 0.09798510633409017,
+      "ci95_high": 0.173682051943615
+    },
+    "average_conflict_effect": {
+      "mean": 0.5416621954645962,
+      "ci95_low": 0.4491617606778163,
+      "ci95_high": 0.6318751383572817
+    }
+  },
+  "observational_prediction": {
+    "current_loss": {
+      "auroc": 0.4651416122004357,
+      "auprc": 0.5117802233662696,
+      "pearson": -0.3910105214691535,
+      "spearman": 0.00454785827604442
+    },
+    "novelty": {
+      "auroc": 0.5697167755991286,
+      "auprc": 0.5709368026217254,
+      "pearson": 0.07109131354427826,
+      "spearman": 0.15335801163405605
+    },
+    "grad_conflict": {
+      "auroc": 0.7461873638344227,
+      "auprc": 0.7358087477245464,
+      "pearson": 0.5901427540257421,
+      "spearman": 0.4240613432046536
+    },
+    "virtual_interference": {
+      "auroc": 0.7200435729847494,
+      "auprc": 0.7263706995538993,
+      "pearson": 0.6072919810260609,
+      "spearman": 0.3932310946589106
+    }
+  }
+}

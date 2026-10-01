@@ -1,0 +1,87 @@
+GPU: NVIDIA GeForce RTX 4090
+Loading BANKING77...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+steps: 629
+hidden boundaries: [92, 190, 276, 358, 454, 542]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6118.34it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 novelty=+0.0129 conflict=-0.5709 virtualI=-0.000659
+step=  20 phase(eval)=0 novelty=+0.0119 conflict=-0.5437 virtualI=-0.000878
+step=  30 phase(eval)=0 novelty=+0.0065 conflict=+0.2897 virtualI=+0.000756
+step=  40 phase(eval)=0 novelty=+0.0099 conflict=-0.2991 virtualI=-0.000807
+step=  50 phase(eval)=0 novelty=+0.0162 conflict=-0.0614 virtualI=-0.000127
+step=  60 phase(eval)=0 novelty=+0.0134 conflict=-0.0245 virtualI=-0.000056
+step=  70 phase(eval)=0 novelty=+0.0119 conflict=-0.6041 virtualI=-0.002043
+step=  80 phase(eval)=0 novelty=+0.0103 conflict=-0.1879 virtualI=-0.000768
+step=  90 phase(eval)=0 novelty=+0.0099 conflict=+0.0802 virtualI=+0.000120
+step= 100 phase(eval)=1 novelty=+0.0181 conflict=-0.0437 virtualI=-0.000262
+step= 110 phase(eval)=1 novelty=+0.0132 conflict=-0.1482 virtualI=-0.000993
+step= 120 phase(eval)=1 novelty=+0.0188 conflict=-0.0645 virtualI=-0.000497
+step= 130 phase(eval)=1 novelty=+0.0156 conflict=-0.0980 virtualI=-0.001412
+step= 140 phase(eval)=1 novelty=+0.0113 conflict=-0.2186 virtualI=-0.002081
+step= 150 phase(eval)=1 novelty=+0.0090 conflict=-0.0849 virtualI=-0.000614
+step= 160 phase(eval)=1 novelty=+0.0136 conflict=-0.2081 virtualI=-0.001408
+step= 170 phase(eval)=1 novelty=+0.0099 conflict=+0.0029 virtualI=+0.000015
+step= 180 phase(eval)=1 novelty=+0.0089 conflict=+0.1081 virtualI=+0.000437
+step= 190 phase(eval)=1 novelty=+0.0273 conflict=-0.1114 virtualI=-0.000951
+step= 200 phase(eval)=2 novelty=+0.0108 conflict=-0.1690 virtualI=-0.002322
+step= 210 phase(eval)=2 novelty=+0.0145 conflict=-0.2117 virtualI=-0.000814
+step= 220 phase(eval)=2 novelty=+0.0156 conflict=-0.1418 virtualI=-0.000973
+step= 230 phase(eval)=2 novelty=+0.0193 conflict=-0.1052 virtualI=-0.001692
+step= 240 phase(eval)=2 novelty=+0.0184 conflict=+0.1977 virtualI=+0.002859
+step= 250 phase(eval)=2 novelty=+0.0173 conflict=-0.0427 virtualI=-0.000235
+step= 260 phase(eval)=2 novelty=+0.0130 conflict=-0.0156 virtualI=-0.000206
+step= 270 phase(eval)=2 novelty=+0.0102 conflict=-0.0343 virtualI=-0.000192
+step= 280 phase(eval)=3 novelty=+0.0120 conflict=-0.6841 virtualI=-0.031451
+step= 290 phase(eval)=3 novelty=+0.0159 conflict=+0.2556 virtualI=+0.000703
+step= 300 phase(eval)=3 novelty=+0.0178 conflict=-0.0800 virtualI=-0.000144
+step= 310 phase(eval)=3 novelty=+0.0120 conflict=+0.1668 virtualI=+0.000448
+step= 320 phase(eval)=3 novelty=+0.0182 conflict=-0.0559 virtualI=-0.000311
+step= 330 phase(eval)=3 novelty=+0.0110 conflict=+0.0085 virtualI=+0.000055
+step= 340 phase(eval)=3 novelty=+0.0159 conflict=+0.1343 virtualI=+0.000692
+step= 350 phase(eval)=3 novelty=+0.0208 conflict=+0.0946 virtualI=+0.000491
+step= 360 phase(eval)=4 novelty=+0.0102 conflict=-0.5820 virtualI=-0.016677
+step= 370 phase(eval)=4 novelty=+0.0217 conflict=-0.4773 virtualI=-0.007286
+step= 380 phase(eval)=4 novelty=+0.0121 conflict=+0.0402 virtualI=+0.000125
+step= 390 phase(eval)=4 novelty=+0.0127 conflict=+0.0463 virtualI=+0.000137
+step= 400 phase(eval)=4 novelty=+0.0144 conflict=-0.0586 virtualI=-0.000256
+step= 410 phase(eval)=4 novelty=+0.0140 conflict=-0.0569 virtualI=-0.000303
+step= 420 phase(eval)=4 novelty=+0.0159 conflict=-0.2220 virtualI=-0.000706
+step= 430 phase(eval)=4 novelty=+0.0093 conflict=+0.0357 virtualI=+0.000262
+step= 440 phase(eval)=4 novelty=+0.0159 conflict=-0.0225 virtualI=-0.000138
+step= 450 phase(eval)=4 novelty=+0.0144 conflict=-0.0126 virtualI=-0.000173
+step= 460 phase(eval)=5 novelty=+0.0141 conflict=-0.5094 virtualI=-0.011733
+step= 470 phase(eval)=5 novelty=+0.0198 conflict=-0.1567 virtualI=-0.000910
+step= 480 phase(eval)=5 novelty=+0.0190 conflict=+0.0557 virtualI=+0.000112
+step= 490 phase(eval)=5 novelty=+0.0111 conflict=+0.0611 virtualI=+0.000131
+step= 500 phase(eval)=5 novelty=+0.0152 conflict=-0.1298 virtualI=-0.000544
+step= 510 phase(eval)=5 novelty=+0.0210 conflict=-0.0322 virtualI=-0.000152
+step= 520 phase(eval)=5 novelty=+0.0131 conflict=-0.0900 virtualI=-0.000735
+step= 530 phase(eval)=5 novelty=+0.0111 conflict=-0.0405 virtualI=-0.000204
+step= 540 phase(eval)=5 novelty=+0.0140 conflict=+0.0506 virtualI=+0.000286
+step= 550 phase(eval)=6 novelty=+0.0104 conflict=-0.3633 virtualI=-0.003988
+step= 560 phase(eval)=6 novelty=+0.0222 conflict=-0.1075 virtualI=-0.000401
+step= 570 phase(eval)=6 novelty=+0.0146 conflict=-0.0415 virtualI=-0.000077
+step= 580 phase(eval)=6 novelty=+0.0186 conflict=+0.0649 virtualI=+0.000195
+step= 590 phase(eval)=6 novelty=+0.0154 conflict=+0.0603 virtualI=+0.000293
+step= 600 phase(eval)=6 novelty=+0.0201 conflict=+0.0426 virtualI=+0.000248
+step= 610 phase(eval)=6 novelty=+0.0165 conflict=-0.0150 virtualI=-0.000082
+step= 620 phase(eval)=6 novelty=+0.0211 conflict=+0.0169 virtualI=+0.000094
+
+DONE
+saved: results/full_seed2026/signals.csv

@@ -1,0 +1,77 @@
+GPU: NVIDIA GeForce RTX 4090
+Loading BANKING77...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8467.53it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+baseline epoch=1 memory_acc=0.4609 memory_loss=1.8871
+baseline epoch=2 memory_acc=0.8516 memory_loss=0.4640
+baseline epoch=3 memory_acc=0.9531 memory_loss=0.1454
+
+FROZEN BASELINE memory accuracy = 0.9531
+trial=00 familiar_safe      N=+0.0041 G=-0.6328 VI=-0.000301 H=-0.0349 dAcc=-0.0156
+trial=00 novel_safe         N=+0.1308 G=-0.2996 VI=-0.000453 H=-0.0044 dAcc=-0.0312
+trial=00 familiar_conflict  N=+0.0041 G=+0.2176 VI=+0.000425 H=+0.9753 dAcc=+0.1719
+trial=00 novel_conflict     N=+0.1308 G=-0.0513 VI=-0.000097 H=+0.0929 dAcc=+0.0469
+trial=01 familiar_safe      N=+0.0038 G=-0.4299 VI=-0.000143 H=-0.0745 dAcc=-0.0312
+trial=01 novel_safe         N=+0.1329 G=-0.2076 VI=-0.000308 H=+0.0079 dAcc=+0.0156
+trial=01 familiar_conflict  N=+0.0038 G=+0.1315 VI=+0.000293 H=+1.3403 dAcc=+0.5156
+trial=01 novel_conflict     N=+0.1329 G=-0.0809 VI=-0.000201 H=+0.1273 dAcc=+0.0625
+trial=02 familiar_safe      N=+0.0033 G=-0.2927 VI=-0.000124 H=-0.0354 dAcc=-0.0312
+trial=02 novel_safe         N=+0.1359 G=-0.0787 VI=-0.000098 H=+0.0256 dAcc=+0.0156
+trial=02 familiar_conflict  N=+0.0033 G=-0.0318 VI=-0.000068 H=+1.3519 dAcc=+0.2969
+trial=02 novel_conflict     N=+0.1359 G=-0.0941 VI=-0.000248 H=+0.1240 dAcc=+0.0625
+trial=03 familiar_safe      N=+0.0039 G=-0.5102 VI=-0.000254 H=-0.0413 dAcc=-0.0312
+trial=03 novel_safe         N=+0.1316 G=-0.2246 VI=-0.000297 H=-0.0129 dAcc=-0.0312
+trial=03 familiar_conflict  N=+0.0039 G=+0.1807 VI=+0.000403 H=+1.4509 dAcc=+0.2969
+trial=03 novel_conflict     N=+0.1316 G=+0.0055 VI=+0.000021 H=+0.1913 dAcc=+0.0938
+trial=04 familiar_safe      N=+0.0036 G=-0.3927 VI=-0.000153 H=-0.0495 dAcc=-0.0312
+trial=04 novel_safe         N=+0.1341 G=-0.0866 VI=-0.000126 H=-0.0149 dAcc=-0.0156
+trial=04 familiar_conflict  N=+0.0036 G=-0.1413 VI=-0.000298 H=+1.2725 dAcc=+0.3125
+trial=04 novel_conflict     N=+0.1341 G=-0.1889 VI=-0.000467 H=+0.0334 dAcc=+0.0156
+trial=05 familiar_safe      N=+0.0045 G=-0.1502 VI=-0.000056 H=+0.0180 dAcc=+0.0156
+trial=05 novel_safe         N=+0.1376 G=-0.0725 VI=-0.000110 H=+0.0606 dAcc=+0.0469
+trial=05 familiar_conflict  N=+0.0045 G=-0.1490 VI=-0.000378 H=+1.4326 dAcc=+0.4531
+trial=05 novel_conflict     N=+0.1376 G=-0.2004 VI=-0.000528 H=+0.0284 dAcc=+0.0156
+trial=06 familiar_safe      N=+0.0030 G=-0.6804 VI=-0.000310 H=-0.0635 dAcc=-0.0312
+trial=06 novel_safe         N=+0.1331 G=-0.1397 VI=-0.000196 H=-0.0109 dAcc=-0.0156
+trial=06 familiar_conflict  N=+0.0030 G=-0.0179 VI=-0.000034 H=+1.2089 dAcc=+0.3438
+trial=06 novel_conflict     N=+0.1331 G=-0.0751 VI=-0.000175 H=+0.1576 dAcc=+0.0469
+trial=07 familiar_safe      N=+0.0032 G=-0.1302 VI=-0.000063 H=-0.0178 dAcc=-0.0312
+trial=07 novel_safe         N=+0.1340 G=-0.0223 VI=-0.000029 H=+0.0445 dAcc=+0.0312
+trial=07 familiar_conflict  N=+0.0032 G=-0.2188 VI=-0.000461 H=+1.1654 dAcc=+0.2031
+trial=07 novel_conflict     N=+0.1340 G=-0.2134 VI=-0.000542 H=+0.0762 dAcc=+0.0156
+
+================================================================================
+CONTROLLED 2x2 SUMMARY
+================================================================================
+                    novelty           grad_conflict           virtual_interference           actual_harm           accuracy_drop          
+                       mean       std          mean       std                 mean       std        mean       std          mean       std
+condition                                                                                                                                 
+familiar_conflict  0.003665  0.000502     -0.003634  0.164152            -0.000015  0.000354    1.274736  0.156822      0.324219  0.115350
+familiar_safe      0.003665  0.000502     -0.402393  0.204438            -0.000175  0.000101   -0.037362  0.028487     -0.023438  0.016704
+novel_conflict     0.133748  0.002204     -0.112339  0.079430            -0.000280  0.000210    0.103894  0.057381      0.044922  0.028246
+novel_safe         0.133748  0.002204     -0.141460  0.094265            -0.000202  0.000141    0.011952  0.028680      0.001953  0.029455
+
+=== FACTOR EFFECTS ===
+{
+  "novelty_manipulation_effect_on_novelty": 0.13008226454257965,
+  "conflict_effect_on_actual_harm": 0.7020201440900564,
+  "novelty_effect_on_actual_harm": -0.5607639215886593,
+  "conflict_effect_on_grad_conflict": 0.21393988945055753,
+  "baseline_memory_accuracy": 0.953125
+}

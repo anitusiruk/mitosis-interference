@@ -1,0 +1,7 @@
+{
+  "novelty_manipulation_effect_on_novelty": 0.13008226454257965,
+  "conflict_effect_on_actual_harm": 0.7020201440900564,
+  "novelty_effect_on_actual_harm": -0.5607639215886593,
+  "conflict_effect_on_grad_conflict": 0.21393988945055753,
+  "baseline_memory_accuracy": 0.953125
+}

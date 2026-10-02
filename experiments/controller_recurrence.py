@@ -1,0 +1,565 @@
+import argparse
+import json
+from collections import Counter, defaultdict
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+
+from datasets import load_dataset
+from transformers import (
+    AutoTokenizer,
+    AutoModelForSequenceClassification,
+)
+from peft import (
+    LoraConfig,
+    TaskType,
+    get_peft_model,
+)
+
+from experiments.signal_scan import seed_all
+from src.adapter_pool_confidence import ConfidenceAdapterPool
+
+
+def make_dev_split(ds):
+    labels = np.asarray(ds["label"])
+
+    rng = np.random.default_rng(424242)
+
+    train_ids = []
+    dev_ids = []
+
+    for cls in range(77):
+        ids = np.flatnonzero(labels == cls).copy()
+        rng.shuffle(ids)
+
+        n_dev = max(
+            1,
+            int(round(0.20 * len(ids)))
+        )
+
+        dev_ids.extend(ids[:n_dev].tolist())
+        train_ids.extend(ids[n_dev:].tolist())
+
+    return (
+        ds.select(sorted(train_ids)),
+        ds.select(sorted(dev_ids)),
+    )
+
+
+def batches_from_ids(
+    ds,
+    ids,
+    batch_size,
+    rng,
+    concept,
+    occurrence,
+):
+    ids = np.asarray(ids).copy()
+    rng.shuffle(ids)
+
+    batches = []
+
+    for start in range(
+        0,
+        len(ids),
+        batch_size,
+    ):
+        chunk = ids[
+            start:start + batch_size
+        ]
+
+        if len(chunk) == 0:
+            continue
+
+        batches.append({
+            # EVAL ONLY.
+            "concept": concept,
+            "occurrence": occurrence,
+
+            "texts": [
+                ds[int(i)]["text"]
+                for i in chunk
+            ],
+
+            "labels": [
+                int(ds[int(i)]["label"])
+                for i in chunk
+            ],
+        })
+
+    return batches
+
+
+def split_group_occurrences(
+    ds,
+    classes,
+    rng,
+):
+    labels = np.asarray(
+        ds["label"]
+    )
+
+    first = []
+    second = []
+
+    # Split WITHIN every class, so both appearances
+    # have the same label support but disjoint examples.
+    for cls in classes:
+
+        ids = np.flatnonzero(
+            labels == cls
+        ).copy()
+
+        rng.shuffle(ids)
+
+        cut = len(ids) // 2
+
+        first.extend(
+            ids[:cut].tolist()
+        )
+
+        second.extend(
+            ids[cut:].tolist()
+        )
+
+    return first, second
+
+
+def make_recurrence_stream(
+    ds,
+    batch_size,
+    seed,
+):
+    rng = np.random.default_rng(
+        seed + 9000
+    )
+
+    # Three disjoint concept families.
+    A = list(range(0, 11))
+    B = list(range(11, 22))
+    C = list(range(22, 33))
+
+    A1_ids, A2_ids = (
+        split_group_occurrences(
+            ds,
+            A,
+            rng,
+        )
+    )
+
+    B1_ids, B2_ids = (
+        split_group_occurrences(
+            ds,
+            B,
+            rng,
+        )
+    )
+
+    labels = np.asarray(
+        ds["label"]
+    )
+
+    C_ids = np.flatnonzero(
+        np.isin(labels, C)
+    ).tolist()
+
+    segments = [
+        (
+            "A",
+            1,
+            A1_ids,
+        ),
+        (
+            "B",
+            1,
+            B1_ids,
+        ),
+        (
+            "A",
+            2,
+            A2_ids,
+        ),
+        (
+            "C",
+            1,
+            C_ids,
+        ),
+        (
+            "B",
+            2,
+            B2_ids,
+        ),
+    ]
+
+    stream = []
+    boundaries = []
+
+    for index, (
+        concept,
+        occurrence,
+        ids,
+    ) in enumerate(segments):
+
+        if index > 0:
+            boundaries.append(
+                len(stream) + 1
+            )
+
+        segment_batches = batches_from_ids(
+            ds=ds,
+            ids=ids,
+            batch_size=batch_size,
+            rng=rng,
+            concept=concept,
+            occurrence=occurrence,
+        )
+
+        stream.extend(
+            segment_batches
+        )
+
+    return stream, boundaries
+
+
+def main():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=2026,
+    )
+
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=16,
+    )
+
+    args = parser.parse_args()
+
+    seed_all(args.seed)
+
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA required"
+        )
+
+    device = torch.device(
+        "cuda"
+    )
+
+    banking = load_dataset(
+        "PolyAI/banking77",
+        trust_remote_code=True,
+    )
+
+    train_ds, dev_ds = make_dev_split(
+        banking["train"]
+    )
+
+    stream, boundaries = (
+        make_recurrence_stream(
+            train_ds,
+            args.batch_size,
+            args.seed,
+        )
+    )
+
+    print(
+        "GPU:",
+        torch.cuda.get_device_name(0),
+        flush=True,
+    )
+
+    print(
+        "stream steps:",
+        len(stream),
+        flush=True,
+    )
+
+    print(
+        "boundaries (EVAL ONLY):",
+        boundaries,
+        flush=True,
+    )
+
+    print(
+        "schedule (EVAL ONLY):",
+        "A1 -> B1 -> A2 -> C1 -> B2",
+        flush=True,
+    )
+
+    tok = AutoTokenizer.from_pretrained(
+        "distilbert-base-uncased"
+    )
+
+    base = (
+        AutoModelForSequenceClassification
+        .from_pretrained(
+            "distilbert-base-uncased",
+            num_labels=77,
+        )
+    )
+
+    cfg = LoraConfig(
+        task_type=TaskType.SEQ_CLS,
+        r=8,
+        lora_alpha=16,
+        lora_dropout=0.0,
+        target_modules=[
+            "q_lin",
+            "v_lin",
+        ],
+        bias="none",
+    )
+
+    model = get_peft_model(
+        base,
+        cfg,
+    ).to(device)
+
+    pool = ConfidenceAdapterPool(
+        model=model,
+        tokenizer=tok,
+        lora_config=cfg,
+        device=device,
+        lr=2e-4,
+        memory_size=512,
+        memory_probe=64,
+        threshold=0.0,
+        confidence_z=1.96,
+        seed=args.seed,
+    )
+
+    rows = []
+
+    segment_adapter = defaultdict(
+        Counter
+    )
+
+    previous_segment = None
+
+    for step, batch in enumerate(
+        stream,
+        start=1,
+    ):
+        segment = (
+            f"{batch['concept']}"
+            f"{batch['occurrence']}"
+        )
+
+        if segment != previous_segment:
+            print()
+            print(
+                "=== ENTER",
+                segment,
+                "at step",
+                step,
+                "===",
+                flush=True,
+            )
+
+            previous_segment = segment
+
+        name, info = pool.select(
+            batch["texts"],
+            batch["labels"],
+        )
+
+        loss = pool.train_step(
+            name,
+            batch["texts"],
+            batch["labels"],
+        )
+
+        segment_adapter[
+            segment
+        ][name] += 1
+
+        rows.append({
+            "step": step,
+            "concept":
+                batch["concept"],
+            "occurrence":
+                batch["occurrence"],
+            "segment":
+                segment,
+            "adapter":
+                name,
+            "decision":
+                info.get("decision"),
+            "best_risk":
+                info.get("best_risk"),
+            "best_lcb":
+                info.get("best_lcb"),
+            "best_ucb":
+                info.get("best_ucb"),
+            "best_gain":
+                info.get("best_gain"),
+            "num_adapters":
+                len(pool.states),
+            "loss":
+                loss,
+            "risks":
+                json.dumps(
+                    info.get(
+                        "risks",
+                        {},
+                    ),
+                    sort_keys=True,
+                ),
+        })
+
+        if (
+            info.get("decision")
+            == "spawn"
+            or step % 10 == 0
+        ):
+            print(
+                f"step={step:4d} "
+                f"segment(eval)={segment:2s} "
+                f"adapter={name:12s} "
+                f"decision={info.get('decision'):6s} "
+                f"risk={info.get('best_risk')} "
+                f"LCB={info.get('best_lcb')} "
+                f"pool={len(pool.states)} "
+                f"loss={loss:.4f}",
+                flush=True,
+            )
+
+    out = Path(
+        f"results/"
+        f"controller_recurrence_seed"
+        f"{args.seed}"
+    )
+
+    out.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    df = pd.DataFrame(
+        rows
+    )
+
+    df.to_csv(
+        out / "routing.csv",
+        index=False,
+    )
+
+    print()
+    print(
+        "=== SEGMENT / ADAPTER COUNTS ==="
+    )
+
+    dominant = {}
+
+    for segment in [
+        "A1",
+        "B1",
+        "A2",
+        "C1",
+        "B2",
+    ]:
+        counts = segment_adapter[
+            segment
+        ]
+
+        print(
+            segment,
+            dict(counts),
+        )
+
+        if counts:
+            dominant[segment] = (
+                counts.most_common(1)[0][0]
+            )
+
+    print()
+    print(
+        "=== RECURRENCE CHECK ==="
+    )
+
+    print(
+        "A1 dominant:",
+        dominant.get("A1"),
+    )
+
+    print(
+        "A2 dominant:",
+        dominant.get("A2"),
+    )
+
+    print(
+        "A reused:",
+        (
+            dominant.get("A1")
+            == dominant.get("A2")
+        ),
+    )
+
+    print(
+        "B1 dominant:",
+        dominant.get("B1"),
+    )
+
+    print(
+        "B2 dominant:",
+        dominant.get("B2"),
+    )
+
+    print(
+        "B reused:",
+        (
+            dominant.get("B1")
+            == dominant.get("B2")
+        ),
+    )
+
+    print()
+    print(
+        "=== SPAWNS ==="
+    )
+
+    spawns = df[
+        df["decision"] == "spawn"
+    ]
+
+    if len(spawns):
+        print(
+            spawns[
+                [
+                    "step",
+                    "segment",
+                    "adapter",
+                    "best_risk",
+                    "best_lcb",
+                    "best_ucb",
+                    "num_adapters",
+                ]
+            ].to_string(
+                index=False
+            )
+        )
+    else:
+        print(
+            "No spawns."
+        )
+
+    print()
+    print(
+        "final adapter count:",
+        len(pool.states),
+    )
+
+    print(
+        "saved:",
+        out / "routing.csv",
+    )
+
+
+if __name__ == "__main__":
+    main()

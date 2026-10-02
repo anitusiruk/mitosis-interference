@@ -4,7 +4,7 @@ import math
 import torch
 import torch.nn.functional as F
 
-from signal_scan import (
+from experiments.signal_scan import (
     encode,
     trainable_params,
 )
@@ -27,8 +27,7 @@ class ConfidenceAdapterPool(AdapterPool):
     ):
         super().__init__(*args, **kwargs)
 
-        # Fixed BEFORE looking at this controller's result.
-        # Two-sided 95% normal interval.
+        # Fixed 95% normal-approximation confidence gate.
         self.confidence_z = confidence_z
 
 
@@ -110,36 +109,25 @@ class ConfidenceAdapterPool(AdapterPool):
                 device=self.device,
             )
 
-            # -------------------------
-            # BEFORE virtual update
-            # -------------------------
-
+            # BEFORE virtual update.
             self.model.eval()
 
             with torch.no_grad():
-
-                cur_before_vec = (
-                    self._loss_vector(
-                        cur_x,
-                        cur_y,
-                    )
+                cur_before_vec = self._loss_vector(
+                    cur_x,
+                    cur_y,
                 )
 
-                mem_before_vec = (
-                    self._loss_vector(
-                        mem_x,
-                        mem_y,
-                    )
+                mem_before_vec = self._loss_vector(
+                    mem_x,
+                    mem_y,
                 )
 
             cur_before = float(
                 cur_before_vec.mean().item()
             )
 
-            # -------------------------
-            # Exact training update
-            # -------------------------
-
+            # Exact optimizer-faithful virtual update.
             self.model.train()
 
             state.optimizer.zero_grad(
@@ -160,26 +148,18 @@ class ConfidenceAdapterPool(AdapterPool):
 
             state.optimizer.step()
 
-            # -------------------------
-            # AFTER virtual update
-            # -------------------------
-
+            # AFTER virtual update.
             self.model.eval()
 
             with torch.no_grad():
-
-                cur_after_vec = (
-                    self._loss_vector(
-                        cur_x,
-                        cur_y,
-                    )
+                cur_after_vec = self._loss_vector(
+                    cur_x,
+                    cur_y,
                 )
 
-                mem_after_vec = (
-                    self._loss_vector(
-                        mem_x,
-                        mem_y,
-                    )
+                mem_after_vec = self._loss_vector(
+                    mem_x,
+                    mem_y,
                 )
 
             cur_after = float(
@@ -235,14 +215,15 @@ class ConfidenceAdapterPool(AdapterPool):
             }
 
         finally:
+            # Restore parameters.
             with torch.no_grad():
-
                 for p, old in zip(
                     params,
                     param_backup,
                 ):
                     p.copy_(old)
 
+            # Restore this adapter's optimizer.
             state.optimizer.load_state_dict(
                 optimizer_backup
             )
@@ -251,6 +232,8 @@ class ConfidenceAdapterPool(AdapterPool):
                 set_to_none=True
             )
 
+            # Restore all RNG state so diagnostics
+            # cannot perturb real training.
             restore_rng_state(
                 rng_state
             )
@@ -266,10 +249,8 @@ class ConfidenceAdapterPool(AdapterPool):
         texts,
         labels,
     ):
-        # ---------------------------------
-        # Warm up newly spawned capacity.
-        # ---------------------------------
-
+        # Newly created adapter must first accumulate
+        # enough protected history for scoring.
         if self.warmup_name is not None:
 
             state = self.states[
@@ -292,16 +273,12 @@ class ConfidenceAdapterPool(AdapterPool):
                         "best_gain": None,
                         "best_lcb": None,
                         "best_ucb": None,
+                        "risks": {},
                         "profiles": {},
                     },
                 )
 
             self.warmup_name = None
-
-        # ---------------------------------
-        # Counterfactual profile of every
-        # mature adapter.
-        # ---------------------------------
 
         profiles = {}
 
@@ -311,13 +288,10 @@ class ConfidenceAdapterPool(AdapterPool):
                 len(state.memory.items)
                 >= self.memory_probe
             ):
-
-                profiles[name] = (
-                    self.profile(
-                        name,
-                        texts,
-                        labels,
-                    )
+                profiles[name] = self.profile(
+                    name,
+                    texts,
+                    labels,
                 )
 
         if not profiles:
@@ -325,67 +299,73 @@ class ConfidenceAdapterPool(AdapterPool):
                 "No mature adapter available."
             )
 
-        # ---------------------------------
-        # CONFIDENCE-GATED SAFETY SET
-        #
-        # Unsafe only if we have positive
-        # evidence that expected protected
-        # harm is > threshold.
-        # ---------------------------------
+        # Always expose risks for logging.
+        risks = {
+            name: profile["harm"]
+            for name, profile
+            in profiles.items()
+        }
 
+        # Adapter is feasible unless we have
+        # positive-confidence evidence that
+        # expected harm exceeds the threshold.
         feasible = [
             name
-            for name, p
+            for name, profile
             in profiles.items()
-            if p["harm_lcb"]
-            <= self.threshold
+            if (
+                profile["harm_lcb"]
+                <= self.threshold
+            )
         ]
 
         if feasible:
-
-            # Same current batch across all
-            # adapters -> directly comparable.
+            # All candidates see the SAME incoming
+            # batch, so post-update current loss is
+            # directly comparable across adapters.
             best_name = min(
                 feasible,
-                key=lambda n: (
-                    profiles[n]["cur_after"],
-                    profiles[n]["harm"],
+                key=lambda name: (
+                    profiles[name]["cur_after"],
+                    profiles[name]["harm"],
                 ),
             )
 
-            p = profiles[best_name]
+            profile = profiles[
+                best_name
+            ]
 
-            self.activate(best_name)
+            self.activate(
+                best_name
+            )
 
             return (
                 best_name,
                 {
                     "decision": "reuse",
                     "best_risk":
-                        p["harm"],
+                        profile["harm"],
                     "best_gain":
-                        p["gain"],
+                        profile["gain"],
                     "best_lcb":
-                        p["harm_lcb"],
+                        profile["harm_lcb"],
                     "best_ucb":
-                        p["harm_ucb"],
-                    "profiles":
-                        profiles,
+                        profile["harm_ucb"],
+                    "risks": risks,
+                    "profiles": profiles,
                 },
             )
 
-        # ---------------------------------
-        # No existing capacity is
-        # confidently feasible.
-        # ---------------------------------
-
+        # No existing adapter is confidently safe.
         least_bad = min(
             profiles,
-            key=lambda n:
-                profiles[n]["harm_lcb"],
+            key=lambda name:
+                profiles[name]["harm_lcb"],
         )
 
-        p = profiles[least_bad]
+        profile = profiles[
+            least_bad
+        ]
 
         new_name = self.spawn()
 
@@ -394,13 +374,13 @@ class ConfidenceAdapterPool(AdapterPool):
             {
                 "decision": "spawn",
                 "best_risk":
-                    p["harm"],
+                    profile["harm"],
                 "best_gain": None,
                 "best_lcb":
-                    p["harm_lcb"],
+                    profile["harm_lcb"],
                 "best_ucb":
-                    p["harm_ucb"],
-                "profiles":
-                    profiles,
+                    profile["harm_ucb"],
+                "risks": risks,
+                "profiles": profiles,
             },
         )

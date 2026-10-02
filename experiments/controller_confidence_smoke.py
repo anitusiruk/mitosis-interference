@@ -1,6 +1,11 @@
 import argparse
 import json
-from collections import Counter, defaultdict
+
+from collections import (
+    Counter,
+    defaultdict,
+)
+
 from pathlib import Path
 
 import numpy as np
@@ -20,18 +25,22 @@ from peft import (
     get_peft_model,
 )
 
-from signal_scan import seed_all
+from experiments.signal_scan import seed_all
 
 from experiments.day2_predictor_scan_rngsafe import (
     make_stream_ordered,
 )
 
-from src.adapter_pool_confidence import ConfidenceAdapterPool
+from src.adapter_pool_confidence import (
+    ConfidenceAdapterPool,
+)
 
 
 def make_dev_split(ds):
 
-    labels = np.asarray(ds["label"])
+    labels = np.asarray(
+        ds["label"]
+    )
 
     rng = np.random.default_rng(
         424242
@@ -50,7 +59,9 @@ def make_dev_split(ds):
 
         n_dev = max(
             1,
-            int(round(0.20 * len(ids))),
+            int(round(
+                0.20 * len(ids)
+            )),
         )
 
         dev_ids.extend(
@@ -62,46 +73,61 @@ def make_dev_split(ds):
         )
 
     return (
-        ds.select(sorted(train_ids)),
-        ds.select(sorted(dev_ids)),
+        ds.select(
+            sorted(train_ids)
+        ),
+        ds.select(
+            sorted(dev_ids)
+        ),
     )
 
 
 def main():
 
-    ap = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser()
 
-    ap.add_argument(
+    parser.add_argument(
         "--seed",
         type=int,
         default=2026,
     )
 
-    ap.add_argument(
+    parser.add_argument(
         "--class-order-seed",
         type=int,
         default=-1,
     )
 
-    ap.add_argument(
+    parser.add_argument(
         "--max-steps",
         type=int,
-        default=180,
+        default=240,
     )
 
-    args = ap.parse_args()
+    args = parser.parse_args()
 
-    seed_all(args.seed)
+    seed_all(
+        args.seed
+    )
 
-    device = torch.device("cuda")
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA required"
+        )
+
+    device = torch.device(
+        "cuda"
+    )
 
     banking = load_dataset(
         "PolyAI/banking77",
         trust_remote_code=True,
     )
 
-    train_ds, dev_ds = make_dev_split(
-        banking["train"]
+    train_ds, dev_ds = (
+        make_dev_split(
+            banking["train"]
+        )
     )
 
     stream, boundaries, groups = (
@@ -115,17 +141,20 @@ def main():
 
     print(
         "GPU:",
-        torch.cuda.get_device_name(0)
+        torch.cuda.get_device_name(0),
+        flush=True,
     )
 
     print(
         "boundaries (EVAL ONLY):",
-        boundaries
+        boundaries,
+        flush=True,
     )
 
     print(
         "phase groups (EVAL ONLY):",
-        groups
+        groups,
+        flush=True,
     )
 
     tok = AutoTokenizer.from_pretrained(
@@ -166,12 +195,15 @@ def main():
         memory_size=512,
         memory_probe=64,
         threshold=0.0,
+        confidence_z=1.96,
         seed=args.seed,
     )
 
     rows = []
 
-    phase_adapter = defaultdict(Counter)
+    phase_adapter = defaultdict(
+        Counter
+    )
 
     for step, batch in enumerate(
         stream,
@@ -189,31 +221,51 @@ def main():
             batch["labels"],
         )
 
+        phase = int(
+            batch["phase"]
+        )
+
         phase_adapter[
-            int(batch["phase"])
+            phase
         ][name] += 1
+
+        # Defensive .get() calls mean logging itself
+        # cannot crash if a diagnostic field is absent.
+        risks = info.get(
+            "risks",
+            {},
+        )
+
+        profiles = info.get(
+            "profiles",
+            {},
+        )
 
         row = {
             "step": step,
-            "true_phase":
-                int(batch["phase"]),
+            "true_phase": phase,
             "adapter": name,
             "decision":
-                info["decision"],
+                info.get("decision"),
             "best_risk":
-                info["best_risk"],
+                info.get("best_risk"),
             "best_gain":
-                info["best_gain"],
+                info.get("best_gain"),
             "best_lcb":
-                info["best_lcb"],
+                info.get("best_lcb"),
             "best_ucb":
-                info["best_ucb"],
+                info.get("best_ucb"),
             "num_adapters":
                 len(pool.states),
             "loss": loss,
             "risks":
                 json.dumps(
-                    info["risks"],
+                    risks,
+                    sort_keys=True,
+                ),
+            "profiles":
+                json.dumps(
+                    profiles,
                     sort_keys=True,
                 ),
         }
@@ -221,18 +273,18 @@ def main():
         rows.append(row)
 
         if (
-            info["decision"] == "spawn"
+            info.get("decision") == "spawn"
             or step % 10 == 0
         ):
             print(
                 f"step={step:4d} "
-                f"phase(eval)={batch['phase']} "
+                f"phase(eval)={phase} "
                 f"adapter={name:12s} "
-                f"decision={info['decision']:6s} "
-                f"risk={info['best_risk']} "
-                f"gain={info['best_gain']} "
-                f"LCB={info['best_lcb']} "
-                f"UCB={info['best_ucb']} "
+                f"decision={info.get('decision')} "
+                f"risk={info.get('best_risk')} "
+                f"LCB={info.get('best_lcb')} "
+                f"UCB={info.get('best_ucb')} "
+                f"gain={info.get('best_gain')} "
                 f"pool={len(pool.states)} "
                 f"loss={loss:.4f}",
                 flush=True,
@@ -242,7 +294,8 @@ def main():
             break
 
     out = Path(
-        f"results/controller_confidence_smoke_seed{args.seed}"
+        f"results/"
+        f"controller_confidence_smoke_seed{args.seed}"
     )
 
     out.mkdir(
@@ -250,13 +303,19 @@ def main():
         exist_ok=True,
     )
 
-    pd.DataFrame(rows).to_csv(
+    df = pd.DataFrame(
+        rows
+    )
+
+    df.to_csv(
         out / "routing.csv",
         index=False,
     )
 
     print()
-    print("=== ADAPTER SUMMARY ===")
+    print(
+        "=== ADAPTER SUMMARY ==="
+    )
 
     print(
         json.dumps(
@@ -266,7 +325,9 @@ def main():
     )
 
     print()
-    print("=== PHASE / ADAPTER COUNTS ===")
+    print(
+        "=== PHASE / ADAPTER COUNTS ==="
+    )
 
     for phase in sorted(
         phase_adapter
@@ -275,12 +336,47 @@ def main():
             "phase",
             phase,
             dict(
-                phase_adapter[phase]
+                phase_adapter[
+                    phase
+                ]
             ),
         )
 
     print()
-    print("saved:", out / "routing.csv")
+    print(
+        "=== SPAWNS ==="
+    )
+
+    spawn_df = df[
+        df["decision"] == "spawn"
+    ]
+
+    if len(spawn_df):
+        print(
+            spawn_df[
+                [
+                    "step",
+                    "true_phase",
+                    "adapter",
+                    "best_risk",
+                    "best_lcb",
+                    "best_ucb",
+                    "num_adapters",
+                ]
+            ].to_string(
+                index=False
+            )
+        )
+    else:
+        print(
+            "No spawns."
+        )
+
+    print()
+    print(
+        "saved:",
+        out / "routing.csv",
+    )
 
 
 if __name__ == "__main__":

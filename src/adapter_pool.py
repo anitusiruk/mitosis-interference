@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 import torch
 
-from signal_scan import (
+from experiments.signal_scan import (
     Reservoir,
     encode,
     trainable_params,

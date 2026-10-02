@@ -2,7 +2,7 @@ import copy
 
 import torch
 
-from signal_scan import (
+from experiments.signal_scan import (
     encode,
     trainable_params,
 )

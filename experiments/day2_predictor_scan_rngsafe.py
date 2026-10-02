@@ -14,7 +14,7 @@ from transformers import (
     AutoModelForSequenceClassification,
 )
 
-from signal_scan import (
+from experiments.signal_scan import (
     seed_all,
     encode,
     trainable_params,

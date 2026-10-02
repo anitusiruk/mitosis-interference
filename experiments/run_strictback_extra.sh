@@ -4,6 +4,8 @@ set -euo pipefail
 cd /workspace/mitosis-interference
 mkdir -p logs
 
+export PYTHONPATH=/workspace/mitosis-interference
+
 echo "=== STRICT ALTORDER ==="
 python -u experiments/day2_predictor_strict_backward.py \
   --seed 1337 \

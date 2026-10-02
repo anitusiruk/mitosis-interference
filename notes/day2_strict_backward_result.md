@@ -39,3 +39,28 @@ CABLE-style affinity signal.
 
 The non-boundary-crossing analysis is a sensitivity analysis
 and must not be used to retroactively change the gate.
+
+## Boundary-crossing sensitivity
+
+The predeclared strict gate remains FAIL.
+
+However, in the separately defined non-boundary-crossing sensitivity,
+AdamW-I1 AUROC was:
+
+canonical: 0.9698
+altorder:  0.9770
+run3:      0.9902
+run4:      1.0000
+run5:      0.9857
+
+I1 exceeded CABLE-style risk on all 5 non-crossing subsets.
+
+This does NOT replace the failed main gate.
+
+Interpretation:
+AdamW-I1 simulates the consequence of the currently available update.
+A 10-step target that crosses a phase boundary additionally depends on
+future batches from a distribution unavailable at probe time.
+
+The crossing analysis therefore diagnoses a horizon/action mismatch,
+not a revised primary evaluation.

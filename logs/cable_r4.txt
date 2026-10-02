@@ -1,0 +1,76 @@
+GPU: NVIDIA GeForce RTX 4090
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+development split: 8005 stream / 1998 held-out
+steps: 503
+hidden boundaries: [73, 152, 231, 298, 373, 438]
+phase groups: [[58, 8, 29, 25, 11, 45, 76, 62, 22, 39, 50], [51, 34, 67, 5, 13, 16, 43, 33, 48, 47, 70], [60, 73, 6, 15, 54, 53, 61, 63, 35, 68, 32], [37, 57, 30, 1, 56, 46, 69, 55, 2, 9, 19], [75, 26, 3, 71, 20, 52, 21, 31, 38, 14, 4], [59, 44, 7, 36, 72, 65, 66, 12, 42, 41, 74], [49, 64, 23, 10, 40, 28, 18, 27, 24, 17, 0]]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5681.80it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 N=+0.0117 G=-0.7527 SGD1=-0.000811 CABLE=-0.000521 A1=-0.073411 A3=-0.234713 A5=-0.415132
+step=  20 phase(eval)=0 N=+0.0106 G=-0.5583 SGD1=-0.000854 CABLE=-0.000823 A1=-0.103894 A3=-0.289738 A5=-0.428013
+step=  30 phase(eval)=0 N=+0.0105 G=+0.0693 SGD1=+0.000123 CABLE=-0.000782 A1=-0.021708 A3=-0.051203 A5=-0.074852
+step=  40 phase(eval)=0 N=+0.0116 G=-0.4235 SGD1=-0.000931 CABLE=-0.002308 A1=-0.021790 A3=-0.058901 A5=-0.084308
+step=  50 phase(eval)=0 N=+0.0074 G=+0.0637 SGD1=+0.000235 CABLE=-0.002094 A1=-0.008395 A3=-0.012976 A5=+0.004322
+step=  60 phase(eval)=0 N=+0.0079 G=-0.4193 SGD1=-0.002055 CABLE=-0.005987 A1=-0.024561 A3=-0.068131 A5=-0.085253
+step=  70 phase(eval)=0 N=+0.0094 G=-0.5237 SGD1=-0.002954 CABLE=-0.006970 A1=-0.030127 A3=-0.079672 A5=-0.097528
+step=  80 phase(eval)=1 N=+0.0103 G=+0.1259 SGD1=+0.000524 CABLE=-0.002321 A1=+0.048144 A3=+0.241651 A5=+0.546118
+step=  90 phase(eval)=1 N=+0.0174 G=-0.1973 SGD1=-0.000427 CABLE=-0.000820 A1=+0.038280 A3=+0.080578 A5=+0.118363
+step= 100 phase(eval)=1 N=+0.0107 G=+0.1910 SGD1=+0.000803 CABLE=-0.001005 A1=+0.142439 A3=+0.393058 A5=+0.696830
+step= 110 phase(eval)=1 N=+0.0190 G=-0.1077 SGD1=-0.000875 CABLE=-0.002360 A1=+0.055620 A3=+0.103865 A5=+0.187335
+step= 120 phase(eval)=1 N=+0.0083 G=+0.0672 SGD1=+0.000572 CABLE=-0.003611 A1=+0.037545 A3=+0.130326 A5=+0.264600
+step= 130 phase(eval)=1 N=+0.0098 G=-0.0732 SGD1=-0.000638 CABLE=-0.005458 A1=+0.020884 A3=+0.060300 A5=+0.109485
+step= 140 phase(eval)=1 N=+0.0081 G=-0.1145 SGD1=-0.000741 CABLE=-0.003883 A1=-0.000361 A3=-0.004322 A5=+0.000086
+step= 150 phase(eval)=1 N=+0.0131 G=-0.0952 SGD1=-0.000733 CABLE=-0.006263 A1=-0.000680 A3=-0.004723 A5=+0.006143
+step= 160 phase(eval)=2 N=+0.0102 G=-0.4843 SGD1=-0.006493 CABLE=-0.005059 A1=-0.149433 A3=-0.436727 A5=-0.665078
+step= 170 phase(eval)=2 N=+0.0134 G=+0.0685 SGD1=+0.000225 CABLE=-0.001512 A1=+0.041193 A3=+0.154083 A5=+0.276521
+step= 180 phase(eval)=2 N=+0.0178 G=+0.2209 SGD1=+0.000562 CABLE=-0.000940 A1=+0.084902 A3=+0.317400 A5=+0.651380
+step= 190 phase(eval)=2 N=+0.0097 G=+0.0187 SGD1=+0.000102 CABLE=-0.002639 A1=+0.147341 A3=+0.419489 A5=+0.671052
+step= 200 phase(eval)=2 N=+0.0151 G=+0.1481 SGD1=+0.001089 CABLE=-0.003427 A1=+0.072014 A3=+0.220288 A5=+0.382896
+step= 210 phase(eval)=2 N=+0.0221 G=+0.0018 SGD1=+0.000022 CABLE=-0.005230 A1=+0.017625 A3=+0.064852 A5=+0.138502
+step= 220 phase(eval)=2 N=+0.0091 G=-0.1253 SGD1=-0.000555 CABLE=-0.003608 A1=+0.010891 A3=+0.017000 A5=+0.020832
+step= 230 phase(eval)=2 N=+0.0655 G=+0.0091 SGD1=+0.000018 CABLE=-0.006798 A1=+0.010516 A3=+0.037119 A5=+0.071632
+step= 240 phase(eval)=3 N=+0.0185 G=-0.4931 SGD1=-0.008390 CABLE=-0.005720 A1=-0.188963 A3=-0.558245 A5=-0.874059
+step= 250 phase(eval)=3 N=+0.0237 G=+0.0125 SGD1=+0.000024 CABLE=-0.000754 A1=+0.004852 A3=+0.064481 A5=+0.149364
+step= 260 phase(eval)=3 N=+0.0157 G=+0.0887 SGD1=+0.000220 CABLE=-0.000856 A1=+0.097943 A3=+0.347701 A5=+0.660494
+step= 270 phase(eval)=3 N=+0.0132 G=-0.2224 SGD1=-0.001620 CABLE=-0.003271 A1=+0.074219 A3=+0.182974 A5=+0.279811
+step= 280 phase(eval)=3 N=+0.0151 G=+0.0247 SGD1=+0.000233 CABLE=-0.005100 A1=-0.023049 A3=-0.052426 A5=-0.046136
+step= 290 phase(eval)=3 N=+0.0133 G=+0.0121 SGD1=+0.000039 CABLE=-0.002299 A1=+0.005045 A3=+0.009935 A5=+0.032339
+step= 300 phase(eval)=4 N=+0.0097 G=-0.6391 SGD1=-0.017946 CABLE=-0.008145 A1=-0.095773 A3=-0.376443 A5=-0.710861
+step= 310 phase(eval)=4 N=+0.0166 G=-0.3053 SGD1=-0.002249 CABLE=-0.002446 A1=-0.123320 A3=-0.314126 A5=-0.436734
+step= 320 phase(eval)=4 N=+0.0145 G=+0.0255 SGD1=+0.000053 CABLE=-0.000912 A1=+0.031487 A3=+0.113588 A5=+0.214455
+step= 330 phase(eval)=4 N=+0.0171 G=+0.1940 SGD1=+0.000643 CABLE=-0.001408 A1=+0.085052 A3=+0.304058 A5=+0.579434
+step= 340 phase(eval)=4 N=+0.0166 G=-0.2408 SGD1=-0.001479 CABLE=-0.003422 A1=+0.065546 A3=+0.173291 A5=+0.260418
+step= 350 phase(eval)=4 N=+0.0122 G=-0.0361 SGD1=-0.000149 CABLE=-0.002788 A1=+0.042084 A3=+0.114385 A5=+0.179872
+step= 360 phase(eval)=4 N=+0.0170 G=-0.1231 SGD1=-0.000860 CABLE=-0.004821 A1=+0.009084 A3=+0.028734 A5=+0.068623
+step= 370 phase(eval)=4 N=+0.0121 G=-0.0797 SGD1=-0.000354 CABLE=-0.003198 A1=+0.006103 A3=+0.018273 A5=+0.044394
+step= 380 phase(eval)=5 N=+0.0160 G=-0.4395 SGD1=-0.006155 CABLE=-0.003908 A1=-0.185286 A3=-0.542461 A5=-0.838966
+step= 390 phase(eval)=5 N=+0.0143 G=+0.2554 SGD1=+0.000651 CABLE=-0.000495 A1=+0.090178 A3=+0.318758 A5=+0.523514
+step= 400 phase(eval)=5 N=+0.0116 G=-0.2432 SGD1=-0.000783 CABLE=-0.001358 A1=+0.032557 A3=+0.105233 A5=+0.212667
+step= 410 phase(eval)=5 N=+0.0156 G=-0.2495 SGD1=-0.001630 CABLE=-0.003750 A1=+0.067213 A3=+0.168635 A5=+0.246278
+step= 420 phase(eval)=5 N=+0.0143 G=-0.0406 SGD1=-0.000257 CABLE=-0.003011 A1=+0.027183 A3=+0.080989 A5=+0.138196
+step= 430 phase(eval)=5 N=+0.0099 G=-0.0121 SGD1=-0.000100 CABLE=-0.008684 A1=+0.022095 A3=+0.075738 A5=+0.155424
+step= 440 phase(eval)=6 N=+0.0108 G=-0.6740 SGD1=-0.020387 CABLE=-0.008153 A1=-0.116666 A3=-0.449798 A5=-0.845270
+step= 450 phase(eval)=6 N=+0.0116 G=-0.2143 SGD1=-0.001034 CABLE=-0.001571 A1=-0.066764 A3=-0.143763 A5=-0.169300
+step= 460 phase(eval)=6 N=+0.0164 G=-0.0965 SGD1=-0.000157 CABLE=-0.000845 A1=+0.004622 A3=+0.015406 A5=+0.025957
+step= 470 phase(eval)=6 N=+0.0128 G=+0.0287 SGD1=+0.000053 CABLE=-0.000832 A1=+0.016702 A3=+0.064260 A5=+0.142095
+step= 480 phase(eval)=6 N=+0.0091 G=+0.1469 SGD1=+0.000333 CABLE=-0.001118 A1=+0.101432 A3=+0.322856 A5=+0.546143
+step= 490 phase(eval)=6 N=+0.0171 G=+0.0458 SGD1=+0.000099 CABLE=-0.002157 A1=+0.097980 A3=+0.284932 A5=+0.466525
+step= 500 phase(eval)=6 N=+0.0129 G=+0.0022 SGD1=+0.000005 CABLE=-0.001735 A1=+0.032677 A3=+0.088704 A5=+0.153439
+
+DONE
+saved: results/cable_r4_seed31415/signals.csv

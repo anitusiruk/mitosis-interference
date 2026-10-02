@@ -20,7 +20,7 @@ from peft import (
     get_peft_model,
 )
 
-from signal_scan import seed_all
+from experiments.signal_scan import seed_all
 
 from experiments.day2_predictor_scan_rngsafe import (
     make_stream_ordered,

@@ -1,0 +1,75 @@
+GPU: NVIDIA GeForce RTX 4090
+development split: 8005 stream / 1998 held-out
+steps: 504
+hidden boundaries: [73, 147, 224, 287, 357, 430]
+phase groups: [[14, 57, 26, 54, 41, 36, 67, 52, 43, 33, 0], [73, 42, 74, 19, 61, 66, 48, 69, 21, 4, 50], [47, 9, 56, 34, 44, 46, 49, 63, 24, 15, 30], [64, 23, 27, 38, 37, 22, 7, 25, 51, 10, 60], [8, 62, 1, 40, 59, 72, 3, 53, 16, 6, 35], [18, 12, 32, 2, 55, 5, 65, 75, 28, 31, 76], [20, 39, 13, 68, 11, 71, 70, 45, 29, 17, 58]]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6004.21it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 N=+0.0059 G=-0.8304 SGD1=-0.000974 A1=-0.072353 A3=-0.230143 A5=-0.406768
+step=  20 phase(eval)=0 N=+0.0064 G=-0.6500 SGD1=-0.001008 A1=-0.098908 A3=-0.283369 A5=-0.430642
+step=  30 phase(eval)=0 N=+0.0162 G=-0.1053 SGD1=-0.000188 A1=-0.014817 A3=-0.036657 A5=-0.043380
+step=  40 phase(eval)=0 N=+0.0086 G=-0.3727 SGD1=-0.000744 A1=-0.018723 A3=-0.051518 A5=-0.066210
+step=  50 phase(eval)=0 N=+0.0120 G=-0.1677 SGD1=-0.000402 A1=-0.029344 A3=-0.080863 A5=-0.116505
+step=  60 phase(eval)=0 N=+0.0162 G=-0.6214 SGD1=-0.003808 A1=-0.041317 A3=-0.116414 A5=-0.151839
+step=  70 phase(eval)=0 N=+0.0068 G=-0.4198 SGD1=-0.000924 A1=-0.032487 A3=-0.095711 A5=-0.131168
+step=  80 phase(eval)=1 N=+0.0110 G=+0.1110 SGD1=+0.000423 A1=+0.028095 A3=+0.174044 A5=+0.503415
+step=  90 phase(eval)=1 N=+0.0156 G=-0.1585 SGD1=-0.000684 A1=+0.098782 A3=+0.242673 A5=+0.393514
+step= 100 phase(eval)=1 N=+0.0191 G=-0.1336 SGD1=-0.000962 A1=+0.059392 A3=+0.183888 A5=+0.331036
+step= 110 phase(eval)=1 N=+0.0163 G=-0.1926 SGD1=-0.001081 A1=+0.031652 A3=+0.063618 A5=+0.070274
+step= 120 phase(eval)=1 N=+0.0166 G=-0.0340 SGD1=-0.000268 A1=+0.014437 A3=+0.078139 A5=+0.183786
+step= 130 phase(eval)=1 N=+0.0106 G=-0.2846 SGD1=-0.002288 A1=-0.004880 A3=-0.047132 A5=-0.078384
+step= 140 phase(eval)=1 N=+0.0140 G=-0.0445 SGD1=-0.000174 A1=+0.016246 A3=+0.057657 A5=+0.105131
+step= 150 phase(eval)=2 N=+0.0134 G=-0.5621 SGD1=-0.013299 A1=-0.130439 A3=-0.476388 A5=-0.861195
+step= 160 phase(eval)=2 N=+0.0119 G=+0.2553 SGD1=+0.000535 A1=+0.101375 A3=+0.344228 A5=+0.541534
+step= 170 phase(eval)=2 N=+0.0106 G=-0.2610 SGD1=-0.000570 A1=-0.008390 A3=-0.025361 A5=-0.002442
+step= 180 phase(eval)=2 N=+0.0106 G=-0.0787 SGD1=-0.000412 A1=+0.133441 A3=+0.393148 A5=+0.624999
+step= 190 phase(eval)=2 N=+0.0105 G=-0.0364 SGD1=-0.000168 A1=+0.015158 A3=+0.036737 A5=+0.067923
+step= 200 phase(eval)=2 N=+0.0109 G=+0.0324 SGD1=+0.000222 A1=+0.027133 A3=+0.096827 A5=+0.174046
+step= 210 phase(eval)=2 N=+0.0106 G=+0.0189 SGD1=+0.000101 A1=-0.007960 A3=-0.010379 A5=+0.015349
+step= 220 phase(eval)=2 N=+0.0118 G=-0.0507 SGD1=-0.000438 A1=-0.008733 A3=-0.020379 A5=+0.000116
+step= 230 phase(eval)=3 N=+0.0143 G=-0.6120 SGD1=-0.012872 A1=-0.197665 A3=-0.572160 A5=-0.879533
+step= 240 phase(eval)=3 N=+0.0126 G=-0.1044 SGD1=-0.000359 A1=-0.025241 A3=-0.010451 A5=+0.054967
+step= 250 phase(eval)=3 N=+0.0114 G=-0.0751 SGD1=-0.000134 A1=+0.031988 A3=+0.091915 A5=+0.158450
+step= 260 phase(eval)=3 N=+0.0138 G=+0.0993 SGD1=+0.000211 A1=+0.076596 A3=+0.249313 A5=+0.437075
+step= 270 phase(eval)=3 N=+0.0097 G=-0.1700 SGD1=-0.000558 A1=+0.099041 A3=+0.270096 A5=+0.401348
+step= 280 phase(eval)=3 N=+0.0110 G=-0.0123 SGD1=-0.000066 A1=+0.038490 A3=+0.127473 A5=+0.255915
+step= 290 phase(eval)=4 N=+0.0184 G=-0.4656 SGD1=-0.011158 A1=-0.110107 A3=-0.401347 A5=-0.757692
+step= 300 phase(eval)=4 N=+0.0128 G=-0.3537 SGD1=-0.002468 A1=-0.100281 A3=-0.204110 A5=-0.182041
+step= 310 phase(eval)=4 N=+0.0207 G=-0.1844 SGD1=-0.000394 A1=+0.045712 A3=+0.111760 A5=+0.151298
+step= 320 phase(eval)=4 N=+0.0139 G=+0.2300 SGD1=+0.000809 A1=+0.081580 A3=+0.292527 A5=+0.565568
+step= 330 phase(eval)=4 N=+0.0096 G=-0.1598 SGD1=-0.001060 A1=+0.077212 A3=+0.206998 A5=+0.321120
+step= 340 phase(eval)=4 N=+0.0151 G=+0.0605 SGD1=+0.000445 A1=+0.045990 A3=+0.132149 A5=+0.225528
+step= 350 phase(eval)=4 N=+0.0131 G=-0.0781 SGD1=-0.000422 A1=+0.015588 A3=+0.040426 A5=+0.069259
+step= 360 phase(eval)=5 N=+0.0185 G=-0.5815 SGD1=-0.012075 A1=-0.137326 A3=-0.449884 A5=-0.763767
+step= 370 phase(eval)=5 N=+0.0125 G=-0.3558 SGD1=-0.001949 A1=-0.091105 A3=-0.223702 A5=-0.302275
+step= 380 phase(eval)=5 N=+0.0074 G=-0.0501 SGD1=-0.000107 A1=+0.010147 A3=+0.038639 A5=+0.074358
+step= 390 phase(eval)=5 N=+0.0180 G=+0.0934 SGD1=+0.000165 A1=+0.028239 A3=+0.101346 A5=+0.204445
+step= 400 phase(eval)=5 N=+0.0134 G=+0.0912 SGD1=+0.000264 A1=+0.088222 A3=+0.272929 A5=+0.465362
+step= 410 phase(eval)=5 N=+0.0129 G=-0.1368 SGD1=-0.000654 A1=+0.063966 A3=+0.176888 A5=+0.272635
+step= 420 phase(eval)=5 N=+0.0185 G=-0.0164 SGD1=-0.000079 A1=+0.036080 A3=+0.091955 A5=+0.136236
+step= 430 phase(eval)=6 N=+0.0106 G=-0.4762 SGD1=-0.010003 A1=-0.026918 A3=-0.156502 A5=-0.351894
+step= 440 phase(eval)=6 N=+0.0144 G=-0.5154 SGD1=-0.006314 A1=-0.166603 A3=-0.463447 A5=-0.703429
+step= 450 phase(eval)=6 N=+0.0084 G=-0.0516 SGD1=-0.000192 A1=-0.025191 A3=-0.054749 A5=-0.061903
+step= 460 phase(eval)=6 N=+0.0094 G=+0.0738 SGD1=+0.000178 A1=+0.019007 A3=+0.071285 A5=+0.143867
+step= 470 phase(eval)=6 N=+0.0085 G=+0.1404 SGD1=+0.000383 A1=+0.081139 A3=+0.271873 A5=+0.483953
+step= 480 phase(eval)=6 N=+0.0155 G=-0.0359 SGD1=-0.000145 A1=+0.091441 A3=+0.254397 A5=+0.411796
+step= 490 phase(eval)=6 N=+0.0141 G=+0.0185 SGD1=+0.000085 A1=+0.056245 A3=+0.164872 A5=+0.268658
+step= 500 phase(eval)=6 N=+0.0163 G=-0.0116 SGD1=-0.000048 A1=+0.030704 A3=+0.093196 A5=+0.149262
+
+DONE
+saved: results/rngsafe_altorder_seed1337/signals.csv

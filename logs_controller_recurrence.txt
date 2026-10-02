@@ -1,0 +1,81 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+GPU: NVIDIA GeForce RTX 4090
+stream steps: 222
+boundaries (EVAL ONLY): [38, 77, 114, 183]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6578.27it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 at step 1 ===
+step=  10 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.07577440142631531 LCB=-0.08155047368258238 pool=1 loss=3.8586
+step=  20 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.09373737871646881 LCB=-0.1006452060304582 pool=1 loss=3.0327
+step=  30 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.025023380294442177 LCB=-0.03887520872056484 pool=1 loss=2.5349
+
+=== ENTER B1 at step 38 ===
+step=  40 segment(eval)=B1 adapter=default      decision=reuse  risk=0.014550291001796722 LCB=-0.012624243050813673 pool=1 loss=7.2670
+step=  42 segment(eval)=B1 adapter=adapter_1    decision=spawn  risk=0.040155038237571716 LCB=0.000870632976293563 pool=2 loss=4.3463
+step=  50 segment(eval)=B1 adapter=adapter_1    decision=reuse  risk=-0.07526636123657227 LCB=-0.07879078797064722 pool=2 loss=3.9495
+step=  60 segment(eval)=B1 adapter=adapter_1    decision=reuse  risk=-0.10136444866657257 LCB=-0.10917122507467866 pool=2 loss=2.9692
+step=  70 segment(eval)=B1 adapter=adapter_1    decision=reuse  risk=-0.017611540853977203 LCB=-0.0286445009149611 pool=2 loss=2.2286
+
+=== ENTER A2 at step 77 ===
+step=  80 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.02904606983065605 LCB=-0.03857949024066329 pool=2 loss=2.3997
+step=  90 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.03291350230574608 LCB=-0.04803884027525783 pool=2 loss=1.9699
+step= 100 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.03169740363955498 LCB=-0.046318560056388375 pool=2 loss=1.6410
+step= 110 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.011266487650573254 LCB=-0.02531745906919241 pool=2 loss=1.4973
+
+=== ENTER C1 at step 114 ===
+step= 120 segment(eval)=C1 adapter=adapter_1    decision=reuse  risk=0.030994730070233345 LCB=-0.02458942398428917 pool=2 loss=5.8513
+step= 130 segment(eval)=C1 adapter=default      decision=reuse  risk=0.004904394969344139 LCB=-0.027248735800385476 pool=2 loss=6.3152
+step= 134 segment(eval)=C1 adapter=adapter_2    decision=spawn  risk=0.08231835812330246 LCB=0.04498883843421936 pool=3 loss=4.3854
+step= 140 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.06191278621554375 LCB=-0.06623150044120849 pool=3 loss=4.0410
+step= 150 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.10797730088233948 LCB=-0.11434815210290253 pool=3 loss=3.2319
+step= 160 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.03782752901315689 LCB=-0.04559422163292766 pool=3 loss=2.6771
+step= 170 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.00794663280248642 LCB=-0.019742973726242778 pool=3 loss=2.1815
+step= 180 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.019817333668470383 LCB=-0.030614340789616105 pool=3 loss=2.1857
+
+=== ENTER B2 at step 183 ===
+step= 190 segment(eval)=B2 adapter=adapter_2    decision=reuse  risk=-0.019969947636127472 LCB=-0.05312331669032574 pool=3 loss=6.5830
+step= 195 segment(eval)=B2 adapter=adapter_3    decision=spawn  risk=0.03853137791156769 LCB=0.0010867489874362979 pool=4 loss=4.3504
+step= 200 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=0.017456457018852234 LCB=-0.002593841254711151 pool=4 loss=2.8838
+step= 210 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=-0.04217260330915451 LCB=-0.0642826084792614 pool=4 loss=2.3206
+step= 220 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=-0.005696452222764492 LCB=-0.018874049205332994 pool=4 loss=1.8983
+
+=== SEGMENT / ADAPTER COUNTS ===
+A1 {'default': 37}
+B1 {'default': 4, 'adapter_1': 35}
+A2 {'default': 37}
+C1 {'adapter_1': 9, 'default': 11, 'adapter_2': 49}
+B2 {'adapter_2': 11, 'adapter_1': 24, 'adapter_3': 5}
+
+=== RECURRENCE CHECK ===
+A1 dominant: default
+A2 dominant: default
+A reused: True
+B1 dominant: adapter_1
+B2 dominant: adapter_1
+B reused: True
+
+=== SPAWNS ===
+ step segment   adapter  best_risk  best_lcb  best_ucb  num_adapters
+   42      B1 adapter_1   0.040155  0.000871  0.079439             2
+  134      C1 adapter_2   0.082318  0.044989  0.119648             3
+  195      B2 adapter_3   0.038531  0.001087  0.075976             4
+
+final adapter count: 4
+saved: results/controller_recurrence_seed2026/routing.csv

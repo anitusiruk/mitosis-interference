@@ -1,0 +1,63 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+GPU: NVIDIA GeForce RTX 4090
+boundaries (EVAL ONLY): [75, 153, 222, 288, 365, 435]
+phase groups (EVAL ONLY): [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32], [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43], [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54], [55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65], [66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76]]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5784.05it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 adapter=default      decision=reuse  risk=-0.07474255561828613 pool=1 loss=3.8462
+step=  20 phase(eval)=0 adapter=default      decision=reuse  risk=-0.08834552764892578 pool=1 loss=2.8345
+step=  30 phase(eval)=0 adapter=default      decision=reuse  risk=-0.02449202537536621 pool=1 loss=2.4958
+step=  40 phase(eval)=0 adapter=default      decision=reuse  risk=-0.034697771072387695 pool=1 loss=2.0476
+step=  50 phase(eval)=0 adapter=default      decision=reuse  risk=-0.028927922248840332 pool=1 loss=1.8234
+step=  60 phase(eval)=0 adapter=default      decision=reuse  risk=-0.030938029289245605 pool=1 loss=1.7413
+step=  70 phase(eval)=0 adapter=default      decision=reuse  risk=-0.021001219749450684 pool=1 loss=1.5783
+step=  80 phase(eval)=1 adapter=adapter_1    decision=spawn  risk=0.011387348175048828 pool=2 loss=4.3399
+step=  90 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.0853891372680664 pool=2 loss=3.7763
+step= 100 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.08851480484008789 pool=2 loss=2.8660
+step= 110 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.030811071395874023 pool=2 loss=2.6140
+step= 120 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.024014949798583984 pool=2 loss=1.9295
+step= 130 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.017948031425476074 pool=2 loss=2.0155
+step= 140 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.019300103187561035 pool=2 loss=1.6709
+step= 150 phase(eval)=1 adapter=adapter_1    decision=reuse  risk=-0.018498539924621582 pool=2 loss=1.6925
+step= 159 phase(eval)=2 adapter=adapter_2    decision=spawn  risk=0.005379915237426758 pool=3 loss=4.4419
+step= 160 phase(eval)=2 adapter=adapter_2    decision=warmup risk=None pool=3 loss=4.3235
+step= 170 phase(eval)=2 adapter=adapter_2    decision=reuse  risk=-0.07664179801940918 pool=3 loss=3.7972
+step= 180 phase(eval)=2 adapter=adapter_2    decision=reuse  risk=-0.09462976455688477 pool=3 loss=2.8802
+
+=== ADAPTER SUMMARY ===
+{
+  "default": {
+    "updates": 81,
+    "memory": 512
+  },
+  "adapter_1": {
+    "updates": 77,
+    "memory": 512
+  },
+  "adapter_2": {
+    "updates": 22,
+    "memory": 352
+  }
+}
+
+=== PHASE / ADAPTER COUNTS ===
+phase 0 {'default': 74}
+phase 1 {'default': 6, 'adapter_1': 72}
+phase 2 {'adapter_1': 5, 'default': 1, 'adapter_2': 22}
+
+saved: results/controller_smoke_seed2026/routing.csv

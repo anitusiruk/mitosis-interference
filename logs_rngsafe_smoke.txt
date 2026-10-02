@@ -1,0 +1,45 @@
+GPU: NVIDIA GeForce RTX 4090
+/workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9/banking77.py:23: SyntaxWarning: invalid escape sequence '\~'
+  _CITATION = """\
+Downloading data:   0%|          | 0.00/839k [00:00<?, ?B/s]Downloading data: 100%|██████████| 839k/839k [00:00<00:00, 17.5MB/s]
+Downloading data:   0%|          | 0.00/240k [00:00<?, ?B/s]Downloading data: 100%|██████████| 240k/240k [00:00<00:00, 19.9MB/s]
+Generating train split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating train split:  45%|████▌     | 4506/10003 [00:00<00:00, 44858.23 examples/s]Generating train split: 100%|██████████| 10003/10003 [00:00<00:00, 57834.65 examples/s]
+Generating test split:   0%|          | 0/3080 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 3080/3080 [00:00<00:00, 78475.36 examples/s]
+development split: 8005 stream / 1998 held-out
+steps: 504
+hidden boundaries: [75, 153, 222, 288, 365, 435]
+phase groups: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], [22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32], [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43], [44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54], [55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65], [66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76]]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5677.18it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=  10 phase(eval)=0 N=+0.0073 G=-0.6630 SGD1=-0.000795 A1=-0.071465 A3=-0.228461 A5=-0.405663
+step=  20 phase(eval)=0 N=+0.0103 G=-0.4114 SGD1=-0.000845 A1=-0.095640 A3=-0.264276 A5=-0.382228
+step=  30 phase(eval)=0 N=+0.0099 G=-0.5385 SGD1=-0.001512 A1=-0.023830 A3=-0.075790 A5=-0.119902
+step=  40 phase(eval)=0 N=+0.0078 G=+0.1683 SGD1=+0.000418 A1=-0.022396 A3=-0.049956 A5=-0.045187
+step=  50 phase(eval)=0 N=+0.0087 G=+0.1159 SGD1=+0.000302 A1=-0.007476 A3=-0.005134 A5=+0.030710
+step=  60 phase(eval)=0 N=+0.0085 G=-0.2226 SGD1=-0.000926 A1=-0.029826 A3=-0.085714 A5=-0.118280
+step=  70 phase(eval)=0 N=+0.0109 G=-0.7904 SGD1=-0.002631 A1=-0.021333 A3=-0.081687 A5=-0.144345
+step=  80 phase(eval)=1 N=+0.0162 G=-0.0766 SGD1=-0.000298 A1=-0.001627 A3=+0.071075 A5=+0.313339
+step=  90 phase(eval)=1 N=+0.0133 G=-0.0925 SGD1=-0.000395 A1=+0.138173 A3=+0.315858 A5=+0.453197
+step= 100 phase(eval)=1 N=+0.0217 G=+0.0313 SGD1=+0.000155 A1=+0.058246 A3=+0.189289 A5=+0.362211
+step= 110 phase(eval)=1 N=+0.0188 G=-0.2466 SGD1=-0.003333 A1=+0.071601 A3=+0.175784 A5=+0.253959
+step= 120 phase(eval)=1 N=+0.0184 G=+0.0459 SGD1=+0.000356 A1=+0.020362 A3=+0.056809 A5=+0.094954
+Reached max-steps.
+
+DONE
+saved: results/rngsafe_smoke_seed2026/signals.csv

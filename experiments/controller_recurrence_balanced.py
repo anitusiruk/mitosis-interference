@@ -456,7 +456,7 @@ def main():
 
     out = Path(
         f"results/"
-        f"controller_recurrence_seed"
+        f"controller_recurrence_balanced_seed"
         f"{args.seed}"
     )
 

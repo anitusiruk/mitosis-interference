@@ -1,0 +1,94 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+balanced examples/class: 23
+balanced examples/segment: 253
+GPU: NVIDIA GeForce RTX 4090
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5237.25it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 at step 1 ===
+step=  10 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.0672675296664238 LCB=-0.07124920757487416 pool=1 loss=3.9324
+
+=== HELDOUT EVAL AFTER A1 ===
+default      A: n= 291 loss=3.3038 acc=0.2749
+default      B: n= 310 loss=4.6758 acc=0.0000
+default      C: n= 273 loss=4.6852 acc=0.0000
+
+=== ENTER B1 at step 17 ===
+step=  20 segment(eval)=B1 adapter=default      decision=reuse  risk=-0.03711267560720444 LCB=-0.03948528896085918 pool=1 loss=4.6251
+step=  30 segment(eval)=B1 adapter=default      decision=reuse  risk=-0.023431330919265747 LCB=-0.034859307687729595 pool=1 loss=4.0637
+
+=== HELDOUT EVAL AFTER B1 ===
+default      A: n= 291 loss=3.1278 acc=0.1546
+default      B: n= 310 loss=3.8554 acc=0.0000
+default      C: n= 273 loss=5.1125 acc=0.0000
+
+=== ENTER A2 at step 33 ===
+step=  40 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.032895978540182114 LCB=-0.03906721718609333 pool=1 loss=3.0989
+
+=== HELDOUT EVAL AFTER A2 ===
+default      A: n= 291 loss=2.5740 acc=0.2715
+default      B: n= 310 loss=3.7669 acc=0.0000
+default      C: n= 273 loss=6.7586 acc=0.0000
+
+=== ENTER C1 at step 49 ===
+step=  50 segment(eval)=C1 adapter=default      decision=reuse  risk=-0.0015922002494335175 LCB=-0.009953334592282773 pool=1 loss=6.7775
+step=  60 segment(eval)=C1 adapter=default      decision=reuse  risk=0.00729755312204361 LCB=-0.010943655483424665 pool=1 loss=5.2358
+
+=== HELDOUT EVAL AFTER C1 ===
+default      A: n= 291 loss=2.9189 acc=0.4536
+default      B: n= 310 loss=3.8666 acc=0.0000
+default      C: n= 273 loss=4.5722 acc=0.0000
+
+=== ENTER B2 at step 65 ===
+step=  69 segment(eval)=B2 adapter=adapter_1    decision=spawn  risk=0.010304037481546402 LCB=0.0016343662142753596 pool=2 loss=4.3640
+step=  70 segment(eval)=B2 adapter=adapter_1    decision=warmup risk=None LCB=None pool=2 loss=4.3051
+step=  80 segment(eval)=B2 adapter=default      decision=reuse  risk=-0.010618805885314941 LCB=-0.018182758577167987 pool=2 loss=3.6163
+
+=== HELDOUT EVAL AFTER B2 ===
+default      A: n= 291 loss=3.3209 acc=0.3265
+default      B: n= 310 loss=3.5648 acc=0.0000
+default      C: n= 273 loss=4.0780 acc=0.0000
+adapter_1    A: n= 291 loss=4.4108 acc=0.0000
+adapter_1    B: n= 310 loss=4.1160 acc=0.1387
+adapter_1    C: n= 273 loss=4.4307 acc=0.0000
+saved eval: results/controller_recurrence_balanced_eval_seed2026/eval_matrix.csv
+
+=== SEGMENT / ADAPTER COUNTS ===
+A1 {'default': 16}
+B1 {'default': 16}
+A2 {'default': 16}
+C1 {'default': 16}
+B2 {'default': 12, 'adapter_1': 4}
+
+=== RECURRENCE CHECK ===
+A1 dominant: default
+A2 dominant: default
+A reused: True
+B1 dominant: default
+B2 dominant: default
+B reused: True
+
+=== SPAWNS ===
+ step segment   adapter  best_risk  best_lcb  best_ucb  num_adapters
+   69      B2 adapter_1   0.010304  0.001634  0.018974             2
+
+final adapter count: 2
+saved: results/controller_recurrence_balanced_eval_seed2026/routing.csv

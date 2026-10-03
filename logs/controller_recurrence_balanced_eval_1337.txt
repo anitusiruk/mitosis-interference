@@ -1,0 +1,88 @@
+balanced examples/class: 23
+balanced examples/segment: 253
+GPU: NVIDIA GeForce RTX 4090
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6071.22it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 at step 1 ===
+step=  10 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.07924042642116547 LCB=-0.08248398666735739 pool=1 loss=3.8304
+
+=== HELDOUT EVAL AFTER A1 ===
+default      A: n= 291 loss=3.1653 acc=0.1306
+default      B: n= 310 loss=4.8518 acc=0.0000
+default      C: n= 273 loss=4.6869 acc=0.0000
+
+=== ENTER B1 at step 17 ===
+step=  20 segment(eval)=B1 adapter=default      decision=reuse  risk=-0.03314566612243652 LCB=-0.036630309801548716 pool=1 loss=4.8014
+step=  30 segment(eval)=B1 adapter=default      decision=reuse  risk=-0.02269793301820755 LCB=-0.0363868835195899 pool=1 loss=4.0761
+
+=== HELDOUT EVAL AFTER B1 ===
+default      A: n= 291 loss=3.0828 acc=0.3505
+default      B: n= 310 loss=3.8894 acc=0.0000
+default      C: n= 273 loss=5.1000 acc=0.0000
+
+=== ENTER A2 at step 33 ===
+step=  40 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.027286700904369354 LCB=-0.03180724829435348 pool=1 loss=3.0619
+
+=== HELDOUT EVAL AFTER A2 ===
+default      A: n= 291 loss=2.5771 acc=0.4570
+default      B: n= 310 loss=3.7576 acc=0.0000
+default      C: n= 273 loss=6.6445 acc=0.0000
+
+=== ENTER C1 at step 49 ===
+step=  50 segment(eval)=C1 adapter=default      decision=reuse  risk=0.0014156028628349304 LCB=-0.007002416178584098 pool=1 loss=6.5081
+step=  60 segment(eval)=C1 adapter=default      decision=reuse  risk=-0.0005107447504997253 LCB=-0.01783447287976742 pool=1 loss=5.1126
+
+=== HELDOUT EVAL AFTER C1 ===
+default      A: n= 291 loss=2.8809 acc=0.5258
+default      B: n= 310 loss=3.9011 acc=0.0000
+default      C: n= 273 loss=4.5516 acc=0.0000
+
+=== ENTER B2 at step 65 ===
+step=  70 segment(eval)=B2 adapter=default      decision=reuse  risk=-0.004612274467945099 LCB=-0.013241017702966928 pool=1 loss=3.8861
+step=  80 segment(eval)=B2 adapter=default      decision=reuse  risk=-0.013553012162446976 LCB=-0.02218678344041109 pool=1 loss=3.5192
+
+=== HELDOUT EVAL AFTER B2 ===
+default      A: n= 291 loss=3.3523 acc=0.3505
+default      B: n= 310 loss=3.3948 acc=0.2516
+default      C: n= 273 loss=4.1144 acc=0.0000
+saved eval: results/controller_recurrence_balanced_eval_seed1337/eval_matrix.csv
+
+=== SEGMENT / ADAPTER COUNTS ===
+A1 {'default': 16}
+B1 {'default': 16}
+A2 {'default': 16}
+C1 {'default': 16}
+B2 {'default': 16}
+
+=== RECURRENCE CHECK ===
+A1 dominant: default
+A2 dominant: default
+A reused: True
+B1 dominant: default
+B2 dominant: default
+B reused: True
+
+=== SPAWNS ===
+No spawns.
+
+final adapter count: 1
+saved: results/controller_recurrence_balanced_eval_seed1337/routing.csv

@@ -1,0 +1,119 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+balanced examples/class: 23
+balanced examples/segment: 253
+GPU: NVIDIA GeForce RTX 4090
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 4923.76it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 at step 1 ===
+step=  10 segment(eval)=A1 adapter=default      decision=reuse  risk=-0.07565779983997345 LCB=-0.07974532539956272 pool=1 loss=3.8323
+
+=== HELDOUT EVAL AFTER A1 ===
+default      A: n= 291 loss=3.1963 acc=0.1237
+default      B: n= 310 loss=4.7885 acc=0.0000
+default      C: n= 273 loss=4.6804 acc=0.0000
+
+=== ENTER B1 at step 17 ===
+step=  17 segment(eval)=B1 adapter=adapter_1    decision=spawn  risk=-0.08102582395076752 LCB=-0.0843041487922892 pool=2 loss=4.6591
+step=  20 segment(eval)=B1 adapter=adapter_1    decision=warmup risk=None LCB=None pool=2 loss=4.4064
+step=  30 segment(eval)=B1 adapter=adapter_1    decision=reuse  risk=-0.05633130669593811 LCB=-0.05811167221982032 pool=2 loss=3.8722
+
+=== HELDOUT EVAL AFTER B1 ===
+default      A: n= 291 loss=3.1963 acc=0.1237
+default      B: n= 310 loss=4.7885 acc=0.0000
+default      C: n= 273 loss=4.6804 acc=0.0000
+adapter_1    A: n= 291 loss=3.7837 acc=0.1168
+adapter_1    B: n= 310 loss=3.6494 acc=0.1000
+adapter_1    C: n= 273 loss=4.7269 acc=0.0000
+
+=== ENTER A2 at step 33 ===
+step=  40 segment(eval)=A2 adapter=default      decision=reuse  risk=-0.0579804927110672 LCB=-0.06557027515955269 pool=2 loss=2.6444
+
+=== HELDOUT EVAL AFTER A2 ===
+default      A: n= 291 loss=2.2991 acc=0.3471
+default      B: n= 310 loss=7.2371 acc=0.0000
+default      C: n= 273 loss=7.0262 acc=0.0000
+adapter_1    A: n= 291 loss=3.7837 acc=0.1168
+adapter_1    B: n= 310 loss=3.6494 acc=0.1000
+adapter_1    C: n= 273 loss=4.7269 acc=0.0000
+
+=== ENTER C1 at step 49 ===
+step=  49 segment(eval)=C1 adapter=adapter_2    decision=spawn  risk=-0.05133136361837387 LCB=-0.05367223225999623 pool=3 loss=4.7779
+step=  50 segment(eval)=C1 adapter=adapter_2    decision=warmup risk=None LCB=None pool=3 loss=4.7030
+step=  60 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=-0.05392028018832207 LCB=-0.057243441455066206 pool=3 loss=4.0645
+step=  64 segment(eval)=C1 adapter=adapter_3    decision=spawn  risk=-0.05632496252655983 LCB=-0.05835551562719047 pool=4 loss=3.9349
+
+=== HELDOUT EVAL AFTER C1 ===
+default      A: n= 291 loss=2.2991 acc=0.3471
+default      B: n= 310 loss=7.2371 acc=0.0000
+default      C: n= 273 loss=7.0262 acc=0.0000
+adapter_1    A: n= 291 loss=3.7837 acc=0.1168
+adapter_1    B: n= 310 loss=3.6494 acc=0.1000
+adapter_1    C: n= 273 loss=4.7269 acc=0.0000
+adapter_2    A: n= 291 loss=3.9823 acc=0.0000
+adapter_2    B: n= 310 loss=3.9112 acc=0.0065
+adapter_2    C: n= 273 loss=3.8395 acc=0.2381
+adapter_3    A: n= 291 loss=3.9696 acc=0.0000
+adapter_3    B: n= 310 loss=3.8986 acc=0.0000
+adapter_3    C: n= 273 loss=3.7795 acc=0.2051
+
+=== ENTER B2 at step 65 ===
+step=  70 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=-0.06465452909469604 LCB=-0.06879148536361754 pool=4 loss=3.5641
+step=  80 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=-0.07180510461330414 LCB=-0.07473442358430475 pool=4 loss=3.0249
+
+=== HELDOUT EVAL AFTER B2 ===
+default      A: n= 291 loss=2.2991 acc=0.3471
+default      B: n= 310 loss=7.2371 acc=0.0000
+default      C: n= 273 loss=7.0262 acc=0.0000
+adapter_1    A: n= 291 loss=4.2038 acc=0.0000
+adapter_1    B: n= 310 loss=2.8343 acc=0.1452
+adapter_1    C: n= 273 loss=5.4829 acc=0.0000
+adapter_2    A: n= 291 loss=3.9823 acc=0.0000
+adapter_2    B: n= 310 loss=3.9112 acc=0.0065
+adapter_2    C: n= 273 loss=3.8395 acc=0.2381
+adapter_3    A: n= 291 loss=4.0225 acc=0.0000
+adapter_3    B: n= 310 loss=3.7087 acc=0.1258
+adapter_3    C: n= 273 loss=3.7375 acc=0.1026
+saved eval: results/controller_recurrence_counterfactual_confident_seed4242/eval_matrix.csv
+
+=== SEGMENT / ADAPTER COUNTS ===
+A1 {'default': 16}
+B1 {'adapter_1': 16}
+A2 {'default': 16}
+C1 {'adapter_2': 15, 'adapter_3': 1}
+B2 {'adapter_3': 4, 'adapter_1': 12}
+
+=== RECURRENCE CHECK ===
+A1 dominant: default
+A2 dominant: default
+A reused: True
+B1 dominant: adapter_1
+B2 dominant: adapter_1
+B reused: True
+
+=== SPAWNS ===
+ step segment   adapter  best_risk  best_lcb  best_ucb  num_adapters
+   17      B1 adapter_1  -0.081026 -0.084304 -0.077747             2
+   49      C1 adapter_2  -0.051331 -0.053672 -0.048990             3
+   64      C1 adapter_3  -0.056325 -0.058356 -0.054294             4
+
+final adapter count: 4
+saved: results/controller_recurrence_counterfactual_confident_seed4242/routing.csv

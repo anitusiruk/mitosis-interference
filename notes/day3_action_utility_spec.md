@@ -285,3 +285,221 @@ shift as sufficient evidence that expansion is useful.
 
 This claim remains provisional until contemporary baseline
 comparisons are completed.
+
+
+# Amendment 1 — Common Status-Quo No-Update Baseline
+
+Date: 2026-10-03
+
+Status:
+PREDECLARED BEFORE IMPLEMENTATION AND BEFORE ANY NEW
+ACTION-UTILITY RESULTS.
+
+This amendment supersedes Sections 4, 6, 7, and 8 wherever
+their definition of "absolute gain" conflicts with the definitions
+below.
+
+## Motivation
+
+The original specification defined fresh absolute gain relative to
+the fresh adapter's own pre-update state.
+
+That quantity measures whether a fresh adapter can learn from its
+support data, but it does not measure whether spawning fresh
+capacity improves the system relative to doing nothing.
+
+Example:
+
+- active existing adapter query loss = 0.30
+- fresh before update = 0.69
+- fresh after update = 0.50
+
+Fresh has positive within-adapter training gain:
+
+0.69 - 0.50 = +0.19
+
+but fresh is still much worse than the current system:
+
+0.30 - 0.50 = -0.20
+
+Therefore a common action baseline is required.
+
+## Common status-quo baseline
+
+For each cross-fit fold, define:
+
+L_statusquo
+
+as the query loss of the REAL currently active adapter before any
+prospective action is applied.
+
+The real active adapter is inherited from the unchanged V3
+trajectory.
+
+No adapter is selected using segment/domain identity.
+
+No prospective optimizer step is performed for the status-quo
+reference.
+
+This represents the DEFER / NO-COMMIT action.
+
+Define:
+
+U_defer = 0
+
+by construction.
+
+## Reuse action utility
+
+For every mature existing adapter j:
+
+1. evaluate the common status-quo query loss
+2. activate candidate adapter j
+3. apply the exact prospective AdamW support update
+4. evaluate candidate j on the held-out query examples
+5. restore all state exactly
+
+Define:
+
+U_reuse_j =
+    L_statusquo
+    - L_reuse_j_after
+
+Interpretation:
+
+U_reuse_j > 0:
+    updating candidate j improves query performance relative
+    to leaving the real current model unchanged
+
+U_reuse_j < 0:
+    the status quo is better than prospective reuse action j
+
+Also log candidate-local trainability:
+
+T_reuse_j =
+    L_reuse_j_before
+    - L_reuse_j_after
+
+T_reuse_j is diagnostic only.
+
+It is NOT the system-level action utility.
+
+## Fresh action utility
+
+For the temporary fresh adapter:
+
+1. evaluate L_statusquo on the unchanged real active adapter
+2. instantiate the exact existing fresh-capacity action
+3. evaluate fresh query loss before update
+4. apply one exact AdamW support update
+5. evaluate fresh query loss after update
+6. delete the temporary adapter
+7. restore all state exactly
+
+Define:
+
+U_fresh =
+    L_statusquo
+    - L_fresh_after
+
+This is the PRIMARY fresh absolute-utility quantity.
+
+Positive U_fresh means fresh capacity predicts lower query loss
+than simply leaving the current real adapter unchanged.
+
+Also log:
+
+T_fresh =
+    L_fresh_before
+    - L_fresh_after
+
+T_fresh measures fresh-adapter trainability only.
+
+It is NOT sufficient evidence for expansion.
+
+## Relative fresh advantage
+
+Among protected-harm-feasible mature reuse candidates, define:
+
+U_best_reuse =
+    max_j U_reuse_j
+
+If at least one feasible reuse candidate exists:
+
+A_fresh =
+    U_fresh
+    - U_best_reuse
+
+If no feasible reuse candidate exists:
+
+fresh is compared directly against defer:
+
+A_fresh_vs_defer =
+    U_fresh
+
+"No feasible reuse" must NOT imply mandatory spawn.
+
+## Fresh-positive window
+
+A window is fresh-positive only when:
+
+If feasible reuse exists:
+
+    U_fresh > 0
+
+AND
+
+    U_fresh > U_best_reuse
+
+If no feasible reuse exists:
+
+    U_fresh > 0
+
+Strict inequalities are used.
+
+No magnitude threshold is introduced.
+
+This means fresh must beat:
+
+1. the status quo / defer action
+2. the best feasible reuse action, when one exists
+
+## Two-window diagnostic
+
+fresh_confirmed_2window is true only when two consecutive
+eligible windows are fresh-positive.
+
+Task/segment IDs are not used.
+
+Two-window confirmation remains an offline diagnostic in Day 3.
+
+It does not yet alter the real V3 trajectory.
+
+## Why this amendment matters
+
+This amendment explicitly represents the previously missing
+third possibility:
+
+- reuse is harmful or unhelpful
+- fresh is also harmful or unhelpful
+- therefore DEFER is preferable
+
+This addresses the previously observed Amazon failures:
+
+- step 11: both prospective update actions had negative gain
+- step 71: no safe reuse existed, but fresh prospective gain
+  was also negative
+
+The live controller will not be changed during this diagnostic.
+
+## Interpretation discipline
+
+Positive candidate-local trainability T_fresh is not evidence that
+fresh capacity is globally useful.
+
+Relative superiority to reuse is not sufficient either.
+
+The primary quantity is common-baseline system utility U.
+
+This amendment was frozen before implementation and before
+observing any results produced by this definition.

@@ -503,3 +503,169 @@ The primary quantity is common-baseline system utility U.
 
 This amendment was frozen before implementation and before
 observing any results produced by this definition.
+
+
+# Amendment 2 — Cross-Fold Candidate Aggregation
+
+Date: 2026-10-04
+
+Status:
+PREDECLARED BEFORE ACTION-UTILITY IMPLEMENTATION AND BEFORE
+ANY ACTION-UTILITY RESULTS.
+
+This amendment defines how the two folds are combined and fixes
+the behavior for odd-sized batches.
+
+## Explicit complementary folds
+
+For a batch with indices 0 ... n-1:
+
+Fold A:
+- support = even indices
+- query = odd indices
+
+Fold B:
+- support = odd indices
+- query = even indices
+
+Therefore every example is used exactly once as held-out query
+evidence, including when n is odd.
+
+The prior adjacent-pair swapping implementation is NOT reused for
+this diagnostic because for odd n it leaves the final example in
+the same side in both folds.
+
+## Query-count-weighted aggregation
+
+Fold-level query losses and utilities are means over their
+respective query examples.
+
+Because odd batches produce unequal query-set sizes, cross-fitted
+query quantities are aggregated by query example count.
+
+For quantity Q:
+
+Q_crossfit =
+    (n_query_A * Q_A + n_query_B * Q_B)
+    / (n_query_A + n_query_B)
+
+Thus every example contributes equal held-out query weight.
+
+For even batches this reduces to the ordinary mean of the two folds.
+
+## Candidate-level aggregation before selection
+
+Reuse candidates are NOT selected independently in Fold A and
+Fold B and then averaged.
+
+For every mature adapter j:
+
+1. compute Fold-A action utility
+2. compute Fold-B action utility
+3. aggregate adapter j's utility across folds
+4. aggregate its query loss/trainability across folds
+5. retain both fold-specific protected-harm measurements
+
+Only after candidate-level cross-fitting is complete is the best
+reuse candidate selected.
+
+This avoids combining two different fold-specific winning adapters
+into a synthetic "best reuse" action.
+
+## Cross-fold protected-harm feasibility
+
+No new harm threshold is introduced.
+
+Candidate adapter j is cross-fold feasible only if the existing
+frozen V3 criterion holds in BOTH prospective support directions:
+
+harm_lcb_A <= threshold
+
+AND
+
+harm_lcb_B <= threshold
+
+This is intentionally conservative.
+
+Both fold-specific harm, SE, LCB and UCB values remain logged.
+
+The candidate's mean harm is diagnostic only.
+
+## Best reuse candidate
+
+Among cross-fold-feasible mature adapters:
+
+best_reuse =
+    argmax_j U_reuse_j_crossfit
+
+Ties are broken by:
+
+1. lower maximum fold harm LCB
+2. lower mean prospective harm
+3. adapter name for deterministic final tie breaking
+
+No segment identity is used.
+
+## Fresh action
+
+Fresh utility is aggregated using the same query-count-weighted
+cross-fitting rule.
+
+The temporary fresh adapter initialization is generated through the
+existing shadow-fresh transaction.
+
+Because that transaction restores RNG state, the two folds start
+their fresh candidate from the same stochastic initialization state.
+
+## Fresh-positive diagnostic
+
+If at least one cross-fold-feasible reuse candidate exists:
+
+fresh_positive =
+    U_fresh > 0
+    AND
+    U_fresh > U_best_reuse
+
+If no cross-fold-feasible reuse candidate exists:
+
+fresh_positive =
+    U_fresh > 0
+
+"No feasible reuse" never implies fresh-positive by itself.
+
+## Two-window confirmation
+
+Two-window confirmation remains an OFFLINE diagnostic.
+
+It is not stored as mutable controller state in the action-utility
+pool.
+
+It will be computed from the logged sequence after the run:
+
+confirmed at t iff
+    fresh_positive[t-1]
+    AND
+    fresh_positive[t]
+
+Only consecutive ELIGIBLE action-utility windows count.
+
+Warmup/unavailable windows break the consecutive sequence.
+
+No task, domain, phase, or segment identity is used.
+
+## Interpretation
+
+The resulting comparison is between complete system actions:
+
+- DEFER / unchanged active adapter
+- switch to + update existing adapter j
+- instantiate + update fresh capacity
+
+Therefore U_reuse_j includes any effect of switching from the
+currently active adapter to candidate j.
+
+It should be described as SYSTEM ACTION UTILITY, not isolated
+optimizer-update utility.
+
+This amendment was frozen before implementation and before seeing
+results from this definition.

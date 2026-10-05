@@ -199,6 +199,216 @@ def snapshots_equal(a, b):
     )
 
 
+def show_snapshot_diff(
+    before,
+    after,
+):
+    """
+    Diagnostic only.
+    Prints the smallest paths that differ.
+    """
+
+    def walk(
+        path,
+        a,
+        b,
+    ):
+        if torch.is_tensor(a):
+            if not torch.is_tensor(b):
+                print(
+                    "DIFF",
+                    path,
+                    "type:",
+                    type(a),
+                    type(b),
+                )
+                return
+
+            if (
+                a.dtype != b.dtype
+                or tuple(a.shape)
+                != tuple(b.shape)
+            ):
+                print(
+                    "DIFF",
+                    path,
+                    "tensor metadata",
+                    a.dtype,
+                    tuple(a.shape),
+                    b.dtype,
+                    tuple(b.shape),
+                )
+                return
+
+            if not torch.equal(
+                a,
+                b,
+            ):
+                aa = (
+                    a.detach()
+                    .float()
+                    .cpu()
+                )
+
+                bb = (
+                    b.detach()
+                    .float()
+                    .cpu()
+                )
+
+                print(
+                    "DIFF",
+                    path,
+                    "tensor max_abs=",
+                    float(
+                        (
+                            aa - bb
+                        )
+                        .abs()
+                        .max()
+                        .item()
+                    ),
+                )
+
+            return
+
+        if isinstance(
+            a,
+            np.ndarray,
+        ):
+            if (
+                not isinstance(
+                    b,
+                    np.ndarray,
+                )
+                or a.dtype != b.dtype
+                or a.shape != b.shape
+                or not np.array_equal(
+                    a,
+                    b,
+                )
+            ):
+                print(
+                    "DIFF",
+                    path,
+                    "numpy array",
+                )
+
+            return
+
+        if isinstance(
+            a,
+            dict,
+        ):
+            if not isinstance(
+                b,
+                dict,
+            ):
+                print(
+                    "DIFF",
+                    path,
+                    "dict/type mismatch",
+                )
+                return
+
+            keys = sorted(
+                set(a)
+                | set(b)
+            )
+
+            for key in keys:
+                if key not in a:
+                    print(
+                        "DIFF",
+                        f"{path}.{key}",
+                        "missing before",
+                    )
+                    continue
+
+                if key not in b:
+                    print(
+                        "DIFF",
+                        f"{path}.{key}",
+                        "missing after",
+                    )
+                    continue
+
+                walk(
+                    f"{path}.{key}",
+                    a[key],
+                    b[key],
+                )
+
+            return
+
+        if isinstance(
+            a,
+            (list, tuple),
+        ):
+            if (
+                not isinstance(
+                    b,
+                    type(a),
+                )
+                or len(a) != len(b)
+            ):
+                print(
+                    "DIFF",
+                    path,
+                    "sequence metadata",
+                    type(a),
+                    len(a),
+                    type(b),
+                    (
+                        len(b)
+                        if hasattr(
+                            b,
+                            "__len__",
+                        )
+                        else None
+                    ),
+                )
+                return
+
+            for i, (x, y) in enumerate(
+                zip(a, b)
+            ):
+                walk(
+                    f"{path}[{i}]",
+                    x,
+                    y,
+                )
+
+            return
+
+        if a != b:
+            print(
+                "DIFF",
+                path,
+                "before=",
+                repr(a),
+                "after=",
+                repr(b),
+            )
+
+    print()
+    print(
+        "=== SNAPSHOT DIFFERENCES ==="
+    )
+
+    walk(
+        "snapshot",
+        before,
+        after,
+    )
+
+    print(
+        "=== END SNAPSHOT DIFFERENCES ==="
+    )
+    print()
+
+
+
 def check(
     name,
     condition,
@@ -380,6 +590,80 @@ check(
 
 
 # =========================================================
+# 0. MATURE-WARMUP -> DECISION-READY TRANSITION
+#
+# train_step() has made the initial adapter mature, but
+# existing semantics intentionally leave warmup_name set
+# until the NEXT decision. select_action() must clear only
+# that controller bookkeeping flag before evaluating
+# utility.
+# =========================================================
+
+print()
+print(
+    "=== MATURE WARMUP TRANSITION ==="
+)
+
+check(
+    "mature adapter still marked warmup before decision",
+    pool.warmup_name == default,
+)
+
+before_transition = snapshot_learner(
+    pool
+)
+
+selected0, info0 = (
+    pool.select_action(
+        TEXTS,
+        LABELS,
+        restore_name=default,
+    )
+)
+
+after_transition = snapshot_learner(
+    pool
+)
+
+expected_transition = copy.deepcopy(
+    before_transition
+)
+
+expected_transition[
+    "warmup_name"
+] = None
+
+if not snapshots_equal(
+    expected_transition,
+    after_transition,
+):
+    show_snapshot_diff(
+        expected_transition,
+        after_transition,
+    )
+
+check(
+    "mature warmup clears before utility decision",
+    pool.warmup_name is None,
+)
+
+check(
+    "unavailable transition decision is defer",
+    info0[
+        "decision"
+    ] == "defer",
+)
+
+check(
+    "maturation transition changes only warmup flag",
+    snapshots_equal(
+        expected_transition,
+        after_transition,
+    ),
+)
+
+
+# =========================================================
 # 1. Exact real full-batch guard transaction
 # =========================================================
 
@@ -518,6 +802,15 @@ check(
     "pending evidence cleared",
     pool.pending_fresh is False,
 )
+
+if not snapshots_equal(
+    before,
+    after,
+):
+    show_snapshot_diff(
+        before,
+        after,
+    )
 
 check(
     "unavailable defer exactly non-mutating",

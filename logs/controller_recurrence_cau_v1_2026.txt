@@ -1,0 +1,116 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9/banking77.py:23: SyntaxWarning: invalid escape sequence '\~'
+  _CITATION = """\
+Downloading data:   0%|          | 0.00/839k [00:00<?, ?B/s]Downloading data: 100%|██████████| 839k/839k [00:00<00:00, 17.8MB/s]
+Downloading data:   0%|          | 0.00/240k [00:00<?, ?B/s]Downloading data: 100%|██████████| 240k/240k [00:00<00:00, 28.0MB/s]
+Generating train split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating train split:  58%|█████▊    | 5768/10003 [00:00<00:00, 57423.62 examples/s]Generating train split: 100%|██████████| 10003/10003 [00:00<00:00, 64203.18 examples/s]
+Generating test split:   0%|          | 0/3080 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 3080/3080 [00:00<00:00, 74216.70 examples/s]
+balanced examples/class: 23
+balanced examples/segment: 253
+GPU: NVIDIA GeForce RTX 4090
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5565.99it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 at step 1 ===
+step=  10 segment(eval)=A1 adapter=default      decision=reuse  risk=None LCB=None pool=1 loss=3.9324488639831543
+
+=== HELDOUT EVAL AFTER A1 ===
+default      A: n= 291 loss=3.3038 acc=0.2749
+default      B: n= 310 loss=4.6758 acc=0.0000
+default      C: n= 273 loss=4.6852 acc=0.0000
+
+=== ENTER B1 at step 17 ===
+step=  18 segment(eval)=B1 adapter=adapter_1    decision=spawn  risk=None LCB=None pool=2 loss=4.352518081665039
+step=  20 segment(eval)=B1 adapter=adapter_1    decision=warmup risk=None LCB=None pool=2 loss=4.230973243713379
+step=  30 segment(eval)=B1 adapter=adapter_1    decision=reuse  risk=None LCB=None pool=2 loss=3.562783718109131
+
+=== HELDOUT EVAL AFTER B1 ===
+default      A: n= 291 loss=3.2237 acc=0.2852
+default      B: n= 310 loss=4.7011 acc=0.0000
+default      C: n= 273 loss=4.7397 acc=0.0000
+adapter_1    A: n= 291 loss=4.7816 acc=0.0000
+adapter_1    B: n= 310 loss=3.2544 acc=0.2032
+adapter_1    C: n= 273 loss=4.7915 acc=0.0000
+
+=== ENTER A2 at step 33 ===
+step=  40 segment(eval)=A2 adapter=default      decision=reuse  risk=None LCB=None pool=2 loss=2.747486114501953
+
+=== HELDOUT EVAL AFTER A2 ===
+default      A: n= 291 loss=2.3091 acc=0.2096
+default      B: n= 310 loss=6.4793 acc=0.0000
+default      C: n= 273 loss=7.0571 acc=0.0000
+adapter_1    A: n= 291 loss=4.7816 acc=0.0000
+adapter_1    B: n= 310 loss=3.2544 acc=0.2032
+adapter_1    C: n= 273 loss=4.7915 acc=0.0000
+
+=== ENTER C1 at step 49 ===
+step=  50 segment(eval)=C1 adapter=adapter_2    decision=spawn  risk=None LCB=None pool=3 loss=4.376396656036377
+step=  60 segment(eval)=C1 adapter=adapter_2    decision=reuse  risk=None LCB=None pool=3 loss=3.8122572898864746
+
+=== HELDOUT EVAL AFTER C1 ===
+default      A: n= 291 loss=2.3091 acc=0.2096
+default      B: n= 310 loss=6.4793 acc=0.0000
+default      C: n= 273 loss=7.0571 acc=0.0000
+adapter_1    A: n= 291 loss=4.8418 acc=0.0000
+adapter_1    B: n= 310 loss=3.1779 acc=0.2097
+adapter_1    C: n= 273 loss=4.8231 acc=0.0000
+adapter_2    A: n= 291 loss=4.6310 acc=0.0000
+adapter_2    B: n= 310 loss=4.6382 acc=0.0000
+adapter_2    C: n= 273 loss=3.3706 acc=0.2747
+
+=== ENTER B2 at step 65 ===
+step=  70 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=None LCB=None pool=3 loss=2.8313584327697754
+step=  80 segment(eval)=B2 adapter=adapter_1    decision=reuse  risk=None LCB=None pool=3 loss=2.408626079559326
+
+=== HELDOUT EVAL AFTER B2 ===
+default      A: n= 291 loss=2.3091 acc=0.2096
+default      B: n= 310 loss=6.4793 acc=0.0000
+default      C: n= 273 loss=7.0571 acc=0.0000
+adapter_1    A: n= 291 loss=7.4747 acc=0.0000
+adapter_1    B: n= 310 loss=2.2774 acc=0.3065
+adapter_1    C: n= 273 loss=6.9388 acc=0.0000
+adapter_2    A: n= 291 loss=4.6310 acc=0.0000
+adapter_2    B: n= 310 loss=4.6382 acc=0.0000
+adapter_2    C: n= 273 loss=3.3706 acc=0.2747
+saved eval: results/controller_recurrence_cau_v1_seed2026/eval_matrix.csv
+
+=== SEGMENT / ADAPTER COUNTS ===
+A1 {'default': 16}
+B1 {'default': 1, 'adapter_1': 15}
+A2 {'default': 16}
+C1 {'adapter_1': 1, 'adapter_2': 15}
+B2 {'adapter_1': 16}
+
+=== RECURRENCE CHECK ===
+A1 dominant: default
+A2 dominant: default
+A reused: True
+B1 dominant: adapter_1
+B2 dominant: adapter_1
+B reused: True
+
+=== SPAWNS ===
+ step segment   adapter best_risk best_lcb best_ucb  num_adapters
+   18      B1 adapter_1      None     None     None             2
+   50      C1 adapter_2      None     None     None             3
+
+final adapter count: 3
+saved: results/controller_recurrence_cau_v1_seed2026/routing.csv

@@ -1,0 +1,117 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/200000 [00:00<?, ? examples/s]Generating train split:  14%|█▎        | 27237/200000 [00:00<00:00, 193708.65 examples/s]Generating train split:  40%|███▉      | 79007/200000 [00:00<00:00, 298302.87 examples/s]Generating train split:  65%|██████▌   | 130905/200000 [00:00<00:00, 344500.14 examples/s]Generating train split:  93%|█████████▎| 185628/200000 [00:00<00:00, 374918.99 examples/s]Generating train split: 100%|██████████| 200000/200000 [00:00<00:00, 349560.44 examples/s]
+Generating validation split:   0%|          | 0/5000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 5000/5000 [00:00<00:00, 303350.35 examples/s]
+Generating test split:   0%|          | 0/5000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 5000/5000 [00:00<00:00, 352261.23 examples/s]
+GPU: NVIDIA GeForce RTX 4090
+method: cau_v0
+domains: {'A': 'home', 'B': 'apparel', 'C': 'drugstore'}
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+shared labels: {0=negative, 1=positive}
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5548.76it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 ( home ) at step 1 ===
+step 10 segment A1 adapter default decision reuse risk None loss 0.66964 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER A1 ===
+default      A/home       loss=0.6670 acc=0.5000 neg=1.0000 pos=0.0000
+default      B/apparel    loss=0.6776 acc=0.5078 neg=1.0000 pos=0.0156
+default      C/drugstore  loss=0.6862 acc=0.5000 neg=1.0000 pos=0.0000
+
+=== ENTER B1 ( apparel ) at step 17 ===
+step 20 segment B1 adapter default decision defer risk None loss NA pool 1
+step 30 segment B1 adapter default decision reuse risk None loss 0.63408 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER B1 ===
+default      A/home       loss=0.6842 acc=0.5000 neg=1.0000 pos=0.0000
+default      B/apparel    loss=0.6947 acc=0.5000 neg=1.0000 pos=0.0000
+default      C/drugstore  loss=0.7082 acc=0.5000 neg=1.0000 pos=0.0000
+
+=== ENTER A2 ( home ) at step 33 ===
+step 36 segment A2 adapter adapter_1 decision spawn risk None loss 0.68197 pool 2
+step 40 segment A2 adapter adapter_1 decision defer risk None loss NA pool 2
+step 47 segment A2 adapter adapter_2 decision spawn risk None loss 0.65095 pool 3
+
+=== HELDOUT DOMAIN EVAL AFTER A2 ===
+default      A/home       loss=0.6928 acc=0.5000 neg=1.0000 pos=0.0000
+default      B/apparel    loss=0.7036 acc=0.5000 neg=1.0000 pos=0.0000
+default      C/drugstore  loss=0.7199 acc=0.5000 neg=1.0000 pos=0.0000
+adapter_1    A/home       loss=0.6722 acc=0.6719 neg=0.9844 pos=0.3594
+adapter_1    B/apparel    loss=0.6789 acc=0.6484 neg=0.9062 pos=0.3906
+adapter_1    C/drugstore  loss=0.6842 acc=0.5703 neg=0.9375 pos=0.2031
+adapter_2    A/home       loss=0.6985 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    B/apparel    loss=0.7015 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    C/drugstore  loss=0.7033 acc=0.5000 neg=0.0000 pos=1.0000
+
+=== ENTER C1 ( drugstore ) at step 49 ===
+step 50 segment C1 adapter adapter_2 decision warmup risk None loss 0.69197 pool 3
+step 60 segment C1 adapter adapter_2 decision reuse risk None loss 0.65361 pool 3
+
+=== HELDOUT DOMAIN EVAL AFTER C1 ===
+default      A/home       loss=0.6721 acc=0.5000 neg=1.0000 pos=0.0000
+default      B/apparel    loss=0.6843 acc=0.5156 neg=1.0000 pos=0.0312
+default      C/drugstore  loss=0.7107 acc=0.5000 neg=1.0000 pos=0.0000
+adapter_1    A/home       loss=0.6722 acc=0.6719 neg=0.9844 pos=0.3594
+adapter_1    B/apparel    loss=0.6789 acc=0.6484 neg=0.9062 pos=0.3906
+adapter_1    C/drugstore  loss=0.6842 acc=0.5703 neg=0.9375 pos=0.2031
+adapter_2    A/home       loss=0.6603 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    B/apparel    loss=0.6693 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    C/drugstore  loss=0.6733 acc=0.5000 neg=0.0000 pos=1.0000
+
+=== ENTER B2 ( apparel ) at step 65 ===
+step 70 segment B2 adapter default decision reuse risk None loss 0.543 pool 3
+step 80 segment B2 adapter default decision defer risk None loss NA pool 3
+
+=== HELDOUT DOMAIN EVAL AFTER B2 ===
+default      A/home       loss=0.5172 acc=0.8203 neg=0.6875 pos=0.9531
+default      B/apparel    loss=0.5558 acc=0.7422 neg=0.5156 pos=0.9688
+default      C/drugstore  loss=0.5757 acc=0.7344 neg=0.5312 pos=0.9375
+adapter_1    A/home       loss=0.6722 acc=0.6719 neg=0.9844 pos=0.3594
+adapter_1    B/apparel    loss=0.6789 acc=0.6484 neg=0.9062 pos=0.3906
+adapter_1    C/drugstore  loss=0.6842 acc=0.5703 neg=0.9375 pos=0.2031
+adapter_2    A/home       loss=0.6576 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    B/apparel    loss=0.6672 acc=0.5000 neg=0.0000 pos=1.0000
+adapter_2    C/drugstore  loss=0.6717 acc=0.5000 neg=0.0000 pos=1.0000
+
+=== SEGMENT / ADAPTER COUNTS ===
+adapter  adapter_1  adapter_2  default
+segment                               
+A1               0          0       16
+A2               7          2        7
+B1               0          0       16
+B2               0          1       15
+C1               0         10        6
+
+=== DECISIONS ===
+decision  defer  reuse  spawn  warmup
+segment                              
+A1            6      6      0       4
+A2            8      2      2       4
+B1           14      2      0       0
+B2            4     12      0       0
+C1            1     13      0       2
+
+=== SPAWNS ===
+ step segment domain   adapter decision best_risk best_lcb  num_adapters
+   36      A2   home adapter_1    spawn      None     None             2
+   47      A2   home adapter_2    spawn      None     None             3
+
+final adapters: 3
+saved: results/controller_domain_recurrence_cau_v0_seed2026

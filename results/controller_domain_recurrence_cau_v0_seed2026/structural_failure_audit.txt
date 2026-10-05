@@ -1,0 +1,184 @@
+============================================================================================
+AMAZON LIVE CAU-v0 STRUCTURAL FAILURE AUDIT
+============================================================================================
+
+=== GLOBAL ACTION COUNTS ===
+decision
+reuse     35
+defer     33
+warmup    10
+spawn      2
+
+total rows: 80
+real training updates: 47
+deferred batches: 33
+defer fraction: 0.4125
+permanent spawns: 2
+final adapters: 3
+
+=== ACTIONS BY SEGMENT ===
+decision  defer  reuse  spawn  warmup
+segment                              
+A1            6      6      0       4
+A2            8      2      2       4
+B1           14      2      0       0
+B2            4     12      0       0
+C1            1     13      0       2
+
+=== UPDATE FRACTION BY SEGMENT ===
+segment  n  updates  defers  update_fraction  longest_defer_streak
+     A1 16       10       6           0.6250                     2
+     B1 16        2      14           0.1250                    11
+     A2 16        8       8           0.5000                     3
+     C1 16       15       1           0.9375                     1
+     B2 16       12       4           0.7500                     2
+
+=== CAU REASONS ===
+cau_reason
+positive_guarded_reuse            35
+no_positive_guarded_reuse         22
+pending_fresh_no_guarded_reuse    11
+existing_warmup                   10
+confirmed_fresh                    2
+
+=== DEFER REASONS BY SEGMENT ===
+cau_reason  no_positive_guarded_reuse  pending_fresh_no_guarded_reuse
+segment                                                              
+A1                                  3                               3
+A2                                  4                               4
+B1                                 10                               4
+B2                                  4                               0
+C1                                  1                               0
+
+=== FRESH-POSITIVE BY SEGMENT ===
+         sum  count    mean
+segment                    
+A1         3     16  0.1875
+B1         4     16  0.2500
+A2         6     16  0.3750
+C1         0     16  0.0000
+B2         0     16  0.0000
+
+=== FULL-BATCH GUARD SUMMARY ===
+candidate guard evaluations: 51
+safe: 51
+unsafe: 0
+
+full_batch_safe  True
+segment              
+A1                  6
+A2                  3
+B1                  2
+B2                 16
+C1                 24
+
+=== SPAWN EVENTS ===
+ step segment domain   adapter decision      cau_reason  cau_pending_before  cau_pending_after  statusquo_loss best_reuse  best_reuse_utility cau_guarded_best_reuse  fresh_utility  fresh_advantage  fold_a_fresh_utility  fold_b_fresh_utility  fresh_local_trainability
+   36      A2   home adapter_1    spawn confirmed_fresh                True              False         0.72730    default            -0.00874                    NaN        0.03980          0.04854               0.09515              -0.01554                  -0.00146
+   47      A2   home adapter_2    spawn confirmed_fresh                True              False         0.67114  adapter_1             0.00264                    NaN        0.02739          0.02475               0.00328               0.05151                   0.01368
+
+=== TRAJECTORY AROUND SPAWNS ===
+
+--- around spawn step 36 ---
+ step segment   adapter decision                     cau_reason  cau_pending_before  cau_pending_after utility_status  statusquo_loss best_reuse  best_reuse_utility cau_guarded_best_reuse fresh_positive  fresh_utility  fresh_advantage  fold_a_fresh_utility  fold_b_fresh_utility    loss  num_adapters
+   33      A2   default    defer pending_fresh_no_guarded_reuse               False               True             ok         0.76684    default            -0.00899                    NaN           True        0.12323          0.13223               0.06136               0.18511     NaN             1
+   34      A2   default    defer      no_positive_guarded_reuse                True              False             ok         0.71818    default            -0.02035                    NaN          False       -0.04350         -0.02316               0.20050              -0.28750     NaN             1
+   35      A2   default    defer pending_fresh_no_guarded_reuse               False               True             ok         0.78172    default            -0.01210                    NaN           True        0.13603          0.14813               0.16328               0.10877     NaN             1
+   36      A2 adapter_1    spawn                confirmed_fresh                True              False             ok         0.72730    default            -0.00874                    NaN           True        0.03980          0.04854               0.09515              -0.01554 0.68197             2
+   37      A2 adapter_1   warmup                existing_warmup               False              False         warmup             NaN        NaN                 NaN                    NaN            NaN            NaN              NaN                   NaN                   NaN 0.71585             2
+   38      A2 adapter_1   warmup                existing_warmup               False              False         warmup             NaN        NaN                 NaN                    NaN            NaN            NaN              NaN                   NaN                   NaN 0.68879             2
+
+--- around spawn step 47 ---
+ step segment   adapter decision                     cau_reason  cau_pending_before  cau_pending_after utility_status  statusquo_loss best_reuse  best_reuse_utility cau_guarded_best_reuse fresh_positive  fresh_utility  fresh_advantage  fold_a_fresh_utility  fold_b_fresh_utility    loss  num_adapters
+   44      A2   default    defer      no_positive_guarded_reuse               False              False             ok         0.58625    default            -0.00290                    NaN          False       -0.13829         -0.13539               0.01639              -0.29297     NaN             2
+   45      A2 adapter_1    reuse         positive_guarded_reuse               False              False             ok         0.72325  adapter_1             0.02728              adapter_1          False       -0.04042         -0.06770               0.25184              -0.33268 0.68675             2
+   46      A2 adapter_1    defer pending_fresh_no_guarded_reuse               False               True             ok         0.70157  adapter_1            -0.00197                    NaN           True        0.00740          0.00937              -0.00561               0.02042     NaN             2
+   47      A2 adapter_2    spawn                confirmed_fresh                True              False             ok         0.67114  adapter_1             0.00264                    NaN           True        0.02739          0.02475               0.00328               0.05151 0.65095             3
+   48      A2 adapter_2   warmup                existing_warmup               False              False         warmup             NaN        NaN                 NaN                    NaN            NaN            NaN              NaN                   NaN                   NaN 0.73585             3
+   49      C1 adapter_2   warmup                existing_warmup               False              False         warmup             NaN        NaN                 NaN                    NaN            NaN            NaN              NaN                   NaN                   NaN 0.66109             3
+
+=== PREVIOUSLY IMPORTANT STEPS ON LIVE TRAJECTORY ===
+ step segment   adapter decision                     cau_reason  cau_pending_before  cau_pending_after utility_status  statusquo_loss best_reuse  best_reuse_utility cau_guarded_best_reuse fresh_positive  fresh_utility  fresh_advantage  fold_a_fresh_utility  fold_b_fresh_utility    loss  num_adapters
+    7      A1   default    defer pending_fresh_no_guarded_reuse               False               True             ok         0.67246    default            -0.00747                    NaN           True        0.02337          0.03084               0.03639               0.01034     NaN             1
+   11      A1   default    defer pending_fresh_no_guarded_reuse               False               True             ok         0.70776    default            -0.01684                    NaN           True        0.03009          0.04692               0.09314              -0.03297     NaN             1
+   14      A1   default    defer pending_fresh_no_guarded_reuse               False               True             ok         0.72027    default            -0.01294                    NaN           True        0.07354          0.08648               0.04660               0.10048     NaN             1
+   23      B1   default    defer      no_positive_guarded_reuse                True              False             ok         0.66042    default            -0.00258                    NaN          False       -0.03279         -0.03021               0.01336              -0.07894     NaN             1
+   36      A2 adapter_1    spawn                confirmed_fresh                True              False             ok         0.72730    default            -0.00874                    NaN           True        0.03980          0.04854               0.09515              -0.01554 0.68197             2
+   47      A2 adapter_2    spawn                confirmed_fresh                True              False             ok         0.67114  adapter_1             0.00264                    NaN           True        0.02739          0.02475               0.00328               0.05151 0.65095             3
+   50      C1 adapter_2   warmup                existing_warmup               False              False         warmup             NaN        NaN                 NaN                    NaN            NaN            NaN              NaN                   NaN                   NaN 0.69197             3
+   71      B2   default    reuse         positive_guarded_reuse               False              False             ok         0.58525    default             0.00161                default          False       -0.14221         -0.14382              -0.22494              -0.05948 0.60184             3
+   80      B2   default    defer      no_positive_guarded_reuse               False              False             ok         0.58851    default            -0.01057                    NaN          False       -0.13973         -0.12916              -0.22173              -0.05774     NaN             3
+
+=== V3 VS CAU ACTION COUNTS ===
+                  v3  cau
+segment decision         
+A1      reuse     12    6
+        warmup     4    4
+A2      reuse     16    2
+B1      reuse     16    2
+B2      reuse     12   12
+        spawn      1    0
+        warmup     3    0
+C1      reuse     16   13
+A1      defer      0    6
+A2      defer      0    8
+        spawn      0    2
+        warmup     0    4
+B1      defer      0   14
+B2      defer      0    4
+C1      defer      0    1
+        warmup     0    2
+
+=== HELDOUT DEFAULT: CAU MINUS V3 ===
+checkpoint concept  accuracy_v3  loss_v3  accuracy_cau  loss_cau  accuracy_delta  loss_delta
+        A1       A      0.76562  0.61965       0.50000   0.66702        -0.26562     0.04736
+        A1       B      0.78906  0.63571       0.50781   0.67756        -0.28125     0.04185
+        A1       C      0.64844  0.64909       0.50000   0.68618        -0.14844     0.03709
+        B1       A      0.86719  0.45601       0.50000   0.68422        -0.36719     0.22820
+        B1       B      0.82812  0.49024       0.50000   0.69471        -0.32812     0.20447
+        B1       C      0.78906  0.53500       0.50000   0.70819        -0.28906     0.17318
+        A2       A      0.86719  0.29355       0.50000   0.69282        -0.36719     0.39927
+        A2       B      0.85156  0.32336       0.50000   0.70356        -0.35156     0.38020
+        A2       C      0.82031  0.46017       0.50000   0.71985        -0.32031     0.25968
+        C1       A      0.87500  0.29826       0.50000   0.67210        -0.37500     0.37383
+        C1       B      0.85938  0.32641       0.51562   0.68427        -0.34375     0.35786
+        C1       C      0.82812  0.42844       0.50000   0.71075        -0.32812     0.28231
+        B2       A      0.85938  0.30677       0.82031   0.51719        -0.03906     0.21042
+        B2       B      0.87500  0.33368       0.74219   0.55585        -0.13281     0.22217
+        B2       C      0.80469  0.49463       0.73438   0.57571        -0.07031     0.08108
+
+=== MEAN DEFAULT HELDOUT ACCURACY BY CHECKPOINT ===
+            accuracy_v3  accuracy_cau  accuracy_delta
+checkpoint                                           
+A1              0.73438       0.50260        -0.23177
+B1              0.82812       0.50000        -0.32812
+A2              0.84635       0.50000        -0.34635
+C1              0.85417       0.50521        -0.34896
+B2              0.84635       0.76562        -0.08073
+
+=== CAU ORACLE BEST-ADAPTER ACCURACY (DIAGNOSTIC ONLY) ===
+checkpoint  concept
+A1          A          0.50000
+            B          0.50781
+            C          0.50000
+B1          A          0.50000
+            B          0.50000
+            C          0.50000
+A2          A          0.67188
+            B          0.64844
+            C          0.57031
+C1          A          0.67188
+            B          0.64844
+            C          0.57031
+B2          A          0.82031
+            B          0.74219
+            C          0.73438
+
+IMPORTANT: oracle-best adapter accuracy is NOT task-free system performance.
+
+=== PREDECLARED STRUCTURAL FAILURE FLAGS ===
+same-label Amazon permanent spawns: 2
+overall defer fraction: 0.4125
+B1 update fraction: 0.125
+
+Do not tune thresholds from this development trajectory.

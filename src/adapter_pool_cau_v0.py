@@ -196,20 +196,25 @@ class CAUV0AdapterPool(
         # Preserve the frozen cross-fit ranking.
         #
         # Full-batch profile is feasibility-only.
-        best_name = max(
+        # Frozen ranking:
+        #   1. maximum cross-fitted system utility
+        #   2. lower worst-fold harm LCB
+        #   3. lower mean harm
+        #   4. lexicographically LOWER adapter name
+        best_name = min(
             surviving,
             key=lambda name: (
-                reuse_profiles[
+                -reuse_profiles[
                     name
                 ][
                     "system_utility"
                 ],
-                -reuse_profiles[
+                reuse_profiles[
                     name
                 ][
                     "harm_lcb_max"
                 ],
-                -reuse_profiles[
+                reuse_profiles[
                     name
                 ][
                     "harm_mean"

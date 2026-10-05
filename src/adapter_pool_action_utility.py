@@ -529,16 +529,21 @@ class ActionUtilityShadowPool(
         ]
 
         if feasible:
-            best_reuse = max(
+            # Frozen ranking:
+            #   1. maximum system utility
+            #   2. lower worst-fold harm LCB
+            #   3. lower mean harm
+            #   4. lexicographically LOWER adapter name
+            best_reuse = min(
                 feasible,
                 key=lambda name: (
-                    reuse_profiles[name][
+                    -reuse_profiles[name][
                         "system_utility"
                     ],
-                    -reuse_profiles[name][
+                    reuse_profiles[name][
                         "harm_lcb_max"
                     ],
-                    -reuse_profiles[name][
+                    reuse_profiles[name][
                         "harm_mean"
                     ],
                     name,

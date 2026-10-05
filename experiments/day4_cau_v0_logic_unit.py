@@ -1059,3 +1059,95 @@ print(
 print(
     "============================================"
 )
+
+
+# =========================================================
+# 11. EXACT TIE -> LOWER DETERMINISTIC ADAPTER NAME
+# =========================================================
+
+print()
+print(
+    "=== EXACT REUSE TIE-BREAK ==="
+)
+
+p = LogicPool()
+
+p.add_mature_adapter(
+    name="adapter_1",
+    seed=201,
+)
+
+p.add_mature_adapter(
+    name="adapter_2",
+    seed=202,
+)
+
+p.fake_utility = utility_result(
+    reuses={
+        # Lower utility so it cannot win.
+        "default":
+            reuse_profile(
+                utility=0.10
+            ),
+
+        # Exact tie on every frozen ranking quantity.
+        "adapter_1": {
+            "system_utility": 0.30,
+            "feasible_both": True,
+            "harm_lcb_max": -0.10,
+            "harm_mean": -0.05,
+        },
+
+        "adapter_2": {
+            "system_utility": 0.30,
+            "feasible_both": True,
+            "harm_lcb_max": -0.10,
+            "harm_mean": -0.05,
+        },
+    },
+    fresh_positive=False,
+)
+
+p.profile_table[
+    "adapter_1"
+] = profile_result(
+    harm_lcb=-0.10
+)
+
+p.profile_table[
+    "adapter_2"
+] = profile_result(
+    harm_lcb=-0.10
+)
+
+name, info, loss = (
+    p.live_step(
+        TEXTS,
+        LABELS,
+        restore_name="default",
+    )
+)
+
+check(
+    "exact tie chooses lower adapter name",
+    name == "adapter_1",
+)
+
+check(
+    "tie result remains reuse",
+    info[
+        "decision"
+    ] == "reuse",
+)
+
+check(
+    "tie winner is guarded best reuse",
+    info[
+        "guarded_best_reuse"
+    ] == "adapter_1",
+)
+
+print()
+print(
+    "CAU-v0 EXACT TIE-BREAK AUDIT: PASS"
+)

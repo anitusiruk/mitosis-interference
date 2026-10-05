@@ -1,0 +1,101 @@
+================================================================================================
+AMAZON CAU-v1 PREDECLARED DEVELOPMENT REPORT
+================================================================================================
+
+=== GLOBAL ACTION COUNTS ===
+V3       {'reuse': 72, 'warmup': 7, 'spawn': 1}
+CAU-v0   {'reuse': 35, 'defer': 33, 'warmup': 10, 'spawn': 2}
+CAU-v1   {'reuse': 75, 'warmup': 4, 'defer': 1}
+
+=== CAU-v1 ACTIONS BY SEGMENT ===
+decision  defer  reuse  warmup
+segment                       
+A1            0     12       4
+A2            0     16       0
+B1            0     16       0
+B2            0     16       0
+C1            1     15       0
+
+=== LEARNING CONTINUITY ===
+method segment  n  updates  defers  update_fraction  longest_defer_streak
+CAU-v0      A1 16       10       6           0.6250                     2
+CAU-v0      B1 16        2      14           0.1250                    11
+CAU-v0      A2 16        8       8           0.5000                     3
+CAU-v0      C1 16       15       1           0.9375                     1
+CAU-v0      B2 16       12       4           0.7500                     2
+CAU-v1      A1 16       16       0           1.0000                     0
+CAU-v1      B1 16       16       0           1.0000                     0
+CAU-v1      A2 16       16       0           1.0000                     0
+CAU-v1      C1 16       15       1           0.9375                     1
+CAU-v1      B2 16       16       0           1.0000                     0
+
+=== CAU-v1 REASONS ===
+cau_reason
+safe_existing_reuse                  71
+existing_warmup                       4
+pending_fresh_safe_existing_reuse     4
+no_retention_feasible_reuse           1
+
+=== CAU-v1 SPAWNS ===
+NONE
+
+=== CAU-v1 FULL-BATCH GUARDS ===
+evaluations: 75
+safe: 75
+negative/nonpositive utility evaluated: 27
+negative/nonpositive utility AND safe: 27
+
+=== KEY CAU-v1 WINDOWS ===
+ step segment adapter decision                        cau_reason  cau_pending_before  cau_pending_after  statusquo_loss best_reuse  best_reuse_utility cau_guarded_best_reuse fresh_positive  fresh_utility  fresh_advantage  fold_a_fresh_utility  fold_b_fresh_utility    loss  num_adapters
+    7      A1 default    reuse pending_fresh_safe_existing_reuse               False               True         0.67246    default            -0.00747                default           True        0.02337          0.03084               0.03639               0.01034 0.66447             1
+   11      A1 default    reuse pending_fresh_safe_existing_reuse               False               True         0.69839    default            -0.00327                default           True        0.02106          0.02433               0.08209              -0.03997 0.70734             1
+   14      A1 default    reuse pending_fresh_safe_existing_reuse               False               True         0.67392    default             0.01031                default           True        0.02711          0.01680               0.01475               0.03946 0.68181             1
+   17      B1 default    reuse               safe_existing_reuse               False              False         0.64500    default             0.00631                default          False       -0.04528         -0.05158              -0.04791              -0.04264 0.64533             1
+   20      B1 default    reuse               safe_existing_reuse               False              False         0.59712    default             0.00223                default          False       -0.12550         -0.12773              -0.09586              -0.15515 0.59645             1
+   23      B1 default    reuse               safe_existing_reuse               False              False         0.66066    default             0.00189                default          False       -0.03352         -0.03541              -0.01349              -0.05355 0.66164             1
+   30      B1 default    reuse               safe_existing_reuse               False              False         0.60427    default             0.01050                default          False       -0.08576         -0.09626              -0.01179              -0.15973 0.61038             1
+   33      A2 default    reuse               safe_existing_reuse               False              False         0.36958    default             0.01767                default          False       -0.27358         -0.29126              -0.30469              -0.24248 0.36530             1
+   35      A2 default    reuse               safe_existing_reuse               False              False         0.41227    default             0.02703                default          False       -0.23241         -0.25944              -0.22600              -0.23883 0.43196             1
+   36      A2 default    reuse               safe_existing_reuse               False              False         0.45401    default             0.01181                default          False       -0.23302         -0.24483              -0.29082              -0.17521 0.47480             1
+   46      A2 default    reuse               safe_existing_reuse               False              False         0.59530    default            -0.02120                default          False       -0.09996         -0.07875              -0.03588              -0.16403 0.63566             1
+   47      A2 default    reuse               safe_existing_reuse               False              False         0.30860    default             0.00397                default          False       -0.33472         -0.33870              -0.09988              -0.56957 0.32308             1
+   50      C1 default    reuse pending_fresh_safe_existing_reuse               False               True         0.77146    default            -0.01744                default           True        0.07869          0.09613              -0.59356               0.75094 0.75063             1
+   69      B2 default    reuse               safe_existing_reuse               False              False         0.34457    default            -0.00507                default          False       -0.36449         -0.35942              -0.24234              -0.48664 0.39726             1
+   70      B2 default    reuse               safe_existing_reuse               False              False         0.34528    default            -0.00365                default          False       -0.35022         -0.34657              -0.31783              -0.38261 0.36920             1
+   71      B2 default    reuse               safe_existing_reuse               False              False         0.30186    default             0.00434                default          False       -0.42318         -0.42752              -0.63371              -0.21266 0.27956             1
+   80      B2 default    reuse               safe_existing_reuse               False              False         0.27816    default            -0.01301                default          False       -0.44899         -0.43597              -0.53221              -0.36577 0.27889             1
+
+=== DEFAULT-ADAPTER HELDOUT ACCURACY ===
+method               cau_v0   cau_v1       v3
+checkpoint concept                           
+A1         A        0.50000  0.76562  0.76562
+           B        0.50781  0.78906  0.78906
+           C        0.50000  0.64844  0.64844
+A2         A        0.50000  0.86719  0.86719
+           B        0.50000  0.85156  0.85156
+           C        0.50000  0.82031  0.82031
+B1         A        0.50000  0.86719  0.86719
+           B        0.50000  0.82812  0.82812
+           C        0.50000  0.78906  0.78906
+B2         A        0.82031  0.87500  0.85938
+           B        0.74219  0.89062  0.87500
+           C        0.73438  0.79688  0.80469
+C1         A        0.50000  0.87500  0.87500
+           B        0.51562  0.83594  0.85938
+           C        0.50000  0.79688  0.82812
+
+=== MEAN DEFAULT HELDOUT ACCURACY BY CHECKPOINT ===
+method           v3   cau_v0   cau_v1
+checkpoint                           
+A1          0.73438  0.50260  0.73438
+B1          0.82812  0.50000  0.82812
+A2          0.84635  0.50000  0.84635
+C1          0.85417  0.50521  0.83594
+B2          0.84635  0.76562  0.85417
+
+=== DESCRIPTIVE SUMMARY ===
+CAU-v0 {'defers': 33, 'spawns': 2, 'max_adapters': 3, 'updates': 47}
+CAU-v1 {'defers': 1, 'spawns': 0, 'max_adapters': 1, 'updates': 79}
+
+No numerical pass threshold is imposed by this report.
+Interpret qualitative structural behavior before any further revision.

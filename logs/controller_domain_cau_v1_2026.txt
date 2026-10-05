@@ -1,0 +1,94 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+GPU: NVIDIA GeForce RTX 4090
+method: cau_v1
+domains: {'A': 'home', 'B': 'apparel', 'C': 'drugstore'}
+stream steps: 80
+boundaries (EVAL ONLY): [17, 33, 49, 65]
+schedule (EVAL ONLY): A1 -> B1 -> A2 -> C1 -> B2
+shared labels: {0=negative, 1=positive}
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5048.15it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+=== ENTER A1 ( home ) at step 1 ===
+step 10 segment A1 adapter default decision reuse risk None loss 0.66109 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER A1 ===
+default      A/home       loss=0.6197 acc=0.7656 neg=1.0000 pos=0.5312
+default      B/apparel    loss=0.6357 acc=0.7891 neg=0.9219 pos=0.6562
+default      C/drugstore  loss=0.6491 acc=0.6484 neg=0.9531 pos=0.3438
+
+=== ENTER B1 ( apparel ) at step 17 ===
+step 20 segment B1 adapter default decision reuse risk None loss 0.59645 pool 1
+step 30 segment B1 adapter default decision reuse risk None loss 0.61038 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER B1 ===
+default      A/home       loss=0.4560 acc=0.8672 neg=0.9375 pos=0.7969
+default      B/apparel    loss=0.4902 acc=0.8281 neg=0.8594 pos=0.7969
+default      C/drugstore  loss=0.5350 acc=0.7891 neg=0.8750 pos=0.7031
+
+=== ENTER A2 ( home ) at step 33 ===
+step 40 segment A2 adapter default decision reuse risk None loss 0.53312 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER A2 ===
+default      A/home       loss=0.2935 acc=0.8672 neg=0.9375 pos=0.7969
+default      B/apparel    loss=0.3234 acc=0.8516 neg=0.9219 pos=0.7812
+default      C/drugstore  loss=0.4602 acc=0.8203 neg=0.9219 pos=0.7188
+
+=== ENTER C1 ( drugstore ) at step 49 ===
+step 50 segment C1 adapter default decision reuse risk None loss 0.75063 pool 1
+step 60 segment C1 adapter default decision reuse risk None loss 0.23771 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER C1 ===
+default      A/home       loss=0.2818 acc=0.8750 neg=0.8594 pos=0.8906
+default      B/apparel    loss=0.3025 acc=0.8359 neg=0.8125 pos=0.8594
+default      C/drugstore  loss=0.4224 acc=0.7969 neg=0.8125 pos=0.7812
+
+=== ENTER B2 ( apparel ) at step 65 ===
+step 70 segment B2 adapter default decision reuse risk None loss 0.3692 pool 1
+step 80 segment B2 adapter default decision reuse risk None loss 0.27889 pool 1
+
+=== HELDOUT DOMAIN EVAL AFTER B2 ===
+default      A/home       loss=0.2721 acc=0.8750 neg=0.8906 pos=0.8594
+default      B/apparel    loss=0.2692 acc=0.8906 neg=0.9375 pos=0.8438
+default      C/drugstore  loss=0.4161 acc=0.7969 neg=0.8438 pos=0.7500
+
+=== SEGMENT / ADAPTER COUNTS ===
+adapter  default
+segment         
+A1            16
+A2            16
+B1            16
+B2            16
+C1            16
+
+=== DECISIONS ===
+decision  defer  reuse  warmup
+segment                       
+A1            0     12       4
+A2            0     16       0
+B1            0     16       0
+B2            0     16       0
+C1            1     15       0
+
+=== SPAWNS ===
+Empty DataFrame
+Columns: [step, segment, domain, adapter, decision, best_risk, best_lcb, num_adapters]
+Index: []
+
+final adapters: 1
+saved: results/controller_domain_recurrence_cau_v1_seed2026

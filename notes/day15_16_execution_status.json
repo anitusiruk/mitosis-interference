@@ -1,0 +1,31 @@
+{
+  "jobs": [
+    {
+      "name": "day16_banking_private_seed2027_canonical_bert",
+      "study": 16,
+      "status": "completed",
+      "started_utc": "2026-10-06T23:41:48.348058+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day16_bert_allocation",
+        "--architecture",
+        "private",
+        "--seed",
+        "2027",
+        "--order",
+        "canonical",
+        "--output",
+        "results/day16_banking_private_seed2027_canonical_bert",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-06T23:43:43.280776+00:00"
+    }
+  ],
+  "planned_jobs": 40,
+  "generated_utc": "2026-10-06T23:43:44.795335+00:00",
+  "github_save_pending": true
+}

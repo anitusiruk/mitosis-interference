@@ -1,0 +1,4 @@
+seed,order,architecture,rule,bert_macro_accuracy,distilbert_macro_accuracy,bert_minus_distilbert,updates,adapters,adaptation_parameters,maximum_training_texts
+2027,canonical,private,frozen_centroid,0.029322829555619667,0.1592516119286987,-0.12992878237307903,80,3,1062375,510
+2027,canonical,private,last_active,0.023655913978494602,0.14623655913978492,-0.12258064516129032,80,3,1062375,510
+2027,canonical,private,uniform_probability,0.0356607882381078,0.08600302996711373,-0.05034224172900593,80,3,1062375,510

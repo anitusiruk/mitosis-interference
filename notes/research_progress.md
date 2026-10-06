@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-06T23:36:52.648633+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-06T23:43:44.715151+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -17,6 +17,9 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 8 | 44 | 44 | completed |
 | 10 | 12 | 12 | completed |
 | 12 | 11 | 11 | completed |
+| 14 fixed-memory routing | 44 | 44 | completed |
+| 15 | 0 | 20 | not launched |
+| 16 | 1 | 20 | completed |
 | 5 head-only | 2 | 2 | completed |
 
 Complete trajectories alone enter summaries. A queue record is an execution status; the independent evidence audit also checks the saved trajectory summary, full step count and final metrics.
@@ -278,6 +281,44 @@ The fixed-memory extension limits total stored training examples to 512 and pres
 | last_active | rank96_minus_adaptive | 5 | -0.0345 | -0.0755 | 0.0066 |
 | uniform_probability | rank96_minus_rank8 | 5 | -0.0946 | -0.1406 | -0.0486 |
 | uniform_probability | rank96_minus_adaptive | 5 | -0.0611 | -0.0900 | -0.0323 |
+
+
+## Fixed-memory learned routing and extended attribution
+
+| regime | architecture | rule | contrast | seed_clusters | mean | ci_low | ci_high |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| amazon | head_only | linear_hard | fixed_minus_per_adapter | 5 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | head_only | linear_hard | fixed_minus_single | 5 | -0.0029 | -0.0242 | 0.0184 |
+| amazon | head_only | linear_hard | fixed_minus_rank96 | 0 | nan | nan | nan |
+| amazon | head_only | linear_probability_mixture | fixed_minus_per_adapter | 5 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | head_only | linear_probability_mixture | fixed_minus_single | 5 | -0.0029 | -0.0242 | 0.0184 |
+| amazon | head_only | linear_probability_mixture | fixed_minus_rank96 | 0 | nan | nan | nan |
+| amazon | private | linear_hard | fixed_minus_per_adapter | 5 | -0.0026 | -0.0098 | 0.0046 |
+| amazon | private | linear_hard | fixed_minus_single | 5 | -0.0224 | -0.0597 | 0.0149 |
+| amazon | private | linear_hard | fixed_minus_rank96 | 0 | nan | nan | nan |
+| amazon | private | linear_probability_mixture | fixed_minus_per_adapter | 5 | -0.0008 | -0.0030 | 0.0014 |
+| amazon | private | linear_probability_mixture | fixed_minus_single | 5 | -0.0180 | -0.0440 | 0.0081 |
+| amazon | private | linear_probability_mixture | fixed_minus_rank96 | 0 | nan | nan | nan |
+| banking | head_only | linear_hard | fixed_minus_per_adapter | 5 | -0.0051 | -0.0156 | 0.0054 |
+| banking | head_only | linear_hard | fixed_minus_single | 5 | 0.0345 | -0.0061 | 0.0751 |
+| banking | head_only | linear_hard | fixed_minus_rank96 | 0 | nan | nan | nan |
+| banking | head_only | linear_probability_mixture | fixed_minus_per_adapter | 5 | -0.0009 | -0.0120 | 0.0103 |
+| banking | head_only | linear_probability_mixture | fixed_minus_single | 5 | 0.0338 | -0.0027 | 0.0703 |
+| banking | head_only | linear_probability_mixture | fixed_minus_rank96 | 0 | nan | nan | nan |
+| banking | private | linear_hard | fixed_minus_per_adapter | 5 | -0.0060 | -0.0148 | 0.0029 |
+| banking | private | linear_hard | fixed_minus_single | 5 | 0.0535 | 0.0082 | 0.0988 |
+| banking | private | linear_hard | fixed_minus_rank96 | 5 | 0.1481 | 0.1125 | 0.1837 |
+| banking | private | linear_probability_mixture | fixed_minus_per_adapter | 5 | -0.0019 | -0.0098 | 0.0060 |
+| banking | private | linear_probability_mixture | fixed_minus_single | 5 | 0.0541 | 0.0067 | 0.1014 |
+| banking | private | linear_probability_mixture | fixed_minus_rank96 | 5 | 0.1487 | 0.1154 | 0.1820 |
+
+
+The Day-15 observer independently crosses LoRA/head weights with LoRA/head AdamW state. All mature batches and every cell are retained. Only verified bitwise paired trajectory/state reproductions enter its causal summaries. The Day-16 BERT check tests transfer beyond the DistilBERT classifier stack; multiple backbone components change together, so it does not isolate classifier architecture causally. Both studies are development extensions, not untouched test confirmations. Current novelty limits are in notes/novelty_audit_20261006.md.
+
+Pending; no saved completed-result table yet.
+
+
+Pending; no complete fresh-seed comparison groups yet.
 
 
 ## Methodological checks and limits

@@ -9,4 +9,4 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Learner binaries and dataset caches stay on the research pod.
+# Model and optimizer tensors are versioned through Git LFS.

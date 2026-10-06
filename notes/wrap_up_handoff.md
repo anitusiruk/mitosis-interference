@@ -9,3 +9,5 @@ Unlaunched frozen controls are listed in remaining_frozen_jobs.json. Their metho
 All completed learner weights, optimizers, RNG and reservoirs are versioned through Git LFS. The complete offline archive contains the Git bundle and every local LFS object. A bundle alone does not contain model tensors. Preserve the complete archive before terminating the pod.
 
 Current findings and limitations are in research_progress.md and paper_working_draft.md. Neither is a submission-ready paper. GitHub push status is recorded separately after the actual attempt.
+
+GitHub preservation succeeded in anitusiruk/mitosis-interference on branch day5-causal-audit. All 313 unique Git LFS objects were fetched into a separate empty storage directory and verified by SHA-256. The successful verification receipt is notes/github_save_verification.json; the earlier unauthenticated push log is historical. No further study was launched during this save.

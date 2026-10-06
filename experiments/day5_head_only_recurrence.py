@@ -137,6 +137,9 @@ def main():
     parser.add_argument('--output',required=True)
     parser.add_argument('--deadline-utc',default='2026-10-06T03:30:00+00:00')
     args=parser.parse_args()
+    os.environ['TOKENIZERS_PARALLELISM']='false'
+    os.environ['OMP_NUM_THREADS']='8'
+    torch.set_num_threads(8)
     if args.component_audit and args.architecture!='private':
         parser.error('Factorial attribution is on the original private-package trajectory')
     out=Path(args.output)

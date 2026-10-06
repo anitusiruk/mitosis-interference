@@ -1,4 +1,7 @@
 architecture,rule,seed_clusters,mean,ci_low,ci_high
+head_only,frozen_centroid,0,,,
+head_only,last_active,0,,,
+head_only,uniform_probability,0,,,
 private,frozen_centroid,0,,,
 private,last_active,0,,,
 private,uniform_probability,0,,,

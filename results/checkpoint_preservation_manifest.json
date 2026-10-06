@@ -479,6 +479,38 @@
     "bytes": 24635681,
     "sha256": "a67a02ba772191998cfd2ba19fb16de102a7b16d57d68494054ea0cb2fc7d1e3"
   },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/README.md": {
+    "bytes": 5182,
+    "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "7caed315fc8d02e7d3a4ef82790e6cf7ed35aa89efe2c9a3bca5dce069897411"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "1df1b4a16d15bc8611f127f254a34db0712019a3464b38ba44203b8efda2fee3"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "f791f4f9ca34ae3badcc148a289c324f7a75432ea8873379b041dd1d1f6e5c27"
+  },
+  "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/learner_state.pt": {
+    "bytes": 2440539,
+    "sha256": "c6dc2685ba0dbf1c564e14ef7570d6af36bda6bbf76bf15f1337be95a6db6423"
+  },
   "results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/README.md": {
     "bytes": 5182,
     "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"

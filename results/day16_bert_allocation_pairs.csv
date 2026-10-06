@@ -1,1 +1,2 @@
-
+seed,order,allocation_disagreements,private_spawn_steps,head_only_spawn_steps,private_learning_updates,head_only_learning_updates
+2027,canonical,0,"[18, 50]","[18, 50]",80,80

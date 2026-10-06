@@ -1,0 +1,7 @@
+all real LoRA tensors unchanged PASS
+all real LoRA B outputs exactly zero PASS
+default activation cannot unfreeze LoRA PASS
+adapter_1 activation cannot unfreeze LoRA PASS
+default optimizer contains no LoRA PASS
+adapter_1 optimizer contains no LoRA PASS
+DAY5_HEAD_ONLY_INTEGRITY_PASS

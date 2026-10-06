@@ -1,0 +1,11 @@
+# Larger fixed-capacity baseline, declared before outcomes
+
+Add a fixed single private-package LoRA learner with rank 96 on BANKING77, rather than comparing every growing pool only to rank 8. This uses the same train-only split, batches, two orders, model initialization convention, AdamW step, clipping, learning rate 0.0002, 64-token context, 512-item reservoir and full-label-space development evaluation. It performs one ordinary supervised update on every incoming batch; no retention/allocation probes and no rehearsal training.
+
+Set LoRA alpha to 192, preserving the original alpha/rank ratio of 2. LoRA dropout remains zero and Q/V target modules remain unchanged.
+
+The rank is an explicit resource sensitivity chosen by parameter arithmetic, not development accuracy: DistilBERT Q/V LoRA has 18,432 parameters per rank unit. A 77-label private head stack has 649,805 parameters. Three rank-8 packages contain 2,391,783 adaptation parameters; one rank-96 package contains 2,419,277, approximately 1.15% more. Report actual counts and optimizer bytes. This compares a standard larger static alternative near the observed three-package storage scale. The original controller has no three-adapter hard cap, so do not call the experiment a universally parameter-matched algorithm comparison; if a reference run grows past three, explicitly display the mismatch. Active training compute, inference compute and classifier multiplicity also differ.
+
+Run development seed 2026/canonical plus seeds 2027–2031 in canonical/B-first order: 11 trajectories. Compare to the corresponding original private CAU and rank-8 fixed single. Report all three existing fixed routers (identical for one-adapter models), learned-batch counts, capacity, optimizer state, memory and wall-clock. Average both orders inside each fresh seed for descriptive paired intervals over five independent seed clusters; keep 2026 separate. No hyperparameter sweep, outcome-selected rank or official-test evaluation.
+
+This is a capacity baseline, not a reproduction of a modern named continual-learning method. Source-faithful modern baselines remain an essential next step. The queue follows the pre-update ranking pilot and honors 03:20 launch/03:25 checkpoint cutoffs on 2026-10-06. Preserve incompletion rather than extending beyond the user's deadline.

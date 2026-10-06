@@ -1,0 +1,12 @@
+START day5_banking_private_cau_seed2026
+END day5_banking_private_cau_seed2026 returncode 0
+START day5_banking_shared_cau_seed2026
+END day5_banking_shared_cau_seed2026 returncode 0
+START day5_amazon_private_cau_seed2026
+END day5_amazon_private_cau_seed2026 returncode 0
+START day5_amazon_shared_cau_seed2026
+END day5_amazon_shared_cau_seed2026 returncode 0
+START day5_banking_private_single_seed2026
+END day5_banking_private_single_seed2026 returncode 0
+START day5_amazon_private_single_seed2026
+END day5_amazon_private_single_seed2026 returncode 0

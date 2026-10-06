@@ -1,0 +1,7 @@
+rule,contrast,seed_clusters,mean,ci_low,ci_high
+frozen_centroid,rank96_minus_rank8,0,,,
+frozen_centroid,rank96_minus_adaptive,0,,,
+last_active,rank96_minus_rank8,0,,,
+last_active,rank96_minus_adaptive,0,,,
+uniform_probability,rank96_minus_rank8,0,,,
+uniform_probability,rank96_minus_adaptive,0,,,

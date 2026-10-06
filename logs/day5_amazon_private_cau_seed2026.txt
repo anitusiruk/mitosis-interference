@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/200000 [00:00<?, ? examples/s]Generating train split:  27%|██▋       | 53650/200000 [00:00<00:00, 343606.42 examples/s]Generating train split:  52%|█████▏    | 104923/200000 [00:00<00:00, 392798.81 examples/s]Generating train split:  79%|███████▊  | 157041/200000 [00:00<00:00, 419570.08 examples/s]Generating train split: 100%|██████████| 200000/200000 [00:00<00:00, 423506.65 examples/s]
+Generating validation split:   0%|          | 0/5000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 5000/5000 [00:00<00:00, 369125.92 examples/s]
+Generating test split:   0%|          | 0/5000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 5000/5000 [00:00<00:00, 358273.17 examples/s]
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6257.91it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=26.0
+step=10 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=36.2
+step=15 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=47.6
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.7656, 'uniform_probability:A': 0.7656, 'frozen_centroid:A': 0.7656, 'last_active:B': 0.7891, 'uniform_probability:B': 0.7891, 'frozen_centroid:B': 0.7891, 'last_active:C': 0.6484, 'uniform_probability:C': 0.6484, 'frozen_centroid:C': 0.6484}
+step=20 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=61.0
+step=25 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=75.2
+step=30 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=90.5
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.8672, 'uniform_probability:A': 0.8672, 'frozen_centroid:A': 0.8672, 'last_active:B': 0.8281, 'uniform_probability:B': 0.8281, 'frozen_centroid:B': 0.8281, 'last_active:C': 0.7891, 'uniform_probability:C': 0.7891, 'frozen_centroid:C': 0.7891}
+step=35 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=107.8
+step=40 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=125.8
+step=45 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=145.1
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.8672, 'uniform_probability:A': 0.8672, 'frozen_centroid:A': 0.8672, 'last_active:B': 0.8516, 'uniform_probability:B': 0.8516, 'frozen_centroid:B': 0.8516, 'last_active:C': 0.8203, 'uniform_probability:C': 0.8203, 'frozen_centroid:C': 0.8203}
+step=50 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=166.2
+step=55 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=187.9
+step=60 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=210.9
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.875, 'uniform_probability:A': 0.875, 'frozen_centroid:A': 0.875, 'last_active:B': 0.8359, 'uniform_probability:B': 0.8359, 'frozen_centroid:B': 0.8359, 'last_active:C': 0.7969, 'uniform_probability:C': 0.7969, 'frozen_centroid:C': 0.7969}
+step=65 segment(eval)=B2 decision=reuse adapter=default pool=1 elapsed=235.9
+step=70 segment(eval)=B2 decision=reuse adapter=default pool=1 elapsed=261.7
+step=75 segment(eval)=B2 decision=reuse adapter=default pool=1 elapsed=288.6
+step=80 segment(eval)=B2 decision=reuse adapter=default pool=1 elapsed=316.8
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.875, 'uniform_probability:A': 0.875, 'frozen_centroid:A': 0.875, 'last_active:B': 0.8906, 'uniform_probability:B': 0.8906, 'frozen_centroid:B': 0.8906, 'last_active:C': 0.7969, 'uniform_probability:C': 0.7969, 'frozen_centroid:C': 0.7969}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 79, "decisions": {"warmup": 4, "reuse": 75, "defer": 1}, "final_adapters": ["default"], "pool_summary": {"default": {"updates": 79, "memory": 512}}, "resources": {"lora_parameters": 147456, "private_head_parameters": 592130, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 67694596, "currently_trainable_parameters": 739586, "optimizer_state_bytes": 5916800, "replay_items": 512, "elapsed_seconds": 317.6623425260186, "gpu_peak_allocated_bytes": 556547584}, "timing": {"component_audit_seconds": 243.738349981606, "live_training_seconds": 46.841760132461786, "evaluation_seconds": 2.8454120475798845}, "component_trial_rows": 1064, "official_test_used": false}

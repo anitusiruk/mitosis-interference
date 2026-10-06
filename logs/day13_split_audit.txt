@@ -1,0 +1,30 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2026 overlap 0 truncated token overlap 0
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2027 overlap 0 truncated token overlap 0
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2028 overlap 0 truncated token overlap 0
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2029 overlap 0 truncated token overlap 0
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2030 overlap 0 truncated token overlap 0
+balanced examples/class: 23
+balanced examples/segment: 253
+SPLIT_AUDIT banking 2031 overlap 0 truncated token overlap 0
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (689 > 512). Running this sequence through the model will result in indexing errors
+SPLIT_AUDIT amazon 2026 overlap 0 truncated token overlap 0
+SPLIT_AUDIT amazon 2027 overlap 0 truncated token overlap 0
+SPLIT_AUDIT amazon 2028 overlap 0 truncated token overlap 0
+SPLIT_AUDIT amazon 2029 overlap 0 truncated token overlap 0
+SPLIT_AUDIT amazon 2030 overlap 0 truncated token overlap 0
+SPLIT_AUDIT amazon 2031 overlap 0 truncated token overlap 0
+SPLIT_AUDIT multinli 2026 overlap 0 truncated token overlap 0
+SPLIT_AUDIT multinli 2027 overlap 0 truncated token overlap 0
+SPLIT_AUDIT multinli 2028 overlap 0 truncated token overlap 0
+SPLIT_AUDIT_COMPLETE 15

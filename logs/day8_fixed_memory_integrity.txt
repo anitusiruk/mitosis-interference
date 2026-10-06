@@ -1,0 +1,3 @@
+FixedMemoryCAUV1AdapterPool budget, historical seen, exact shadow restoration, cap PASS
+FixedMemoryHeadOnlyCAUV1AdapterPool budget, historical seen, exact shadow restoration, cap PASS
+DAY8_FIXED_MEMORY_INTEGRITY_PASS

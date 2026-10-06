@@ -1,0 +1,10 @@
+{
+  "generated_utc": "2026-10-06T05:43:27.629859+00:00",
+  "completed_trajectories_checked": 134,
+  "partial_folders": [],
+  "stream_pair_groups": 28,
+  "checks": "PASS",
+  "official_test_flag_check": "provenance assertion, not an independent access audit",
+  "checkpoint_reload_limit": "Auxiliary router checks nine aggregate sample counts and accuracies; per-example predictions were not stored.",
+  "statistical_unit": "Independent training seed; paired orders averaged within seed; fixed development examples."
+}

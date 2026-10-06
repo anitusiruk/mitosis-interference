@@ -1,0 +1,20 @@
+{
+  "router_training_examples": 1424,
+  "fit_and_training_feature_seconds": 1.224664295092225,
+  "classifier_and_route_inference_seconds": 0.6644731070846319,
+  "adapters": [
+    "adapter_1",
+    "adapter_2",
+    "adapter_3",
+    "adapter_4",
+    "default"
+  ],
+  "learned_router_coefficients": 3845,
+  "normalization_statistics": 1536,
+  "original_prediction_agreement": true,
+  "source_sha256": "d25ad35ff10ddfa32a726249caf3c4a96645e12d35056e9cd1e156cb205b1003",
+  "frozen_algorithm_sha256": "1e2343f62b6de00e872d3611a1a880249eeed38b4fa5bb2211370d19645fbdba",
+  "execution_scope": "replication",
+  "learner_state_sha256": "8869d59cae2d32d3c81e84005913efbf3cfe66e3c8d85f049ee87e77c0f7a5a4",
+  "official_test_used": false
+}

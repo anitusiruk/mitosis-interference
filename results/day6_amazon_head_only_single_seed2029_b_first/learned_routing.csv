@@ -1,0 +1,7 @@
+concept,rule,n,accuracy,loss
+A,linear_hard,128,0.8828125,0.4065997153520584
+A,linear_probability_mixture,128,0.8828125,0.4065997004508972
+B,linear_hard,128,0.7890625,0.480759397149086
+B,linear_probability_mixture,128,0.7890625,0.480759397149086
+C,linear_hard,128,0.7890625,0.5015083253383636
+C,linear_probability_mixture,128,0.7890625,0.5015083253383636

@@ -1,0 +1,9 @@
+{
+  "start_utc": "2026-10-06T02:37:57.648880+00:00",
+  "end_utc": "2026-10-06T02:39:04.580611+00:00",
+  "source_sha256": "76b5623bbb8407a20fad75235aaf012a9bbd89a1b3e2970bd75f0b61919fccd5",
+  "official_test_or_multinli_validation_used": false,
+  "normalization": "Unicode NFKC, casefold, whitespace collapse",
+  "timing_caveat": "Offline CPU-only data audit may overlap queued GPU runs; current wall-clock measurements are descriptive, not dedicated resource benchmarks.",
+  "interpretation": "Exact-normalized/token-prefix overlap audit only; does not establish absence of near duplicates, pretrained exposure, or all provenance problems."
+}

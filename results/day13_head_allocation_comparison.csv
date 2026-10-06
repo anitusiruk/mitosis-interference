@@ -1,0 +1,21 @@
+regime,seed,order,private_spawn_steps,head_only_spawn_steps,allocation_disagreements
+banking,2027,canonical,"[18, 50]","[18, 50]",0
+banking,2027,b_first,"[18, 50]","[18, 50]",0
+banking,2028,canonical,"[18, 50]","[18, 50]",0
+banking,2028,b_first,"[18, 50]","[18, 50]",0
+banking,2029,canonical,"[18, 50]","[18, 50]",0
+banking,2029,b_first,"[18, 50]","[18, 50]",0
+banking,2030,canonical,"[18, 50]","[18, 50]",0
+banking,2030,b_first,"[18, 50]","[18, 50]",0
+banking,2031,canonical,"[18, 50]","[18, 50]",0
+banking,2031,b_first,"[18, 50]","[18, 50]",0
+amazon,2027,canonical,[],[],8
+amazon,2027,b_first,[],[],10
+amazon,2028,canonical,[],[],9
+amazon,2028,b_first,[],[],10
+amazon,2029,canonical,[67],[],16
+amazon,2029,b_first,[],[],7
+amazon,2030,canonical,[],[],19
+amazon,2030,b_first,[],[],2
+amazon,2031,canonical,[],[],8
+amazon,2031,b_first,[],[],12

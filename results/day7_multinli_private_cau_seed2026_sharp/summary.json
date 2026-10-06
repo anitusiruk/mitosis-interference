@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "steps": 90,
+  "learning_updates": 90,
+  "decisions": {
+    "warmup": 10,
+    "reuse": 78,
+    "spawn": 2
+  },
+  "final_adapters": [
+    "default",
+    "adapter_1",
+    "adapter_2"
+  ],
+  "pool_summary": {
+    "default": {
+      "updates": 44,
+      "memory": 512
+    },
+    "adapter_1": {
+      "updates": 28,
+      "memory": 448
+    },
+    "adapter_2": {
+      "updates": 18,
+      "memory": 288
+    }
+  },
+  "resources": {
+    "lora_parameters": 442368,
+    "private_head_parameters": 1778697,
+    "unwrapped_shared_head_parameters": 0,
+    "total_unique_parameters": 69176844,
+    "currently_trainable_parameters": 740355,
+    "optimizer_state_bytes": 17768856,
+    "replay_items": 1248,
+    "elapsed_seconds": 67.31160161271691,
+    "gpu_peak_allocated_bytes": 565467136
+  },
+  "timing": {
+    "component_audit_seconds": 0.0,
+    "live_training_seconds": 57.693454248830676,
+    "evaluation_seconds": 7.2235156539827585
+  },
+  "component_trial_rows": 0,
+  "official_test_used": false
+}

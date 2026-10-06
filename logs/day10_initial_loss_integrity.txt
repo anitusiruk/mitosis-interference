@@ -1,0 +1,3 @@
+InitialLossCAUV1AdapterPool core learner state/RNG/optimizer/reservoir restoration PASS
+InitialLossHeadOnlyCAUV1AdapterPool core learner state/RNG/optimizer/reservoir restoration PASS
+DAY10_INITIAL_LOSS_INTEGRITY_PASS

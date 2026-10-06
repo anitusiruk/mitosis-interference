@@ -1,0 +1,13 @@
+regime,rule,contrast,seed_clusters,mean,ci_low,ci_high
+amazon,linear_hard,LoRA minus head-only / CAU,5,0.027083333333333327,0.0026870097914708964,0.05147965687519576
+amazon,linear_hard,CAU minus single / private,5,-0.019791666666666662,-0.05036919231052939,0.010785858977196066
+amazon,linear_hard,CAU minus single / head-only,5,-0.0028645833333333258,-0.024172587754034355,0.0184434210873677
+amazon,linear_probability_mixture,LoRA minus head-only / CAU,5,0.029687499999999988,0.012073084827447084,0.04730191517255289
+amazon,linear_probability_mixture,CAU minus single / private,5,-0.0171875,-0.04136858930837239,0.006993589308372385
+amazon,linear_probability_mixture,CAU minus single / head-only,5,-0.0028645833333333258,-0.024172587754034355,0.0184434210873677
+banking,linear_hard,LoRA minus head-only / CAU,5,0.060702195487695974,0.006299982897160314,0.11510440807823163
+banking,linear_hard,CAU minus single / private,5,0.05946414816384886,0.015956523102557567,0.10297177322514015
+banking,linear_hard,CAU minus single / head-only,5,0.03963805658185441,0.0005715112924634808,0.07870460187124534
+banking,linear_probability_mixture,LoRA minus head-only / CAU,5,0.06223299480698883,0.005628654900534387,0.11883733471344327
+banking,linear_probability_mixture,CAU minus single / private,5,0.056014354783892516,0.010174379648821272,0.10185432991896376
+banking,linear_probability_mixture,CAU minus single / head-only,5,0.03465746388260523,-0.002477459531351617,0.07179238729656208

@@ -1,0 +1,13 @@
+regime,architecture,rule,seed_clusters,mean,ci_low,ci_high
+amazon,head_only,frozen_centroid,1,0.0,,
+amazon,head_only,last_active,1,0.0,,
+amazon,head_only,uniform_probability,1,0.0,,
+amazon,private,frozen_centroid,1,0.0,,
+amazon,private,last_active,1,0.0,,
+amazon,private,uniform_probability,1,0.0,,
+banking,head_only,frozen_centroid,1,0.002234042423600112,,
+banking,head_only,last_active,1,0.0,,
+banking,head_only,uniform_probability,1,0.0,,
+banking,private,frozen_centroid,1,0.0058841945107325905,,
+banking,private,last_active,1,0.0,,
+banking,private,uniform_probability,1,0.0,,

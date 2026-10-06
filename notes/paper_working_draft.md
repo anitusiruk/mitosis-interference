@@ -40,7 +40,7 @@ BANKING uses a fixed train-derived development split, 33 observed classes within
 
 MultiNLI uses training-only fiction/government/telephone genres, three labels, a normalized-premise-grouped development holdout and genuine pair tokenization. Sharp/blurry variants preserve the same 1440 examples and labels. Its small short-context setting is a stress test, not a competitive NLI evaluation. Seed 2026 is a development pilot; 2027/2028 are descriptive transfer checks.
 
-All predictors use full class spaces. Oracle specialist accuracy is a diagnostic. Fixed deployment rules are last-active, uniform probability mixture and frozen-base centroid. A standardized linear gate trained on reservoir-text adapter ownership is a separately declared auxiliary development diagnostic. Both hard selection and probability mixture are retained; no best routing rule is selected from outcomes.
+All predictors use full class spaces. Reported macro accuracy averages the three concept-level accuracies; it is not a BANKING per-class macro accuracy. Oracle specialist accuracy is a diagnostic. Fixed deployment rules are last-active, uniform probability mixture and frozen-base centroid. A standardized linear gate trained on reservoir-text adapter ownership is a separately declared auxiliary development diagnostic. Both hard selection and probability mixture are retained; no best routing rule is selected from outcomes.
 
 ## 5. Findings supported by the completed primary study
 
@@ -52,7 +52,9 @@ MultiNLI growing-pool predictors often perform near the balanced chance level, w
 
 The four original pre-update-ranking pilots reproduce their original structural decisions. Prospective protected-memory checks remain in those pilots, so the finding concerns the action-ranking learning-gain term and does not demonstrate that all lookahead is unnecessary or that runtime improves.
 
-Auxiliary learned routing, fixed-memory replications and the larger fixed-capacity baseline are **pending final analysis**. Insert their verified saved tables only after the relevant trajectories and consistency checks complete. The single learned-routing pilot already differs from the original deployment rules; do not promote that exploratory result to a confirmed end-to-end improvement.
+The auxiliary learned-router study is complete for all 110 checkpoints. Over five fresh BANKING seed clusters, private CAU minus private single is +5.95 percentage points under hard routing (descriptive interval [1.60, 10.30]) and +5.60 under probability mixture ([1.02, 10.18]). Corresponding Amazon differences are -1.98 ([-5.04, 1.08]) and -1.72 ([-4.14, 0.70]). These are auxiliary development outcomes introduced after the original deployment failure, not an untouched confirmation of a complete method. Both rules remain in the account.
+
+Fixed-memory replications and the larger fixed-capacity baseline remain **pending final analysis**. The rank-96 original pilot under the fixed training recipe performs poorly. This is a parameter sensitivity, not evidence that a properly tuned larger static alternative is inferior. Its training hyperparameters need a baseline tuning study with pilot/confirmation separation; no outcome-selected favorable rank or final-data tuning is justified.
 
 ## 6. Reproducibility and limitations
 

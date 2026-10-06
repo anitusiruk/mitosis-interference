@@ -1,0 +1,40 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8787.38it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=12.3
+step=10 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=13.8
+step=15 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=15.4
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.7344, 'uniform_probability:A': 0.7344, 'frozen_centroid:A': 0.7344, 'last_active:B': 0.6406, 'uniform_probability:B': 0.6406, 'frozen_centroid:B': 0.6406, 'last_active:C': 0.7266, 'uniform_probability:C': 0.7266, 'frozen_centroid:C': 0.7266}
+step=20 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=17.5
+step=25 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=19.1
+step=30 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=20.8
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.8672, 'uniform_probability:A': 0.8672, 'frozen_centroid:A': 0.8672, 'last_active:B': 0.8203, 'uniform_probability:B': 0.8203, 'frozen_centroid:B': 0.8203, 'last_active:C': 0.8047, 'uniform_probability:C': 0.8047, 'frozen_centroid:C': 0.8047}
+step=35 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=23.1
+step=40 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=24.8
+step=45 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=26.4
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.8672, 'uniform_probability:A': 0.8672, 'frozen_centroid:A': 0.8672, 'last_active:B': 0.7969, 'uniform_probability:B': 0.7969, 'frozen_centroid:B': 0.7969, 'last_active:C': 0.75, 'uniform_probability:C': 0.75, 'frozen_centroid:C': 0.75}
+step=50 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=28.8
+step=55 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=30.5
+step=60 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=32.3
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.8281, 'uniform_probability:A': 0.8281, 'frozen_centroid:A': 0.8281, 'last_active:B': 0.7656, 'uniform_probability:B': 0.7656, 'frozen_centroid:B': 0.7656, 'last_active:C': 0.75, 'uniform_probability:C': 0.75, 'frozen_centroid:C': 0.75}
+step=65 segment(eval)=B2 decision=defer adapter=default pool=1 elapsed=34.5
+step=70 segment(eval)=B2 decision=defer adapter=default pool=1 elapsed=36.0
+step=75 segment(eval)=B2 decision=defer adapter=default pool=1 elapsed=37.4
+step=80 segment(eval)=B2 decision=defer adapter=default pool=1 elapsed=38.9
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.8281, 'uniform_probability:A': 0.8281, 'frozen_centroid:A': 0.8281, 'last_active:B': 0.7656, 'uniform_probability:B': 0.7656, 'frozen_centroid:B': 0.7656, 'last_active:C': 0.75, 'uniform_probability:C': 0.75, 'frozen_centroid:C': 0.75}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 63, "decisions": {"warmup": 4, "reuse": 59, "defer": 17}, "final_adapters": ["default"], "pool_summary": {"default": {"updates": 63, "memory": 512}}, "resources": {"lora_parameters": 147456, "private_head_parameters": 592130, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 67694596, "currently_trainable_parameters": 592130, "optimizer_state_bytes": 4737056, "replay_items": 512, "elapsed_seconds": 39.796563068404794, "gpu_peak_allocated_bytes": 487040512}, "timing": {"component_audit_seconds": 0.0, "live_training_seconds": 24.68986894749105, "evaluation_seconds": 2.902303073555231}, "component_trial_rows": 0, "official_test_used": false}

@@ -2,6 +2,35 @@
 
 Seed 2026 only. Descriptive measurements, not independent replications. Oracle and restricted accuracies are diagnostic; label-free full-label-space metrics are reported separately. No official test data were used.
 
+## day5_amazon_head_only_cau_seed2026
+
+Status: summary recorded.
+Completed steps: 80. Learned batches: 80. Decisions: {'warmup': 4, 'reuse': 76}. Final pool: 1.
+
+Spawns: none.
+
+Selected guarded reuse updates: 76; positive measured mean protected loss increase admitted: 6. Maximum measured mean harm: 0.00451628. This is an empirical probe statistic, not a formal retention guarantee.
+
+Final recorded label-free full-space development accuracy:
+
+| concept | frozen_centroid | last_active | uniform_probability |
+| --- | --- | --- | --- |
+| A | 0.8594 | 0.8594 | 0.8594 |
+| B | 0.8203 | 0.8203 | 0.8203 |
+| C | 0.7969 | 0.7969 | 0.7969 |
+
+Macro accuracy over already observed concepts: frozen_centroid=0.8255, last_active=0.8255, uniform_probability=0.8255.
+
+Timings separate method execution from the extra attribution and evaluation probes:
+
+```json
+{
+  "component_audit_seconds": 0.0,
+  "live_training_seconds": 25.89077985100448,
+  "evaluation_seconds": 2.9054668825119734
+}
+```
+
 ## day5_amazon_private_cau_seed2026
 
 Status: summary recorded.
@@ -242,6 +271,7 @@ Timings separate method execution from the extra attribution and evaluation prob
 
 | run | steps | updates | adapters | frozen_centroid | last_active | uniform_probability |
 | --- | --- | --- | --- | --- | --- | --- |
+| day5_amazon_head_only_cau_seed2026 | 80 | 80 | 1 | 0.8255 | 0.8255 | 0.8255 |
 | day5_amazon_private_cau_seed2026 | 80 | 79 | 1 | 0.8542 | 0.8542 | 0.8542 |
 | day5_amazon_private_single_seed2026 | 80 | 80 | 1 | 0.8516 | 0.8516 | 0.8516 |
 | day5_amazon_shared_cau_seed2026 | 80 | 79 | 1 | 0.8542 | 0.8542 | 0.8542 |

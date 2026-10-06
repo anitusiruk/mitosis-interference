@@ -1,0 +1,16 @@
+{
+  "router_training_examples": 512,
+  "fit_and_training_feature_seconds": 0.20051087252795696,
+  "classifier_and_route_inference_seconds": 0.23111627250909805,
+  "adapters": [
+    "default"
+  ],
+  "learned_router_coefficients": 0,
+  "normalization_statistics": 0,
+  "original_prediction_agreement": true,
+  "source_sha256": "d25ad35ff10ddfa32a726249caf3c4a96645e12d35056e9cd1e156cb205b1003",
+  "frozen_algorithm_sha256": "1e2343f62b6de00e872d3611a1a880249eeed38b4fa5bb2211370d19645fbdba",
+  "execution_scope": "replication",
+  "learner_state_sha256": "165ff89b6284e7777ed37e05e0c214d87ca3fb4f2b4ca44c4d2ca72b9f90873b",
+  "official_test_used": false
+}

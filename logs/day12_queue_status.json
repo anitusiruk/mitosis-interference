@@ -1,0 +1,58 @@
+[
+  {
+    "name": "day12_banking_private_single_rank96_seed2026_canonical",
+    "command": [
+      "/usr/local/bin/python",
+      "-u",
+      "-m",
+      "experiments.day12_capacity_recurrence",
+      "--regime",
+      "banking",
+      "--architecture",
+      "private",
+      "--policy",
+      "single",
+      "--seed",
+      "2026",
+      "--order",
+      "canonical",
+      "--output",
+      "results/day12_banking_private_single_rank96_seed2026_canonical",
+      "--deadline-utc",
+      "2026-10-06T03:25:00+00:00"
+    ],
+    "status": "completed",
+    "start_utc": "2026-10-06T02:32:03.897314+00:00",
+    "dispatcher": "tonight_balanced_queue",
+    "returncode": 0,
+    "end_utc": "2026-10-06T02:32:21.361153+00:00"
+  },
+  {
+    "name": "day12_banking_private_single_rank96_seed2027_canonical",
+    "command": [
+      "/usr/local/bin/python",
+      "-u",
+      "-m",
+      "experiments.day12_capacity_recurrence",
+      "--regime",
+      "banking",
+      "--architecture",
+      "private",
+      "--policy",
+      "single",
+      "--seed",
+      "2027",
+      "--order",
+      "canonical",
+      "--output",
+      "results/day12_banking_private_single_rank96_seed2027_canonical",
+      "--deadline-utc",
+      "2026-10-06T03:25:00+00:00"
+    ],
+    "status": "completed",
+    "start_utc": "2026-10-06T02:44:51.546676+00:00",
+    "dispatcher": "tonight_balanced_queue",
+    "returncode": 0,
+    "end_utc": "2026-10-06T02:45:08.252711+00:00"
+  }
+]

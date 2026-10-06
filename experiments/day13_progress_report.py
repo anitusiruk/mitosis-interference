@@ -37,7 +37,8 @@ report=['# Research progress and evidence handoff','',
     '## Primary five-seed results','',
     'Seeds 2027–2031 each have canonical and B-first orders. Average both orders within a seed before '
     'descriptive 95% Student-t intervals. Fixed development examples define the scope; windows and orders '
-    'are not independent replicates. All three fixed routing rules are reported.','',
+    'are not independent replicates. All three fixed routing rules are reported. Macro accuracy averages '
+    'three concept-level accuracies; it is not BANKING per-class macro accuracy.','',
     table('results/day6_seed_cluster_summary.csv',['regime','rule','architecture','policy','seed_clusters','mean','ci_low','ci_high']),'',
     table('results/day6_paired_differences.csv'),'','',
     '## Mechanism','',
@@ -70,7 +71,9 @@ report=['# Research progress and evidence handoff','',
     'The fixed-memory extension limits total stored training examples to 512 and preserves 64-example probes. '
     'It also caps the pool at eight. The rank-96 single baseline was selected by parameter arithmetic near '
     'three rank-8 private packages; it is not universally parameter matched to an uncapped growing pool. '
-    'Memory, head storage, optimizer state, active-update compute and inference compute remain separate resources.','',
+    'Memory, head storage, optimizer state, active-update compute and inference compute remain separate resources. '
+    'Poor rank-96 performance under the shared fixed recipe does not establish superiority over a tuned '
+    'larger static baseline; baseline-specific tuning with pilot/confirmation separation remains necessary.','',
     table('results/day8_memory_paired_differences.csv'),'','',
     table('results/day12_capacity_paired_differences.csv'),'','',
     '## Methodological checks and limits','',

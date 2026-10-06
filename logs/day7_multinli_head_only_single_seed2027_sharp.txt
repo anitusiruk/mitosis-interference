@@ -1,0 +1,42 @@
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 7169.63it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=1.6
+step=10 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=1.6
+step=15 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=1.7
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.3542, 'uniform_probability:A': 0.3542, 'frozen_centroid:A': 0.3542, 'last_active:B': 0.349, 'uniform_probability:B': 0.349, 'frozen_centroid:B': 0.349, 'last_active:C': 0.3333, 'uniform_probability:C': 0.3333, 'frozen_centroid:C': 0.3333}
+step=20 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=2.6
+step=25 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=2.6
+step=30 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=2.7
+step=35 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=2.8
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.3229, 'uniform_probability:A': 0.3229, 'frozen_centroid:A': 0.3229, 'last_active:B': 0.3281, 'uniform_probability:B': 0.3281, 'frozen_centroid:B': 0.3281, 'last_active:C': 0.3333, 'uniform_probability:C': 0.3333, 'frozen_centroid:C': 0.3333}
+step=40 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=3.7
+step=45 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=3.8
+step=50 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=3.8
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.401, 'uniform_probability:A': 0.401, 'frozen_centroid:A': 0.401, 'last_active:B': 0.3438, 'uniform_probability:B': 0.3438, 'frozen_centroid:B': 0.3438, 'last_active:C': 0.3281, 'uniform_probability:C': 0.3281, 'frozen_centroid:C': 0.3281}
+step=55 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=4.7
+step=60 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=4.8
+step=65 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=4.9
+step=70 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=4.9
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.375, 'uniform_probability:A': 0.375, 'frozen_centroid:A': 0.375, 'last_active:B': 0.3333, 'uniform_probability:B': 0.3333, 'frozen_centroid:B': 0.3333, 'last_active:C': 0.3698, 'uniform_probability:C': 0.3698, 'frozen_centroid:C': 0.3698}
+step=75 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=5.8
+step=80 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=5.9
+step=85 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=6.0
+step=90 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=6.1
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.3333, 'uniform_probability:A': 0.3333, 'frozen_centroid:A': 0.3333, 'last_active:B': 0.3854, 'uniform_probability:B': 0.3854, 'frozen_centroid:B': 0.3854, 'last_active:C': 0.3385, 'uniform_probability:C': 0.3385, 'frozen_centroid:C': 0.3385}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+FINAL_SUMMARY {"status": "completed", "steps": 90, "learning_updates": 90, "decisions": {"single_update": 90}, "final_adapters": ["default"], "pool_summary": {"default": {"updates": 90, "memory": 512}}, "resources": {"lora_parameters": 147456, "private_head_parameters": 592899, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 67696134, "currently_trainable_parameters": 592899, "optimizer_state_bytes": 4743208, "replay_items": 512, "elapsed_seconds": 7.163481660187244, "gpu_peak_allocated_bytes": 488630784}, "timing": {"component_audit_seconds": 0.0, "live_training_seconds": 1.4453516881912947, "evaluation_seconds": 4.022271227091551}, "component_trial_rows": 0, "official_test_used": false}

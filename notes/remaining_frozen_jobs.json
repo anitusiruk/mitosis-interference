@@ -1,0 +1,452 @@
+[
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2028_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2028_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2028_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2028_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2028_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2028_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2028_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2028_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2029_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2029_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2029_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2029_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2029_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2029_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2029_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2029_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2029,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2030_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2030_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2030_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2030_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2030_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2030_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2030_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2030_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2030,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2031_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2031_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2031_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2031_canonical_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "canonical"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_private_cau_seed2031_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_banking_head_only_cau_seed2031_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_private_cau_seed2031_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "b_first"
+  },
+  {
+    "study": 8,
+    "name": "day8_amazon_head_only_cau_seed2031_b_first_fixed512",
+    "module": "experiments.day8_fixed_memory_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2031,
+    "order": "b_first"
+  },
+  {
+    "study": 10,
+    "name": "day10_banking_private_cau_seed2028_canonical_initial_loss",
+    "module": "experiments.day10_initial_loss_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 10,
+    "name": "day10_banking_head_only_cau_seed2028_canonical_initial_loss",
+    "module": "experiments.day10_initial_loss_recurrence",
+    "regime": "banking",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 10,
+    "name": "day10_amazon_private_cau_seed2028_canonical_initial_loss",
+    "module": "experiments.day10_initial_loss_recurrence",
+    "regime": "amazon",
+    "architecture": "private",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 10,
+    "name": "day10_amazon_head_only_cau_seed2028_canonical_initial_loss",
+    "module": "experiments.day10_initial_loss_recurrence",
+    "regime": "amazon",
+    "architecture": "head_only",
+    "policy": "cau",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2027_b_first",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2027,
+    "order": "b_first"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2028_canonical",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2028,
+    "order": "canonical"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2028_b_first",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2028,
+    "order": "b_first"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2029_canonical",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2029,
+    "order": "canonical"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2029_b_first",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2029,
+    "order": "b_first"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2030_canonical",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2030,
+    "order": "canonical"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2030_b_first",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2030,
+    "order": "b_first"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2031_canonical",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2031,
+    "order": "canonical"
+  },
+  {
+    "study": 12,
+    "name": "day12_banking_private_single_rank96_seed2031_b_first",
+    "module": "experiments.day12_capacity_recurrence",
+    "regime": "banking",
+    "architecture": "private",
+    "policy": "single",
+    "seed": 2031,
+    "order": "b_first"
+  }
+]

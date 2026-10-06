@@ -102,6 +102,14 @@ def main():
             report+=['Factorial contrasts: positive values favor the named intervention. '
                      'These are means over dependent development windows; no confidence intervals are attached.','',
                      markdown_table(means,digits=6),'']
+            spawn_steps=set(spawns.step)
+            if spawn_steps:
+                selected=values[values.step.isin(spawn_steps)][['step','segment','source_adapter',*metrics]]
+                report+=['Matched active-source contrasts at the actual spawn windows (not a best-adapter attribution):','',
+                         markdown_table(selected,digits=6),'',
+                         'A fresh LoRA factor also resets its optimizer moments; a fresh head factor resets its head moments. '
+                         'These contrasts attribute component interventions under that exact optimizer convention. '
+                         'They do not isolate weight initialization from moment initialization.','']
             baseline=pd.read_csv(folder/'component_trials.csv')
             original=baseline[baseline.variant=='reuse_lora_inherit_head'].copy()
             original['x']=original.query_before*original.query_n

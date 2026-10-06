@@ -1,6 +1,6 @@
 # BERT allocation transfer diagnostic
 
-Complete trajectories 3/20; complete private/head-only pairs 1/10. Partial attempts: [].
+Complete trajectories 4/20; complete private/head-only pairs 2/10. Partial attempts: [].
 
 This transfer check replaces the backbone, representations, tokenizer, pooler and classifier. It does not isolate classifier design alone or compare against a tuned static BERT baseline. All deployment rules and both allocation controls are retained.
 
@@ -9,14 +9,15 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | seed | order | allocation_disagreements | private_spawn_steps | head_only_spawn_steps | private_learning_updates | head_only_learning_updates |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2027 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
+| 2027 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
 
 ## Descriptive cross-backbone accuracy differences
 
 | architecture | rule | seed_clusters | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- |
-| head_only | frozen_centroid | 0 | nan | nan | nan |
-| head_only | last_active | 0 | nan | nan | nan |
-| head_only | uniform_probability | 0 | nan | nan | nan |
+| head_only | frozen_centroid | 1 | -0.0423 | nan | nan |
+| head_only | last_active | 1 | -0.0118 | nan | nan |
+| head_only | uniform_probability | 1 | 0.0221 | nan | nan |
 | private | frozen_centroid | 1 | -0.1246 | nan | nan |
 | private | last_active | 1 | -0.0727 | nan | nan |
 | private | uniform_probability | 1 | -0.0423 | nan | nan |
@@ -34,5 +35,8 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2027 | b_first | private | frozen_centroid | 0.0340 | 0.1532 | -0.1192 | 80 | 3 | 1062375 | 510 |
 | 2027 | b_first | private | last_active | 0.0412 | 0.0641 | -0.0229 | 80 | 3 | 1062375 | 510 |
 | 2027 | b_first | private | uniform_probability | 0.0435 | 0.0778 | -0.0342 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | head_only | frozen_centroid | 0.0570 | 0.0900 | -0.0330 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | head_only | last_active | 0.0493 | 0.0137 | 0.0355 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | head_only | uniform_probability | 0.0355 | 0.0137 | 0.0218 | 80 | 3 | 1062375 | 510 |
 
 Intervals average both orders within each independent seed. The fixed development examples have been repeatedly examined; this is development evidence. Scope is the BANKING label-group stress test, the frozen training recipe and the declared memory budget. Neither allocation equivalence nor disagreement alone establishes competitive utility or a general capacity principle.

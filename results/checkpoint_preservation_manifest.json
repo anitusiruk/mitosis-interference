@@ -479,6 +479,38 @@
     "bytes": 24635681,
     "sha256": "a67a02ba772191998cfd2ba19fb16de102a7b16d57d68494054ea0cb2fc7d1e3"
   },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/README.md": {
+    "bytes": 5182,
+    "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "30a550668d0d3632c243554abc94431a21f396050d86847df8631f9fa42695e3"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "170418feab3f63fd2de2cdfbf2ccc6bc8e036d94c55a39663ea9024ec3e3a1c0"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "0d91b2c1a6cae74e38a509221ff37fe45d49804a0348c34c39ddf0a4bbf1b03c"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "9990786e72be10b6d4f2f617809dd22b1758cc51a02015aa6bff5c9673855963"
+  },
+  "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/learner_state.pt": {
+    "bytes": 2441947,
+    "sha256": "e52306ffee6f1333b664d1e42d7664dd6ddecd6be1b55fbfb62742193e22c2ba"
+  },
   "results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/README.md": {
     "bytes": 5182,
     "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"

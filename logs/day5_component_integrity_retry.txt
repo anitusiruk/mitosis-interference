@@ -1,0 +1,13 @@
+reuse_lora_inherit_head restores all real state PASS
+reuse_lora_fresh_head restores all real state PASS
+fresh_lora_inherit_head restores all real state PASS
+fresh_lora_fresh_head restores all real state PASS
+reuse_lora_inherit_head_reset_optimizer restores all real state PASS
+reuse_lora_common_frozen_head restores all real state PASS
+fresh_lora_common_frozen_head restores all real state PASS
+reuse_lora_common_frozen_head changes no head parameters PASS
+fresh_lora_common_frozen_head changes no head parameters PASS
+cloned inherited-components trial matches exact real optimizer update PASS
+odd batch queries each example once per variant PASS
+all factorial folds jointly remain non-invasive PASS
+DAY5_COMPONENT_INTEGRITY_PASS

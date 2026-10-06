@@ -1,0 +1,29 @@
+one physical head stack, not private saved modules PASS
+shared head moments exist PASS
+reuse restores params/opt/RNG/memory/gradients/trainability/modes PASS
+fresh restores full real state and registry PASS
+fresh head intervention checks old default memory PASS
+virtual reuse equals exact subsequent real update PASS
+all adapter records share the same physical optimizer PASS
+optimizer parameters are unique PASS
+real fresh LoRA has empty moments before first update PASS
+nonselected old adapter also protected PASS
+multi-adapter trial restores all shared state PASS
+fresh feasibility requires both folds PASS
+all crossfit probes restore full state PASS
+new fresh probe is non-invasive PASS
+virtual fresh equals real spawn/update with inherited head moments PASS
+post-spawn shared warmup rejects harm instead of unguarded training PASS
+DAY5_SHARED_HEAD_INTEGRITY_PASS
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day5_component_integrity.py", line 50, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/day5_component_integrity.py", line 31, in main
+    trials[variant]=component_trial(pool,'default',texts,labels,texts,labels,variant)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/component_intervention_audit.py", line 69, in component_trial
+    opt = torch.optim.AdamW(params, **copy.deepcopy(opt_source.defaults))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdamW.__init__() got an unexpected keyword argument 'decoupled_weight_decay'

@@ -1,0 +1,95 @@
+
+=== NEGATIVE ONE-STEP UTILITY, SAFE EXISTING CAPACITY ===
+negative utility does NOT cause defer                      PASS
+v1 reason identifies safe existing reuse                   PASS
+default selected                                           PASS
+real update executed                                       PASS
+real loss returned                                         PASS
+negative candidate was full-batch checked                  PASS
+guard records utility as negative                          PASS
+guard records utility positivity false                     PASS
+prospective guard private RNG restored                     PASS
+
+=== FIRST FRESH POSITIVE + NEGATIVE SAFE REUSE ===
+first fresh-positive does not spawn                        PASS
+pending fresh evidence becomes true                        PASS
+first-fresh reuse reason updated                           PASS
+supervised batch is still learned                          PASS
+adapter count unchanged                                    PASS
+
+=== BEST SAFE EXISTING ACTION MAY BE NEGATIVE ===
+higher utility among negative actions selected             PASS
+negative winner receives update                            PASS
+decision remains reuse                                     PASS
+
+=== NO RETENTION-FEASIBLE EXISTING ACTION -> DEFER ===
+unsafe existing action defers                              PASS
+reason means retention infeasible                          PASS
+no optimizer-equivalent update executed                    PASS
+no replay addition executed                                PASS
+defer returns no train loss                                PASS
+
+=== CROSS-FOLD INFEASIBLE EXISTING ACTION -> DEFER ===
+cross-fold infeasible action not trained                   PASS
+no prospective full-batch guard run                        PASS
+defer has no train loss                                    PASS
+
+=== UNAVAILABLE DIAGNOSTIC -> DEFER ===
+unavailable remains defer                                  PASS
+unavailable reason unchanged                               PASS
+unavailable executes no update                             PASS
+
+=== CONFIRMED FRESH STILL SPAWNS ===
+confirmed fresh decision is spawn                          PASS
+one adapter added                                          PASS
+new adapter trained                                        PASS
+pending evidence clears                                    PASS
+spawn still establishes warmup                             PASS
+spawn returns train loss                                   PASS
+
+=== NEGATIVE EXACT TIE ===
+lower adapter name wins exact negative tie                 PASS
+tie winner really trained                                  PASS
+
+============================================
+CAU-v1 LEARNING-CONTINUITY LOGIC AUDIT: PASS
+============================================
+GPU: NVIDIA GeForce RTX 4090
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 4730.61it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+default adapter mature                                  PASS
+
+=== REAL NEGATIVE-UTILITY GUARD TRANSACTION ===
+negative utility candidate is evaluated                 PASS
+negative utility candidate can survive                  PASS
+negative sign explicitly recorded                       PASS
+prospective transaction exactly restores learner        PASS
+
+=== REAL NEGATIVE-UTILITY LIVE REUSE ===
+decision is reuse                                       PASS
+reason is safe existing reuse                           PASS
+same real adapter selected                              PASS
+real optimizer update occurred                          PASS
+real replay observation occurred                        PASS
+real training loss returned                             PASS
+no temporary shadow adapter remains                     PASS
+
+=========================================
+CAU-v1 REAL NEGATIVE-UTILITY SMOKE: PASS
+=========================================

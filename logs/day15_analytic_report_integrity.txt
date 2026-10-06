@@ -1,0 +1,3 @@
+DAY15_REPORT_SAVED 20 verified trajectories
+DAY15_REPORT_SAVED 1 verified trajectories
+DAY15_ANALYTIC_REPORT_INTEGRITY_PASS 588 balanced intervals; unpaired order excluded

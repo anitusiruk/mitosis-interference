@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-06T23:41:44.418988+00:00",
+  "gates": [
+    [
+      "experiments.day15_moment_integrity",
+      [
+        "--device",
+        "cpu"
+      ],
+      "day15_cpu_integrity_final.txt"
+    ],
+    [
+      "experiments.day15_moment_integrity",
+      [
+        "--device",
+        "cuda"
+      ],
+      "day15_cuda_integrity.txt"
+    ],
+    [
+      "experiments.day16_bert_integrity",
+      [
+        "--device",
+        "cpu"
+      ],
+      "day16_cpu_integrity_final.txt"
+    ],
+    [
+      "experiments.day16_bert_integrity",
+      [
+        "--device",
+        "cuda"
+      ],
+      "day16_cuda_integrity.txt"
+    ],
+    [
+      "experiments.day15_report_integrity",
+      [],
+      "day15_analytic_report_integrity.txt"
+    ]
+  ],
+  "backbone_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "repository": "anitusiruk/mitosis-interference"
+}

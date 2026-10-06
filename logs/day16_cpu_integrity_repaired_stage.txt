@@ -1,0 +1,18 @@
+DAY15_REPORT_SAVED 20 verified trajectories
+DAY15_REPORT_SAVED 1 verified trajectories
+DAY15_ANALYTIC_REPORT_INTEGRITY_PASS 252 balanced intervals; unpaired order excluded
+private single private linear classifier PASS
+private frozen pooler PASS
+private exact crossfit state restoration PASS
+private inherited intervention restoration PASS
+private intervention equals actual update PASS
+private multi-package allocation budget PASS
+BERT component cloning is non-invasive PASS
+head_only single private linear classifier PASS
+head_only frozen pooler PASS
+head_only exact crossfit state restoration PASS
+head_only inherited intervention restoration PASS
+head_only intervention equals actual update PASS
+head_only multi-package allocation budget PASS
+head-only LoRA is zero and frozen PASS
+DAY16_BERT_INTEGRITY_PASS cpu

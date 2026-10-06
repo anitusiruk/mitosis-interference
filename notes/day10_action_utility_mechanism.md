@@ -50,23 +50,35 @@ These disagreement counts rescore the same reference states. They are not a clos
 | amazon | head_only | 2027 | frozen_centroid | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
 | amazon | head_only | 2027 | last_active | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
 | amazon | head_only | 2027 | uniform_probability | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
+| amazon | head_only | 2028 | frozen_centroid | 0.6771 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | head_only | 2028 | last_active | 0.7734 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | head_only | 2028 | uniform_probability | 0.6250 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
 | amazon | private | 2026 | frozen_centroid | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2026 | last_active | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2026 | uniform_probability | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2027 | frozen_centroid | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
 | amazon | private | 2027 | last_active | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
 | amazon | private | 2027 | uniform_probability | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
+| amazon | private | 2028 | frozen_centroid | 0.7474 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | private | 2028 | last_active | 0.8411 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | private | 2028 | uniform_probability | 0.8542 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
 | banking | head_only | 2026 | frozen_centroid | 0.1246 | 0.1246 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2026 | last_active | 0.0774 | 0.0774 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2026 | uniform_probability | 0.0712 | 0.0712 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | frozen_centroid | 0.1129 | 0.1129 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | last_active | 0.0978 | 0.0978 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | uniform_probability | 0.0137 | 0.0137 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | frozen_centroid | 0.1309 | 0.1309 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | last_active | 0.0591 | 0.0591 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | uniform_probability | 0.1219 | 0.1219 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | frozen_centroid | 0.1613 | 0.1613 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | last_active | 0.1022 | 0.1022 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | uniform_probability | 0.1222 | 0.1222 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | frozen_centroid | 0.1584 | 0.1584 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | last_active | 0.1462 | 0.1462 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | uniform_probability | 0.0860 | 0.0860 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | frozen_centroid | 0.1750 | 0.1750 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | last_active | 0.1247 | 0.1247 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | uniform_probability | 0.1442 | 0.1442 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 
 Only ranking uses pre-update current-query loss. Exact AdamW protected-memory guards remain. No inference about the benefit of all lookahead computation or a runtime speedup follows. Three canonical-order development seeds require broader confirmation.

@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-06T05:43:28.020130+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-06T23:36:52.648633+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -14,9 +14,9 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 6 | 80 | 80 | completed |
 | 7 | 24 | 24 | completed |
 | 9 | 110 | 110 | completed |
-| 8 | 12 | 44 | completed |
-| 10 | 8 | 12 | completed |
-| 12 | 2 | 11 | completed |
+| 8 | 44 | 44 | completed |
+| 10 | 12 | 12 | completed |
+| 12 | 11 | 11 | completed |
 | 5 head-only | 2 | 2 | completed |
 
 Complete trajectories alone enter summaries. A queue record is an execution status; the independent evidence audit also checks the saved trajectory summary, full step count and final metrics.
@@ -120,24 +120,36 @@ The closed-loop pre-update ranking sensitivity preserves prospective AdamW reten
 | amazon | head_only | 2027 | frozen_centroid | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
 | amazon | head_only | 2027 | last_active | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
 | amazon | head_only | 2027 | uniform_probability | 0.7943 | 0.7943 | 0 | 80 | 1 | [] |
+| amazon | head_only | 2028 | frozen_centroid | 0.6771 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | head_only | 2028 | last_active | 0.7734 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | head_only | 2028 | uniform_probability | 0.6250 | 0.7995 | 24 | 80 | 2 | [{"step":16,"segment":"A1"}] |
 | amazon | private | 2026 | frozen_centroid | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2026 | last_active | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2026 | uniform_probability | 0.8542 | 0.8542 | 0 | 79 | 1 | [] |
 | amazon | private | 2027 | frozen_centroid | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
 | amazon | private | 2027 | last_active | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
 | amazon | private | 2027 | uniform_probability | 0.8516 | 0.8516 | 0 | 72 | 1 | [] |
+| amazon | private | 2028 | frozen_centroid | 0.7474 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | private | 2028 | last_active | 0.8411 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
+| amazon | private | 2028 | uniform_probability | 0.8542 | 0.8333 | 30 | 80 | 2 | [{"step":16,"segment":"A1"}] |
 | banking | head_only | 2026 | frozen_centroid | 0.1246 | 0.1246 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2026 | last_active | 0.0774 | 0.0774 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2026 | uniform_probability | 0.0712 | 0.0712 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | frozen_centroid | 0.1129 | 0.1129 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | last_active | 0.0978 | 0.0978 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | head_only | 2027 | uniform_probability | 0.0137 | 0.0137 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | frozen_centroid | 0.1309 | 0.1309 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | last_active | 0.0591 | 0.0591 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | head_only | 2028 | uniform_probability | 0.1219 | 0.1219 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | frozen_centroid | 0.1613 | 0.1613 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | last_active | 0.1022 | 0.1022 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2026 | uniform_probability | 0.1222 | 0.1222 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | frozen_centroid | 0.1584 | 0.1584 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | last_active | 0.1462 | 0.1462 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 | banking | private | 2027 | uniform_probability | 0.0860 | 0.0860 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | frozen_centroid | 0.1750 | 0.1750 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | last_active | 0.1247 | 0.1247 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
+| banking | private | 2028 | uniform_probability | 0.1442 | 0.1442 | 0 | 80 | 3 | [{"step":18,"segment":"B1"},{"step":50,"segment":"C1"}] |
 
 
 ## Third regime and deployment
@@ -244,28 +256,28 @@ The fixed-memory extension limits total stored training examples to 512 and pres
 
 | regime | architecture | rule | seed_clusters | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- |
-| amazon | head_only | frozen_centroid | 1 | 0.0000 | nan | nan |
-| amazon | head_only | last_active | 1 | 0.0000 | nan | nan |
-| amazon | head_only | uniform_probability | 1 | 0.0000 | nan | nan |
-| amazon | private | frozen_centroid | 1 | 0.0000 | nan | nan |
-| amazon | private | last_active | 1 | 0.0000 | nan | nan |
-| amazon | private | uniform_probability | 1 | 0.0000 | nan | nan |
-| banking | head_only | frozen_centroid | 1 | 0.0022 | nan | nan |
-| banking | head_only | last_active | 1 | 0.0000 | nan | nan |
-| banking | head_only | uniform_probability | 1 | 0.0000 | nan | nan |
-| banking | private | frozen_centroid | 1 | 0.0059 | nan | nan |
-| banking | private | last_active | 1 | 0.0000 | nan | nan |
-| banking | private | uniform_probability | 1 | 0.0000 | nan | nan |
+| amazon | head_only | frozen_centroid | 5 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | head_only | last_active | 5 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | head_only | uniform_probability | 5 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | private | frozen_centroid | 5 | -0.0013 | -0.0049 | 0.0023 |
+| amazon | private | last_active | 5 | 0.0005 | -0.0009 | 0.0020 |
+| amazon | private | uniform_probability | 5 | -0.0003 | -0.0010 | 0.0005 |
+| banking | head_only | frozen_centroid | 5 | 0.0015 | -0.0024 | 0.0053 |
+| banking | head_only | last_active | 5 | 0.0000 | 0.0000 | 0.0000 |
+| banking | head_only | uniform_probability | 5 | 0.0000 | 0.0000 | 0.0000 |
+| banking | private | frozen_centroid | 5 | 0.0038 | 0.0012 | 0.0064 |
+| banking | private | last_active | 5 | 0.0000 | 0.0000 | 0.0000 |
+| banking | private | uniform_probability | 5 | 0.0000 | 0.0000 | 0.0000 |
 
 
 | rule | contrast | seed_clusters | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- |
-| frozen_centroid | rank96_minus_rank8 | 0 | nan | nan | nan |
-| frozen_centroid | rank96_minus_adaptive | 0 | nan | nan | nan |
-| last_active | rank96_minus_rank8 | 0 | nan | nan | nan |
-| last_active | rank96_minus_adaptive | 0 | nan | nan | nan |
-| uniform_probability | rank96_minus_rank8 | 0 | nan | nan | nan |
-| uniform_probability | rank96_minus_adaptive | 0 | nan | nan | nan |
+| frozen_centroid | rank96_minus_rank8 | 5 | -0.0946 | -0.1406 | -0.0486 |
+| frozen_centroid | rank96_minus_adaptive | 5 | -0.0892 | -0.1235 | -0.0549 |
+| last_active | rank96_minus_rank8 | 5 | -0.0946 | -0.1406 | -0.0486 |
+| last_active | rank96_minus_adaptive | 5 | -0.0345 | -0.0755 | 0.0066 |
+| uniform_probability | rank96_minus_rank8 | 5 | -0.0946 | -0.1406 | -0.0486 |
+| uniform_probability | rank96_minus_adaptive | 5 | -0.0611 | -0.0900 | -0.0323 |
 
 
 ## Methodological checks and limits
@@ -299,7 +311,7 @@ The normalized-text and token-truncation audit is an additional offline diagnost
 
 ## Reproduction and preservation
 
-The working branch is day5-causal-audit; master remains the restored Day-4 reference. All live trajectories record source hashes, model revision, package versions, stream hashes and saved final learner state. Downloaded source/result archives exclude large learner checkpoints; the portable Git bundle preserves committed history. Checkpoint files remain on the pod and must be backed up before termination. GitHub push failed because the pod lacks authentication; no successful push is claimed.
+The working branch is day5-causal-audit; master remains the restored Day-4 reference. All live trajectories record source hashes, package versions, stream hashes and saved final learner state. The older model-revision field is null; exact historical backbone identity was not recorded. The restart records an explicit Hugging Face commit and backbone file hashes, and verifies saved aggregate predictions and losses before new outcomes. This numerical reload check does not prove historical byte identity. The saved GitHub snapshot and all 738 checkpoint files were successfully restored on the new pod; notes/github_save_verification.json records the earlier authenticated save. Source-only archives and Git bundles omit LFS tensor content. New work requires its own successful GitHub save before pod shutdown.
 
 To recover committed history from the final bundle:
 

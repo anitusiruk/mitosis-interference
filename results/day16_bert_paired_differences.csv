@@ -2,6 +2,6 @@ architecture,rule,seed_clusters,mean,ci_low,ci_high
 head_only,frozen_centroid,1,-0.042340846531069336,,
 head_only,last_active,1,-0.011815024202786087,,
 head_only,uniform_probability,1,0.022102132062225183,,
-private,frozen_centroid,1,-0.1245648432046836,,
-private,last_active,1,-0.07274507630344013,,
-private,uniform_probability,1,-0.04229147049233513,,
+private,frozen_centroid,2,-0.1063917403957311,-0.33730290537783303,0.1245194245863708
+private,last_active,2,-0.06924491002475705,-0.1137187393723589,-0.0247710806771552
+private,uniform_probability,2,-0.06422392317803025,-0.34290215736893703,0.21445431101287651

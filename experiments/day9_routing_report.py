@@ -10,7 +10,9 @@ report=['# Auxiliary learned routing diagnostic','',
     'A standardized linear gate learns past adapter assignments from reservoir texts only. '
     'Neither gold class labels nor true genre/concept identities are router fitting targets. '
     'Both hard selection and probability mixture are reported; no development winner is selected. '
-    'Every included checkpoint first passed original prediction agreement. Official tests remain unused.','']
+    'Every included checkpoint first passed equality of nine aggregate sample counts and accuracies. '
+    'Original per-example predictions were not stored; the provenance field original_prediction_agreement '
+    'records this weaker aggregate check. Official tests remain unused.','']
 if path.exists():
     df=pd.read_csv(path)
     report+=[f'Completed learner checkpoints: {df.run.nunique()}.','']

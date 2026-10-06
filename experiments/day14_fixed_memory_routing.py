@@ -1,4 +1,5 @@
 """Train-assignment router diagnostic on verified frozen checkpoints."""
+import argparse
 from datetime import datetime,timezone
 import gc
 import hashlib
@@ -31,6 +32,11 @@ from experiments.day7_multinli_data import build_multinli,PairTokenizer
 from experiments.day9_learned_routing import evaluation_sets, frozen_features, load_checkpoint, evaluate_learned
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--deadline-utc',default='2026-10-06T03:24:00+00:00')
+    args=parser.parse_args()
+    deadline=datetime.fromisoformat(args.deadline_utc)
+    if deadline.tzinfo is None:parser.error('An explicit timezone is required')
     os.environ['OMP_NUM_THREADS']='8';os.environ['TOKENIZERS_PARALLELISM']='false';torch.set_num_threads(8)
     sets={};features={};all_rows=[]
     status_path=Path('logs/day14_fixed_memory_routing_status.json')
@@ -40,13 +46,19 @@ def main():
     patterns=['day8_*_fixed512']
     folders=sorted([p for pattern in patterns for p in Path('results').glob(pattern)])
     for folder in folders:
-        if datetime.now(timezone.utc)>=datetime.fromisoformat('2026-10-06T03:24:00+00:00'):break
-        if datetime.now(timezone.utc)>=datetime.fromisoformat('2026-10-06T03:25:00+00:00'):break
+        if datetime.now(timezone.utc)>=deadline:break
         summary_path=folder/'summary.json'
         if not summary_path.exists() or json.loads(summary_path.read_text())['status']!='completed':continue
         provenance=json.loads((folder/'provenance.json').read_text());args=provenance['args']
         if args['architecture'] not in ['private','head_only']:continue
-        if (folder/'learned_routing.csv').exists():raise RuntimeError('Refusing to overwrite auxiliary routing outcomes')
+        if (folder/'learned_routing.csv').exists():
+            resource=json.loads((folder/'learned_routing_provenance.json').read_text())
+            assert resource['learner_state_sha256']==hashlib.sha256((folder/'checkpoint/learner_state.pt').read_bytes()).hexdigest()
+            assert resource['frozen_algorithm_sha256']==hashlib.sha256(Path('experiments/day9_learned_routing.py').read_bytes()).hexdigest()
+            assert len([r for r in all_rows if r['run']==folder.name])==2
+            assert any(r['run']==folder.name and r['status']=='completed' for r in status)
+            print('SKIP_VERIFIED_ROUTING',folder.name,flush=True)
+            continue
         regime=args['regime']
         if regime not in sets:sets[regime]=evaluation_sets(regime)
         pool,last_name,provenance=load_checkpoint(folder)

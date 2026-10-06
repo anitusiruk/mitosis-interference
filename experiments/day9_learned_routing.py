@@ -52,7 +52,7 @@ def load_checkpoint(folder):
     provenance=json.loads((folder/'provenance.json').read_text())
     args=provenance['args'];regime=args['regime']
     count={'banking':77,'amazon':2,'multinli':3}[regime]
-    revision=provenance['model_revision']
+    revision=provenance['model_revision'] or os.environ.get('MITOSIS_MODEL_REVISION')
     tok=AutoTokenizer.from_pretrained('distilbert-base-uncased',revision=revision)
     if regime=='multinli':tok=PairTokenizer(tok)
     base=AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased',revision=revision,num_labels=count)

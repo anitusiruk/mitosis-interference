@@ -1,0 +1,300 @@
+{
+  "verified_utc": "2026-10-06T22:55:10.355817+00:00",
+  "backbone_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "historical_revision_field_was_null": true,
+  "historical_exact_backbone_identity_proven": false,
+  "validation_scope": "nine aggregate counts, accuracies and losses per restored Day8 checkpoint; per-example predictions were not saved",
+  "loss_absolute_tolerance": 1e-05,
+  "loss_relative_tolerance": 0,
+  "stream_checks": [
+    {
+      "run": "day8_banking_private_cau_seed2028_canonical_fixed512",
+      "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2028_canonical_fixed512",
+      "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2028_canonical_fixed512",
+      "stream_sha256": "278db98bcd86c297e8eee1b7ed7888af827e0b76ed06da21a23a333ac86f72e9",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2028_canonical_fixed512",
+      "stream_sha256": "278db98bcd86c297e8eee1b7ed7888af827e0b76ed06da21a23a333ac86f72e9",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2028_b_first_fixed512",
+      "stream_sha256": "50f54f20a3d5beadb75a2daf2a8830a047ed02b81c6d6e889f99f85f2b87d8c3",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2028_b_first_fixed512",
+      "stream_sha256": "50f54f20a3d5beadb75a2daf2a8830a047ed02b81c6d6e889f99f85f2b87d8c3",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2028_b_first_fixed512",
+      "stream_sha256": "33a143cff105000d7fc0fa82f897e56bc57a777d6925855d7060bc49aa919457",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2028_b_first_fixed512",
+      "stream_sha256": "33a143cff105000d7fc0fa82f897e56bc57a777d6925855d7060bc49aa919457",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2029_canonical_fixed512",
+      "stream_sha256": "5e33eba3b77b667156b81c202d9dcc5dddcb748ccee3bd569504301bd56d26d0",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2029_canonical_fixed512",
+      "stream_sha256": "5e33eba3b77b667156b81c202d9dcc5dddcb748ccee3bd569504301bd56d26d0",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2029_canonical_fixed512",
+      "stream_sha256": "9ffa93e9a35f1eed33873eee62370b071a64103685e61991817b5474628ea15d",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2029_canonical_fixed512",
+      "stream_sha256": "9ffa93e9a35f1eed33873eee62370b071a64103685e61991817b5474628ea15d",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2029_b_first_fixed512",
+      "stream_sha256": "c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2029_b_first_fixed512",
+      "stream_sha256": "c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2029_b_first_fixed512",
+      "stream_sha256": "c29f668113205ce3557e48ca8b9e2185b8df430d470db1b1ded4bf2482d8e5e8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2029_b_first_fixed512",
+      "stream_sha256": "c29f668113205ce3557e48ca8b9e2185b8df430d470db1b1ded4bf2482d8e5e8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2030_canonical_fixed512",
+      "stream_sha256": "409afedba5aa00e8beea1d1867b9ebdbc0db10e3c67530e571e1e619342c0a00",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2030_canonical_fixed512",
+      "stream_sha256": "409afedba5aa00e8beea1d1867b9ebdbc0db10e3c67530e571e1e619342c0a00",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2030_canonical_fixed512",
+      "stream_sha256": "9eb6f3aa1bbdb791093ad4e81197df79f87bdb6ef37f2790de0e82cdf33c3e6e",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2030_canonical_fixed512",
+      "stream_sha256": "9eb6f3aa1bbdb791093ad4e81197df79f87bdb6ef37f2790de0e82cdf33c3e6e",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2030_b_first_fixed512",
+      "stream_sha256": "35f2425c6788c5ecd4632aa9888259f3f52b4727fe41147c1f350641b362cec8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2030_b_first_fixed512",
+      "stream_sha256": "35f2425c6788c5ecd4632aa9888259f3f52b4727fe41147c1f350641b362cec8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2030_b_first_fixed512",
+      "stream_sha256": "fe2134a88e2204967868eeb353a254408f09afb769836409249ca4b5ac41a94a",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2030_b_first_fixed512",
+      "stream_sha256": "fe2134a88e2204967868eeb353a254408f09afb769836409249ca4b5ac41a94a",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2031_canonical_fixed512",
+      "stream_sha256": "e379f7c45e8d2ccad9eaab9f418bfa1022f6523a7e7d4eecd64b4789a6fa5d99",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2031_canonical_fixed512",
+      "stream_sha256": "e379f7c45e8d2ccad9eaab9f418bfa1022f6523a7e7d4eecd64b4789a6fa5d99",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2031_canonical_fixed512",
+      "stream_sha256": "e55310e3079b56f5a986da5dc1dafb1431cd34c2259580c0109200a13a326991",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2031_canonical_fixed512",
+      "stream_sha256": "e55310e3079b56f5a986da5dc1dafb1431cd34c2259580c0109200a13a326991",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_private_cau_seed2031_b_first_fixed512",
+      "stream_sha256": "348b82325fd7e263fb7f500262abc38723e24b81eb488aec544e8dbf25e43c9e",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2031_b_first_fixed512",
+      "stream_sha256": "348b82325fd7e263fb7f500262abc38723e24b81eb488aec544e8dbf25e43c9e",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2031_b_first_fixed512",
+      "stream_sha256": "5807903928eb20d26c9404641e0395566fbd1f33c4991c2d5b006a4a9b277f4d",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2031_b_first_fixed512",
+      "stream_sha256": "5807903928eb20d26c9404641e0395566fbd1f33c4991c2d5b006a4a9b277f4d",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day10_banking_private_cau_seed2028_canonical_initial_loss",
+      "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day10_banking_head_only_cau_seed2028_canonical_initial_loss",
+      "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day10_amazon_private_cau_seed2028_canonical_initial_loss",
+      "stream_sha256": "278db98bcd86c297e8eee1b7ed7888af827e0b76ed06da21a23a333ac86f72e9",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day10_amazon_head_only_cau_seed2028_canonical_initial_loss",
+      "stream_sha256": "278db98bcd86c297e8eee1b7ed7888af827e0b76ed06da21a23a333ac86f72e9",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2027_b_first",
+      "stream_sha256": "a4e74f9e47e75ad07657bec55f39754dafcabb9a3ece081e11e8cdfa4c511f18",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2028_canonical",
+      "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2028_b_first",
+      "stream_sha256": "50f54f20a3d5beadb75a2daf2a8830a047ed02b81c6d6e889f99f85f2b87d8c3",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2029_canonical",
+      "stream_sha256": "5e33eba3b77b667156b81c202d9dcc5dddcb748ccee3bd569504301bd56d26d0",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2029_b_first",
+      "stream_sha256": "c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2030_canonical",
+      "stream_sha256": "409afedba5aa00e8beea1d1867b9ebdbc0db10e3c67530e571e1e619342c0a00",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2030_b_first",
+      "stream_sha256": "35f2425c6788c5ecd4632aa9888259f3f52b4727fe41147c1f350641b362cec8",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2031_canonical",
+      "stream_sha256": "e379f7c45e8d2ccad9eaab9f418bfa1022f6523a7e7d4eecd64b4789a6fa5d99",
+      "matches_saved_reference": true
+    },
+    {
+      "run": "day12_banking_private_single_rank96_seed2031_b_first",
+      "stream_sha256": "348b82325fd7e263fb7f500262abc38723e24b81eb488aec544e8dbf25e43c9e",
+      "matches_saved_reference": true
+    }
+  ],
+  "checkpoint_reload_checks": [
+    {
+      "run": "day8_amazon_head_only_cau_seed2026_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2027_b_first_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 5.551115123125783e-17
+    },
+    {
+      "run": "day8_amazon_head_only_cau_seed2027_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2026_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 5.551115123125783e-17
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2027_b_first_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 5.551115123125783e-17
+    },
+    {
+      "run": "day8_amazon_private_cau_seed2027_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2026_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 8.881784197001252e-16
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2027_b_first_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_banking_head_only_cau_seed2027_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_banking_private_cau_seed2026_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 8.881784197001252e-16
+    },
+    {
+      "run": "day8_banking_private_cau_seed2027_b_first_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 0.0
+    },
+    {
+      "run": "day8_banking_private_cau_seed2027_canonical_fixed512",
+      "aggregate_counts_and_accuracies_equal": true,
+      "maximum_absolute_loss_difference": 4.440892098500626e-16
+    }
+  ],
+  "official_test_used": false,
+  "status": "passed"
+}

@@ -96,10 +96,13 @@ report=['# Research progress and evidence handoff','',
           'truncated_token_train_dev_unique_overlap','training_fraction_over_64_tokens','development_fraction_over_64_tokens']),'','',
     '## Reproduction and preservation','',
     'The working branch is day5-causal-audit; master remains the restored Day-4 reference. All live trajectories '
-    'record source hashes, model revision, package versions, stream hashes and saved final learner state. '
-    'Downloaded source/result archives exclude large learner checkpoints; the portable Git bundle preserves '
-    'committed history. Checkpoint files remain on the pod and must be backed up before termination. '
-    'GitHub push failed because the pod lacks authentication; no successful push is claimed.','',
+    'record source hashes, package versions, stream hashes and saved final learner state. The older model-revision '
+    'field is null; exact historical backbone identity was not recorded. The restart records an explicit '
+    'Hugging Face commit and backbone file hashes, and verifies saved aggregate predictions and losses before '
+    'new outcomes. This numerical reload check does not prove historical byte identity. '
+    'The saved GitHub snapshot and all 738 checkpoint files were successfully restored on the new pod; '
+    'notes/github_save_verification.json records the earlier authenticated save. Source-only archives and '
+    'Git bundles omit LFS tensor content. New work requires its own successful GitHub save before pod shutdown.','',
     'To recover committed history from the final bundle:','',
     '```bash\ngit clone mitosis-research-final.bundle mitosis-interference\ncd mitosis-interference\n'
     'git checkout day5-causal-audit\nexport PYTHONPATH="$PWD"\n```','',

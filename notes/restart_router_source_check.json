@@ -1,0 +1,11 @@
+{
+  "reference_git_head": "a19f188b43005e6c92e46432fb1df521818e8d6d",
+  "functions_unchanged": [
+    "evaluation_sets",
+    "frozen_features",
+    "evaluate_learned"
+  ],
+  "original_source_sha256": "1e2343f62b6de00e872d3611a1a880249eeed38b4fa5bb2211370d19645fbdba",
+  "patched_source_sha256": "b0783f298aba6f739bd437958710e6f30b588302b8bf991a3bb9a39529e96708",
+  "scope": "checkpoint model-revision fallback only; fit/feature/prediction functions unchanged"
+}

@@ -34,3 +34,14 @@ convincing support for claims, clear communication, and findings of interest to
 the audience. They do not require a new state-of-the-art or a novelty threshold.
 This does not make an incomplete pilot ready to submit: evidence must support
 the final stated scope and human authors must understand and verify the work.
+# Additional primary-source check (2026-10-06 UTC)
+
+| Work | Relevant overlap | Implication for this project |
+| --- | --- | --- |
+| [TORA, submitted 2026-10-01](https://arxiv.org/html/2610.01702v1) | DistilBERT text-classification adapter transfer/isolation using SVD geometry. Its framework first trains an incoming task for one epoch to obtain a fingerprint. | Generic text-classification reuse/expansion is occupied. A batch-level exact-state decision differs in intervention and available information, but requires empirical value and a careful comparator adaptation. Do not claim broad priority. |
+| [CaLoRA, NeurIPS 2025](https://papers.nips.cc/paper_files/paper/2025/file/7c22f3719c9699c0ea4fe47fb536ff82-Paper-Conference.pdf) | Parameter-level counterfactual attribution and gradient adaptation for backward transfer. The paper states clear task boundaries as a limitation. | Causal attribution of LoRA is established terminology; this project's action-level cross-fit probe is a narrower distinction, not the first causal LoRA method. |
+| [Adam failure and adaptive moment routing, 2026](https://arxiv.org/html/2604.22407v1) | Studies how modified gradients interact with Adam's second moments, including LoRA experiments. | Optimizer-aware forgetting and hidden Adam failure are already studied. The specific effect on reuse-versus-fresh action scores needs evidence beyond that general observation. |
+| [L2R, EMNLP Findings 2024](https://aclanthology.org/2024.findings-emnlp.38/) | Learns routing/composition of isolated PEFT modules using a small memory. | A learned router added here is a standard comparator/engineering repair, not a novelty claim or an exact reproduction of L2R. |
+| [LiteLoRA author repository, ColorAI 2026 workshop](https://github.com/tanguy8001/LiteLoRA) | Learned recruit/reuse gating on top of SD-LoRA, with private classifier heads and gating state in saved artifacts. | Adapter-count reduction and head-bearing package reuse are also occupied. Repository results are author claims, not independently reproduced evidence here. |
+
+The current best potential contribution is a carefully specified decision protocol and mechanistic audit of **optimizer-bearing classifier-and-adapter packages**, including its failure boundaries. Day-5 observations already undermine a LoRA-only interpretation and a claim that spawning implies deployed improvement. Whether the narrower protocol has enough demonstrated value remains unresolved. Modern source-faithful baselines, natural same-label regimes and resource fairness are necessary before claiming decent novelty or submission readiness.

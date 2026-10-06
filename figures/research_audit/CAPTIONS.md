@@ -1,0 +1,7 @@
+# Figure scope and captions
+
+- `day5_spawn_attribution`: original BANKING seed 2026 spawn windows. Left decomposes fresh-versus-best-feasible-reuse advantage into its initial predictor gap and difference in one-step learning gain. Right shows matched active-source component interventions, including their specified optimizer-moment resets. The two panels are different decompositions; initial gap is not itself a pure classifier effect. No uncertainty inference from these dependent windows.
+- `day5_allocation_and_inference`: exact package counts and skipped batches for the Day-5 reference, head-only, shared-head sensitivity and fixed single. All three fixed label-free rules use full 77-class predictions. Boundaries in the plot are evaluator metadata only; never supplied to the learner. The shared-head extension also changes protection and moment sharing, so its curve is not a head-sharing-only causal estimate.
+- `day6_seed_cluster_accuracy`: both paired orders are averaged within each seed. Dots represent independent seed clusters; intervals are descriptive Student-t intervals conditional on fixed development examples and the two orders. All fixed routing rules are displayed. Partial batches may show fewer than five complete clusters and must be labeled accordingly. No multiplicity-adjusted winner or official-test claim follows.
+
+All figures are generated deterministically from saved CSV/JSON values and supplied as PNG, SVG and PDF. No fabricated or illustrative measurements are used.

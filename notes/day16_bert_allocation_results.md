@@ -1,6 +1,6 @@
 # BERT allocation transfer diagnostic
 
-Complete trajectories 2/20; complete private/head-only pairs 1/10. Partial attempts: [].
+Complete trajectories 3/20; complete private/head-only pairs 1/10. Partial attempts: [].
 
 This transfer check replaces the backbone, representations, tokenizer, pooler and classifier. It does not isolate classifier design alone or compare against a tuned static BERT baseline. All deployment rules and both allocation controls are retained.
 
@@ -17,9 +17,9 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | head_only | frozen_centroid | 0 | nan | nan | nan |
 | head_only | last_active | 0 | nan | nan | nan |
 | head_only | uniform_probability | 0 | nan | nan | nan |
-| private | frozen_centroid | 0 | nan | nan | nan |
-| private | last_active | 0 | nan | nan | nan |
-| private | uniform_probability | 0 | nan | nan | nan |
+| private | frozen_centroid | 1 | -0.1246 | nan | nan |
+| private | last_active | 1 | -0.0727 | nan | nan |
+| private | uniform_probability | 1 | -0.0423 | nan | nan |
 
 ## Every trajectory and prediction rule
 
@@ -31,5 +31,8 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2027 | canonical | head_only | frozen_centroid | 0.0590 | 0.1107 | -0.0517 | 80 | 3 | 1062375 | 510 |
 | 2027 | canonical | head_only | last_active | 0.0387 | 0.0978 | -0.0591 | 80 | 3 | 1062375 | 510 |
 | 2027 | canonical | head_only | uniform_probability | 0.0362 | 0.0137 | 0.0224 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | private | frozen_centroid | 0.0340 | 0.1532 | -0.1192 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | private | last_active | 0.0412 | 0.0641 | -0.0229 | 80 | 3 | 1062375 | 510 |
+| 2027 | b_first | private | uniform_probability | 0.0435 | 0.0778 | -0.0342 | 80 | 3 | 1062375 | 510 |
 
 Intervals average both orders within each independent seed. The fixed development examples have been repeatedly examined; this is development evidence. Scope is the BANKING label-group stress test, the frozen training recipe and the declared memory budget. Neither allocation equivalence nor disagreement alone establishes competitive utility or a general capacity principle.

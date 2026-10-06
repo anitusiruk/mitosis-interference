@@ -8,3 +8,7 @@ __pycache__/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Learner binaries and dataset caches stay on the research pod.
+results/day*/checkpoint/
+data/day7_cache/

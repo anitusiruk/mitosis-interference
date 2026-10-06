@@ -3,6 +3,7 @@
   "finished_utc": "2026-10-06T23:38:48.281519+00:00",
   "queue_returncode": 0,
   "successful_execution": true,
-  "github_save_pending": true,
-  "repository": "anitusiruk/mitosis-interference"
+  "github_save_pending": false,
+  "repository": "anitusiruk/mitosis-interference",
+  "github_save_verified": true
 }

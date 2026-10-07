@@ -52,7 +52,7 @@ The full equal-budget learning-rate grid and its pilot-only selection rule were 
 
 Selected rates: {"8": 0.0002, "96": 0.0001}.
 
-Completed paired-development static trajectories: 15/20; incomplete attempts: [].
+Completed paired-development static trajectories: 16/20; incomplete attempts: [].
 
 ## Every rule and rank
 
@@ -63,11 +63,11 @@ Completed paired-development static trajectories: 15/20; incomplete attempts: []
 | 8 | linear_hard | 4 | 0.0676 | 0.0339 | 0.1013 |
 | 8 | linear_probability_mixture | 4 | 0.0696 | 0.0407 | 0.0985 |
 | 8 | uniform_probability | 4 | -0.0237 | -0.0859 | 0.0385 |
-| 96 | frozen_centroid | 3 | 0.0684 | 0.0069 | 0.1299 |
-| 96 | last_active | 3 | 0.0178 | -0.0387 | 0.0743 |
-| 96 | linear_hard | 3 | 0.1299 | 0.0651 | 0.1946 |
-| 96 | linear_probability_mixture | 3 | 0.1308 | 0.0732 | 0.1885 |
-| 96 | uniform_probability | 3 | 0.0230 | -0.0937 | 0.1397 |
+| 96 | frozen_centroid | 4 | 0.0823 | 0.0275 | 0.1371 |
+| 96 | last_active | 4 | 0.0285 | -0.0165 | 0.0734 |
+| 96 | linear_hard | 4 | 0.1440 | 0.0877 | 0.2004 |
+| 96 | linear_probability_mixture | 4 | 0.1461 | 0.0890 | 0.2032 |
+| 96 | uniform_probability | 4 | 0.0528 | -0.0600 | 0.1655 |
 
 ## Every trajectory and actual resource count
 
@@ -143,6 +143,11 @@ Completed paired-development static trajectories: 15/20; incomplete attempts: []
 | 96 | 0.0001 | 2029 | canonical | linear_hard | 0.1317 | 0.2568 | 0.1251 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
 | 96 | 0.0001 | 2029 | canonical | linear_probability_mixture | 0.1317 | 0.2587 | 0.1269 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
 | 96 | 0.0001 | 2029 | canonical | uniform_probability | 0.1317 | 0.1612 | 0.0295 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
+| 96 | 0.0001 | 2030 | b_first | frozen_centroid | 0.0252 | 0.1764 | 0.1512 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2908 | 4.5981 | 523651072 |
+| 96 | 0.0001 | 2030 | b_first | last_active | 0.0252 | 0.1397 | 0.1145 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2908 | 4.5981 | 523651072 |
+| 96 | 0.0001 | 2030 | b_first | linear_hard | 0.0252 | 0.2418 | 0.2166 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2908 | 4.5981 | 523651072 |
+| 96 | 0.0001 | 2030 | b_first | linear_probability_mixture | 0.0252 | 0.2507 | 0.2255 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2908 | 4.5981 | 523651072 |
+| 96 | 0.0001 | 2030 | b_first | uniform_probability | 0.0252 | 0.2052 | 0.1800 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2908 | 4.5981 | 523651072 |
 | 96 | 0.0001 | 2030 | canonical | frozen_centroid | 0.0733 | 0.1703 | 0.0970 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3124 | 4.6237 | 524257280 |
 | 96 | 0.0001 | 2030 | canonical | last_active | 0.0733 | 0.0796 | 0.0063 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3124 | 4.6237 | 524257280 |
 | 96 | 0.0001 | 2030 | canonical | linear_hard | 0.0733 | 0.2298 | 0.1565 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3124 | 4.6237 | 524257280 |

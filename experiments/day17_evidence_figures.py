@@ -9,7 +9,7 @@ import pandas as pd
 
 
 FACTORS = ['reset_lora_weights', 'reset_head_weights', 'reset_lora_optimizer', 'reset_head_optimizer']
-LABELS = ['LoRA weights', 'Classifier weights', 'LoRA AdamW state', 'Classifier AdamW state']
+LABELS = ['LoRA weights', 'Classifier stack weights', 'LoRA AdamW state', 'Classifier stack AdamW state']
 OUT = Path('figures/extended_audit')
 
 
@@ -45,6 +45,36 @@ def draw_points(ax, d, offset, label, color):
             ax.plot([row.ci_low, row.ci_high], [position, position], color=color, lw=1.3)
 
 
+def frozen_classifier_figure():
+    d = read('results/day19_linear_classifier_prediction_differences.csv')
+    if d.empty:
+        return None
+    rules = ['frozen_centroid', 'last_active', 'uniform_probability']
+    assert len(d) == 3 and set(d.rule) == set(rules)
+    d = d.set_index('rule').loc[rules]
+    assert np.isfinite(d[['mean','ci_low','ci_high']].to_numpy()).all()
+    fig, ax = plt.subplots(figsize=(8.1, 3.8))
+    for i, (_, row) in enumerate(d.iterrows()):
+        ax.scatter(100*row['mean'], i, s=36, color='#2468a2', zorder=3)
+        ax.plot([100*row.ci_low,100*row.ci_high], [i,i], color='#2468a2', lw=1.7)
+    ax.axvline(0, color='black', lw=.8)
+    ax.set_yticks(range(3), ['Frozen centroid', 'Last active', 'Uniform mixture'])
+    ax.invert_yaxis()
+    ax.set_xlabel('LoRA plus output classifier minus output classifier only\nDevelopment accuracy difference (percentage points)')
+    ax.set_title('Frozen hidden pre-classifier | '+str(int(d.seed_clusters.min()))+' paired training seeds')
+    ax.grid(axis='x', alpha=.2)
+    fig.tight_layout()
+    save(fig, 'frozen_preclassifier_lora_comparison')
+    return ('* `frozen_preclassifier_lora_comparison`: All three original prediction '
+            'rules in the within-backbone control. The hidden pre-classifier and its '
+            'private copies stay frozen. Positive differences favor LoRA learning; '
+            'negative differences favor output-classifier-only learning. Both orders '
+            'are averaged inside each training seed. The plot is a development '
+            'diagnostic, not a tuned performance benchmark or untouched confirmation. '
+            'Freezing the hidden layer also removes its optimizer state. No rule '
+            'is selected by its observed outcome.')
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     captions = ['# Extended development-audit figure captions', '',
@@ -73,7 +103,10 @@ def main():
         captions += ['* `weight_state_attribution`: All four marginal reset effects, split into '
             'initial prediction and one-step local learning contributions, plus their post-update '
             'total. Artificial inherited optimizer states on reset weights are causal probes, '
-            'not recommended deployment states. Each verified observer reproduces the original '
+            'not recommended deployment states. The classifier-stack factor includes '
+            'both the hidden pre-classifier and output classifier. Effects average '
+            'every eligible mature batch and all eight settings of the other factors; '
+            'each verified observer reproduces the original '
             'real learner bitwise. The source is the actual active package, not retrospectively '
             'best feasible reuse.', '']
         fig, axes = plt.subplots(len(available), 2, figsize=(11, 3.8*len(available)), squeeze=False)
@@ -133,6 +166,9 @@ def main():
             'Actual head storage and compute differ even under the same retained-text budget. '
             'This repairs a learning-rate comparator gap; it does not establish final-test or '
             'named-method superiority.', '']
+    classifier_caption = frozen_classifier_figure()
+    if classifier_caption:
+        captions += [classifier_caption, '']
     Path(OUT/'CAPTIONS.md').write_text('\n'.join(captions)+'\n')
     print('EXTENDED_EVIDENCE_FIGURES_SAVED', len(list(OUT.glob('*.png'))), flush=True)
 

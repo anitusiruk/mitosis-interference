@@ -1,6 +1,6 @@
 # Tuned fixed-capacity development baselines
 
-Completed pilot trajectories: 1/24.
+Completed pilot trajectories: 2/24.
 
 The full equal-budget learning-rate grid and its pilot-only selection rule were committed before tuning outcomes. Both ranks and all adaptive deployment rules are retained. Development examples and the adaptive reference outcomes were already examined; this is not untouched final evaluation.
 
@@ -8,6 +8,7 @@ The full equal-budget learning-rate grid and its pilot-only selection rule were 
 
 | run | rank | learning_rate | seed | order | final_macro_accuracy | updates |
 | --- | --- | --- | --- | --- | --- | --- |
+| day17_pilot_rank8_lr20_seed2026_b_first | 8 | 0.0000 | 2026 | b_first | 0.0412 | 80 |
 | day17_pilot_rank8_lr20_seed2026_canonical | 8 | 0.0000 | 2026 | canonical | 0.0321 | 80 |
 
 Completed paired-development static trajectories: 0/20; incomplete attempts: [].

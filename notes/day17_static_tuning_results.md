@@ -52,7 +52,7 @@ The full equal-budget learning-rate grid and its pilot-only selection rule were 
 
 Selected rates: {"8": 0.0002, "96": 0.0001}.
 
-Completed paired-development static trajectories: 9/20; incomplete attempts: [].
+Completed paired-development static trajectories: 10/20; incomplete attempts: [].
 
 ## Every rule and rank
 
@@ -118,5 +118,10 @@ Completed paired-development static trajectories: 9/20; incomplete attempts: [].
 | 96 | 0.0001 | 2028 | canonical | linear_hard | 0.0470 | 0.2264 | 0.1794 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2546 | 4.7359 | 523520000 |
 | 96 | 0.0001 | 2028 | canonical | linear_probability_mixture | 0.0470 | 0.2375 | 0.1905 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2546 | 4.7359 | 523520000 |
 | 96 | 0.0001 | 2028 | canonical | uniform_probability | 0.0470 | 0.1442 | 0.0973 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.2546 | 4.7359 | 523520000 |
+| 96 | 0.0001 | 2029 | canonical | frozen_centroid | 0.1317 | 0.1902 | 0.0585 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
+| 96 | 0.0001 | 2029 | canonical | last_active | 0.1317 | 0.1129 | -0.0188 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
+| 96 | 0.0001 | 2029 | canonical | linear_hard | 0.1317 | 0.2568 | 0.1251 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
+| 96 | 0.0001 | 2029 | canonical | linear_probability_mixture | 0.1317 | 0.2587 | 0.1269 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
+| 96 | 0.0001 | 2029 | canonical | uniform_probability | 0.1317 | 0.1612 | 0.0295 | 2419277 | 2391783 | 19354328 | 19134600 | 512 | 510 | 2.3310 | 4.6636 | 561932288 |
 
 Intervals are descriptive over paired training seeds and fixed development examples. Repeatedly evaluated orders, batches, and classes are not independent replicates. This is a learning-rate study, not exhaustive hyperparameter optimization. Static and adaptive models differ in classifier multiplicity and update/inference compute. Equal retained-text budgets are not universal resource matching. No modern named-method or final-test claim follows.

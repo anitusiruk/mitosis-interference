@@ -503,9 +503,33 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T00:37:49.527888+00:00"
+    },
+    {
+      "name": "day15_amazon_private_cau_seed2027_canonical_weight_moments",
+      "study": 15,
+      "status": "completed",
+      "started_utc": "2026-10-07T00:38:10.035849+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day15_weight_moment_recurrence",
+        "--regime",
+        "amazon",
+        "--seed",
+        "2027",
+        "--order",
+        "canonical",
+        "--output",
+        "results/day15_amazon_private_cau_seed2027_canonical_weight_moments",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T00:54:39.137816+00:00"
     }
   ],
   "planned_jobs": 40,
-  "generated_utc": "2026-10-07T00:38:00.922448+00:00",
+  "generated_utc": "2026-10-07T00:54:54.953310+00:00",
   "github_save_pending": true
 }

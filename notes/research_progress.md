@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-07T00:38:00.838945+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-07T00:54:54.867911+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -18,7 +18,7 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 10 | 12 | 12 | completed |
 | 12 | 11 | 11 | completed |
 | 14 fixed-memory routing | 44 | 44 | completed |
-| 15 | 1 | 20 | completed |
+| 15 | 2 | 20 | completed |
 | 16 | 20 | 20 | completed |
 | 5 head-only | 2 | 2 | completed |
 

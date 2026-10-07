@@ -1,0 +1,75 @@
+{
+  "selected_rates": {
+    "8": 0.0002,
+    "96": 0.0001
+  },
+  "grid_summary": [
+    {
+      "rank": 8,
+      "learning_rate": 2e-05,
+      "pilot_accuracy_mean": 0.036631193880944435
+    },
+    {
+      "rank": 8,
+      "learning_rate": 5e-05,
+      "pilot_accuracy_mean": 0.053017034327310336
+    },
+    {
+      "rank": 8,
+      "learning_rate": 0.0001,
+      "pilot_accuracy_mean": 0.11358496840705021
+    },
+    {
+      "rank": 8,
+      "learning_rate": 0.0002,
+      "pilot_accuracy_mean": 0.18593467095296157
+    },
+    {
+      "rank": 8,
+      "learning_rate": 0.0004,
+      "pilot_accuracy_mean": 0.11647939504607278
+    },
+    {
+      "rank": 8,
+      "learning_rate": 0.0008,
+      "pilot_accuracy_mean": 0.034210915271773265
+    },
+    {
+      "rank": 96,
+      "learning_rate": 2e-05,
+      "pilot_accuracy_mean": 0.04058123637438567
+    },
+    {
+      "rank": 96,
+      "learning_rate": 5e-05,
+      "pilot_accuracy_mean": 0.051388071707326746
+    },
+    {
+      "rank": 96,
+      "learning_rate": 0.0001,
+      "pilot_accuracy_mean": 0.14890625577356537
+    },
+    {
+      "rank": 96,
+      "learning_rate": 0.0002,
+      "pilot_accuracy_mean": 0.04826227609732763
+    },
+    {
+      "rank": 96,
+      "learning_rate": 0.0004,
+      "pilot_accuracy_mean": 0.03567232014189112
+    },
+    {
+      "rank": 96,
+      "learning_rate": 0.0008,
+      "pilot_accuracy_mean": 0.03280863171119239
+    }
+  ],
+  "selected_utc": "2026-10-07T01:48:03.925149+00:00",
+  "pilot_seed": 2026,
+  "selection_metric": "final concept-macro accuracy, averaged paired pilot orders",
+  "tie_break": "smaller learning rate",
+  "confirmation_outcomes_used": false,
+  "spec_sha256": "d5d522795254b429de4f980b3503c247668f86983c44478809b4ff02292cdba5",
+  "pilot_grid_sha256": "241da7e6170f2a4ac05f68b8d9d5910de852cfdda4cb2404241bf6795e6f54e0"
+}

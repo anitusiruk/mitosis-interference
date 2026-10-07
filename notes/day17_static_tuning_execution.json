@@ -182,6 +182,32 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T01:40:28.550067+00:00"
+    },
+    {
+      "name": "day17_pilot_rank8_lr200_seed2026_canonical",
+      "phase": "pilot",
+      "status": "completed",
+      "started_utc": "2026-10-07T01:40:36.041943+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day17_static_tuning",
+        "--rank",
+        "8",
+        "--learning-rate",
+        "0.0002",
+        "--seed",
+        "2026",
+        "--order",
+        "canonical",
+        "--output",
+        "results/day17_pilot_rank8_lr200_seed2026_canonical",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T01:40:53.067714+00:00"
     }
   ],
   "planned_research_jobs": 44,

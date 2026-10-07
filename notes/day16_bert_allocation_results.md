@@ -1,6 +1,6 @@
 # BERT allocation transfer diagnostic
 
-Complete trajectories 18/20; complete private/head-only pairs 9/10. Partial attempts: [].
+Complete trajectories 19/20; complete private/head-only pairs 9/10. Partial attempts: [].
 
 This transfer check replaces the backbone, representations, tokenizer, pooler and classifier. It does not isolate classifier design alone or compare against a tuned static BERT baseline. All deployment rules and both allocation controls are retained.
 
@@ -25,9 +25,9 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | head_only | frozen_centroid | 4 | -0.0517 | -0.1030 | -0.0003 |
 | head_only | last_active | 4 | -0.0268 | -0.0575 | 0.0038 |
 | head_only | uniform_probability | 4 | -0.0429 | -0.1131 | 0.0274 |
-| private | frozen_centroid | 4 | -0.1068 | -0.1330 | -0.0806 |
-| private | last_active | 4 | -0.0750 | -0.0909 | -0.0591 |
-| private | uniform_probability | 4 | -0.0950 | -0.1683 | -0.0217 |
+| private | frozen_centroid | 5 | -0.1078 | -0.1257 | -0.0898 |
+| private | last_active | 5 | -0.0706 | -0.0869 | -0.0543 |
+| private | uniform_probability | 5 | -0.0912 | -0.1418 | -0.0405 |
 
 ## Every trajectory and prediction rule
 
@@ -87,5 +87,8 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2031 | canonical | head_only | frozen_centroid | 0.0546 | 0.1345 | -0.0799 | 80 | 3 | 1062375 | 510 |
 | 2031 | canonical | head_only | last_active | 0.0409 | 0.0559 | -0.0151 | 80 | 3 | 1062375 | 510 |
 | 2031 | canonical | head_only | uniform_probability | 0.0464 | 0.0798 | -0.0333 | 80 | 3 | 1062375 | 510 |
+| 2031 | b_first | private | frozen_centroid | 0.0533 | 0.1745 | -0.1211 | 80 | 3 | 1062375 | 510 |
+| 2031 | b_first | private | last_active | 0.0298 | 0.1054 | -0.0756 | 80 | 3 | 1062375 | 510 |
+| 2031 | b_first | private | uniform_probability | 0.0383 | 0.1296 | -0.0912 | 80 | 3 | 1062375 | 510 |
 
 Intervals average both orders within each independent seed. The fixed development examples have been repeatedly examined; this is development evidence. Scope is the BANKING label-group stress test, the frozen training recipe and the declared memory budget. Neither allocation equivalence nor disagreement alone establishes competitive utility or a general capacity principle.

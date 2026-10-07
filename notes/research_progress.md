@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-07T00:18:10.194705+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-07T00:20:17.045883+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -19,7 +19,7 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 12 | 11 | 11 | completed |
 | 14 fixed-memory routing | 44 | 44 | completed |
 | 15 | 0 | 20 | not launched |
-| 16 | 18 | 20 | completed |
+| 16 | 19 | 20 | completed |
 | 5 head-only | 2 | 2 | completed |
 
 Complete trajectories alone enter summaries. A queue record is an execution status; the independent evidence audit also checks the saved trajectory summary, full step count and final metrics.

@@ -79,6 +79,22 @@
     "bytes": 24635297,
     "sha256": "f618137eff94e4f6bb2f5b4bd0ad560ae746836af5ca4d30ae75a0b9040af521"
   },
+  "results/day17_confirm_rank96_lr100_seed2028_canonical/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day17_confirm_rank96_lr100_seed2028_canonical/checkpoint/adapters/adapter_config.json": {
+    "bytes": 1129,
+    "sha256": "30e38f4627ff7761f1606480865e9a2181e035554ad462922d98649d3f6e6ef6"
+  },
+  "results/day17_confirm_rank96_lr100_seed2028_canonical/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 9681044,
+    "sha256": "d62d0c58bdb1438dffc831f48bf0d3b0d345efd6fe4e616a21eed57871c7266a"
+  },
+  "results/day17_confirm_rank96_lr100_seed2028_canonical/checkpoint/learner_state.pt": {
+    "bytes": 24636001,
+    "sha256": "551b76a7de59c7aad6fbd24945a8d99bef12622d4cff7ece2a5fde7314bc3f35"
+  },
   "results/day17_pilot_rank8_lr100_seed2026_b_first/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

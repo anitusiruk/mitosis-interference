@@ -23,3 +23,6 @@ seed,order,architecture,rule,final_macro_accuracy
 2028,b_first,head_only,frozen_centroid,0.05754184477164187
 2028,b_first,head_only,last_active,0.037800687285223365
 2028,b_first,head_only,uniform_probability,0.0393193659239552
+2029,canonical,private,frozen_centroid,0.06108676823675157
+2029,canonical,private,last_active,0.03333333333333333
+2029,canonical,private,uniform_probability,0.03225806451612903

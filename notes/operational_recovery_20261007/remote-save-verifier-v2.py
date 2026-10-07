@@ -122,7 +122,7 @@ repo = json.loads(read(["gh", "api", "repos/anitusiruk/mitosis-interference"]))
 assert repo["full_name"] == "anitusiruk/mitosis-interference"
 assert repo["permissions"]["push"], "Authenticated account cannot push"
 assert read(["git", "remote", "get-url", "origin"]) == "https://github.com/anitusiruk/mitosis-interference.git"
-run(["git", "config", "--local", "--replace-all", "credential.https://github.com.helper", ""])
+run(["git", "config", "--local", "credential.https://github.com.helper", ""])
 run(["git", "config", "--local", "--add", "credential.https://github.com.helper", "!gh auth git-credential"])
 
 snapshot = head()

@@ -1,0 +1,59 @@
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:00:17.858478+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:00:32.858709+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:00:47.858973+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:01:02.859185+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:01:17.859487+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:01:32.859694+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:01:47.859965+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:02:02.860225+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:02:17.860497+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:02:32.860758+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:02:47.860977+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:03:02.861199+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:03:17.861431+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:03:32.861713+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:03:47.861968+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:04:02.862236+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:04:17.862505+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:04:32.862761+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:04:47.862974+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:05:02.863219+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:05:17.863476+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:05:32.863735+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:05:47.864013+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:06:02.864275+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:06:17.864537+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:06:32.864789+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:06:47.865331+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:07:02.865575+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:07:17.865789+00:00
+LINEAR_CONTROL_WAITING_FOR_STATIC_VERIFIED_SAVE 2026-10-07T02:07:32.865981+00:00
+LINEAR_CONTROL_SOURCE src/adapter_pool_frozen_preclassifier.py 57a3a09eaf813040ba9f99da602cce7c5d82eed261d12abb9587efa37aecfcdb
+LINEAR_CONTROL_SOURCE experiments/day19_linear_classifier_control.py ff8e06e30e5bed51e02471d9d80bc484a21101f127db684439d56031cb0da6e8
+LINEAR_CONTROL_SOURCE experiments/day19_linear_classifier_integrity.py 0ebf32a3aae2639acd3e4ef29de40386d4106d8c872a6aaca2946674c8d65fcc
+LINEAR_CONTROL_SOURCE experiments/day19_linear_classifier_report.py 891a0d2ff48052c6d966bddc206099b926916772aaccb52a186c8708a77cd6cf
+LINEAR_CONTROL_SOURCE experiments/day19_linear_classifier_worker.py 6d19f0f39e70925960a6ea20290bccda407d257e6f4c2045380be7025472c95f
+LINEAR_CONTROL_SOURCE notes/day19_linear_classifier_spec.md 57815bc162200537dfc0fbbbf4167ae790f8fa7a255f254e7eeed71e73f7395f
+RUN /usr/local/bin/python -m compileall -q src/adapter_pool_frozen_preclassifier.py experiments/day19_linear_classifier_control.py experiments/day19_linear_classifier_integrity.py experiments/day19_linear_classifier_report.py experiments/day19_linear_classifier_worker.py
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_integrity --device cpu
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_integrity --device cuda
+RUN git lfs checkout results/day8_banking_head_only_cau_seed2031_b_first_fixed512/checkpoint/adapters/adapter_1/adapter_model.safetensors results/day8_banking_head_only_cau_seed2031_b_first_fixed512/checkpoint/adapters/adapter_2/adapter_model.safetensors results/day8_banking_head_only_cau_seed2031_b_first_fixed512/checkpoint/adapters/adapter_model.safetensors results/day8_banking_head_only_cau_seed2031_b_first_fixed512/checkpoint/learner_state.pt
+Checking out LFS objects: 100% (4/4), 36 MB | 0 B/s, done.
+RUN git add -A
+RUN git commit -m Freeze within-DistilBERT linear-classifier allocation controls before outcomes
+[day17-static-tuning-20261006 d9221ed] Freeze within-DistilBERT linear-classifier allocation controls before outcomes
+ 9 files changed, 531 insertions(+)
+ create mode 100644 experiments/day19_linear_classifier_control.py
+ create mode 100644 experiments/day19_linear_classifier_integrity.py
+ create mode 100644 experiments/day19_linear_classifier_report.py
+ create mode 100644 experiments/day19_linear_classifier_worker.py
+ create mode 100644 logs/day19_linear_classifier_gate_cpu.txt
+ create mode 100644 logs/day19_linear_classifier_gate_cuda.txt
+ create mode 100644 notes/day19_linear_classifier_spec.md
+ create mode 100644 notes/day19_prelaunch_gate.json
+ create mode 100644 src/adapter_pool_frozen_preclassifier.py
+RUN git push origin day17-static-tuning-20261006
+To https://github.com/anitusiruk/mitosis-interference.git
+   ad0cb42..d9221ed  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CLASSIFIER_PREREGISTRATION_PUSHED d9221eda59e9e3ad344f216ea0d293b0bb456086 TINY_GATE 0
+LINEAR_CLASSIFIER_WORKER_STARTED 31925

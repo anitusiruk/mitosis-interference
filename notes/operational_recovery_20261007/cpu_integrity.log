@@ -1,0 +1,45 @@
+(False, False, False, False) restores complete live state PASS
+(False, False, False, True) restores complete live state PASS
+(False, False, True, False) restores complete live state PASS
+(False, False, True, True) restores complete live state PASS
+(False, True, False, False) restores complete live state PASS
+(False, True, False, True) restores complete live state PASS
+(False, True, True, False) restores complete live state PASS
+(False, True, True, True) restores complete live state PASS
+(True, False, False, False) restores complete live state PASS
+(True, False, False, True) restores complete live state PASS
+(True, False, True, False) restores complete live state PASS
+(True, False, True, True) restores complete live state PASS
+(True, True, False, False) restores complete live state PASS
+(True, True, False, True) restores complete live state PASS
+(True, True, True, False) restores complete live state PASS
+(True, True, True, True) restores complete live state PASS
+all 16 cells exist exactly once PASS
+head matched initializer False PASS
+head matched initializer True PASS
+head optimizer transport is independent of weights PASS
+head empty optimizer state is empty in every cell PASS
+head inherited state is present even with reset weights PASS
+lora matched initializer False PASS
+lora matched initializer True PASS
+lora optimizer transport is independent of weights PASS
+lora empty optimizer state is empty in every cell PASS
+lora inherited state is present even with reset weights PASS
+moments do not affect initial prediction PASS
+old coupled cell matches reuse_lora_inherit_head PASS
+moments do not affect initial prediction PASS
+old coupled cell matches reuse_lora_fresh_head FAIL
+Traceback (most recent call last):
+  File "/workspace/mitosis-day15-stage/cpu_loader.py", line 7, in <module>
+    runpy.run_path("/workspace/mitosis-day15-stage/experiments/day15_moment_integrity.py",run_name="__main__")
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-day15-stage/experiments/day15_moment_integrity.py", line 80, in <module>
+    main()
+  File "/workspace/mitosis-day15-stage/experiments/day15_moment_integrity.py", line 58, in main
+    check('old coupled cell matches ' + variant, abs(old['query_after'] - new['query_after']) < 1e-7)
+  File "/workspace/mitosis-interference/experiments/day5_shared_head_integrity.py", line 39, in check
+    assert value, name
+           ^^^^^
+AssertionError: old coupled cell matches reuse_lora_fresh_head

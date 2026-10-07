@@ -1,0 +1,10 @@
+{
+  "previous_manuscript_sha256": "2a3158350c783920f36c217f738c8061796b78beecaab5115d7cec3a0d2306a6",
+  "new_manuscript_sha256": "7ef1dbcebd9d76eba3c0564c7dfb556714f785c6aa049727e78b533fefbecab1",
+  "diagnostic_coverage": {
+    "15": 10,
+    "16": 20
+  },
+  "training_or_test_data_accessed": false,
+  "scope": "editorial refresh from existing saved development evidence"
+}

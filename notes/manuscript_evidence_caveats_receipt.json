@@ -1,0 +1,7 @@
+{
+  "previous_manuscript_sha256": "7ef1dbcebd9d76eba3c0564c7dfb556714f785c6aa049727e78b533fefbecab1",
+  "new_manuscript_sha256": "9c65aa8fe42ec2c09332838d6e2b7635307333e583cbacbd56af940a09da4e3d",
+  "saved_observers_independently_checked": 10,
+  "scope": "estimator distinction, full cross-backbone results, post-outcome quality-control disclosure",
+  "training_outputs_modified": false
+}

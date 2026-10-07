@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/jjul482/CABLE",
+  "commit": "c72b9cfeb345c8d517f1266ceb2b0ebf8a02430e",
+  "file_sha256": {
+    "README.md": "7da7b0e18edcf3e747eca8f05ebba9ef2ba916ac57636c7a79da5c35b3814822",
+    "backbone/cable.py": "44c537e2bb9a624c890ca6abdfdfb92096368fec4dba33aa9b134725af6ff507",
+    "backbone/linears.py": "2505381e259cab4dd2640caf441390dc1e040b47dce3adce1a67ea94b84865d4",
+    "main.py": "59c748c9fdb5ae0fda1a08692fbab191967186dbd80a46e9d7cc1fe9d71500d4",
+    "models/base.py": "62a19b6e4de771883a87ceb2f213b5cfc1b3e6cf03ac75b9882e30ee419fbb1d",
+    "models/cable.py": "2bf27224a0bc6d048bba7c77984e83f2c4c434933495c46817d7106ab7e060ef",
+    "models/reinforcement.py": "5b1e7c37fac02b2eb3fcc6d55e2c060d647e3639def7a840ae5ea99e48b62ada",
+    "trainer.py": "2593ece76f62445de0953eec49919d8f99c0852c152ae72b6e5c75942958f026",
+    "utils/buffer_manager.py": "a997ae34d48efd629995ccd81ab76324311973cc7d672bef91165a31130a9787",
+    "utils/data.py": "27961df38d706192f193ba5e3e71c8ae346a1cafc547e817fd840e15374377e3",
+    "utils/data_manager.py": "a29d918d6a4ab199ed4cf9b1d53b784646d46d631a064e16b469a47d73b65eb6",
+    "utils/factory.py": "7b65e15e0ec3eeac43c8d43ae431c70e76f940331f7cce23e46d724ec511a248",
+    "utils/forgetting_history.py": "ce83ea37339ab47cff3be78e9625d670f447813e586f945de35fc2f9f697c075",
+    "utils/im_classes.py": "ccbada793be7e75958c0fdcd622e74926580fa8c8b90750eab760542afdccfe1",
+    "utils/inc_net.py": "092133fde4e72b9f634468336c2db44168b03f89c5b1820740cd1724ed30615d",
+    "utils/toolkit.py": "bc295c7a55553a3f84ca05b227f6964c526f5d2414dc3cfcc8c661e948ce513b"
+  },
+  "source_executed": false,
+  "author_code_redistributed": false,
+  "review_added_after_development_outcomes": true
+}

@@ -335,9 +335,33 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T00:10:04.079469+00:00"
+    },
+    {
+      "name": "day16_banking_private_seed2030_b_first_bert",
+      "study": 16,
+      "status": "completed",
+      "started_utc": "2026-10-07T00:10:15.914049+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day16_bert_allocation",
+        "--architecture",
+        "private",
+        "--seed",
+        "2030",
+        "--order",
+        "b_first",
+        "--output",
+        "results/day16_banking_private_seed2030_b_first_bert",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T00:12:12.025919+00:00"
     }
   ],
   "planned_jobs": 40,
-  "generated_utc": "2026-10-07T00:10:05.753747+00:00",
+  "generated_utc": "2026-10-07T00:12:13.734230+00:00",
   "github_save_pending": true
 }

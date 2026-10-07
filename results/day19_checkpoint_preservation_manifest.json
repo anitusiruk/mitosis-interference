@@ -191,6 +191,38 @@
     "bytes": 11892979,
     "sha256": "2fda4a4233a296a30d31ad20c6da8fa59c51e0a7804504e5d94899bef6fcca37"
   },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "ad98249568ab97d4d3c087260a4fb7e12642efdd58f36dec005a54cbf16401e3"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "68b912f82389efb1c9e336c33f6485e6ffc1d5451cdf47e811ec65eaa0d2c129"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "017f8f33132cc46fa333aea173c1f03adf19533cecd423211be7ad35b4b2427d"
+  },
+  "results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/learner_state.pt": {
+    "bytes": 11893555,
+    "sha256": "d9d304ea0442b380048c5c82b322498ce15a142ba13d13e549932d7d655cee23"
+  },
   "results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

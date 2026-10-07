@@ -33,6 +33,40 @@ The full equal-budget learning-rate grid and its pilot-only selection rule were 
 | day17_pilot_rank96_lr800_seed2026_b_first | 96 | 0.0008 | 2026 | b_first | 0.0355 | 80 |
 | day17_pilot_rank96_lr800_seed2026_canonical | 96 | 0.0008 | 2026 | canonical | 0.0301 | 80 |
 
-Completed paired-development static trajectories: 0/20; incomplete attempts: [].
+## Frozen pilot selection
+
+| rank | learning_rate | pilot_accuracy_mean |
+| --- | --- | --- |
+| 8 | 0.0000 | 0.0366 |
+| 8 | 0.0001 | 0.0530 |
+| 8 | 0.0001 | 0.1136 |
+| 8 | 0.0002 | 0.1859 |
+| 8 | 0.0004 | 0.1165 |
+| 8 | 0.0008 | 0.0342 |
+| 96 | 0.0000 | 0.0406 |
+| 96 | 0.0001 | 0.0514 |
+| 96 | 0.0001 | 0.1489 |
+| 96 | 0.0002 | 0.0483 |
+| 96 | 0.0004 | 0.0357 |
+| 96 | 0.0008 | 0.0328 |
+
+Selected rates: {"8": 0.0002, "96": 0.0001}.
+
+Completed paired-development static trajectories: 1/20; incomplete attempts: [].
+
+## Every rule and rank
+
+|  |
+|  |
+
+## Every trajectory and actual resource count
+
+| rank | learning_rate | seed | order | adaptive_rule | static_accuracy | adaptive_accuracy | adaptive_minus_static | static_adaptation_parameters | adaptive_adaptation_parameters | static_optimizer_bytes | adaptive_optimizer_bytes | static_training_texts | adaptive_training_texts | static_training_seconds | static_evaluation_seconds | static_gpu_peak_allocated_bytes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 8 | 0.0002 | 2027 | canonical | frozen_centroid | 0.2131 | 0.1593 | -0.0538 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
+| 8 | 0.0002 | 2027 | canonical | last_active | 0.2131 | 0.1462 | -0.0669 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
+| 8 | 0.0002 | 2027 | canonical | linear_hard | 0.2131 | 0.2542 | 0.0411 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
+| 8 | 0.0002 | 2027 | canonical | linear_probability_mixture | 0.2131 | 0.2532 | 0.0401 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
+| 8 | 0.0002 | 2027 | canonical | uniform_probability | 0.2131 | 0.0860 | -0.1271 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
 
 Intervals are descriptive over paired training seeds and fixed development examples. Repeatedly evaluated orders, batches, and classes are not independent replicates. This is a learning-rate study, not exhaustive hyperparameter optimization. Static and adaptive models differ in classifier multiplicity and update/inference compute. Equal retained-text budgets are not universal resource matching. No modern named-method or final-test claim follows.

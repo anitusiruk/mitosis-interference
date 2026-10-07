@@ -127,6 +127,38 @@
     "bytes": 15492819,
     "sha256": "ffbacf2cd4d2c9f457adfb14803baefd1e7d42ed52fd0be0a77b08a25bd17a50"
   },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "c0ca5f13e8f7e8b269d023995b256e7e7ddeb4e960270f2b8113b24903c892a8"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "c3c3274c1eb53cf89917220c022cdb041feedebf6cbb41d0875ec487aefec616"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "24e6b404d25496400ab8a11cf7f416c7297659315c07ff17f855f45eb68bd1a6"
+  },
+  "results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/learner_state.pt": {
+    "bytes": 15492691,
+    "sha256": "44f0572f8374d00f9f165fc32931b98470aa6a1467a88ad0a161da97d1f698c7"
+  },
   "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

@@ -1,6 +1,6 @@
 # Frozen hidden pre-classifier allocation diagnostic
 
-Completed trajectories 4/20; paired controls 2/10. Incomplete attempts: [].
+Completed trajectories 5/20; paired controls 2/10. Incomplete attempts: [].
 
 Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. The private condition trains LoRA and the linear output classifier; the other trains only the output classifier, keeping LoRA output zero. This removes hidden pre-classifier learning, with its associated optimizer state, in both conditions. It is an allocation diagnostic, not a tuned competitive benchmark. The retained PEFT pre-classifier copies are dormant stored parameters.
 
@@ -19,6 +19,7 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2027 | canonical | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
 | 2027 | b_first | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
 | 2027 | b_first | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
+| 2028 | canonical | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
 
 ## All private-minus-output-classifier-only accuracy differences
 
@@ -44,5 +45,8 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2027 | b_first | head_only | frozen_centroid | 0.0638 |
 | 2027 | b_first | head_only | last_active | 0.0206 |
 | 2027 | b_first | head_only | uniform_probability | 0.0149 |
+| 2028 | canonical | private | frozen_centroid | 0.0524 |
+| 2028 | canonical | private | last_active | 0.0312 |
+| 2028 | canonical | private | uniform_probability | 0.0333 |
 
 Intervals are descriptive over paired training seeds and fixed repeatedly examined development examples. Neither agreement nor disagreement establishes a universal capacity principle. Existing controls with trainable hidden classifiers must not be described as having no learned hidden representation capacity.

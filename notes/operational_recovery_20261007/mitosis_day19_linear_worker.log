@@ -1,0 +1,613 @@
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode inherited --seed 2031 --order b_first --output results/day19_reference_replay_head_only_seed2031_b_first --deadline-utc 2026-10-07T03:15:00+00:00
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 198ed7d] Preserve frozen pre-classifier diagnostic progress
+ 18 files changed, 1712 insertions(+)
+ create mode 100644 logs/day19_reference_replay_head_only_seed2031_b_first.txt
+ create mode 100644 notes/day19_linear_classifier_execution.json
+ create mode 100644 results/day19_checkpoint_preservation_manifest.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/README.md
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/learner_state.pt
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/eval_matrix.csv
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/events.jsonl
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/label_free_eval.csv
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/provenance.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/reference_replay_verification.json
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/routing.csv
+ create mode 100644 results/day19_reference_replay_head_only_seed2031_b_first/summary.json
+RUN git push origin day17-static-tuning-20261006
+To https://github.com/anitusiruk/mitosis-interference.git
+   d9221ed..198ed7d  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 198ed7db2ba710bbe10e7e4bbf5ca79538affbb4
+LINEAR_CONTROL_JOB day19_reference_replay_head_only_seed2031_b_first completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2027 --order canonical --output results/day19_banking_private_seed2027_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 1a3bce2] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1733 insertions(+)
+ create mode 100644 logs/day19_banking_private_seed2027_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2027_canonical_frozen_preclassifier_report.txt
+ create mode 100644 notes/day19_linear_classifier_results.md
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2027_canonical_frozen_preclassifier/summary.json
+ create mode 100644 results/day19_linear_classifier_allocation_pairs.csv
+ create mode 100644 results/day19_linear_classifier_deployment.csv
+ create mode 100644 results/day19_linear_classifier_prediction_differences.csv
+ create mode 100644 results/day19_linear_classifier_trajectories.csv
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   198ed7d..1a3bce2  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 1a3bce2c662c1356d02f5193ed5b1169429bd176
+LINEAR_CONTROL_JOB day19_banking_private_seed2027_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2027 --order canonical --output results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 9202d80] Preserve frozen pre-classifier diagnostic progress
+ 22 files changed, 1707 insertions(+), 3 deletions(-)
+ create mode 100644 logs/day19_banking_head_only_seed2027_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2027_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   1a3bce2..9202d80  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 9202d80ab6d678ffa89c5c42c1cd7a7ed9cba243
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2027_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2027 --order b_first --output results/day19_banking_private_seed2027_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 ca08cdb] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2027_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2027_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2027_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 6.1 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   9202d80..ca08cdb  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED ca08cdb918b75bddf4479264bde4eccb1bb0696b
+LINEAR_CONTROL_JOB day19_banking_private_seed2027_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2027 --order b_first --output results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 1fa6256] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1711 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_head_only_seed2027_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2027_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 6.7 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   ca08cdb..1fa6256  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 1fa6256e1de49b5723f6d814afbe07fd8e7d611c
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2027_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2028 --order canonical --output results/day19_banking_private_seed2028_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 6839117] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2028_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2028_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2028_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   1fa6256..6839117  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 68391175f88beb0c49824c81acd6ec4a6ef5e440
+LINEAR_CONTROL_JOB day19_banking_private_seed2028_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2028 --order canonical --output results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 54fa6c8] Preserve frozen pre-classifier diagnostic progress
+ 22 files changed, 1705 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_head_only_seed2028_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2028_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 5.7 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   6839117..54fa6c8  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 54fa6c846f3d33d03ddb760ddf18b6a238a255ca
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2028_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2028 --order b_first --output results/day19_banking_private_seed2028_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 03a81ff] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2028_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2028_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2028_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 11 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   54fa6c8..03a81ff  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 03a81ff17098729fb500aac1ca4d95ddd1b588ee
+LINEAR_CONTROL_JOB day19_banking_private_seed2028_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2028 --order b_first --output results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 62357b6] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1711 insertions(+), 7 deletions(-)
+ create mode 100644 logs/day19_banking_head_only_seed2028_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2028_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2028_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   03a81ff..62357b6  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 62357b6328fc938a32afcd6fa69d43f09573b58d
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2028_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2029 --order canonical --output results/day19_banking_private_seed2029_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 5db5777] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2029_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2029_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2029_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   62357b6..5db5777  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 5db5777081cc88bb6f5e376a522ec3f35516909b
+LINEAR_CONTROL_JOB day19_banking_private_seed2029_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2029 --order canonical --output results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 4cd82b4] Preserve frozen pre-classifier diagnostic progress
+ 22 files changed, 1705 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_head_only_seed2029_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2029_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   5db5777..4cd82b4  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 4cd82b4fbd1d9458f5120eae4536f71b21b8c18d
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2029_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2029 --order b_first --output results/day19_banking_private_seed2029_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 8cbed15] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2029_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2029_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2029_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 12 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   4cd82b4..8cbed15  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 8cbed15ccf2defd31989e04de347abcbb26dc6b6
+LINEAR_CONTROL_JOB day19_banking_private_seed2029_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2029 --order b_first --output results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 103db20] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1711 insertions(+), 7 deletions(-)
+ create mode 100644 logs/day19_banking_head_only_seed2029_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2029_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   8cbed15..103db20  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 103db2088d7bf875241dfe1ffaec9d0744447801
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2029_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2030 --order canonical --output results/day19_banking_private_seed2030_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 8ec500b] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2030_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2030_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2030_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   103db20..8ec500b  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 8ec500b0fd8afccc2985479360ddc6929c0c5325
+LINEAR_CONTROL_JOB day19_banking_private_seed2030_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2030 --order canonical --output results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 4bf5327] Preserve frozen pre-classifier diagnostic progress
+ 22 files changed, 1705 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_head_only_seed2030_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2030_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   8ec500b..4bf5327  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 4bf53276e2de484ce7852e2056f15105b8691db7
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2030_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2030 --order b_first --output results/day19_banking_private_seed2030_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 5dfee1c] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2030_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2030_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2030_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 7.5 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   4bf5327..5dfee1c  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 5dfee1c0e08b77de866f11f98d94b7a6f775b52d
+LINEAR_CONTROL_JOB day19_banking_private_seed2030_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2030 --order b_first --output results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 c8fb036] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1711 insertions(+), 7 deletions(-)
+ create mode 100644 logs/day19_banking_head_only_seed2030_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2030_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2030_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   5dfee1c..c8fb036  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED c8fb0365585c3e7a64011da17b6f27d71feda496
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2030_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2031 --order canonical --output results/day19_banking_private_seed2031_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 290f513] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2031_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2031_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2031_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   c8fb036..290f513  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 290f513ec88d1b7c057135299ce2211150971d60
+LINEAR_CONTROL_JOB day19_banking_private_seed2031_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2031 --order canonical --output results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 838992d] Preserve frozen pre-classifier diagnostic progress
+ 22 files changed, 1705 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_head_only_seed2031_canonical_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2031_canonical_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_canonical_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   290f513..838992d  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 838992db9be3829515632205d9b0f5a8e2636ec5
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2031_canonical_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture private --preclassifier-mode frozen --seed 2031 --order b_first --output results/day19_banking_private_seed2031_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 f19db64] Preserve frozen pre-classifier diagnostic progress
+ 21 files changed, 1703 insertions(+), 1 deletion(-)
+ create mode 100644 logs/day19_banking_private_seed2031_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_private_seed2031_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_private_seed2031_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 25 MB | 6.9 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   838992d..f19db64  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED f19db648e4c2d4a5b0dc75e0120cc108ed2a5ed9
+LINEAR_CONTROL_JOB day19_banking_private_seed2031_b_first_frozen_preclassifier completed
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_control --architecture head_only --preclassifier-mode frozen --seed 2031 --order b_first --output results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier --deadline-utc 2026-10-07T03:15:00+00:00
+RUN /usr/local/bin/python -u -m experiments.day19_linear_classifier_report
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 07ead49] Preserve frozen pre-classifier diagnostic progress
+ 23 files changed, 1711 insertions(+), 7 deletions(-)
+ create mode 100644 logs/day19_banking_head_only_seed2031_b_first_frozen_preclassifier.txt
+ create mode 100644 logs/day19_banking_head_only_seed2031_b_first_frozen_preclassifier_report.txt
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/README.md
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/checkpoint/learner_state.pt
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/eval_matrix.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/events.jsonl
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/label_free_eval.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/provenance.json
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/routing.csv
+ create mode 100644 results/day19_banking_head_only_seed2031_b_first_frozen_preclassifier/summary.json
+RUN git push origin day17-static-tuning-20261006
+Uploading LFS objects: 100% (4/4), 22 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   f19db64..07ead49  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 07ead495664490db1ea149fac77ae3d585ad1cd1
+LINEAR_CONTROL_JOB day19_banking_head_only_seed2031_b_first_frozen_preclassifier completed
+RUN git add -A
+RUN git commit -m Preserve frozen pre-classifier diagnostic progress
+[day17-static-tuning-20261006 6a8479b] Preserve frozen pre-classifier diagnostic progress
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+RUN git push origin day17-static-tuning-20261006
+To https://github.com/anitusiruk/mitosis-interference.git
+   07ead49..6a8479b  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CONTROL_PROGRESS_PUSHED 6a8479bf549d93b98c16cafa924fbd8897f4c462
+RUN git -c lfs.storage=/workspace/mitosis-day19-lfs-verify-20261007T023354Z lfs fetch --include=results/day19_*/checkpoint/** --exclude= origin day17-static-tuning-20261006
+fetch: Fetching reference refs/heads/day17-static-tuning-20261006
+LINEAR_CONTROL_REMOTE_CHECKPOINT_ROUNDTRIP_PASS 84
+RUN git add notes/day19_github_save_verification.json notes/day19_linear_classifier_execution.json
+RUN git commit -m Record verified frozen pre-classifier control preservation
+[day17-static-tuning-20261006 adef3d8] Record verified frozen pre-classifier control preservation
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 notes/day19_github_save_verification.json
+RUN git push origin day17-static-tuning-20261006
+To https://github.com/anitusiruk/mitosis-interference.git
+   6a8479b..adef3d8  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+LINEAR_CLASSIFIER_AND_GITHUB_SAVE_COMPLETE adef3d8b56233396aeb07fb085fa3ba529dded57 COMPLETE True FAILED False

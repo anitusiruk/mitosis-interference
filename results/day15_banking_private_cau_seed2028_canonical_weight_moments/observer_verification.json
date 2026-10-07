@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "reference": "results/day8_banking_private_cau_seed2028_canonical_fixed512",
+  "reference_learner_sha256": "c29052b2825bde7aea7155e870344a7a1d1f799fffa3dd2b17c80fbfc715d1e6",
+  "output_learner_sha256": "c29052b2825bde7aea7155e870344a7a1d1f799fffa3dd2b17c80fbfc715d1e6",
+  "bitwise_learner_state_equal": true,
+  "bitwise_adapter_tensors_equal": true,
+  "adapter_files_checked": 3,
+  "training_loss_absolute_tolerance": 1e-06,
+  "maximum_training_loss_difference": 0.0,
+  "stream_sha256": "a10049de9df8942f29beda37e277ec1f83e8ba426a5c337a5a6ab5f1f92be10f"
+}

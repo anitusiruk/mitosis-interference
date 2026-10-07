@@ -1,0 +1,19 @@
+DAY15_REPORT_SAVED 20 verified trajectories
+DAY15_REPORT_SAVED 1 verified trajectories
+DAY15_ANALYTIC_REPORT_INTEGRITY_PASS 252 balanced intervals; unpaired order excluded
+private single private linear classifier PASS
+private frozen pooler PASS
+private exact crossfit state restoration PASS
+Traceback (most recent call last):
+  File "/workspace/mitosis-day15-stage/additional_cpu_loader.py", line 7, in <module>
+    runpy.run_path("/workspace/mitosis-day15-stage/experiments/"+file,run_name="__main__")
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-day15-stage/experiments/day16_bert_integrity.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mitosis-day15-stage/experiments/day16_bert_integrity.py", line 36, in main
+    trial=pool.intervention('default',texts,labels,texts,labels,'default')
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'FixedMemoryCAUV1AdapterPool' object has no attribute 'intervention'

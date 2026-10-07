@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-07T06:44:26.135572+00:00",
+  "derived_command_returncodes": {
+    "factorial_report": 0,
+    "manuscript": 0,
+    "figures": 0,
+    "factorial_integrity": 0,
+    "retention_gate": 0,
+    "retention": 0,
+    "editorial": 0
+  },
+  "new_scientific_training_launched": false,
+  "complete_factorial_observers": 10,
+  "planned_factorial_observers": 20,
+  "remaining_jobs": [
+    "day15_banking_private_cau_seed2029_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2029_b_first_weight_moments",
+    "day15_banking_private_cau_seed2030_canonical_weight_moments",
+    "day15_amazon_private_cau_seed2030_canonical_weight_moments",
+    "day15_banking_private_cau_seed2030_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2030_b_first_weight_moments",
+    "day15_banking_private_cau_seed2031_canonical_weight_moments",
+    "day15_amazon_private_cau_seed2031_canonical_weight_moments",
+    "day15_banking_private_cau_seed2031_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2031_b_first_weight_moments"
+  ],
+  "figure_visual_review_pending": true
+}

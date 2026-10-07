@@ -3,8 +3,8 @@
   "snapshot_commit": "d23779b40c3205941d010d316ea46f3077796a2f",
   "github_push_returncode": 0,
   "branch": "day5-causal-audit",
-  "checkpoint_files": 1180,
-  "checkpoint_bytes": 4557967492,
+  "checkpoint_files": 1566,
+  "checkpoint_bytes": 6347145119,
   "full_state_storage": "Git LFS tensors plus ordinary Git source/results/cache",
   "study_coverage": [
     {
@@ -25,10 +25,10 @@
   ],
   "unlaunched_live_jobs": 45,
   "earlier_github_push_returncode": 128,
-  "github_ref_verified": false,
-  "last_successful_github_snapshot_commit": "fe11925d00a83fe7cddd504bd0e449b055135ad9",
-  "last_successful_github_save_verified_utc": "2026-10-06T23:40:40.984158+00:00",
+  "github_ref_verified": true,
+  "last_successful_github_snapshot_commit": "ab155541450ee6f00283d1f68f6d0a3d506d327f",
+  "last_successful_github_save_verified_utc": "2026-10-07T06:45:21.056930+00:00",
   "github_verification_receipt": "notes/github_save_verification.json",
-  "remote_checkpoints_sha256_verified": false,
-  "new_snapshot_push_pending": true
+  "remote_checkpoints_sha256_verified": true,
+  "new_snapshot_push_pending": false
 }

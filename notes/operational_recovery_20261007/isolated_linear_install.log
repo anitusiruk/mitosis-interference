@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/mitosis-day15-stage/install_isolated_linear.py", line 17, in <module>
+    assert not (PARENT/'experiments/day19_linear_classifier_control.py').exists()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

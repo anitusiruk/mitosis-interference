@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/mitosis-day15-stage/install-backup-amendment-small.py", line 17, in <module>
+    assert not read(['git','status','--porcelain'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

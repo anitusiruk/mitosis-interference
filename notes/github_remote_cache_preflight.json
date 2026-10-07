@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-07T02:44:12.969034+00:00",
+  "snapshot_at_start": "b17b3d9040152021cfc65aafc50ddfd367c4b8d6",
+  "helper_sha256": "cb571bba6fa6b024130cfaa40ee679c7942c937b4f6ccb43f0c2ee151752c102",
+  "prior_remote_objects_rehashed": 356,
+  "current_snapshot_unique_objects": 436,
+  "new_objects_not_yet_downloaded": 80,
+  "sources": [
+    {
+      "receipt_path": "notes/github_save_verification.json",
+      "receipt_sha256": "b6261eae5fb85a9eb888729c664d6dd88d30d6becb1e7359165a117bfa16f75c",
+      "snapshot_commit": "fe11925d00a83fe7cddd504bd0e449b055135ad9",
+      "independent_download_storage": "/workspace/mitosis-lfs-verify-20261006T233927Z",
+      "receipt_scope_objects_rehashed": 356,
+      "objects_in_current_snapshot": 356
+    }
+  ],
+  "preflight_only": true,
+  "all_current_objects_remotely_verified": false
+}

@@ -1,0 +1,15 @@
+[day17-static-tuning-20261006 e63ac4b] Restore pinned plotting dependencies and clarify classifier evidence figures
+ 11 files changed, 1783 insertions(+), 2 deletions(-)
+ create mode 100644 environment/plotting_constraints_20261007.txt
+ create mode 100644 figures/extended_audit/frozen_preclassifier_lora_comparison.pdf
+ create mode 100644 figures/extended_audit/frozen_preclassifier_lora_comparison.png
+ create mode 100644 figures/extended_audit/frozen_preclassifier_lora_comparison.svg
+ create mode 100644 logs/plotting_install_20261007.txt
+ create mode 100644 notes/day19_classifier_figure_caption.md
+ create mode 100644 notes/figure_source_amendment_20261007.json
+ create mode 100644 notes/plotting_dependency_restore_20261007.json
+ create mode 100644 notes/plotting_install_report_20261007.json
+ create mode 100644 requirements-plotting.txt
+To https://github.com/anitusiruk/mitosis-interference.git
+   adef3d8..e63ac4b  day17-static-tuning-20261006 -> day17-static-tuning-20261006
+PINNED_PLOTTING_RESTORED_AND_CLASSIFIER_FIGURE_PUSHED e63ac4b30af3277b328d60024a2fe0e78afd4814 TRAINING_PACKAGES_UNCHANGED

@@ -1,0 +1,935 @@
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2027 --order canonical --output results/day16_banking_private_seed2027_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2027_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit e579afa] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1786 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2027_canonical_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2027_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2027_canonical_bert_report.txt
+ create mode 100644 notes/day15_16_execution_status.json
+ create mode 100644 notes/day16_bert_allocation_results.md
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2027_canonical_bert/summary.json
+ create mode 100644 results/day16_bert_allocation_pairs.csv
+ create mode 100644 results/day16_bert_deployment.csv
+ create mode 100644 results/day16_bert_paired_differences.csv
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 4.7 MB/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   dc45300..e579afa  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED e579afa0b10a074b766ac186aa59869045404549
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2027 --order canonical --output results/day16_banking_head_only_seed2027_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2027_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 3645bea] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1721 insertions(+), 10 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2027_canonical_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2027_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2027_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   e579afa..3645bea  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 3645beaa8ec2bb7807532040dcfc6285ada51279
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2027 --order b_first --output results/day16_banking_private_seed2027_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2027_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 816a13b] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1713 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2027_b_first_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2027_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2027_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2027_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   3645bea..816a13b  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 816a13b57d1a1419240b1e6fd3e9b246de6a97b6
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2027 --order b_first --output results/day16_banking_head_only_seed2027_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2027_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 8475ba4] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1716 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2027_b_first_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2027_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2027_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2027_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   816a13b..8475ba4  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 8475ba431a93a9697b7ef01c40eba19e94b54948
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2028 --order canonical --output results/day16_banking_private_seed2028_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2028_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit ca497bf] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 1707 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2028_canonical_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2028_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2028_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2028_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   8475ba4..ca497bf  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED ca497bf8e312856219c8f88fc66629e18a985d82
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2028 --order canonical --output results/day16_banking_head_only_seed2028_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2028_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 4122426] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1710 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2028_canonical_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2028_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2028_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   ca497bf..4122426  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 4122426e1761a6097b0c034df73d7f5a86503be1
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2028 --order b_first --output results/day16_banking_private_seed2028_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2028_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit b69f42d] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1713 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2028_b_first_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2028_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2028_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2028_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   4122426..b69f42d  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED b69f42d1503e55210157b1deec3afe1e4f788241
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2028 --order b_first --output results/day16_banking_head_only_seed2028_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2028_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 3282e74] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1716 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2028_b_first_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2028_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2028_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2028_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   b69f42d..3282e74  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 3282e742a659caed2409a09ea915996b12e6ca08
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2029 --order canonical --output results/day16_banking_private_seed2029_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2029_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit c7789c4] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 1707 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2029_canonical_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2029_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2029_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2029_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   3282e74..c7789c4  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED c7789c44928bd273639a71ca4fd4c8f575cab0f8
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2029 --order canonical --output results/day16_banking_head_only_seed2029_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2029_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 4891491] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1710 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2029_canonical_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2029_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2029_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   c7789c4..4891491  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 489149129ffc09d98811e7550cd53bb1c428c587
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2029 --order b_first --output results/day16_banking_private_seed2029_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2029_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit cf58c3f] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1713 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2029_b_first_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2029_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2029_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2029_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   4891491..cf58c3f  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED cf58c3f3405699b4bdffd4738d52eb472dd84bcd
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2029 --order b_first --output results/day16_banking_head_only_seed2029_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2029_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit ad439e2] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1716 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2029_b_first_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2029_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2029_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2029_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   cf58c3f..ad439e2  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED ad439e2e54cd1d6353de5f0dfde5c53cbcce2755
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2030 --order canonical --output results/day16_banking_private_seed2030_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2030_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 7c6f9ca] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 1707 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2030_canonical_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2030_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2030_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2030_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   ad439e2..7c6f9ca  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 7c6f9ca2cb19f6a14fae6b7b0f6833e71cbd9417
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2030 --order canonical --output results/day16_banking_head_only_seed2030_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2030_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 4f0ceca] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1710 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2030_canonical_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2030_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2030_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   7c6f9ca..4f0ceca  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 4f0cecabdfea56e8c6d36807ef867cc391a470e8
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2030 --order b_first --output results/day16_banking_private_seed2030_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2030_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 6c7eeb8] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1713 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2030_b_first_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2030_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2030_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2030_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   4f0ceca..6c7eeb8  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 6c7eeb8c683274cd416b2c703e9a2627a02918a5
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2030 --order b_first --output results/day16_banking_head_only_seed2030_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2030_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 8d36e19] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1716 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2030_b_first_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2030_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2030_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2030_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   6c7eeb8..8d36e19  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 8d36e19ac9e6cb7cb2dca139c6317a3e937d5617
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2031 --order canonical --output results/day16_banking_private_seed2031_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2031_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 7323a6f] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 1707 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2031_canonical_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2031_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2031_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2031_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   8d36e19..7323a6f  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 7323a6fea494b42ff3a7273ae49796b72415ce1a
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2031 --order canonical --output results/day16_banking_head_only_seed2031_canonical_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2031_canonical_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 3b9fe2b] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1710 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2031_canonical_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2031_canonical_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2031_canonical_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_canonical_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   7323a6f..3b9fe2b  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 3b9fe2b1cd8e066ecc50dbe03b0cc7ec8c9fd674
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture private --seed 2031 --order b_first --output results/day16_banking_private_seed2031_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_private_seed2031_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit fd4140e] Preserve frozen architecture and weight-state audit progress
+ 24 files changed, 1713 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_private_seed2031_b_first_bert.txt
+ create mode 100644 logs/day16_banking_private_seed2031_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_private_seed2031_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_private_seed2031_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 14 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   3b9fe2b..fd4140e  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED fd4140ebec948a4a3a6a5430bc33030cebae2cb1
+RUN /usr/local/bin/python -u -m experiments.day16_bert_allocation --architecture head_only --seed 2031 --order b_first --output results/day16_banking_head_only_seed2031_b_first_bert --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day16_banking_head_only_seed2031_b_first_bert completed
+RUN /usr/local/bin/python -u -m experiments.day16_bert_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit e036d8f] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 1716 insertions(+), 12 deletions(-)
+ create mode 100644 logs/day16_banking_head_only_seed2031_b_first_bert.txt
+ create mode 100644 logs/day16_banking_head_only_seed2031_b_first_bert_progress.txt
+ create mode 100644 logs/day16_banking_head_only_seed2031_b_first_bert_report.txt
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/README.md
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/checkpoint/learner_state.pt
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/eval_matrix.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/events.jsonl
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/label_free_eval.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/provenance.json
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/routing.csv
+ create mode 100644 results/day16_banking_head_only_seed2031_b_first_bert/summary.json
+RUN git push origin day5-causal-audit
+Uploading LFS objects: 100% (4/4), 6.7 MB | 0 B/s, done.
+To https://github.com/anitusiruk/mitosis-interference.git
+   fd4140e..e036d8f  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED e036d8fe13df610d92d98337ebea4a2db87d7df2
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime banking --seed 2027 --order canonical --output results/day15_banking_private_cau_seed2027_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_banking_private_cau_seed2027_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 035d7b9] Preserve frozen architecture and weight-state audit progress
+ 29 files changed, 20126 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day15_banking_private_cau_seed2027_canonical_weight_moments.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2027_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2027_canonical_weight_moments_report.txt
+ create mode 100644 notes/day15_weight_moment_results.md
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_canonical_weight_moments/summary.json
+ create mode 100644 results/day15_batch_contrasts.csv
+ create mode 100644 results/day15_coverage.csv
+ create mode 100644 results/day15_seed_contrasts.csv
+ create mode 100644 results/day15_seed_intervals.csv
+ create mode 100644 results/day15_trajectory_contrasts.csv
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   e036d8f..035d7b9  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 035d7b9eb3c12d7891b8f7e04ea2b9c38baebcb4
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime amazon --seed 2027 --order canonical --output results/day15_amazon_private_cau_seed2027_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_amazon_private_cau_seed2027_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 63c08a8] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 11242 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_canonical_weight_moments.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_canonical_weight_moments_report.txt
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_canonical_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   035d7b9..63c08a8  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 63c08a8134248a1e888ba8610b7e7b5140594de2
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime banking --seed 2027 --order b_first --output results/day15_banking_private_cau_seed2027_b_first_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_banking_private_cau_seed2027_b_first_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 5c0be0b] Preserve frozen architecture and weight-state audit progress
+ 29 files changed, 20832 insertions(+), 8 deletions(-)
+ create mode 100644 logs/day15_banking_private_cau_seed2027_b_first_weight_moments.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2027_b_first_weight_moments_progress.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2027_b_first_weight_moments_report.txt
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/component_trials.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/events.jsonl
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/observer_verification.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/provenance.json
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/routing.csv
+ create mode 100644 results/day15_banking_private_cau_seed2027_b_first_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   63c08a8..5c0be0b  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 5c0be0bb78f72aee8e581b84925e36ada45d9068
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime amazon --seed 2027 --order b_first --output results/day15_amazon_private_cau_seed2027_b_first_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_amazon_private_cau_seed2027_b_first_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 4b61704] Preserve frozen architecture and weight-state audit progress
+ 25 files changed, 11974 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_b_first_weight_moments.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_b_first_weight_moments_progress.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2027_b_first_weight_moments_report.txt
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/component_trials.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/events.jsonl
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/observer_verification.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/provenance.json
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/routing.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2027_b_first_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   5c0be0b..4b61704  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 4b61704d2435a0ebe7ebdcb5a24700117f0db57a
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime banking --seed 2028 --order canonical --output results/day15_banking_private_cau_seed2028_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_banking_private_cau_seed2028_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 47646fd] Preserve frozen architecture and weight-state audit progress
+ 27 files changed, 20097 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day15_banking_private_cau_seed2028_canonical_weight_moments.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2028_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2028_canonical_weight_moments_report.txt
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_canonical_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   4b61704..47646fd  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 47646fdec9a963dfc16619a3da7b979d50f47908
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime amazon --seed 2028 --order canonical --output results/day15_amazon_private_cau_seed2028_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_amazon_private_cau_seed2028_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 70fcc56] Preserve frozen architecture and weight-state audit progress
+ 23 files changed, 11242 insertions(+), 6 deletions(-)
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_canonical_weight_moments.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_canonical_weight_moments_report.txt
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_canonical_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   47646fd..70fcc56  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 70fcc56c76bcb21315a31a4fd1067f395397cd24
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime banking --seed 2028 --order b_first --output results/day15_banking_private_cau_seed2028_b_first_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_banking_private_cau_seed2028_b_first_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 132ef9c] Preserve frozen architecture and weight-state audit progress
+ 29 files changed, 20829 insertions(+), 696 deletions(-)
+ create mode 100644 logs/day15_banking_private_cau_seed2028_b_first_weight_moments.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2028_b_first_weight_moments_progress.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2028_b_first_weight_moments_report.txt
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/component_trials.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/events.jsonl
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/observer_verification.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/provenance.json
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/routing.csv
+ create mode 100644 results/day15_banking_private_cau_seed2028_b_first_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   70fcc56..132ef9c  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 132ef9ce2bd0d84036cb9995a92ebacca970a78a
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime amazon --seed 2028 --order b_first --output results/day15_amazon_private_cau_seed2028_b_first_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_amazon_private_cau_seed2028_b_first_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit b17b3d9] Preserve frozen architecture and weight-state audit progress
+ 28 files changed, 12083 insertions(+), 703 deletions(-)
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_b_first_weight_moments.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_b_first_weight_moments_progress.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2028_b_first_weight_moments_report.txt
+ create mode 100644 logs/github_remote_cache_reuse_integrity.txt
+ create mode 100644 notes/github_backup_verification_amendment.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/component_trials.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/events.jsonl
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/observer_verification.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/provenance.json
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/routing.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2028_b_first_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   132ef9c..b17b3d9  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED b17b3d9040152021cfc65aafc50ddfd367c4b8d6
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime banking --seed 2029 --order canonical --output results/day15_banking_private_cau_seed2029_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_banking_private_cau_seed2029_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit d9f4fcf] Preserve frozen architecture and weight-state audit progress
+ 33 files changed, 20461 insertions(+), 6 deletions(-)
+ create mode 100644 experiments/day20_complete_frozen_diagnostics.py
+ create mode 100644 logs/day15_banking_private_cau_seed2029_canonical_weight_moments.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2029_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_banking_private_cau_seed2029_canonical_weight_moments_report.txt
+ create mode 100644 logs/day20_scheduling_integrity.txt
+ create mode 100644 notes/day20_continuation_spec.md
+ create mode 100644 notes/github_remote_cache_preflight.json
+ create mode 100644 notes/paper_working_draft_before_extended_audits.md
+ create mode 100644 notes/research_assessment_20261006_classifier_control.md
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_banking_private_cau_seed2029_canonical_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   b17b3d9..d9f4fcf  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED d9f4fcf64710acbff788e7dbf92eb378741a8190
+RUN /usr/local/bin/python -u -m experiments.day15_weight_moment_recurrence --regime amazon --seed 2029 --order canonical --output results/day15_amazon_private_cau_seed2029_canonical_weight_moments --deadline-utc 2026-10-07T03:15:00+00:00
+DIAGNOSTIC_JOB day15_amazon_private_cau_seed2029_canonical_weight_moments completed
+RUN /usr/local/bin/python -u -m experiments.day15_moment_report
+RUN /usr/local/bin/python -u -m experiments.day13_progress_report
+RUN git add -A
+RUN git commit -m Preserve frozen architecture and weight-state audit progress
+[day5-causal-audit 6ab4027] Preserve frozen architecture and weight-state audit progress
+ 26 files changed, 15868 insertions(+), 8 deletions(-)
+ create mode 100644 logs/day15_amazon_private_cau_seed2029_canonical_weight_moments.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2029_canonical_weight_moments_progress.txt
+ create mode 100644 logs/day15_amazon_private_cau_seed2029_canonical_weight_moments_report.txt
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/README.md
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_config.json
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/checkpoint/learner_state.pt
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/component_trials.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/eval_matrix.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/events.jsonl
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/label_free_eval.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/observer_verification.json
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/provenance.json
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/routing.csv
+ create mode 100644 results/day15_amazon_private_cau_seed2029_canonical_weight_moments/summary.json
+RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   d9f4fcf..6ab4027  day5-causal-audit -> day5-causal-audit
+DIAGNOSTIC_PROGRESS_PUSHED 6ab4027583c5036d0c3bcb4360907c1986d67f48
+DIAGNOSTIC_LAUNCH_CUTOFF 2026-10-07T03:08:24.848591+00:00
+RUN git add -A
+RUN git push origin day5-causal-audit
+Everything up-to-date
+DIAGNOSTIC_PROGRESS_PUSHED 6ab4027583c5036d0c3bcb4360907c1986d67f48
+RUN /usr/local/bin/python -u -m experiments.finalize_github_save
+RUN git config --local credential.https://github.com.helper 
+warning: credential.https://github.com.helper has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change credential.https://github.com.helper.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/finalize_github_save.py", line 125, in <module>
+    run(["git", "config", "--local", "credential.https://github.com.helper", ""])
+  File "/workspace/mitosis-interference/experiments/finalize_github_save.py", line 30, in run
+    raise RuntimeError(f"Command failed with exit {result.returncode}: {args[:3]}")
+RuntimeError: Command failed with exit 5: ['git', 'config', '--local']
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day15_16_research_worker.py", line 121, in <module>
+    raise RuntimeError('Diagnostic remote checkpoint roundtrip failed')
+RuntimeError: Diagnostic remote checkpoint roundtrip failed

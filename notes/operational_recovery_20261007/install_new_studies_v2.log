@@ -1,0 +1,67 @@
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:36:28.814282+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:36:58.814478+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:37:28.814714+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:37:58.814957+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:38:28.815213+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:38:58.815454+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:39:28.815695+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:39:58.815954+00:00
+WAITING_FOR_FROZEN_QUEUE_AND_VERIFIED_SAVE 2026-10-06T23:40:28.816172+00:00
+INSTALLED_REVIEWED_SOURCE src/moment_component_audit.py 6afac4d3cd1453638a45aeaa04144ec2b569a408b5459037e60606754900ec2a
+INSTALLED_REVIEWED_SOURCE experiments/day15_moment_integrity.py 1a3b8bd9092bc142da021f14619b259eebd7d0bedc1c483832ddd3970745f709
+INSTALLED_REVIEWED_SOURCE experiments/day15_weight_moment_recurrence.py dbabffef271fcfb08fec552b77823a9d94f521efee94158d055bafc91db187a0
+INSTALLED_REVIEWED_SOURCE experiments/day15_moment_report.py 90c035e638ec3a48d4458f49ac8dc64665e47ecbf54d188432b2ea1adde23cfa
+INSTALLED_REVIEWED_SOURCE experiments/day15_report_integrity.py aede6fb2ea2137885a30f17d5b5afb7f36e9144648ac83c2bb63f1ce50062af6
+INSTALLED_REVIEWED_SOURCE experiments/day16_bert_allocation.py 64b7df6371f12710c75d2a588d0c52e733f51b21e7d069559bb5b313cbcdc462
+INSTALLED_REVIEWED_SOURCE experiments/day16_bert_integrity.py 9dc7abf028b2662b45974b4acea6bbfb457e2f7f0ee9ed6f20b2cd377e2f4b62
+INSTALLED_REVIEWED_SOURCE experiments/day16_bert_report.py a8848d00e1de22b7d2e637ce15837cdf7fa18a5ab2ae47cc05eb20887eb1ee22
+INSTALLED_REVIEWED_SOURCE experiments/day15_16_research_worker.py 11f7493d9003c65d307db1830c5ec76c591c9e137cdebbd9387e67a11a60e640
+INSTALLED_REVIEWED_SOURCE experiments/day13_progress_report.py 9fcc087dc9ffa10f48251e26d9bdd21bcbe535b7a343595a001f0ed9859db479
+INSTALLED_REVIEWED_SOURCE notes/day15_weight_moment_spec.md 3921c7fbbfc29992611129515a734aa987af1d86093cb57dce3687bef697a4c5
+INSTALLED_REVIEWED_SOURCE notes/day16_bert_allocation_spec.md 6df661e6809eb85e78501d547c1dfb4d6fd32521d68ff800d2ab44513fc4077d
+INSTALLED_REVIEWED_SOURCE notes/novelty_audit_20261006.md 357da296168ec333f6e8c48f0bfa50dd15e69e29e9bf7b1807cbb46f0f656482
+INSTALLED_REVIEWED_SOURCE notes/day15_16_implementation_checks.md a9738717f34a1398c5606b1fba72ffa23fe6c4f9424f3301abad086cde6231f3
+INSTALL_V2_RUN python -u -m experiments.day15_moment_integrity --device cpu
+RESEARCH_LAUNCH_GATE experiments.day15_moment_integrity ['--device', 'cpu'] 0
+INSTALL_V2_RUN python -u -m experiments.day15_moment_integrity --device cuda
+RESEARCH_LAUNCH_GATE experiments.day15_moment_integrity ['--device', 'cuda'] 0
+INSTALL_V2_RUN python -u -m experiments.day16_bert_integrity --device cpu
+RESEARCH_LAUNCH_GATE experiments.day16_bert_integrity ['--device', 'cpu'] 0
+INSTALL_V2_RUN python -u -m experiments.day16_bert_integrity --device cuda
+RESEARCH_LAUNCH_GATE experiments.day16_bert_integrity ['--device', 'cuda'] 0
+INSTALL_V2_RUN python -u -m experiments.day15_report_integrity
+RESEARCH_LAUNCH_GATE experiments.day15_report_integrity [] 0
+INSTALL_V2_RUN git add -A
+INSTALL_V2_RUN git commit -m Freeze separate weight-state attribution and BERT allocation transfer studies
+[day5-causal-audit dc45300] Freeze separate weight-state attribution and BERT allocation transfer studies
+ 27 files changed, 1611 insertions(+)
+ create mode 100644 experiments/day15_16_research_worker.py
+ create mode 100644 experiments/day15_moment_integrity.py
+ create mode 100644 experiments/day15_moment_report.py
+ create mode 100644 experiments/day15_report_integrity.py
+ create mode 100644 experiments/day15_weight_moment_recurrence.py
+ create mode 100644 experiments/day16_bert_allocation.py
+ create mode 100644 experiments/day16_bert_integrity.py
+ create mode 100644 experiments/day16_bert_report.py
+ create mode 100644 logs/day15_analytic_report_integrity.txt
+ create mode 100644 logs/day15_cpu_integrity_final.txt
+ create mode 100644 logs/day15_cpu_integrity_initial_failed.txt
+ create mode 100644 logs/day15_cpu_integrity_repaired_stage.txt
+ create mode 100644 logs/day15_cuda_integrity.txt
+ create mode 100644 logs/day16_bert_prefetch.txt
+ create mode 100644 logs/day16_cpu_integrity_final.txt
+ create mode 100644 logs/day16_cpu_integrity_initial_failed.txt
+ create mode 100644 logs/day16_cpu_integrity_repaired_stage.txt
+ create mode 100644 logs/day16_cuda_integrity.txt
+ create mode 100644 notes/CABLE_author_source_audit_receipt.json
+ create mode 100644 notes/day15_16_implementation_checks.md
+ create mode 100644 notes/day15_16_launch_gate.json
+ create mode 100644 notes/day15_weight_moment_spec.md
+ create mode 100644 notes/day16_bert_allocation_spec.md
+ create mode 100644 notes/day16_bert_backbone_pin.json
+ create mode 100644 notes/novelty_audit_20261006.md
+ create mode 100644 src/moment_component_audit.py
+INSTALL_V2_RUN git push origin day5-causal-audit
+To https://github.com/anitusiruk/mitosis-interference.git
+   be92be1..dc45300  day5-causal-audit -> day5-causal-audit
+NEW_FROZEN_DIAGNOSTIC_WORKER_STARTED 8144 PREREGISTERED_GITHUB_HEAD dc45300d212e7ef52c77f4652bb64f9b5083945f

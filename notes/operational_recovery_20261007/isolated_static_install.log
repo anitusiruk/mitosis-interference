@@ -1,0 +1,49 @@
+STOPPED_WAITING_SEQUENTIAL_INSTALLER 10594
+RUN git worktree add -b day17-static-tuning-20261006 /workspace/mitosis-static-tuning 4b61704d2435a0ebe7ebdcb5a24700117f0db57a
+Preparing worktree (new branch 'day17-static-tuning-20261006')
+HEAD is now at 4b61704 Preserve frozen architecture and weight-state audit progress
+ISOLATED_SOURCE experiments/day17_evidence_figures.py 4065f47a10793cc4b3e1643cd19d74fa93659921fd54637fafcaf7b34240c065
+ISOLATED_SOURCE experiments/day17_manuscript_refresh.py ec37967816593a10953f4d4bca9c67216f827bcd03417e4845bad0716a733152
+ISOLATED_SOURCE experiments/day17_static_replay_gate.py d73502c5d958240403205a5c28983e66036b86f396c273fcee4902a405a47f9e
+ISOLATED_SOURCE experiments/day17_static_tuning_report.py e1d93f2ae03db3f3e8855e05c7ec0d3a1436bc9bdd6c1ae182d9396794a8a842
+ISOLATED_SOURCE experiments/day17_static_tuning.py 36b9497a7cbba73408bad4fef2639cfa29759d9764eeadf936ae11539751a719
+ISOLATED_SOURCE experiments/day17_static_tuning_worker.py b923ad4320a48b3d703247c5c8684fcd94e89f3866c9f942b1f54504a459e09d
+ISOLATED_SOURCE experiments/day17_static_report_integrity.py e941bf297cac70856f78d5996ec373a59218dcce479e5801a989b1990f0fa519
+ISOLATED_SOURCE notes/day17_static_tuning_spec.md d5d522795254b429de4f980b3503c247668f86983c44478809b4ff02292cdba5
+ISOLATED_SOURCE notes/classifier_prior_audit_20261006.md 469189d38bd8917b0dd47a6b2e3ad3a476e6afda2fd28a133f4508adc784db48
+ISOLATED_SOURCE experiments/day17_parallel_static_worker.py 0adc608a951b889aa4b1c0a78364ad75edbd5c8f3c787c8fc191aab915e9cb1d
+ISOLATED_SOURCE experiments/day17_integrate_saved_branches.py b38965f4535d7498ed61f40fbf004d1ece1d5e0d5e937b4080907f4fade2382d
+ISOLATED_SOURCE notes/day17_execution_isolation_20261006.md e827940387a7ebb2348e0d9e13f3879a15c2960499f70d9419b51632d053d50b
+RUN git lfs checkout results/day12_banking_private_single_rank96_seed2031_b_first/checkpoint/adapters/adapter_model.safetensors results/day12_banking_private_single_rank96_seed2031_b_first/checkpoint/learner_state.pt
+Checking out LFS objects: 100% (2/2), 34 MB | 0 B/s, done.
+RUN /usr/local/bin/python -m compileall -q /workspace/mitosis-static-tuning/experiments/day17_evidence_figures.py /workspace/mitosis-static-tuning/experiments/day17_manuscript_refresh.py /workspace/mitosis-static-tuning/experiments/day17_static_replay_gate.py /workspace/mitosis-static-tuning/experiments/day17_static_tuning_report.py /workspace/mitosis-static-tuning/experiments/day17_static_tuning.py /workspace/mitosis-static-tuning/experiments/day17_static_tuning_worker.py /workspace/mitosis-static-tuning/experiments/day17_static_report_integrity.py /workspace/mitosis-static-tuning/experiments/day17_parallel_static_worker.py /workspace/mitosis-static-tuning/experiments/day17_integrate_saved_branches.py
+RUN git add -A
+RUN git commit -m Freeze isolated equal-grid static tuning before research outcomes
+[day17-static-tuning-20261006 eb9b997] Freeze isolated equal-grid static tuning before research outcomes
+ 14 files changed, 1395 insertions(+)
+ create mode 100644 experiments/day17_evidence_figures.py
+ create mode 100644 experiments/day17_integrate_saved_branches.py
+ create mode 100644 experiments/day17_manuscript_refresh.py
+ create mode 100644 experiments/day17_parallel_static_worker.py
+ create mode 100644 experiments/day17_static_replay_gate.py
+ create mode 100644 experiments/day17_static_report_integrity.py
+ create mode 100644 experiments/day17_static_tuning.py
+ create mode 100644 experiments/day17_static_tuning_report.py
+ create mode 100644 experiments/day17_static_tuning_worker.py
+ create mode 100644 logs/day17_static_report_analytic_gate.txt
+ create mode 100644 notes/classifier_prior_audit_20261006.md
+ create mode 100644 notes/day17_execution_isolation_20261006.md
+ create mode 100644 notes/day17_prelaunch_gate.json
+ create mode 100644 notes/day17_static_tuning_spec.md
+RUN git push --set-upstream origin day17-static-tuning-20261006
+remote: 
+remote: Create a pull request for 'day17-static-tuning-20261006' on GitHub by visiting:        
+remote:      https://github.com/anitusiruk/mitosis-interference/pull/new/day17-static-tuning-20261006        
+remote: 
+To https://github.com/anitusiruk/mitosis-interference.git
+ * [new branch]      day17-static-tuning-20261006 -> day17-static-tuning-20261006
+branch 'day17-static-tuning-20261006' set up to track 'origin/day17-static-tuning-20261006'.
+STATIC_PREREGISTRATION_PUSHED eb9b9972813481d457e575c56c001964ad5c6500 ANALYTIC_GATE 0
+ISOLATED_STATIC_WORKER_STARTED 17445
+VERIFIED_BRANCH_INTEGRATOR_WAITING 17446
+ISOLATED_INSTALL_AND_LAUNCH_COMPLETE eb9b9972813481d457e575c56c001964ad5c6500

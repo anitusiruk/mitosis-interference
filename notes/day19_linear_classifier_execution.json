@@ -548,5 +548,7 @@
     }
   ],
   "planned_research_jobs": 20,
-  "github_save_pending": true
+  "github_save_pending": true,
+  "failed": false,
+  "administratively_stopped": false
 }

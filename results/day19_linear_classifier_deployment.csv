@@ -1,0 +1,4 @@
+seed,order,architecture,rule,final_macro_accuracy
+2027,canonical,private,frozen_centroid,0.04325682077594276
+2027,canonical,private,last_active,0.04731182795698923
+2027,canonical,private,uniform_probability,0.013745704467353933

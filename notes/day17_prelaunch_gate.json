@@ -1,0 +1,7 @@
+{
+  "gate_returncode": 0,
+  "utc": "2026-10-07T01:37:38.118792+00:00",
+  "research_outcomes_generated": false,
+  "scope": "compile and analytic selection/report fixtures",
+  "execution_isolation": "separate worktree, shared GPU, same existing repository"
+}

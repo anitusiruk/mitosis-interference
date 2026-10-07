@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-07T03:03:39.547575+00:00",
+  "png_sha256": "0ed0206b65ec975495a208ee583b1eeaef1ccc9d7ce6ba8b33e275607fa71498",
+  "full_resolution_png_inspected": true,
+  "all_three_original_rules_displayed": true,
+  "labels_and_uncertainty_visible_without_clipping": true,
+  "all_three_intervals_include_zero": true,
+  "preserved_preview_file": "/workspace/mitosis-day15-stage/preview_checkpoint_frozen_preclassifier_lora_comparison.png",
+  "preview_sha256": "0ed0206b65ec975495a208ee583b1eeaef1ccc9d7ce6ba8b33e275607fa71498",
+  "scope": "Classifier-control figure only; combined regenerated figures still require inspection."
+}

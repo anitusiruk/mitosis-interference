@@ -1,0 +1,13 @@
+{
+  "repository": "anitusiruk/mitosis-interference",
+  "branch": "day17-static-tuning-20261006",
+  "preserved_snapshot_commit": "84adb4d0557446c409db2486b1bd5dbb677a3a10",
+  "verified_utc": "2026-10-07T02:07:43.315139+00:00",
+  "scope": "new Day-17 checkpoints only; unrelated checkpoints retain their main-branch receipts",
+  "all_day17_lfs_sha256_verified": true,
+  "fresh_remote_lfs_fetch_returncode": 0,
+  "checkpoint_files": 180,
+  "tensor_files": 90,
+  "unique_lfs_objects_verified": 90,
+  "checkpoint_bytes": 1116324532
+}

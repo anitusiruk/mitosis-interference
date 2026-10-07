@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-07T02:53:40.760702+00:00",
+  "old_source_sha256": "4065f47a10793cc4b3e1643cd19d74fa93659921fd54637fafcaf7b34240c065",
+  "new_source_sha256": "8ae4b71c4dcc6cf9c5a9d2f7255a5634552d4372e5cb111f8467b77f52d2bb91",
+  "scientific_training_sources_modified": false,
+  "added_after_control_outcomes": true,
+  "reason": "clarify full classifier-stack interventions and show every original prediction rule",
+  "source_result_sha256": "b9881cb07512ec12c2651fba1b5c61de6cec6d2001b3e478872ef0c0bb0a7ec3",
+  "visual_render_review_pending": true
+}

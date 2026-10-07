@@ -311,6 +311,32 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T02:22:39.027770+00:00"
+    },
+    {
+      "name": "day19_banking_head_only_seed2029_b_first_frozen_preclassifier",
+      "phase": "diagnostic",
+      "status": "completed",
+      "started_utc": "2026-10-07T02:22:48.230639+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day19_linear_classifier_control",
+        "--architecture",
+        "head_only",
+        "--preclassifier-mode",
+        "frozen",
+        "--seed",
+        "2029",
+        "--order",
+        "b_first",
+        "--output",
+        "results/day19_banking_head_only_seed2029_b_first_frozen_preclassifier",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T02:23:54.678853+00:00"
     }
   ],
   "planned_research_jobs": 20,

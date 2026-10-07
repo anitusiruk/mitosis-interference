@@ -1,6 +1,6 @@
 # Frozen hidden pre-classifier allocation diagnostic
 
-Completed trajectories 13/20; paired controls 6/10. Incomplete attempts: [].
+Completed trajectories 14/20; paired controls 7/10. Incomplete attempts: [].
 
 Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. The private condition trains LoRA and the linear output classifier; the other trains only the output classifier, keeping LoRA output zero. This removes hidden pre-classifier learning, with its associated optimizer state, in both conditions. It is an allocation diagnostic, not a tuned competitive benchmark. The retained PEFT pre-classifier copies are dormant stored parameters.
 
@@ -14,6 +14,7 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2028 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
 | 2029 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
 | 2029 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
+| 2030 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
 
 ## All deviations from the trainable-stack reference and stored resources
 
@@ -32,6 +33,7 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2029 | b_first | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
 | 2029 | b_first | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
 | 2030 | canonical | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
+| 2030 | canonical | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
 
 ## All private-minus-output-classifier-only accuracy differences
 
@@ -84,5 +86,8 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2030 | canonical | private | frozen_centroid | 0.0642 |
 | 2030 | canonical | private | last_active | 0.0301 |
 | 2030 | canonical | private | uniform_probability | 0.0575 |
+| 2030 | canonical | head_only | frozen_centroid | 0.0811 |
+| 2030 | canonical | head_only | last_active | 0.0376 |
+| 2030 | canonical | head_only | uniform_probability | 0.0419 |
 
 Intervals are descriptive over paired training seeds and fixed repeatedly examined development examples. Neither agreement nor disagreement establishes a universal capacity principle. Existing controls with trainable hidden classifiers must not be described as having no learned hidden representation capacity.

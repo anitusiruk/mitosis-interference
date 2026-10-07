@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-07T00:22:10.765883+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-07T00:38:00.838945+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -18,7 +18,7 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 10 | 12 | 12 | completed |
 | 12 | 11 | 11 | completed |
 | 14 fixed-memory routing | 44 | 44 | completed |
-| 15 | 0 | 20 | not launched |
+| 15 | 1 | 20 | completed |
 | 16 | 20 | 20 | completed |
 | 5 head-only | 2 | 2 | completed |
 
@@ -315,7 +315,7 @@ The fixed-memory extension limits total stored training examples to 512 and pres
 
 The Day-15 observer independently crosses LoRA/head weights with LoRA/head AdamW state. All mature batches and every cell are retained. Only verified bitwise paired trajectory/state reproductions enter its causal summaries. The Day-16 BERT check tests transfer beyond the DistilBERT classifier stack; multiple backbone components change together, so it does not isolate classifier architecture causally. Both studies are development extensions, not untouched test confirmations. Current novelty limits are in notes/novelty_audit_20261006.md.
 
-Pending; no saved completed-result table yet.
+Pending; no complete comparison groups yet.
 
 
 | seed | order | allocation_disagreements | private_spawn_steps | head_only_spawn_steps | private_learning_updates | head_only_learning_updates |

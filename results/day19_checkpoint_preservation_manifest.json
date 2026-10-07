@@ -127,6 +127,38 @@
     "bytes": 11892659,
     "sha256": "f25908661bb2adc0f101e5d4f3d18683ab8d4bee201eb56408e74461b5b08e61"
   },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "d8562c3e539b6a9e484366b1074edf445cabb6d4727983ca2c28423412b02a25"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "f03b853c5fe26a3bfeb58ca0fbdaddc1e4b2f086c4f963b4e33066af006acb67"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "26b8960022b1cb54cd6ac376241e1ff6a5986aa621cb9b6b03e38d0c1b9a551c"
+  },
+  "results/day19_banking_head_only_seed2029_canonical_frozen_preclassifier/checkpoint/learner_state.pt": {
+    "bytes": 11892979,
+    "sha256": "2fda4a4233a296a30d31ad20c6da8fa59c51e0a7804504e5d94899bef6fcca37"
+  },
   "results/day19_banking_private_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

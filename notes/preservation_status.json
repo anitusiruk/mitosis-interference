@@ -3,8 +3,8 @@
   "snapshot_commit": "d23779b40c3205941d010d316ea46f3077796a2f",
   "github_push_returncode": 0,
   "branch": "day5-causal-audit",
-  "checkpoint_files": 1116,
-  "checkpoint_bytes": 4403267070,
+  "checkpoint_files": 1124,
+  "checkpoint_bytes": 4410000304,
   "full_state_storage": "Git LFS tensors plus ordinary Git source/results/cache",
   "study_coverage": [
     {

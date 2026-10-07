@@ -13,6 +13,7 @@ day17_pilot_rank8_lr800_seed2026_b_first,8,0.0008,2026,b_first,0.028636884306987
 day17_pilot_rank8_lr800_seed2026_canonical,8,0.0008,2026,canonical,0.039784946236559135,80
 day17_pilot_rank96_lr100_seed2026_b_first,96,0.0001,2026,b_first,0.196474891918856,80
 day17_pilot_rank96_lr100_seed2026_canonical,96,0.0001,2026,canonical,0.10133761962827474,80
+day17_pilot_rank96_lr200_seed2026_canonical,96,0.0002,2026,canonical,0.06788766788766787,80
 day17_pilot_rank96_lr20_seed2026_b_first,96,2e-05,2026,b_first,0.0334737464434837,80
 day17_pilot_rank96_lr20_seed2026_canonical,96,2e-05,2026,canonical,0.047688726305287636,80
 day17_pilot_rank96_lr50_seed2026_b_first,96,5e-05,2026,b_first,0.0546661777789147,80

@@ -728,6 +728,32 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T01:49:11.619049+00:00"
+    },
+    {
+      "name": "day17_confirm_rank96_lr100_seed2027_b_first",
+      "phase": "confirmation",
+      "status": "completed",
+      "started_utc": "2026-10-07T01:49:17.328110+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day17_static_tuning",
+        "--rank",
+        "96",
+        "--learning-rate",
+        "0.0001",
+        "--seed",
+        "2027",
+        "--order",
+        "b_first",
+        "--output",
+        "results/day17_confirm_rank96_lr100_seed2027_b_first",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T01:49:34.776727+00:00"
     }
   ],
   "planned_research_jobs": 44,

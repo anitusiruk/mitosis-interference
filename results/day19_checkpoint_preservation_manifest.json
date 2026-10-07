@@ -1,4 +1,36 @@
 {
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "371fad62d0885aef73732933e727d5295301c47adae5ea64e4c46704a320f0cc"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "12b0786ab8c620c21452ca77a94f2203fb00b2772c88bdf2bf87529cafb04462"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "c1d8ba45a8b22c6360c2705e74ad11196b90b30db3e9dd6044317d16b1c4d21e"
+  },
+  "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/learner_state.pt": {
+    "bytes": 11892787,
+    "sha256": "ef99808412c27b759a59c3ddc49e3d72baed2f264908a1a3001843d3876f0fdf"
+  },
   "results/day19_banking_private_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

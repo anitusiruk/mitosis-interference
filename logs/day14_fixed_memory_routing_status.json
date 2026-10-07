@@ -1,0 +1,178 @@
+[
+  {
+    "run": "day8_amazon_head_only_cau_seed2026_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2027_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2027_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2028_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2028_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2029_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2029_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2030_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2030_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2031_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_head_only_cau_seed2031_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2026_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2027_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2027_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2028_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2028_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2029_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2029_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2030_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2030_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2031_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_amazon_private_cau_seed2031_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2026_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2027_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2027_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2028_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2028_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2029_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2029_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2030_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2030_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2031_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_head_only_cau_seed2031_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2026_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2027_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2027_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2028_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2028_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2029_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2029_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2030_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2030_canonical_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2031_b_first_fixed512",
+    "status": "completed"
+  },
+  {
+    "run": "day8_banking_private_cau_seed2031_canonical_fixed512",
+    "status": "completed"
+  }
+]

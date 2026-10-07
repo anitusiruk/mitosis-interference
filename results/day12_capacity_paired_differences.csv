@@ -1,7 +1,7 @@
 rule,contrast,seed_clusters,mean,ci_low,ci_high
-frozen_centroid,rank96_minus_rank8,0,,,
-frozen_centroid,rank96_minus_adaptive,0,,,
-last_active,rank96_minus_rank8,0,,,
-last_active,rank96_minus_adaptive,0,,,
-uniform_probability,rank96_minus_rank8,0,,,
-uniform_probability,rank96_minus_adaptive,0,,,
+frozen_centroid,rank96_minus_rank8,5,-0.09458744411188709,-0.14056696617956055,-0.04860792204421362
+frozen_centroid,rank96_minus_adaptive,5,-0.08920602436398907,-0.1235470255444995,-0.054865023183478634
+last_active,rank96_minus_rank8,5,-0.09458744411188709,-0.14056696617956055,-0.04860792204421362
+last_active,rank96_minus_adaptive,5,-0.03448619886930497,-0.0755490158307819,0.006576618092171957
+uniform_probability,rank96_minus_rank8,5,-0.09458744411188709,-0.14056696617956055,-0.04860792204421362
+uniform_probability,rank96_minus_adaptive,5,-0.06113697668403354,-0.08998048595465108,-0.03229346741341601

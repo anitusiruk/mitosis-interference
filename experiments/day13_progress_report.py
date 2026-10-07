@@ -20,6 +20,18 @@ for day,expected in [(5,6),(6,80),(7,24),(9,110),(8,44),(10,12),(12,11)]:
     records=json.loads(path.read_text()) if path.exists() else []
     counts.append({'study':str(day),'completed':sum(x['status']=='completed' for x in records),
                    'planned':expected,'last_status':records[-1]['status'] if records else 'not launched'})
+fixed_router=Path('logs/day14_fixed_memory_routing_status.json')
+if fixed_router.exists():
+    records=json.loads(fixed_router.read_text())
+    counts.append({'study':'14 fixed-memory routing','completed':sum(x['status']=='completed' for x in records),
+                   'planned':44,'last_status':records[-1]['status'] if records else 'not launched'})
+diagnostics=Path('notes/day15_16_execution_status.json')
+if diagnostics.exists():
+    records=json.loads(diagnostics.read_text())['jobs']
+    for study in [15,16]:
+        part=[x for x in records if x['study']==study]
+        counts.append({'study':str(study),'completed':sum(x['status']=='completed' for x in part),
+                       'planned':20,'last_status':part[-1]['status'] if part else 'not launched'})
 head=Path('logs/day5_head_only_queue_status.json')
 if head.exists():counts.append({'study':'5 head-only','completed':sum(r['status']=='completed' for r in json.loads(head.read_text())),
                                'planned':2,'last_status':json.loads(head.read_text())[-1]['status']})
@@ -76,6 +88,16 @@ report=['# Research progress and evidence handoff','',
     'larger static baseline; baseline-specific tuning with pilot/confirmation separation remains necessary.','',
     table('results/day8_memory_paired_differences.csv'),'','',
     table('results/day12_capacity_paired_differences.csv'),'','',
+    '## Fixed-memory learned routing and extended attribution','',
+    table('results/day14_memory_routing_paired_differences.csv'),'','',
+    'The Day-15 observer independently crosses LoRA/head weights with LoRA/head AdamW state. '
+    'All mature batches and every cell are retained. Only verified bitwise paired trajectory/state '
+    'reproductions enter its causal summaries. The Day-16 BERT check tests transfer beyond the '
+    'DistilBERT classifier stack; multiple backbone components change together, so it does not '
+    'isolate classifier architecture causally. Both studies are development extensions, not untouched '
+    'test confirmations. Current novelty limits are in notes/novelty_audit_20261006.md.','',
+    table('results/day15_seed_intervals.csv'),'','',
+    table('results/day16_bert_allocation_pairs.csv'),'','',
     '## Methodological checks and limits','',
     'The shared-head, component, head-only, stream-order, MultiNLI data, fixed-memory and scoring integrity '
     'tests passed in the live environment. Original BANKING/Amazon Day-4 routing was reproduced with zero '
@@ -96,10 +118,13 @@ report=['# Research progress and evidence handoff','',
           'truncated_token_train_dev_unique_overlap','training_fraction_over_64_tokens','development_fraction_over_64_tokens']),'','',
     '## Reproduction and preservation','',
     'The working branch is day5-causal-audit; master remains the restored Day-4 reference. All live trajectories '
-    'record source hashes, model revision, package versions, stream hashes and saved final learner state. '
-    'Downloaded source/result archives exclude large learner checkpoints; the portable Git bundle preserves '
-    'committed history. Checkpoint files remain on the pod and must be backed up before termination. '
-    'GitHub push failed because the pod lacks authentication; no successful push is claimed.','',
+    'record source hashes, package versions, stream hashes and saved final learner state. The older model-revision '
+    'field is null; exact historical backbone identity was not recorded. The restart records an explicit '
+    'Hugging Face commit and backbone file hashes, and verifies saved aggregate predictions and losses before '
+    'new outcomes. This numerical reload check does not prove historical byte identity. '
+    'The saved GitHub snapshot and all 738 checkpoint files were successfully restored on the new pod; '
+    'notes/github_save_verification.json records the earlier authenticated save. Source-only archives and '
+    'Git bundles omit LFS tensor content. New work requires its own successful GitHub save before pod shutdown.','',
     'To recover committed history from the final bundle:','',
     '```bash\ngit clone mitosis-research-final.bundle mitosis-interference\ncd mitosis-interference\n'
     'git checkout day5-causal-audit\nexport PYTHONPATH="$PWD"\n```','',

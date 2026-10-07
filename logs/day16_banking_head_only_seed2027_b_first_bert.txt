@@ -1,0 +1,45 @@
+DAY16_FROZEN_DIAGNOSTIC {"architecture_scope": "BERT classifier-only output layer; frozen pooler", "backbone_manifest_sha256": "c9bd9bf87d50b97905d3a33b20c1c969d14ae05e319fefcafd62f204c4057510", "diagnostic_implementation_sha256": "64b7df6371f12710c75d2a588d0c52e733f51b21e7d069559bb5b313cbcdc462", "diagnostic_spec_sha256": "6df661e6809eb85e78501d547c1dfb4d6fd32521d68ff800d2ab44513fc4077d", "lora_targets": ["query", "value"], "model_id": "google-bert/bert-base-uncased", "official_test_used": false}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+balanced examples/class: 23
+balanced examples/segment: 253
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4903.28it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: google-bert/bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=2.8
+step=10 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=5.8
+step=15 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=8.9
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0, 'frozen_centroid:A': 0.0, 'last_active:B': 0.0774, 'uniform_probability:B': 0.0774, 'frozen_centroid:B': 0.0774, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=18 segment(eval)=A1 decision=spawn adapter=adapter_1 pool=2 elapsed=12.2
+step=20 segment(eval)=A1 decision=warmup adapter=adapter_1 pool=2 elapsed=12.2
+step=25 segment(eval)=A1 decision=reuse adapter=adapter_1 pool=2 elapsed=16.3
+step=30 segment(eval)=A1 decision=reuse adapter=adapter_1 pool=2 elapsed=21.4
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.0825, 'uniform_probability:A': 0.0756, 'frozen_centroid:A': 0.0825, 'last_active:B': 0.0, 'uniform_probability:B': 0.0032, 'frozen_centroid:B': 0.071, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=35 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=28.8
+step=40 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=34.0
+step=45 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=39.3
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0103, 'frozen_centroid:A': 0.0825, 'last_active:B': 0.0903, 'uniform_probability:B': 0.0935, 'frozen_centroid:B': 0.0871, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=50 segment(eval)=C1 decision=spawn adapter=adapter_2 pool=3 elapsed=46.7
+step=55 segment(eval)=C1 decision=reuse adapter=adapter_2 pool=3 elapsed=49.8
+step=60 segment(eval)=C1 decision=reuse adapter=adapter_2 pool=3 elapsed=57.3
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0309, 'frozen_centroid:A': 0.0825, 'last_active:B': 0.0, 'uniform_probability:B': 0.0806, 'frozen_centroid:B': 0.0742, 'last_active:C': 0.0403, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0073}
+step=65 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=67.8
+step=70 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=75.5
+step=75 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=83.0
+step=80 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=90.8
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.1478, 'uniform_probability:A': 0.055, 'frozen_centroid:A': 0.0928, 'last_active:B': 0.0, 'uniform_probability:B': 0.0516, 'frozen_centroid:B': 0.071, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0073}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 80, "decisions": {"warmup": 10, "reuse": 68, "spawn": 2}, "final_adapters": ["default", "adapter_1", "adapter_2"], "pool_summary": {"default": {"updates": 33, "memory": 170}, "adapter_1": {"updates": 32, "memory": 170}, "adapter_2": {"updates": 15, "memory": 170}}, "resources": {"lora_parameters": 884736, "private_head_parameters": 177639, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 110603828, "currently_trainable_parameters": 59213, "optimizer_state_bytes": 1421136, "replay_items": 510, "elapsed_seconds": 94.52407143078744, "gpu_peak_allocated_bytes": 728274432}, "timing": {"component_audit_seconds": 0.0, "live_training_seconds": 79.58234287053347, "evaluation_seconds": 12.11781870177947}, "component_trial_rows": 0, "official_test_used": false}
+DAY16_BERT_DIAGNOSTIC_PASS head_only 2027 b_first

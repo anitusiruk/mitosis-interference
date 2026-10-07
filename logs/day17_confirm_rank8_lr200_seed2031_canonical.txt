@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+balanced examples/class: 23
+balanced examples/segment: 253
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5707.00it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=5.7
+step=10 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=5.8
+step=15 segment(eval)=A1 decision=single_update adapter=default pool=1 elapsed=6.0
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.1649, 'uniform_probability:A': 0.1649, 'frozen_centroid:A': 0.1649, 'last_active:B': 0.0, 'uniform_probability:B': 0.0, 'frozen_centroid:B': 0.0, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=20 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=7.1
+step=25 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=7.2
+step=30 segment(eval)=B1 decision=single_update adapter=default pool=1 elapsed=7.4
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.2852, 'uniform_probability:A': 0.2852, 'frozen_centroid:A': 0.2852, 'last_active:B': 0.0, 'uniform_probability:B': 0.0, 'frozen_centroid:B': 0.0, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=35 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=8.4
+step=40 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=8.6
+step=45 segment(eval)=A2 decision=single_update adapter=default pool=1 elapsed=8.7
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.4055, 'uniform_probability:A': 0.4055, 'frozen_centroid:A': 0.4055, 'last_active:B': 0.0, 'uniform_probability:B': 0.0, 'frozen_centroid:B': 0.0, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=50 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=9.8
+step=55 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=9.9
+step=60 segment(eval)=C1 decision=single_update adapter=default pool=1 elapsed=10.0
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.4777, 'uniform_probability:A': 0.4777, 'frozen_centroid:A': 0.4777, 'last_active:B': 0.0, 'uniform_probability:B': 0.0, 'frozen_centroid:B': 0.0, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=65 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=11.1
+step=70 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=11.2
+step=75 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=11.4
+step=80 segment(eval)=B2 decision=single_update adapter=default pool=1 elapsed=11.5
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.457, 'uniform_probability:A': 0.457, 'frozen_centroid:A': 0.457, 'last_active:B': 0.2323, 'uniform_probability:B': 0.2323, 'frozen_centroid:B': 0.2323, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 80, "decisions": {"single_update": 80}, "final_adapters": ["default"], "pool_summary": {"default": {"updates": 80, "memory": 512}}, "resources": {"lora_parameters": 147456, "private_head_parameters": 649805, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 67809946, "currently_trainable_parameters": 797261, "optimizer_state_bytes": 6378200, "replay_items": 512, "elapsed_seconds": 12.74139918689616, "gpu_peak_allocated_bytes": 500373504}, "timing": {"component_audit_seconds": 0.0, "live_training_seconds": 2.3752342911902815, "evaluation_seconds": 4.565851066960022}, "component_trial_rows": 0, "official_test_used": false}
+STATIC_TUNING_TRAJECTORY_PASS 8 0.0002 2031 canonical

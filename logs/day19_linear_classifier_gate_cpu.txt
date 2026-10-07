@@ -1,0 +1,15 @@
+private only declared parameters trainable PASS
+private exactly one linear output classifier PASS
+private crossfit exact restoration PASS
+private inherited shadow exact restoration PASS
+private inherited intervention equals real update PASS
+private spawned preclassifier matches original PASS
+head_only only declared parameters trainable PASS
+head_only exactly one linear output classifier PASS
+head_only crossfit exact restoration PASS
+head_only inherited shadow exact restoration PASS
+head_only inherited intervention equals real update PASS
+head_only spawned preclassifier matches original PASS
+linear-head-only LoRA remains zero and frozen PASS
+linear-head-only optimizer has two parameters PASS
+LINEAR_CLASSIFIER_INTEGRITY_PASS cpu

@@ -182,8 +182,9 @@ def main():
         stream,boundaries,eval_sets=build_domain_recurrence(args.seed,batch_size=args.batch_size)
         num_labels=2
     stream,boundaries=reorder_stream(stream,args.order)
-    tok=AutoTokenizer.from_pretrained('distilbert-base-uncased')
-    base=AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased',num_labels=num_labels)
+    model_revision=os.environ.get('MITOSIS_MODEL_REVISION')
+    tok=AutoTokenizer.from_pretrained('distilbert-base-uncased',revision=model_revision)
+    base=AutoModelForSequenceClassification.from_pretrained('distilbert-base-uncased',revision=model_revision,num_labels=num_labels)
     cfg=LoraConfig(task_type=TaskType.FEATURE_EXTRACTION if args.architecture=='shared' else TaskType.SEQ_CLS,
         r=8,lora_alpha=16,lora_dropout=0.,target_modules=['q_lin','v_lin'],bias='none')
     model=get_peft_model(base,cfg).to(device)
@@ -194,7 +195,7 @@ def main():
     provenance={'total_memory_budget':512,'maximum_adapters':8,'args':vars(args),'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         'python':sys.version,'gpu':torch.cuda.get_device_name(0),
         'packages':{p:metadata.version(p) for p in ['torch','transformers','peft','datasets','numpy','pandas','scikit-learn']},
-        'model_revision':getattr(base.config,'_commit_hash',None),
+        'model_revision':model_revision or getattr(base.config,'_commit_hash',None),
         'stream_sha256':hashlib.sha256(json.dumps(stream,sort_keys=True).encode()).hexdigest(),
         'stream_steps':len(stream),'boundaries_evaluation_only':boundaries,
         'source_sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for pattern in ['src/*.py','experiments/day5*.py','experiments/day6*.py','experiments/day8*.py','notes/day5*spec.md','notes/day6*spec.md','notes/day8*spec.md'] for p in Path('.').glob(pattern)},

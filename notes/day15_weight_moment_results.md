@@ -2,12 +2,40 @@
 
 Development-stage matched interventions. Positive contrasts mean lower post-update query loss, lower initial query loss, or more local improvement when resetting the named factor. All conditional cells and interactions are retained. Intervals are descriptive and are not multiplicity-adjusted hypothesis tests.
 
-Verified trajectories: 3/20. Incomplete or unverified attempts: [].
+Verified trajectories: 4/20. Incomplete or unverified attempts: [].
 
 ## All marginal effects
 
 | regime | kind | factor | condition | metric | n_seeds | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0003 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | local_improvement_increase | 1 | -0.0003 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0003 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.1581 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_loss_decrease | 1 | -0.1642 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | local_improvement_increase | 1 | 0.0061 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_within_group_decrease | 1 | -0.1642 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_within_group_decrease | 1 | -0.1581 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0005 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | local_improvement_increase | 1 | -0.0005 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0005 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0590 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_loss_decrease | 1 | -0.0565 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | local_improvement_increase | 1 | -0.0025 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_within_group_decrease | 1 | -0.0565 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0590 | nan | nan |
 | banking | marginal | reset_head_optimizer | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0009 | nan | nan |
 | banking | marginal | reset_head_optimizer | average_over_all_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
 | banking | marginal | reset_head_optimizer | average_over_all_other_factors | local_improvement_increase | 1 | -0.0009 | nan | nan |
@@ -41,6 +69,38 @@ Verified trajectories: 3/20. Incomplete or unverified attempts: [].
 
 | regime | kind | factor | condition | metric | n_seeds | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0062 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0025 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0100 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0018 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0072 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0022 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0066 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0023 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2184 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1038 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2156 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1052 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2049 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1085 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.1990 | nan | nan |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1093 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0019 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0014 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0008 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0057 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0008 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0003 | nan | nan |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0000 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.1172 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.1139 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.0026 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.0034 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.1085 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.1021 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.0121 | nan | nan |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.0124 | nan | nan |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0011 | nan | nan |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0025 | nan | nan |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0017 | nan | nan |
@@ -78,6 +138,48 @@ Verified trajectories: 3/20. Incomplete or unverified attempts: [].
 
 | regime | kind | factor | condition | metric | n_seeds | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0053 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0053 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0053 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0016 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0016 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0016 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | -0.0013 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | -0.0013 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | -0.0013 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0005 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0005 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0005 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.1028 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_loss_decrease | 1 | 0.1218 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | local_improvement_increase | 1 | -0.0190 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.1218 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_within_group_decrease | 1 | 0.1028 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0022 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0022 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0022 | nan | nan |
 | banking | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0021 | nan | nan |
 | banking | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | -0.0000 | nan | nan |
 | banking | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0021 | nan | nan |

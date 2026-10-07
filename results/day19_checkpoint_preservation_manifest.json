@@ -1,0 +1,34 @@
+{
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "fe083f679d3596dd0973b73effe099cb229a10f76a873998ba733a219c57b193"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "336e0caf4960d5077b73952e0aaa635ec8d05f008c4a532536133ea80a6260c6"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "127d0636f73b0379cf5fb202dcf865e1a638d8158142d77a5ead56f5a52901ed"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "12805fa1fe04cc90d54f84c4aa2aa0607eee3771beb9cdafbf0f278abd60d1b8"
+  },
+  "results/day19_reference_replay_head_only_seed2031_b_first/checkpoint/learner_state.pt": {
+    "bytes": 26072169,
+    "sha256": "843e194d7c911c5d94dcb2cddb0addd33a2c625af2da1435b9b136c499b9cb34"
+  }
+}

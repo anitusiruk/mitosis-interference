@@ -1,0 +1,32 @@
+{
+  "jobs": [
+    {
+      "name": "day19_reference_replay_head_only_seed2031_b_first",
+      "phase": "replay_gate",
+      "status": "completed",
+      "started_utc": "2026-10-07T02:08:08.496307+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day19_linear_classifier_control",
+        "--architecture",
+        "head_only",
+        "--preclassifier-mode",
+        "inherited",
+        "--seed",
+        "2031",
+        "--order",
+        "b_first",
+        "--output",
+        "results/day19_reference_replay_head_only_seed2031_b_first",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T02:09:09.883200+00:00"
+    }
+  ],
+  "planned_research_jobs": 20,
+  "github_save_pending": true
+}

@@ -1,0 +1,2 @@
+run,rank,learning_rate,seed,order,final_macro_accuracy,updates
+day17_pilot_rank8_lr20_seed2026_canonical,8,2e-05,2026,canonical,0.032073310423825864,80

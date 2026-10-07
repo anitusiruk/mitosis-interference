@@ -511,6 +511,22 @@
     "bytes": 10789089,
     "sha256": "607fcc8d0a35fbc3f2a9fa19782143b507b3fd6d68fd710409d7cc2520557c75"
   },
+  "results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_config.json": {
+    "bytes": 81231,
+    "sha256": "763978f876bc57546e1651eb55f611ed7e67204a6485e96d9f5db46cb621aa99"
+  },
+  "results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 2962192,
+    "sha256": "a9a21a7d6be4f031b533924396b7a393ab51004b0c10befeceba5d52c90f8ee5"
+  },
+  "results/day15_amazon_private_cau_seed2028_canonical_weight_moments/checkpoint/learner_state.pt": {
+    "bytes": 10794721,
+    "sha256": "6da7516573e6abbcf8e12b7fcc4c9c1376292069c3ed83b65671d80144449ed5"
+  },
   "results/day15_banking_private_cau_seed2027_b_first_weight_moments/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

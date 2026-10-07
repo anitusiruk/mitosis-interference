@@ -671,6 +671,38 @@
     "bytes": 2440731,
     "sha256": "64f000ce52f214e4e15550c2252aa3552f27fd2536d7e66c6290e84009454bb9"
   },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/README.md": {
+    "bytes": 5182,
+    "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "02241696c04eafff263f1fc90e1587cc4a94392e79e3fd9f3adc03da238c6542"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "39892399bf66b080bc91f450312f0c4ebc7395f8d1fee99883712d8e979f044e"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "006fef2f7821a8dc3c8857add7db8b473c6ddc84f5775fce0ef2bf695e76b940"
+  },
+  "results/day16_banking_head_only_seed2030_canonical_bert/checkpoint/learner_state.pt": {
+    "bytes": 2440283,
+    "sha256": "93794cfa6d223ff91fce8707d4587a70d0d77878c227c7e4657a619f9a73fdd3"
+  },
   "results/day16_banking_private_seed2027_b_first_bert/checkpoint/adapters/README.md": {
     "bytes": 5182,
     "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"

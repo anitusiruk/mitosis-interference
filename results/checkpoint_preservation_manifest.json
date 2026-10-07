@@ -863,6 +863,38 @@
     "bytes": 9640851,
     "sha256": "89b453fb72d4155d678de12fee31886fb24d913cf7d2c92f785bd8c2b99ab7d6"
   },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/README.md": {
+    "bytes": 5182,
+    "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "a43b4b61e3700106ff6b5b21fbb16a26a9e72af5738779cdee13a566d114c2f4"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "9e3eec64e6602c19e69471c17e68c6a29573d4e6caf8260fea74f3da56f188aa"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5535,
+    "sha256": "224b691e7cfdbaf6d20f753e5d8fe3ca3dc98225fc71cce2872b06b17f4503aa"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 1423380,
+    "sha256": "c4487e55255d58d542b4c6e700db2df4fce1aedd59884fda7fbadab34156a1e2"
+  },
+  "results/day16_banking_private_seed2030_canonical_bert/checkpoint/learner_state.pt": {
+    "bytes": 9640339,
+    "sha256": "88fe2da8b18672901c1718aaaac50c72a7130213e7734ee113f12c6e9871c34e"
+  },
   "results/day5_amazon_head_only_cau_seed2026/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

@@ -1,6 +1,6 @@
 # BERT allocation transfer diagnostic
 
-Complete trajectories 12/20; complete private/head-only pairs 6/10. Partial attempts: [].
+Complete trajectories 13/20; complete private/head-only pairs 6/10. Partial attempts: [].
 
 This transfer check replaces the backbone, representations, tokenizer, pooler and classifier. It does not isolate classifier design alone or compare against a tuned static BERT baseline. All deployment rules and both allocation controls are retained.
 
@@ -66,5 +66,8 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2029 | b_first | head_only | frozen_centroid | 0.0546 | 0.1301 | -0.0754 | 80 | 3 | 1062375 | 510 |
 | 2029 | b_first | head_only | last_active | 0.0458 | 0.0825 | -0.0367 | 80 | 3 | 1062375 | 510 |
 | 2029 | b_first | head_only | uniform_probability | 0.0382 | 0.1340 | -0.0959 | 80 | 3 | 1062375 | 510 |
+| 2030 | canonical | private | frozen_centroid | 0.0693 | 0.1703 | -0.1010 | 80 | 3 | 1062375 | 510 |
+| 2030 | canonical | private | last_active | 0.0344 | 0.0796 | -0.0452 | 80 | 3 | 1062375 | 510 |
+| 2030 | canonical | private | uniform_probability | 0.0371 | 0.1776 | -0.1405 | 80 | 3 | 1062375 | 510 |
 
 Intervals average both orders within each independent seed. The fixed development examples have been repeatedly examined; this is development evidence. Scope is the BANKING label-group stress test, the frozen training recipe and the declared memory budget. Neither allocation equivalence nor disagreement alone establishes competitive utility or a general capacity principle.

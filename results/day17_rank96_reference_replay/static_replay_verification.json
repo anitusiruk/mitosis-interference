@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "reference": "results/day12_banking_private_single_rank96_seed2031_b_first",
+  "candidate": "results/day17_rank96_reference_replay",
+  "stream_sha256": "348b82325fd7e263fb7f500262abc38723e24b81eb488aec544e8dbf25e43c9e",
+  "bitwise_final_state_equal": true,
+  "bitwise_adapter_tensors_equal": true,
+  "maximum_training_loss_difference": 0.0,
+  "reference_state_sha256": "73a595b276c66571fc1a0896d63edc5ca0cb4ac182a2b0004d9e8d5c5dd24d2b"
+}

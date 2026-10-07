@@ -1,0 +1,33 @@
+{
+  "jobs": [
+    {
+      "name": "day17_rank96_reference_replay",
+      "phase": "replay_gate",
+      "status": "completed",
+      "started_utc": "2026-10-07T01:37:41.462793+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day17_static_tuning",
+        "--rank",
+        "96",
+        "--learning-rate",
+        "0.0002",
+        "--seed",
+        "2031",
+        "--order",
+        "b_first",
+        "--output",
+        "results/day17_rank96_reference_replay",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T01:37:58.362216+00:00",
+      "replay_verification_returncode": 0
+    }
+  ],
+  "planned_research_jobs": 44,
+  "github_save_pending": true
+}

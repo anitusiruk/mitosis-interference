@@ -78,5 +78,9 @@
     "notes/operational_recovery_20261007/mitosis_day19_linear_worker.log": "393f11b3753bd7c0f71062a9e406c1a791423b1e8045edd8cd62cbb3622c4215",
     "notes/operational_recovery_20261007/mitosis_day20_completion_worker.log": "f703448c5c655a3c6144620b937cf17700a52e788996b94e4f4dfe961884c096"
   },
-  "backup_verification_pending": true
+  "backup_verification_pending": false,
+  "all_current_checkpoint_objects_remotely_verified": true,
+  "verified_snapshot_commit": "ab155541450ee6f00283d1f68f6d0a3d506d327f",
+  "safe_to_stop_pod": true,
+  "verified_utc": "2026-10-07T06:45:24.850806+00:00"
 }

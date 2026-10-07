@@ -722,6 +722,23 @@
     }
   ],
   "planned_jobs": 40,
-  "generated_utc": "2026-10-07T03:08:15.041552+00:00",
-  "github_save_pending": true
+  "generated_utc": "2026-10-07T06:45:24.849704+00:00",
+  "github_save_pending": false,
+  "github_save_verified": true,
+  "failed": false,
+  "complete": false,
+  "administratively_stopped": true,
+  "stopped_by_user": true,
+  "remaining_jobs": [
+    "day15_banking_private_cau_seed2029_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2029_b_first_weight_moments",
+    "day15_banking_private_cau_seed2030_canonical_weight_moments",
+    "day15_amazon_private_cau_seed2030_canonical_weight_moments",
+    "day15_banking_private_cau_seed2030_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2030_b_first_weight_moments",
+    "day15_banking_private_cau_seed2031_canonical_weight_moments",
+    "day15_amazon_private_cau_seed2031_canonical_weight_moments",
+    "day15_banking_private_cau_seed2031_b_first_weight_moments",
+    "day15_amazon_private_cau_seed2031_b_first_weight_moments"
+  ]
 }

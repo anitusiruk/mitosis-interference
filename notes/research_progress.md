@@ -1,6 +1,6 @@
 # Research progress and evidence handoff
 
-Generated 2026-10-07T02:17:29.350242+00:00. This is a development report, not a submission-ready paper.
+Generated 2026-10-07T02:35:00.305608+00:00. This is a development report, not a submission-ready paper.
 
 ## Decision
 
@@ -18,7 +18,7 @@ Carry forward the mechanistic audit and the original private-package implementat
 | 10 | 12 | 12 | completed |
 | 12 | 11 | 11 | completed |
 | 14 fixed-memory routing | 44 | 44 | completed |
-| 15 | 7 | 20 | completed |
+| 15 | 8 | 20 | completed |
 | 16 | 20 | 20 | completed |
 | 5 head-only | 2 | 2 | completed |
 
@@ -317,300 +317,300 @@ The Day-15 observer independently crosses LoRA/head weights with LoRA/head AdamW
 
 | regime | kind | factor | condition | metric | n_seeds | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0062 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 1 | -0.0062 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.0062 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0025 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 1 | 0.0025 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | 0.0025 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0100 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 1 | -0.0100 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.0100 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0018 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 1 | 0.0018 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | 0.0018 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0072 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0072 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | 0.0072 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0022 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0022 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.0022 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0066 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0066 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | 0.0066 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0023 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0023 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.0023 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2184 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0068 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.2184 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1038 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0005 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.1038 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2156 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0095 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.2156 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1052 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0019 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.1052 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.2049 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0202 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.2049 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1085 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0052 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.1085 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.1990 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0261 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | -0.2251 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.1990 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.1093 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0060 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | -0.1033 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.1093 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0019 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | local_improvement_increase | 1 | -0.0019 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.0019 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0014 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | local_improvement_increase | 1 | 0.0014 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | 0.0014 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | local_improvement_increase | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 1 | -0.0057 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | local_improvement_increase | 1 | -0.0057 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_within_group_decrease | 1 | -0.0057 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | local_improvement_increase | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_within_group_decrease | 1 | 0.0008 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 1 | 0.0003 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | local_improvement_increase | 1 | 0.0003 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_within_group_decrease | 1 | 0.0003 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 1 | -0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | local_improvement_increase | 1 | -0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_within_group_decrease | 1 | -0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.1172 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_loss_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | local_improvement_increase | 1 | 0.0002 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_within_group_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_within_group_decrease | 1 | -0.1172 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.1139 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_loss_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | local_improvement_increase | 1 | 0.0035 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_within_group_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_within_group_decrease | 1 | -0.1139 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.0026 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_loss_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | local_improvement_increase | 1 | -0.0070 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_within_group_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_within_group_decrease | 1 | -0.0026 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.0034 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_loss_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | local_improvement_increase | 1 | -0.0079 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_within_group_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_within_group_decrease | 1 | -0.0034 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.1085 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_loss_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | local_improvement_increase | 1 | 0.0089 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_within_group_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_within_group_decrease | 1 | -0.1085 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.1021 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_loss_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | local_improvement_increase | 1 | 0.0153 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_within_group_decrease | 1 | -0.1174 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_within_group_decrease | 1 | -0.1021 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 1 | -0.0121 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_loss_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | local_improvement_increase | 1 | -0.0165 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_within_group_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_within_group_decrease | 1 | -0.0121 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 1 | -0.0124 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_loss_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | local_improvement_increase | 1 | -0.0168 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_within_group_decrease | 1 | 0.0044 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_within_group_decrease | 1 | -0.0124 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0053 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0053 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0053 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0016 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0016 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0016 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | -0.0013 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | -0.0013 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | -0.0013 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0005 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0005 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0005 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.1028 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_loss_decrease | 1 | 0.1218 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | local_improvement_increase | 1 | -0.0190 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.1218 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_within_group_decrease | 1 | 0.1028 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 1 | 0.0022 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 1 | 0.0022 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 1 | 0.0022 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0003 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | local_improvement_increase | 1 | -0.0003 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0003 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.1581 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_loss_decrease | 1 | -0.1642 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | local_improvement_increase | 1 | 0.0061 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_within_group_decrease | 1 | -0.1642 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_within_group_decrease | 1 | -0.1581 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0005 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_loss_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | local_improvement_increase | 1 | -0.0005 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_within_group_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0005 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_update_loss_decrease | 1 | -0.0590 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_loss_decrease | 1 | -0.0565 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | local_improvement_increase | 1 | -0.0025 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_within_group_decrease | 1 | -0.0565 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_group_mass_decrease | 1 | 0.0000 | nan | nan |
-| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_within_group_decrease | 1 | -0.0590 | nan | nan |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.0008 | -0.0692 | 0.0675 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 2 | -0.0008 | -0.0692 | 0.0675 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.0008 | -0.0692 | 0.0675 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | 0.0050 | -0.0274 | 0.0374 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 2 | 0.0050 | -0.0274 | 0.0374 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | 0.0050 | -0.0274 | 0.0374 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.0047 | -0.0715 | 0.0621 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 2 | -0.0047 | -0.0715 | 0.0621 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.0047 | -0.0715 | 0.0621 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | 0.0044 | -0.0280 | 0.0368 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 2 | 0.0044 | -0.0280 | 0.0368 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | 0.0044 | -0.0280 | 0.0368 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | 0.0068 | 0.0022 | 0.0114 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0068 | 0.0022 | 0.0114 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | 0.0068 | 0.0022 | 0.0114 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.0015 | -0.0113 | 0.0083 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0015 | -0.0113 | 0.0083 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.0015 | -0.0113 | 0.0083 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | 0.0064 | 0.0035 | 0.0093 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0064 | 0.0035 | 0.0093 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | 0.0064 | 0.0035 | 0.0093 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.0015 | -0.0114 | 0.0083 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0015 | -0.0114 | 0.0083 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_optimizer | {"reset_head_weights": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.0015 | -0.0114 | 0.0083 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.1958 | -0.4824 | 0.0908 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0076 | -0.0029 | 0.0181 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.1958 | -0.4824 | 0.0908 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.0973 | -0.1803 | -0.0142 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0007 | -0.0039 | 0.0024 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.0973 | -0.1803 | -0.0142 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.1961 | -0.4435 | 0.0513 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0072 | -0.0215 | 0.0360 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.1961 | -0.4435 | 0.0513 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.0987 | -0.1809 | -0.0165 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0022 | -0.0063 | 0.0019 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": false, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.0987 | -0.1809 | -0.0165 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.1881 | -0.4017 | 0.0255 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0152 | -0.0473 | 0.0778 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.1881 | -0.4017 | 0.0255 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.1037 | -0.1642 | -0.0432 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0072 | -0.0330 | 0.0185 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.1037 | -0.1642 | -0.0432 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.1850 | -0.3627 | -0.0074 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0183 | -0.0801 | 0.1168 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | -0.2034 | -0.4795 | 0.0728 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.1850 | -0.3627 | -0.0074 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.1046 | -0.1642 | -0.0450 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0081 | -0.0348 | 0.0185 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | -0.0965 | -0.1828 | -0.0102 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_head_weights | {"reset_head_optimizer": true, "reset_lora_optimizer": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.1046 | -0.1642 | -0.0450 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | 0.0009 | -0.0346 | 0.0363 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0009 | -0.0346 | 0.0363 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | 0.0009 | -0.0346 | 0.0363 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | 0.0015 | 0.0004 | 0.0025 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | local_improvement_increase | 2 | 0.0015 | 0.0004 | 0.0025 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | 0.0015 | 0.0004 | 0.0025 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | 0.0005 | -0.0033 | 0.0043 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0005 | -0.0033 | 0.0043 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | 0.0005 | -0.0033 | 0.0043 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | 0.0000 | -0.0001 | 0.0001 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | local_improvement_increase | 2 | 0.0000 | -0.0001 | 0.0001 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | 0.0000 | -0.0001 | 0.0001 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.0030 | -0.0369 | 0.0308 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | local_improvement_increase | 2 | -0.0030 | -0.0369 | 0.0308 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": false} | post_within_group_decrease | 2 | -0.0030 | -0.0369 | 0.0308 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_update_loss_decrease | 2 | 0.0009 | -0.0002 | 0.0019 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | local_improvement_increase | 2 | 0.0009 | -0.0002 | 0.0019 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_weights": true} | post_within_group_decrease | 2 | 0.0009 | -0.0002 | 0.0019 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_update_loss_decrease | 2 | 0.0001 | -0.0020 | 0.0022 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | local_improvement_increase | 2 | 0.0001 | -0.0020 | 0.0022 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": false} | post_within_group_decrease | 2 | 0.0001 | -0.0020 | 0.0022 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_update_loss_decrease | 2 | -0.0000 | -0.0002 | 0.0001 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | local_improvement_increase | 2 | -0.0000 | -0.0002 | 0.0001 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_optimizer | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_weights": true} | post_within_group_decrease | 2 | -0.0000 | -0.0002 | 0.0001 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 2 | -0.1077 | -0.2288 | 0.0135 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_loss_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | local_improvement_increase | 2 | 0.0009 | -0.0085 | 0.0104 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_within_group_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": false} | post_within_group_decrease | 2 | -0.1077 | -0.2288 | 0.0135 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 2 | -0.1071 | -0.1938 | -0.0203 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_loss_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | local_improvement_increase | 2 | 0.0015 | -0.0234 | 0.0265 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_within_group_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": false, "reset_lora_optimizer": true} | post_within_group_decrease | 2 | -0.1071 | -0.1938 | -0.0203 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 2 | -0.0091 | -0.0915 | 0.0733 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_loss_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | local_improvement_increase | 2 | -0.0074 | -0.0115 | -0.0032 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_within_group_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": false} | post_within_group_decrease | 2 | -0.0091 | -0.0915 | 0.0733 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 2 | -0.0096 | -0.0881 | 0.0689 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_loss_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | local_improvement_increase | 2 | -0.0079 | -0.0082 | -0.0076 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_within_group_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": false, "reset_head_weights": true, "reset_lora_optimizer": true} | post_within_group_decrease | 2 | -0.0096 | -0.0881 | 0.0689 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_update_loss_decrease | 2 | -0.1018 | -0.1870 | -0.0167 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_loss_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | local_improvement_increase | 2 | 0.0068 | -0.0197 | 0.0333 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | initial_within_group_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": false} | post_within_group_decrease | 2 | -0.1018 | -0.1870 | -0.0167 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_update_loss_decrease | 2 | -0.0979 | -0.1503 | -0.0456 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_loss_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | local_improvement_increase | 2 | 0.0107 | -0.0487 | 0.0700 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | initial_within_group_decrease | 2 | -0.1086 | -0.2203 | 0.0031 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": false, "reset_lora_optimizer": true} | post_within_group_decrease | 2 | -0.0979 | -0.1503 | -0.0456 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_update_loss_decrease | 2 | -0.0174 | -0.0854 | 0.0506 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_loss_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | local_improvement_increase | 2 | -0.0157 | -0.0259 | -0.0054 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | initial_within_group_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": false} | post_within_group_decrease | 2 | -0.0174 | -0.0854 | 0.0506 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_update_loss_decrease | 2 | -0.0175 | -0.0832 | 0.0482 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_loss_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | local_improvement_increase | 2 | -0.0158 | -0.0283 | -0.0033 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | initial_within_group_decrease | 2 | -0.0017 | -0.0799 | 0.0765 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | conditional | reset_lora_weights | {"reset_head_optimizer": true, "reset_head_weights": true, "reset_lora_optimizer": true} | post_within_group_decrease | 2 | -0.0175 | -0.0832 | 0.0482 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 2 | 0.0016 | -0.0454 | 0.0486 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 2 | 0.0016 | -0.0454 | 0.0486 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.0000 | -0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 2 | 0.0016 | -0.0454 | 0.0486 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 2 | 0.0001 | -0.0192 | 0.0194 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 2 | 0.0001 | -0.0192 | 0.0194 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.0000 | -0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_head_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 2 | 0.0001 | -0.0192 | 0.0194 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 2 | -0.0013 | -0.0013 | -0.0012 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 2 | -0.0013 | -0.0013 | -0.0012 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_optimizer x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 2 | -0.0013 | -0.0013 | -0.0012 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_update_loss_decrease | 2 | -0.0003 | -0.0111 | 0.0105 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | local_improvement_increase | 2 | -0.0003 | -0.0111 | 0.0105 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.0000 | -0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_optimizer | marginal_over_other_factors | post_within_group_decrease | 2 | -0.0003 | -0.0111 | 0.0105 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_update_loss_decrease | 2 | 0.0902 | -0.0698 | 0.2502 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_loss_decrease | 2 | 0.1069 | -0.0830 | 0.2968 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | local_improvement_increase | 2 | -0.0167 | -0.0466 | 0.0132 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.1069 | -0.0830 | 0.2968 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_head_weights | marginal_over_other_factors | post_within_group_decrease | 2 | 0.0902 | -0.0698 | 0.2502 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_update_loss_decrease | 2 | 0.0010 | -0.0143 | 0.0162 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | local_improvement_increase | 2 | 0.0010 | -0.0143 | 0.0162 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | initial_within_group_decrease | 2 | 0.0000 | -0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | interaction | reset_lora_weights x reset_lora_optimizer | marginal_over_other_factors | post_within_group_decrease | 2 | 0.0010 | -0.0143 | 0.0162 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_update_loss_decrease | 2 | 0.0017 | -0.0248 | 0.0283 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | local_improvement_increase | 2 | 0.0017 | -0.0248 | 0.0283 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_optimizer | average_over_all_other_factors | post_within_group_decrease | 2 | 0.0017 | -0.0248 | 0.0283 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_update_loss_decrease | 2 | -0.1462 | -0.2975 | 0.0052 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_loss_decrease | 2 | -0.1499 | -0.3312 | 0.0313 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | local_improvement_increase | 2 | 0.0038 | -0.0261 | 0.0336 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | initial_within_group_decrease | 2 | -0.1499 | -0.3312 | 0.0313 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_head_weights | average_over_all_other_factors | post_within_group_decrease | 2 | -0.1462 | -0.2975 | 0.0052 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_update_loss_decrease | 2 | 0.0001 | -0.0081 | 0.0083 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | local_improvement_increase | 2 | 0.0001 | -0.0081 | 0.0083 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_optimizer | average_over_all_other_factors | post_within_group_decrease | 2 | 0.0001 | -0.0081 | 0.0083 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_update_loss_decrease | 2 | -0.0585 | -0.0649 | -0.0522 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_loss_decrease | 2 | -0.0552 | -0.0719 | -0.0384 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | local_improvement_increase | 2 | -0.0033 | -0.0137 | 0.0070 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | initial_within_group_decrease | 2 | -0.0552 | -0.0719 | -0.0384 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | marginal | reset_lora_weights | average_over_all_other_factors | post_within_group_decrease | 2 | -0.0585 | -0.0649 | -0.0522 |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | post_update_loss_decrease | 2 | -0.0041 | -0.0424 | 0.0342 |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
 | banking | conditional | reset_head_optimizer | {"reset_head_weights": false, "reset_lora_optimizer": false, "reset_lora_weights": false} | local_improvement_increase | 2 | -0.0041 | -0.0424 | 0.0342 |

@@ -1,298 +1,298 @@
 regime,kind,factor,condition,metric,n_seeds,mean,ci_low,ci_high
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.0062262181217144965,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.006226218121714479,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.0062262181952399635,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.0024563230966266844,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,0.0024563230966266974,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.002456324371068102,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.009991867982439305,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.0099918679824393,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.009991867087879462,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.001836369010178667,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,0.0018363690101786821,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.001836366951465608,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.007184956026704688,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.007184956026704704,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.007184953869957673,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.0022396509976763475,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0022396509976763345,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.0022396513898121683,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.006596854054614117,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.006596854054614134,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.006596852093935013,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.0023116745838993474,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.002311674583899332,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.0023116712507448697,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.2183551129541899,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.2251133636424416,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0067582506882516834,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.2251133680539696,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.2183551107974429,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.10379188948948131,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.1032986483095508,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0004932411799305394,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.1032986430157172,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.10379188831307387,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.21560876886360347,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.2251133636424416,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0095045947788381,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.2251133680539696,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.2156087662534494,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.10516499296614998,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.1032986483095508,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.001866344656599194,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.1032986430157172,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.10516499727964401,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.20494393880577072,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.2251133636424416,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.020169424836670866,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.2251133680539696,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.20494393873224526,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.10848786358378434,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.1032986483095508,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.005189215274233572,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.1032986430157172,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.10848786407395414,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.19902004682655006,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.2251133636424416,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.026093316815891533,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.2251133680539696,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.19902004707163495,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.109313036560228,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.1032986483095508,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.006014388250677208,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.1032986430157172,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.10931303548185449,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.0019041669285415036,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.001904166928541489,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.0019041685583560094,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.001398043903081041,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,0.0013980439030810373,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.0013980450794885038,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.0008421771620449267,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.000842177162044927,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.000842175985637464,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,2.4940426412381623e-05,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,2.494042641238239e-05,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,2.4936112918351827e-05,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.005669816789266311,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.00566981678926631,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.005669817450995511,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.0007780898166330234,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,0.0007780898166330213,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.0007780876598860096,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.00025407518995435615,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0002540751899543578,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.0002540742096148039,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-4.708315981061835e-05,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-4.708315981061523e-05,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-4.708374801434969e-05,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.11719090442516303,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.11739383961417173,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,1,0.0002029351890087156,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.11739384343749598,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.11719090442516303,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.11388869359354048,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.11739383961417173,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,1,0.003505146020631242,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.11739384343749598,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.1138886907873185,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.002627680960454439,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,0.004420875718719081,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.0070485566791735075,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,0.004420881600756394,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.002627681940793991,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.003444917696086984,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,0.004420875718719081,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.007865793414806052,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,0.004420881600756394,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.0034449218135131033,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.10850836320682183,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.11739383961417173,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,1,0.008885476407349893,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.11739384343749598,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.10850836185885496,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.1020604566009225,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.11739383961417173,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,1,0.015333383013249224,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.11739384343749598,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.10206045674797344,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.012052287984835475,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,0.004420875718719081,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.016473163703554547,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,0.004420881600756394,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.012052287200563833,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.012353446334600449,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,0.004420875718719081,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.016774322053319517,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,0.004420881600756394,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,0.0,,
-amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.012353445158192986,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.005288969624272894,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,3.606398805320204e-18,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.005288969624272892,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,2.9672901562761174e-18,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.005288969320980347,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.0016179899041737032,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,1,3.606398805320204e-18,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.001617989904173698,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,2.9672901562761174e-18,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.0016179889575333234,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,-0.0012614323763715971,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,0.0,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,-0.0012614323763716008,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,0.0,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,-0.0012614319872993373,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.0005444106370161668,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,3.4237963341647507e-18,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.0005444106370161646,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,2.784687685120664e-18,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.000544412000300857,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_update_loss_decrease,1,0.10279252121261762,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_loss_decrease,1,0.12181471533289082,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,local_improvement_increase,1,-0.019022194120273173,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_within_group_decrease,1,0.12181472503825237,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_within_group_decrease,1,0.10279251942656151,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.002157930588031093,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,1,3.4237963341647507e-18,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.002157930588031085,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,2.784687685120664e-18,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.0021579302295944456,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_update_loss_decrease,1,-0.0003368636872006673,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_loss_decrease,1,0.0,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,local_improvement_increase,1,-0.00033686368720065366,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_within_group_decrease,1,0.0,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_within_group_decrease,1,-0.0003368638296562586,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,post_update_loss_decrease,1,-0.15808570625621973,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_loss_decrease,1,-0.1642060059759962,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,local_improvement_increase,1,0.006120299719776459,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_within_group_decrease,1,-0.16420600553484338,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_head_weights,average_over_all_other_factors,post_within_group_decrease,1,-0.15808570600041238,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_update_loss_decrease,1,-0.000540467547436588,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_loss_decrease,1,0.0,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,local_improvement_increase,1,-0.000540467547436586,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_within_group_decrease,1,0.0,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_within_group_decrease,1,-0.000540468838727592,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_update_loss_decrease,1,-0.059015843850303146,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_loss_decrease,1,-0.056486481947726326,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,local_improvement_increase,1,-0.0025293619025768188,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_within_group_decrease,1,-0.056486480918369796,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_group_mass_decrease,1,0.0,,
-amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_within_group_decrease,1,-0.05901584374154673,,
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.0008435496374180449,-0.06923683742584388,0.06754973815100779
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.0008435496374180336,-0.06923683742584379,0.06754973815100772
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.0008435506866877221,-0.06923682607710784,0.0675497247037324
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.005004507366959986,-0.02737324367739487,0.037382258411314845
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,0.005004507366959997,-0.02737324367739484,0.03738225841131483
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.00500450729343452,-0.027373226623377128,0.037382241210246164
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.004733803957749746,-0.07154384197137,0.0620762340558705
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.00473380395774974,-0.07154384197137,0.06207623405587052
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.004733803455325726,-0.07154383648638793,0.062076229575736476
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.00438552675768733,-0.028004593486963665,0.036775647002338326
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,0.0043855267576873415,-0.0280045934869636,0.036775647002338284
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.004385522395176324,-0.028004568576946276,0.036775613367298926
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.0068212059375486874,0.002199322831930745,0.01144308904316663
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.006821205937548703,0.0021993228319307605,0.011443089043166646
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.006821204761141225,0.0021993341119183486,0.0114430754103641
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.0014694255629652425,-0.011256067629413695,0.00831721650348321
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.0014694255629652253,-0.011256067629413733,0.008317216503483283
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.0014694272295424813,-0.011256053102677355,0.008317198643592393
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.006367439796265802,0.003452455260294446,0.009282424332237159
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,0.006367439796265816,0.0034524552602944267,0.009282424332237206
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.006367439404129982,0.0034524747983907234,0.00928240400986924
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.0015365109827957654,-0.011385898402448327,0.008312876436856798
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.0015365109827957493,-0.011385898402448327,0.008312876436856829
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.0015365094142524818,-0.011385874412393932,0.00831285558388897
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.19579664689157844,-0.48242913521716824,0.09083584143401136
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.20337915861685024,-0.47953841745001097,0.07278010021631048
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.007582511725271788,-0.0028907177671573274,0.018055741217700903
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.20337915998932563,-0.47953845743731094,0.07278013745865972
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.19579664427836083,-0.48242913840395985,0.09083584984723816
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.09725241794397957,-0.1803442822675136,-0.014160553620445548
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.09650961481230824,-0.1827724643890202,-0.010246765235596283
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.0007428031316713306,-0.003913788384849173,0.0024281821215065115
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.0965096133417989,-0.1827724143385701,-0.010246812345027681
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.09725241617936838,-0.18034428797673957,-0.014160544381997181
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.19613849107899067,-0.44353182688047493,0.05125484472249359
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.20337915861685024,-0.47953841745001097,0.07278010021631048
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,0.0072406675378595695,-0.02152525549381674,0.03600659056953588
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.20337915998932563,-0.47953845743731094,0.07278013745865972
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.19613849011090534,-0.4435318050479277,0.05125482482611704
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.09869953499812828,-0.1808509676529439,-0.016548102343312665
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.09650961481230824,-0.1827724643890202,-0.010246765235596283
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.0021899201858200535,-0.006301337107716373,0.0019214967360762659
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.0965096133417989,-0.1827724143385701,-0.010246812345027681
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.09869953813521486,-0.18085098573770458,-0.01654809053272513
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.1881318913166117,-0.4017492087481578,0.0254854261149344
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.20337915861685024,-0.47953841745001097,0.07278010021631048
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.015247267300238525,-0.047294674101376055,0.0777892087018531
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.20337915998932563,-0.47953845743731094,0.07278013745865972
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.1881318888305319,-0.40174923691648773,0.025485459255423948
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.10372635087390479,-0.16422710621953238,-0.04322559552827721
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.09650961481230824,-0.1827724643890202,-0.010246765235596283
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.007216736061596555,-0.03297883029268073,0.018545358169487616
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.0965096133417989,-0.1827724143385701,-0.010246812345027681
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.10372635070234537,-0.16422711445603982,-0.04322558694865093
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.18503724732497512,-0.36270556057686776,-0.007368934073082478
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.20337915861685024,-0.47953841745001097,0.07278010021631048
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,0.018341911291875127,-0.08014903428939282,0.11683285687314307
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.20337915998932563,-0.47953845743731094,0.07278013745865972
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.18503724725144965,-0.3627055645516708,-0.007368929951228537
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.10462157273861139,-0.16423227256842865,-0.04501087290879413
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.09650961481230824,-0.1827724643890202,-0.010246765235596283
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.008111957926303145,-0.03476410767319785,0.018540191820591554
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.0965096133417989,-0.1827724143385701,-0.010246812345027681
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.10462156994464367,-0.16423229157315228,-0.04501084831613506
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.0008848356389391552,-0.03455280199318698,0.03632247327106528
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.000884835638939164,-0.03455280199318689,0.03632247327106522
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.0008848345391207209,-0.034552809827244,0.03632247890548544
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.0014793056210404944,0.00044677759543439405,0.0025118336466465946
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,0.0014793056210404948,0.00044677759543434504,0.002511833646646645
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.0014793074836856439,0.00044677073860300036,0.0025118442287682874
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.000542991451526943,-0.0032585234404524516,0.004344506343506338
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,0.0005429914515269452,-0.003258523440452426,0.004344506343506317
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.0005429887065761967,-0.0032585461156352967,0.00434452352878769
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,3.218856689177061e-05,-5.990778999590132e-05,0.00012428492377944254
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,3.218856689177159e-05,-5.9907789995902944e-05,0.00012428492377944612
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,3.218552783915871e-05,-5.992702236209321e-05,0.00012429807804041062
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.003005418681392545,-0.03685980653871308,0.030848969175927995
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.003005418681392542,-0.0368598065387131,0.030848969175928012
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.0030054182295172847,-0.036859820236524087,0.03084898377748952
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.0008603250117678393,-0.00018457221413440892,0.0019052222376700874
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,0.0008603250117678381,-0.00018457221413442095,0.0019052222376700972
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.0008603225854274482,-0.00018457121496615373,0.0019052163858210502
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,8.922531024405832e-05,-0.0020053910120887562,0.002183841632576873
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,8.922531024405924e-05,-0.0020053910120887645,0.002183841632576883
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,8.922334956495384e-05,-0.0020054054291629222,0.0021838521282928295
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-3.489685293875242e-05,-0.00018973856303053344,0.0001199448571530286
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-3.489685293875231e-05,-0.00018973856303049522,0.0001199448571529906
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-3.489665687084198e-05,-0.00018974833207867229,0.00011995501833698833
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.10765494859936697,-0.22882075567704946,0.013510858478315527
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.10860403749699654,-0.22028906278828614,0.0030809877942930552
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,2,0.000949088897629588,-0.008531692888763253,0.010429870684022428
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.10860403886947192,-0.22028909530174917,0.0030810175628053077
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.10765494833896427,-0.2288207587253767,0.013510862047448141
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.10706047861726563,-0.19382117608842814,-0.020299781146103132
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.10860403749699654,-0.22028906278828614,0.0030809877942930552
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,2,0.0015435588797309188,-0.023380768940396146,0.026467886699857987
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.10860403886947192,-0.22028909530174917,0.0030810175628053077
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.10706047539439935,-0.19382117815952965,-0.020299772629269047
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.009110719651768082,-0.0914855365761413,0.07326409727260512
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.0017344936924545387,-0.07994587765761363,0.07647689027270455
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.0073762259593135315,-0.011539658918527658,-0.003212793000099405
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.0017344922219452103,-0.07994593224088206,0.07647694779699163
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.009110720239971812,-0.09148553218178698,0.07326409170184336
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.009621522536403256,-0.0881027282119094,0.0688596831391029
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.0017344936924545387,-0.07994587765761363,0.07647689027270455
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.007887028843948703,-0.008156850554295776,-0.00761720713360163
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.0017344922219452103,-0.07994593224088206,0.07647694779699163
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.009621523418708852,-0.08810268798811129,0.06885964115069358
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.10180689159498893,-0.18695716192860043,-0.01665662126137743
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.10860403749699654,-0.22028906278828614,0.0030809877942930552
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,2,0.006797145902007621,-0.019737609055670458,0.033331900859685695
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.10860403886947192,-0.22028909530174917,0.0030810175628053077
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.10180689035884202,-0.18695715927164602,-0.016656621446038036
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.09794114790182855,-0.15028192760402173,-0.045600368199635366
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.10860403749699654,-0.22028906278828614,0.0030809877942930552
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,2,0.010662889595168,-0.04868135599392839,0.07000713518426438
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.10860403886947192,-0.22028909530174917,0.0030810175628053077
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.0979411495438973,-0.15028191025008808,-0.04560038883770651
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.017401351152282012,-0.0853676429045888,0.05056494060002477
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.0017344936924545387,-0.07994587765761363,0.07647689027270455
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.01566685745982746,-0.025911949672679797,-0.005421765246975123
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.0017344922219452103,-0.07994593224088206,0.07647694779699163
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.01740135223065552,-0.08536766765011294,0.05056496318880191
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.01752547331546482,-0.08324230703534703,0.04819136040441739
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.0017344936924545387,-0.07994587765761363,0.07647689027270455
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.015790979623010272,-0.02828552986828715,-0.003296429377733393
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.0017344922219452103,-0.07994593224088206,0.07647694779699163
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.017525472237091316,-0.08324230720261305,0.048191362728430415
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,0.0015925071646434926,-0.04537550164699156,0.04856051597627855
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,3.5379228786369096e-18,2.6678537346996754e-18,4.407992022574144e-18
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,0.0015925071646434945,-0.045375501646991515,0.0485605159762785
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,3.4466216430591826e-18,-2.643862364501456e-18,9.53710565061982e-18
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,0.0015925079937197163,-0.0453754864298059,0.048560502417245334
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,0.00010261522134227233,-0.01915204575072968,0.019357276193414222
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,2,3.5379228786369096e-18,2.6678537346996754e-18,4.407992022574144e-18
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,2,0.00010261522134226723,-0.019152045750729676,0.01935727619341421
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,3.4466216430591826e-18,-2.643862364501456e-18,9.53710565061982e-18
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,2,0.00010261363709823852,-0.019152055436496278,0.019357282710692758
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,-0.0012575216226794394,-0.001307212459764745,-0.0012078307855941338
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,-0.0012575216226794433,-0.0013072124597647476,-0.001207830785594139
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,-0.0012575213021543594,-0.0013072112682651648,-0.001207831336043554
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,-0.0003067986399400947,-0.01112243798627758,0.01050884070639739
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,3.2640191719037287e-18,1.2338578360501804e-18,5.294180507757277e-18
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,-0.0003067986399400949,-0.011122437986277555,0.010508840706397366
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,3.264019171903729e-18,-2.826464835656912e-18,9.35450317946437e-18
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,-0.0003067992446104663,-0.011122463596187878,0.010508865106966947
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_update_loss_decrease,2,0.09020110001438297,-0.06978807564979647,0.25019027567856245
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_loss_decrease,2,0.10686954380454203,-0.08302686545190663,0.2967659530609907
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,local_improvement_increase,2,-0.016668443790159023,-0.04657567738242819,0.013238789802110143
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_within_group_decrease,2,0.10686954664752671,-0.08302694980368733,0.2967660430987408
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_within_group_decrease,2,0.09020109887741887,-0.0697880685392647,0.25019026629410246
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,0.000956322156860938,-0.014311560582300731,0.016224204896022606
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,2,3.2640191719037287e-18,1.2338578360501804e-18,5.294180507757277e-18
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,2,0.0009563221568609316,-0.014311560582300712,0.016224204896022575
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,3.264019171903729e-18,-2.826464835656912e-18,9.35450317946437e-18
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,2,0.0009563226435842086,-0.014311549356802506,0.016224194643970923
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_update_loss_decrease,2,0.0017494237146916264,-0.024759371152253833,0.028258218581637084
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,local_improvement_increase,2,0.0017494237146916387,-0.024759371152253806,0.028258218581637084
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_optimizer,average_over_all_other_factors,post_within_group_decrease,2,0.001749422883509205,-0.024759363232332143,0.02825820899935055
+amazon,marginal,reset_head_weights,average_over_all_other_factors,post_update_loss_decrease,2,-0.14617551914584748,-0.29750879501638605,0.0051577567246910705
+amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_loss_decrease,2,-0.14994438671457924,-0.3311554409195155,0.031266667490357
+amazon,marginal,reset_head_weights,average_over_all_other_factors,local_improvement_increase,2,0.003768867568731741,-0.0261089107656661,0.03364664590312958
+amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_weights,average_over_all_other_factors,initial_within_group_decrease,2,-0.14994438666556226,-0.33115543588794044,0.03126666255681593
+amazon,marginal,reset_head_weights,average_over_all_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_head_weights,average_over_all_other_factors,post_within_group_decrease,2,-0.14617551817910251,-0.29750880308296035,0.005157766724755319
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_update_loss_decrease,2,0.00010606950825987047,-0.008108962690942913,0.008321101707462654
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,local_improvement_increase,2,0.00010606950825987237,-0.008108962690942908,0.008321101707462652
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_optimizer,average_over_all_other_factors,post_within_group_decrease,2,0.00010606841322824954,-0.008108966279686436,0.008321103106142935
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_update_loss_decrease,2,-0.05851531667117103,-0.06487511748524369,-0.05215551585709838
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_loss_decrease,2,-0.05516926559472554,-0.07190608625779082,-0.03843244493166026
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,local_improvement_increase,2,-0.0033460510764454798,-0.013723070925438056,0.007030968772547098
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_within_group_decrease,2,-0.05516926554570857,-0.07190607375237879,-0.038432457339038356
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_group_mass_decrease,2,0.0,0.0,0.0
+amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_within_group_decrease,2,-0.05851531647031631,-0.06487511845460892,-0.0521555144860237
 banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.0040942531693112585,-0.04238370764448359,0.034195201305861074
 banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
 banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.004094253169311263,-0.04238370764448363,0.0341952013058611

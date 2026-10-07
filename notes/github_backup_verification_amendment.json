@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-07T02:28:53.980833+00:00",
+  "administrative_only": true,
+  "scientific_training_sources_sha256_unchanged": {
+    "experiments/day15_weight_moment_recurrence.py": "dbabffef271fcfb08fec552b77823a9d94f521efee94158d055bafc91db187a0",
+    "src/moment_component_audit.py": "6afac4d3cd1453638a45aeaa04144ec2b569a408b5459037e60606754900ec2a",
+    "src/adapter_pool_fixed_memory.py": "4bae434534fa2a6e335f4dc4d7254bc6b725d5fb4debff53b71e672da6f47576"
+  },
+  "live_training_process": 34353,
+  "gate_returncode": 0,
+  "old_helper_sha256": "46d4bbe044e906485721cddf1c999f9465dd5dcbb95a2014f0ba474ab7dc5e21",
+  "new_helper_sha256": "cb571bba6fa6b024130cfaa40ee679c7942c937b4f6ccb43f0c2ee151752c102",
+  "mode": "rehash receipt-covered immutable independent GitHub downloads; fetch every remaining current object; rehash the complete snapshot",
+  "old_receipts_archived": true,
+  "training_cutoffs_unchanged": true,
+  "backup_only_cutoff_utc": "2026-10-07T06:00:00+00:00",
+  "reason": "avoid redundant multi-gigabyte downloads while retaining independent remote-byte verification"
+}

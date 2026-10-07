@@ -591,6 +591,38 @@
     "bytes": 29672091,
     "sha256": "9b843797e43f88e35bc4ad8a2ffef6a0a07ed764950b4d50cd7cc7c9bd39e805"
   },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "37a4815ff4f953a54c2045187eb79ad4edbaae940ffd90a212b8f484ed17e342"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "77cf38277c644c87db28028249d6e648372b3b97d12e4aac88f1c98bea1b0a33"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "6069165723fef899ec930899d43f89ab997c52667ec279ae97398fe1607ca163"
+  },
+  "results/day15_banking_private_cau_seed2028_b_first_weight_moments/checkpoint/learner_state.pt": {
+    "bytes": 29672411,
+    "sha256": "354249ff3006ce2e53439c1ad4a7397b9c0fedb42e3d5b7c1dc78f23b24d395a"
+  },
   "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

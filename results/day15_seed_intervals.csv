@@ -293,297 +293,297 @@ amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_group_
 amazon,marginal,reset_lora_weights,average_over_all_other_factors,initial_within_group_decrease,1,-0.056486480918369796,,
 amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_group_mass_decrease,1,0.0,,
 amazon,marginal,reset_lora_weights,average_over_all_other_factors,post_within_group_decrease,1,-0.05901584374154673,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.0010808077487316683,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.0010808077487316696,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.0003733293081705374,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.0007074803441435311,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.0025443781208205913,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0025443781208206017,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.0024698703826128744,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-7.450868795205894e-05,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.0016854935294979357,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.0016854935294979185,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.0007786719108020835,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.0009068336460616587,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.0027082679035899527,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.002708267903589945,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.0026004174662815323,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.00010785028174683679,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.0008149915999108653,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0008149915999108583,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0012848236731120392,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.00046984324088464075,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.0005021746341998843,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0005021746341998725,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.000666783668182737,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.0001646419802864888,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.0006598763413481709,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0006598763413481693,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0012314911399568958,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.000571627079785521,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.000514438519111041,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0005144385191110485,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.0006568163633346384,,
-banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.00014239824735202053,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.9113267360807775,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.9128023860218761,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.001475649941098557,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,-0.8759323414619806,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.03687003870586772,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.8738945870916104,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.037432153211845134,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.7980985061152951,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.7924980521857083,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.005600453929586732,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,-0.7658665826605572,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.026631480848396213,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.7715164318598888,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.02658207626133175,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.9141554298636678,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.9128023860218761,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,-0.0013530438417916847,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,-0.8759323414619806,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.03687003870586772,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.8761618392214507,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.03799360931574644,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.803173775790812,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.7924980521857083,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.010675723605103549,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,-0.7658665826605572,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.026631480848396213,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.7762437050241036,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.02693007994484116,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.9094309367321349,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.9128023860218761,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0033714492897410856,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,-0.8759323414619806,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.03687003870586772,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.8722364341103277,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.03719451610858625,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.7960563026286743,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.7924980521857083,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.0035582504429660026,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,-0.7658665826605572,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.026631480848396213,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.7697133451454587,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.026342925593093203,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-0.9118100599928216,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,-0.9128023860218761,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0009923260290544038,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,-0.8759323414619806,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,-0.03687003870586772,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,-0.8741516761706917,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-0.0376584027494703,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,-0.800979946406333,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,-0.7924980521857083,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,-0.00848189422062465,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,-0.7658665826605572,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,-0.026631480848396213,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,-0.7743001039211567,,
-banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,-0.026679831415742303,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.00292344316021428,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.00292344316021427,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0023255276565368357,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.0005979327710120331,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.005627181307300117,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,0.005627181307300107,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0051924751355097816,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.00043471435924153604,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,9.47493773240295e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,9.474937732402808e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,5.827552669649564e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,3.6476667110732894e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.0005519116317832941,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,0.000551911631783291,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.00046520197129509594,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,8.671067573212518e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,1,0.0023187573794480124,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,1,0.0023187573794480206,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,1,0.0019201850539052898,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,1,0.00039857946909390546,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.005463291524530756,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,1,0.005463291524530765,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.005061928051841124,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,1,0.0004013727654467582,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,1,-6.03658812386649e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,1,-6.0365881238660646e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,1,4.942993541352205e-06,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,1,-6.530717179014735e-05,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,1,0.0005396477468721374,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,1,0.000539647746872115,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,1,0.0,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,1,0.0004751692761431947,,
-banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,1,6.446694279765694e-05,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.15107754816065777,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.1429632563512404,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.00811429180941739,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,-0.1289206536097841,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.014042614253012689,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,-0.13456231174519756,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.01651524619741754,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.14837381001357194,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.1429632563512404,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.005410553662331553,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,-0.1289206536097841,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.014042614253012689,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,-0.13169536426622463,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.016678464609188037,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.03784931819517534,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.02265892251507267,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.015190395680102678,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,-0.018854894808360535,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.003804056395541184,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,-0.0321841565134761,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.0056651692469041545,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.03739215594071607,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.02265892251507267,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.014733233425643416,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,-0.018854894808360535,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.003804056395541184,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,-0.031777230068877504,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.005614935238282762,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.1525411185327467,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.1429632563512404,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.009577862181506323,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,-0.1289206536097841,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.014042614253012689,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,-0.1366588528196399,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.01588227454122607,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.14939658438766396,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.1429632563512404,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.006433328036423578,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,-0.1289206536097841,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.014042614253012689,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,-0.1335171098217041,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.015879481244873216,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,1,-0.039166484429286094,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,1,-0.02265892251507267,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,1,-0.01650756191421341,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,1,-0.018854894808360535,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,1,-0.003804056395541184,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,1,-0.034135763854770886,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,1,-0.005030684025733026,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,1,-0.038566470801175284,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,1,-0.02265892251507267,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,1,-0.015907548286102635,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,1,-0.018854894808360535,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,1,-0.003804056395541184,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,1,-0.03366553757216904,,
-banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,1,-0.00490090991114522,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.0021193005226470686,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,-1.586032892321652e-17,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.0021193005226470604,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,3.717264591378872e-18,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,-7.93016446160826e-18,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.001853750962354652,,
-banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.00026556071671809793,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,-0.00380168262418809,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,1,-1.586032892321652e-17,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,1,-0.0038016826241880977,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,3.717264591378872e-18,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,-7.93016446160826e-18,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,-0.00337413153252922,,
-banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,1,-0.0004275630627359702,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,-0.00023398867675237007,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,0.0,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,-0.0002339886767523643,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,0.0,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,0.0,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,-0.00014481372865181124,,
-banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,-8.918061688706664e-05,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,-0.00124445646018773,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,1,-2.5376526277146434e-17,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,1,-0.001244456460187727,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,3.320756368298459e-18,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,-7.93016446160826e-18,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,-0.0019395503686270236,,
-banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,1,0.0006951163922037366,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_update_loss_decrease,1,0.1121036579320719,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_loss_decrease,1,0.12030433383616773,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,local_improvement_increase,1,-0.008200675904095824,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_group_mass_decrease,1,0.11006575880142358,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_within_group_decrease,1,0.010238557857471495,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_group_mass_decrease,1,0.10116773766086816,,
-banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_within_group_decrease,1,0.010935942042659932,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,1,0.001726362043684665,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,1,-2.5376526277146434e-17,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,1,0.001726362043684655,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,1,3.320756368298459e-18,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,1,-7.93016446160826e-18,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,1,0.0017214608010273128,,
-banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,1,4.895751947886495e-06,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_update_loss_decrease,1,-0.0009450865643365046,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_loss_decrease,1,0.0,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,local_improvement_increase,1,-0.0009450865643365035,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_within_group_decrease,1,0.0,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_group_mass_decrease,1,-0.0006286967857894335,,
-banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_within_group_decrease,1,-0.00031638788161696726,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,post_update_loss_decrease,1,-0.8556289617013145,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,initial_loss_decrease,1,-0.8526502191037922,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,local_improvement_increase,1,-0.0029787425975223215,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,initial_group_mass_decrease,1,-0.820899462061269,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,initial_within_group_decrease,1,-0.031750759777131966,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,post_group_mass_decrease,1,-0.8235272653180861,,
-banking,marginal,reset_head_weights,average_over_all_other_factors,post_within_group_decrease,1,-0.03210169932508207,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_update_loss_decrease,1,0.002182327030779245,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_loss_decrease,1,0.0,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,local_improvement_increase,1,0.0021823270307792424,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_group_mass_decrease,1,0.0,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_within_group_decrease,1,0.0,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_group_mass_decrease,1,0.0019379632081836461,,
-banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_within_group_decrease,1,0.00024436830983057506,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,post_update_loss_decrease,1,-0.09429543630762414,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_loss_decrease,1,-0.08281108943315654,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,local_improvement_increase,1,-0.011484346874467623,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_group_mass_decrease,1,-0.07388777420907233,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_within_group_decrease,1,-0.008923335324276936,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,post_group_mass_decrease,1,-0.08352454083275747,,
-banking,marginal,reset_lora_weights,average_over_all_other_factors,post_within_group_decrease,1,-0.010770895626846253,,
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.0040942531693112585,-0.04238370764448359,0.034195201305861074
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.004094253169311263,-0.04238370764448363,0.0341952013058611
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.0006403931518914263,-0.004033761027838803,0.00275297472405595
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.003453860931344082,-0.03834993495576996,0.031442213093081796
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.004181186412716963,-0.024978807683420645,0.016616434857986723
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.004181186412716959,-0.024978807683420458,0.016616434857986542
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.002833645491973383,-0.007455846509432343,0.0017885555254855768
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.0013475424968279266,-0.017522970708476984,0.014827885714821132
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.004697022333249952,-0.04296212388261033,0.03356807921611043
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.004697022333249935,-0.042962123882610316,0.03356807921611044
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.0010638332782456474,-0.004687151995831111,0.0025594854393398165
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.003633195653066533,-0.03827490949899861,0.031008518192865545
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.004366265581204348,-0.025433123525075013,0.01670059236266632
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.004366265581204343,-0.02543312352507505,0.016700592362666366
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.0029669377134069,-0.007624019013335169,0.0016901435865213682
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.0013993362149039522,-0.017809220895487886,0.015010548465679981
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.001778832700226334,-0.034736495307434626,0.031178829906981956
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.001778832700226334,-0.03473649530743454,0.031178829906981873
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0007073032004492576,-0.0066307901645364245,0.00804539656543494
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.0024861330514425735,-0.028105524191854553,0.023133258088969405
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.002145216360196962,-0.023022040920793668,0.018731608200399746
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.002145216360196959,-0.023022040920793782,0.01873160820039986
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.000987355558426827,-0.005060607628530757,0.003085896511677103
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.001157832374939546,-0.01796146229078216,0.01564579754090307
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.0018723036561693496,-0.03404670113347329,0.03030209382113459
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.0018723036561693425,-0.034046701133473176,0.030302093821134492
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.0006502943870785459,-0.006734510546993696,0.008035099321150787
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.002522607262317939,-0.027312160897794317,0.02226694637315844
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.002160335831589747,-0.023073444058663878,0.018752772395484382
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.0021603358315897504,-0.023073444058663833,0.01875277239548433
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.0009791049492228056,-0.005074169705650082,0.00311595980720447
+banking,conditional,reset_head_optimizer,"{""reset_head_weights"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.0011812188468136586,-0.017999368637583398,0.01563693094395608
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.909375209402252,-0.9341717069277039,-0.8845787118768002
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.9094312619704467,-0.9522654543589523,-0.866597069581941
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,5.605256819462808e-05,-0.017981642294858425,0.01809374743124768
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,-0.8767905792323769,-0.8876955240553509,-0.8658856344094029
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.032640688596190987,-0.08637967699070644,0.021098299798324463
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.876206944214569,-0.9055882272420333,-0.8468256611871048
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.033168271413216224,-0.087346026517444,0.02100948369101155
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.7955543168298491,-0.8278813067783084,-0.7632273268813898
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.7895388069716128,-0.8271395825264556,-0.7519380314167701
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.006015509858236215,-0.01128929546461966,-0.0007417242518527696
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,-0.7659076198362387,-0.7664290465922428,-0.7653861930802346
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.023631207857813155,-0.06175329074057662,0.014490875024950313
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.772127769473981,-0.7798955503615612,-0.7643599885864008
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.023426548170519406,-0.0635213341431315,0.016668237802092697
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.9121407467585344,-0.9377397227708718,-0.886541770746197
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.9094312619704467,-0.9522654543589523,-0.866597069581941
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-0.002709484788087706,-0.019944701164255493,0.01452573158808008
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,-0.8767905792323769,-0.8876955240553509,-0.8658856344094029
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.032640688596190987,-0.08637967699070644,0.021098299798324463
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.8785238847914306,-0.9085365193997694,-0.8485112501830918
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.03361686346950113,-0.08922869227009626,0.021994965331094005
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.8009557627059601,-0.8291382910696017,-0.7727732343423186
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.7895388069716128,-0.8271395825264556,-0.7519380314167701
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.011416955734347254,-0.02083520292554848,-0.00199870854314603
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,-0.7659076198362387,-0.7664290465922428,-0.7653861930802346
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.023631207857813155,-0.06175329074057662,0.014490875024950313
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.7771862746758775,-0.7891627576494226,-0.7652097917023325
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": false, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.02376950163762648,-0.06392845669380862,0.016389453418555657
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.9070597889331671,-0.9371880783265826,-0.8769314995397516
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.9094312619704467,-0.9522654543589523,-0.866597069581941
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.002371473037279556,-0.010334429957809348,0.015077376032368462
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,-0.8767905792323769,-0.8876955240553509,-0.8658856344094029
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.032640688596190987,-0.08637967699070644,0.021098299798324463
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.8748592478622284,-0.9081852563787326,-0.8415332393457241
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.03220054353331471,-0.09565498152155641,0.03125389445492699
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.793518346777329,-0.8257661334358943,-0.7612705601187637
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.7895388069716128,-0.8271395825264556,-0.7519380314167701
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.003979539805716215,-0.009332528701992977,0.0013734490905605483
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,-0.7659076198362387,-0.7664290465922428,-0.7653861930802346
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.023631207857813155,-0.06175329074057662,0.014490875024950313
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.7702814795404345,-0.7775003114806593,-0.7630626476002096
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.023236838048631026,-0.06270342231704956,0.016229746219787518
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-0.9093160280814537,-0.941005708165847,-0.8776263479970604
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,-0.9094312619704467,-0.9522654543589523,-0.866597069581941
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,0.00011523388899288626,-0.011029278415118367,0.011259746193104138
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,-0.8767905792323769,-0.8876955240553509,-0.8658856344094029
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,-0.032640688596190987,-0.08637967699070644,0.021098299798324463
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.8768097571261063,-0.9105838779509317,-0.843035636301281
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,-0.03250627507875253,-0.09797026408980332,0.03295771393229825
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,-0.7987498329563455,-0.8270861110367832,-0.7704135548759078
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,-0.7895388069716128,-0.8271395825264556,-0.7519380314167701
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,-0.009211025984732661,-0.01847552345913727,5.347148967194994e-05
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,-0.7659076198362387,-0.7664290465922428,-0.7653861930802346
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,-0.023631207857813155,-0.06175329074057662,0.014490875024950313
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,-0.7751984419116935,-0.7866129083417377,-0.7637839754816493
+banking,conditional,reset_head_weights,"{""reset_head_optimizer"": true, ""reset_lora_optimizer"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,-0.023551384269536187,-0.06330207421553252,0.01619930567646015
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.0027623017410655696,0.0007148058778843119,0.004809797604246827
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.0027623017410655613,0.000714805877884328,0.004809797604246794
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.002233786202434982,0.001068100503822457,0.0033994719010475073
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.000528528336640247,-0.00035333861608606706,0.0014103952893665611
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.005878036886781122,0.002690614534683727,0.009065459238878517
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,0.005878036886781127,0.0026906145346835505,0.009065459238878705
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.005487915812121642,0.00173398608769736,0.009241845536545924
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.0003901372244069929,-0.00017626897735277677,0.0009565434261667626
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-3.2356152167662558e-06,-0.0012482529915126672,0.0012417817610791346
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-3.2356152167721918e-06,-0.0012482529915127307,0.0012417817610791864
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-8.315437442654012e-05,-0.001880191653912776,0.0017138829050596957
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,7.99362803553432e-05,-0.0004722704632856449,0.0006321430239963312
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.0004765910106700957,-0.00048044822205004433,0.0014336302433902359
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,0.0004765910106700875,-0.00048044822205011903,0.001433630243390294
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0004294106102251679,-2.5361751315690058e-05,0.0008841829717660258
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,4.718375729991786e-05,-0.00045505336088978547,0.0005494208754896212
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_update_loss_decrease,2,0.0021595325771268754,0.00013638963975756572,0.0041826755144961855
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",local_improvement_increase,2,0.0021595325771268893,0.00013638963975765375,0.004182675514496125
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_group_mass_decrease,2,0.001810346076080761,0.00041470953583014705,0.0032059826163313753
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": false}",post_within_group_decrease,2,0.0003491936149177961,-0.00027831315931471786,0.0009767003891503101
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.005692957718293737,0.00277477203936333,0.008611143397224144
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",local_improvement_increase,2,0.005692957718293743,0.0027747720393633693,0.008611143397224116
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0053546235906881245,0.0016355741487331533,0.009073673032643096
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_weights"": true}",post_within_group_decrease,2,0.00033834350633096734,-0.00046251916436367685,0.0011392061770256114
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_update_loss_decrease,2,-9.670657115978175e-05,-0.0005584588175513326,0.0003650456752317691
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",local_improvement_increase,2,-9.670657115978053e-05,-0.0005584588175513699,0.0003650456752318089
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_group_mass_decrease,2,-0.00014016318779725185,-0.0019839120363700467,0.0017035856607755429
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": false}",post_within_group_decrease,2,4.346206947997779e-05,-0.0013385821790966143,0.0014255063180565698
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_update_loss_decrease,2,0.0004614715392773107,-0.0005318513599202519,0.0014547944384748733
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_loss_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",local_improvement_increase,2,0.00046147153927729575,-0.0005318513599201727,0.0014547944384747642
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",initial_within_group_decrease,2,0.0,0.0,0.0
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_group_mass_decrease,2,0.0004376612194291894,-3.8923828435013684e-05,0.0009142462672933925
+banking,conditional,reset_lora_optimizer,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_weights"": true}",post_within_group_decrease,2,2.379728542580522e-05,-0.0004929597076910191,0.0005405542785426297
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.1446591019630432,-0.22621319343805596,-0.06310501048803048
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.13684031714449874,-0.21463963629250948,-0.05904099799648797
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.007818784818544493,-0.011573557145546427,-0.00406401249154256
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,-0.12640465688328822,-0.15837342640569024,-0.0944358873608862
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.010435660265304236,-0.05626635610708959,0.03539503557648112
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,-0.13248310502475272,-0.15890193130355523,-0.1060642787459502
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.012176002512921346,-0.06731132116828305,0.04295931614244035
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.14154336681732765,-0.22833237650761923,-0.054754357127036066
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.13684031714449874,-0.21463963629250948,-0.05904099799648797
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.004703049672828929,-0.013692740215109666,0.004286640869451809
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,-0.12640465688328822,-0.15837342640569024,-0.0944358873608862
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.010435660265304236,-0.05626635610708959,0.03539503557648112
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,-0.12922897541506606,-0.1605674171169056,-0.09789053371322652
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.012314393625154598,-0.06776517303148284,0.04313638578117364
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.03083820939064027,-0.1199227932886599,0.05824637450737937
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.016947862145664936,-0.08951376446001306,0.0556180401686832
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.013890347244975336,-0.030409028828646868,0.0026283343386961956
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,-0.015521697487149932,-0.05787398507652091,0.026830590102221046
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.0014261795269264045,-0.03163996985695976,0.02878761080310695
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,-0.02840393028416477,-0.07643625870285223,0.019628398134522697
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.0024342792702245295,-0.04348662879397052,0.038618070253521465
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.030358382764753403,-0.11973094480634877,0.059014179276841966
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.016947862145664936,-0.08951376446001306,0.0556180401686832
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.013410520619088477,-0.03021718034633578,0.003396139108158825
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,-0.015521697487149932,-0.05787398507652091,0.026830590102221046
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.0014261795269264045,-0.03163996985695976,0.02878761080310695
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,-0.02789136529951306,-0.07726595863614592,0.0214832280371198
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": false, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.002467031793279955,-0.04246493745519526,0.037530873868635344
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.1447460352064489,-0.24379195988593044,-0.04570011052696739
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.13684031714449874,-0.21463963629250948,-0.05904099799648797
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.00790571806195019,-0.029152323593420987,0.013340887469520606
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,-0.12640465688328822,-0.15837342640569024,-0.0944358873608862
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.010435660265304236,-0.05626635610708959,0.03539503557648112
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,-0.13467635736483466,-0.15986635050212591,-0.10948636422754339
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.01006968407840519,-0.08392564854654372,0.06378628038973333
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.14121261006528205,-0.24519986336106314,-0.03722535676950095
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.13684031714449874,-0.21463963629250948,-0.05904099799648797
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.004372292920783336,-0.030560227068553734,0.021815641226987065
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,-0.12640465688328822,-0.15837342640569024,-0.0944358873608862
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.010435660265304236,-0.05626635610708959,0.03539503557648112
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,-0.13113207985022732,-0.16143675896972406,-0.10082740073073058
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": false, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.010080534186992018,-0.08376314275866842,0.06360207438468438
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_update_loss_decrease,2,-0.031204593050610897,-0.13237001499524215,0.06996082889402036
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_loss_decrease,2,-0.016947862145664936,-0.08951376446001306,0.0556180401686832
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",local_improvement_increase,2,-0.01425673090494596,-0.042856250535228894,0.014342788725336973
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_group_mass_decrease,2,-0.015521697487149932,-0.05787398507652091,0.026830590102221046
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",initial_within_group_decrease,2,-0.0014261795269264045,-0.03163996985695976,0.02878761080310695
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_group_mass_decrease,2,-0.030098589043040858,-0.08139575875661012,0.0211985806705284
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": false}",post_within_group_decrease,2,-0.0011059785937215022,-0.050974089342036864,0.04876213215459386
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_update_loss_decrease,2,-0.030646414940173804,-0.13128026623199898,0.06998743635165136
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_loss_decrease,2,-0.016947862145664936,-0.08951376446001306,0.0556180401686832
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",local_improvement_increase,2,-0.013698552794508885,-0.04176650177198594,0.014369396182968168
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_group_mass_decrease,2,-0.015521697487149932,-0.05787398507652091,0.026830590102221046
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",initial_within_group_decrease,2,-0.0014261795269264045,-0.03163996985695976,0.02878761080310695
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_group_mass_decrease,2,-0.029520764635814413,-0.08218509815009223,0.023143568878463396
+banking,conditional,reset_lora_weights,"{""reset_head_optimizer"": true, ""reset_head_weights"": true, ""reset_lora_optimizer"": true}",post_within_group_decrease,2,-0.001125643377775674,-0.049094952884397615,0.046843666128846266
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,0.0023455097370750338,-0.0005287508546559317,0.005219770328805999
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,-1.4274296030894868e-17,-3.442675467904109e-17,5.878162617251355e-18
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,0.0023455097370750277,-0.0005287508546559677,0.005219770328806023
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,2.527739922137633e-18,-1.2586604063972036e-17,1.7642083908247303e-17
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,-7.93016446160826e-18,-7.93016446160826e-18,-7.93016446160826e-18
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.001723986678848883,7.517512518156436e-05,0.0033727982325162014
+banking,interaction,reset_head_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,0.0006215359401571866,-0.003901558129865407,0.0051446300101797805
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,-0.0039136771399241165,-0.005336702386194803,-0.00249065189365343
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,2,-1.4274296030894868e-17,-3.442675467904109e-17,5.878162617251355e-18
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,2,-0.0039136771399241235,-0.0053367023861948,-0.0024906518936534472
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,2.527739922137633e-18,-1.2586604063972036e-17,1.7642083908247303e-17
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,-7.93016446160826e-18,-7.93016446160826e-18,-7.93016446160826e-18
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,-0.0035607293534737337,-0.005931679469718789,-0.0011897792372286792
+banking,interaction,reset_head_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,2,-0.0003529558224337449,-0.0013009306925148036,0.0005950190476473136
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,-0.00022410968994046837,-0.0003496341189584612,-9.858526092247551e-05
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,-0.00022410968994046409,-0.00034963411895843786,-9.858526092249031e-05
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,-0.00015137263798860472,-0.00023471148286791056,-6.80337931092989e-05
+banking,interaction,reset_lora_optimizer x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,-7.274728063698744e-05,-0.00028155261552889496,0.00013605805425492005
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,-0.00010264808168777948,-0.0146106991083878,0.01440540294501224
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_loss_decrease,2,-1.4274296030894868e-17,-1.5534150656791844e-16,1.267929145061287e-16
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,local_improvement_increase,2,-0.00010264808168778446,-0.014610699108387703,0.014405402945012136
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,6.889330376022177e-18,-3.8453701582306825e-17,5.223236233435118e-17
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,-7.93016446160826e-18,-7.93016446160826e-18,-7.93016446160826e-18
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,-0.0018551037176051592,-0.002928100154773263,-0.0007821072804370555
+banking,interaction,reset_lora_weights x reset_head_optimizer,marginal_over_other_factors,post_within_group_decrease,2,0.0017524667411715068,-0.01168244327067874,0.015187376753021755
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_update_loss_decrease,2,0.11227837847648087,0.11005834346760474,0.114498413485357
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_loss_decrease,2,0.11989245499883379,0.11465903816517112,0.12512587183249646
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,local_improvement_increase,2,-0.007614076522352927,-0.015067528364891662,-0.0001606246798141935
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_group_mass_decrease,2,0.11088295939613829,0.10049944132916944,0.12126647746310715
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,initial_within_group_decrease,2,0.009009480738377828,-0.006607424773374077,0.024626386250129733
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_group_mass_decrease,2,0.1029014670980869,0.08087234591165261,0.12493058828452118
+banking,interaction,reset_lora_weights x reset_head_weights,marginal_over_other_factors,post_within_group_decrease,2,0.009376920342117876,-0.010432328573108714,0.029186169257344467
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_update_loss_decrease,2,0.0019217912558015904,-0.0005613723247853745,0.004404954836388555
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_loss_decrease,2,-1.4274296030894868e-17,-1.5534150656791844e-16,1.267929145061287e-16
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,local_improvement_increase,2,0.001921791255801589,-0.0005613723247854859,0.004404954836388664
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_group_mass_decrease,2,6.889330376022177e-18,-3.8453701582306825e-17,5.223236233435118e-17
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,initial_within_group_decrease,2,-7.93016446160826e-18,-7.93016446160826e-18,-7.93016446160826e-18
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_group_mass_decrease,2,0.0019721991290430497,-0.001213733401931033,0.005158131660017133
+banking,interaction,reset_lora_weights x reset_lora_optimizer,marginal_over_other_factors,post_within_group_decrease,2,-5.041463198242256e-05,-0.0007531996942373562,0.000652370430272511
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_update_loss_decrease,2,-0.0031619270055831144,-0.03132955551949439,0.02500570150832816
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,local_improvement_increase,2,-0.00316192700558311,-0.031329555519494345,0.025005701508328124
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_group_mass_decrease,2,-0.0010142090694548983,-0.005912607074018547,0.0038841889351087506
+banking,marginal,reset_head_optimizer,average_over_all_other_factors,post_within_group_decrease,2,-0.0021477158539570267,-0.02541694400959349,0.021121512301679433
+banking,marginal,reset_head_weights,average_over_all_other_factors,post_update_loss_decrease,2,-0.8533337540556114,-0.8824971323139496,-0.8241703757972733
+banking,marginal,reset_head_weights,average_over_all_other_factors,initial_loss_decrease,2,-0.8494850344710299,-0.8897025184427033,-0.8092675504993564
+banking,marginal,reset_head_weights,average_over_all_other_factors,local_improvement_increase,2,-0.0038487195845816223,-0.014902825297917505,0.007205386128754259
+banking,marginal,reset_head_weights,average_over_all_other_factors,initial_group_mass_decrease,2,-0.8213490995343079,-0.827062285323797,-0.8156359137448188
+banking,marginal,reset_head_weights,average_over_all_other_factors,initial_within_group_decrease,2,-0.02813594822700207,-0.07406648386564153,0.01779458741163739
+banking,marginal,reset_head_weights,average_over_all_other_factors,post_group_mass_decrease,2,-0.8251492249495401,-0.8457581761006059,-0.8045402737984744
+banking,marginal,reset_head_weights,average_over_all_other_factors,post_within_group_decrease,2,-0.028184528202637213,-0.0779569064710528,0.021587850065778368
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_update_loss_decrease,2,0.0021663686608547703,0.0019635983453387823,0.0023691389763707583
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_loss_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,local_improvement_increase,2,0.0021663686608547695,0.001963598345338801,0.002369138976370738
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_group_mass_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,initial_within_group_decrease,2,0.0,0.0,0.0
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_group_mass_decrease,2,0.0019413032435945095,0.0018988640698380061,0.001983742417351013
+banking,marginal,reset_lora_optimizer,average_over_all_other_factors,post_within_group_decrease,2,0.00022507275935713093,-2.010045545564271e-05,0.00047024597416990457
+banking,marginal,reset_lora_weights,average_over_all_other_factors,post_update_loss_decrease,2,-0.08690108927478501,-0.18085517656436478,0.00705299801479474
+banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_loss_decrease,2,-0.07689408964508183,-0.15207670037626136,-0.0017114789139023173
+banking,marginal,reset_lora_weights,average_over_all_other_factors,local_improvement_increase,2,-0.0100069996297032,-0.028778476188103544,0.008764476928697142
+banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_group_mass_decrease,2,-0.07096317718521908,-0.10812370574110572,-0.033802648629332445
+banking,marginal,reset_lora_weights,average_over_all_other_factors,initial_within_group_decrease,2,-0.00593091989611532,-0.043953162982024674,0.03209132318979403
+banking,marginal,reset_lora_weights,average_over_all_other_factors,post_group_mass_decrease,2,-0.08042939586467673,-0.11975694151725153,-0.04110185021210195
+banking,marginal,reset_lora_weights,average_over_all_other_factors,post_within_group_decrease,2,-0.006471693429809351,-0.06109823674757227,0.04815484988795357

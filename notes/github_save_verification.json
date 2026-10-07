@@ -1,18 +1,48 @@
 {
-  "verified_utc": "2026-10-06T23:40:40.984158+00:00",
+  "verified_utc": "2026-10-07T06:45:21.056930+00:00",
   "repository": "anitusiruk/mitosis-interference",
   "branch": "day5-causal-audit",
   "authenticated_account": "anitusiruk",
-  "preserved_snapshot_commit": "fe11925d00a83fe7cddd504bd0e449b055135ad9",
+  "preserved_snapshot_commit": "ab155541450ee6f00283d1f68f6d0a3d506d327f",
   "github_snapshot_commit_verified": true,
   "github_push_returncode": 0,
   "lfs_push_all_returncode": 0,
-  "fresh_remote_lfs_fetch_returncode": 0,
-  "fresh_remote_lfs_fsck_returncode": 0,
+  "verification_mode": "incremental_independent_remote_download_with_rehashed_immutable_objects",
+  "verification_storage": "/workspace/mitosis-lfs-verify-20261007T064448Z",
+  "previous_independent_download_sources": [
+    {
+      "receipt_path": "notes/github_save_verification.json",
+      "receipt_sha256": "b6261eae5fb85a9eb888729c664d6dd88d30d6becb1e7359165a117bfa16f75c",
+      "snapshot_commit": "fe11925d00a83fe7cddd504bd0e449b055135ad9",
+      "independent_download_storage": "/workspace/mitosis-lfs-verify-20261006T233927Z",
+      "receipt_scope_objects_rehashed": 356,
+      "objects_in_current_snapshot": 356
+    },
+    {
+      "receipt_path": "notes/day17_github_save_verification.json",
+      "receipt_sha256": "1ad0e365a8c7b5fb837960618386ce789fea5ff776c533971cd732897eecdc4f",
+      "snapshot_commit": "84adb4d0557446c409db2486b1bd5dbb677a3a10",
+      "independent_download_storage": "/workspace/mitosis-day17-lfs-verify-20261007T015703Z",
+      "receipt_scope_objects_rehashed": 90,
+      "objects_in_current_snapshot": 90
+    },
+    {
+      "receipt_path": "notes/day19_github_save_verification.json",
+      "receipt_sha256": "eeb9801ed53d1e841265dc503c27bbbeb6b8429a3b6a89be5b1643c4c31a3bbf",
+      "snapshot_commit": "6a8479bf549d93b98c16cafa924fbd8897f4c462",
+      "independent_download_storage": "/workspace/mitosis-day19-lfs-verify-20261007T023354Z",
+      "receipt_scope_objects_rehashed": 84,
+      "objects_in_current_snapshot": 84
+    }
+  ],
+  "previously_downloaded_objects_rehashed_and_reused": 500,
+  "new_objects_downloaded_from_github": 80,
+  "incremental_remote_lfs_fetch_returncode": 0,
+  "complete_snapshot_lfs_fsck_returncode": 0,
   "all_current_lfs_sha256_verified": true,
-  "lfs_files": 498,
-  "unique_lfs_objects_verified": 356,
-  "checkpoint_files": 996,
-  "checkpoint_bytes": 4244675600,
+  "lfs_files": 783,
+  "unique_lfs_objects_verified": 580,
+  "checkpoint_files": 1566,
+  "checkpoint_bytes": 6347145119,
   "earlier_failed_push_log": "logs/wrap_github_push.txt"
 }

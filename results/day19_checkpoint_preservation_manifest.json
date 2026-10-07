@@ -1,4 +1,36 @@
 {
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "fa9f8219af9989cb888f93cb5412c0f5f32ae0bcadce7411e17f3ecf115add0b"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "d60d6dc5f91a5ca654d29fe17e69bf518c83e081385b5d42b6bbcf32796e685c"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "fa9f8219af9989cb888f93cb5412c0f5f32ae0bcadce7411e17f3ecf115add0b"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "5cb653f71d3830cfff293aaab8e2c8eef5f7b9699912e4fa65cb101db7bb441b"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_config.json": {
+    "bytes": 5529,
+    "sha256": "fa9f8219af9989cb888f93cb5412c0f5f32ae0bcadce7411e17f3ecf115add0b"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "4dfc5440c8582297dc7e54e32ae9a4614322f05201aa3e0c729935fc473dbbc5"
+  },
+  "results/day19_banking_head_only_seed2027_b_first_frozen_preclassifier/checkpoint/learner_state.pt": {
+    "bytes": 11894131,
+    "sha256": "3d9113c2c41d8ab8b645efdefb191d684db39908e2ffc50b6f37a86a5ba55573"
+  },
   "results/day19_banking_head_only_seed2027_canonical_frozen_preclassifier/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

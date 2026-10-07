@@ -1,6 +1,6 @@
 # Frozen hidden pre-classifier allocation diagnostic
 
-Completed trajectories 3/20; paired controls 1/10. Incomplete attempts: [].
+Completed trajectories 4/20; paired controls 2/10. Incomplete attempts: [].
 
 Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. The private condition trains LoRA and the linear output classifier; the other trains only the output classifier, keeping LoRA output zero. This removes hidden pre-classifier learning, with its associated optimizer state, in both conditions. It is an allocation diagnostic, not a tuned competitive benchmark. The retained PEFT pre-classifier copies are dormant stored parameters.
 
@@ -9,6 +9,7 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | seed | order | allocation_disagreements | private_spawn_steps | head_only_spawn_steps | private_learning_updates | head_only_learning_updates |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2027 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
+| 2027 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
 
 ## All deviations from the trainable-stack reference and stored resources
 
@@ -17,11 +18,15 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2027 | canonical | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
 | 2027 | canonical | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
 | 2027 | b_first | private | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 4960368 | 510 |
+| 2027 | b_first | head_only | 0 | [18, 50] | 80 | 3 | 442368 | 177639 | 1771776 | 1421136 | 510 |
 
 ## All private-minus-output-classifier-only accuracy differences
 
 | rule | seed_clusters | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- |
+| frozen_centroid | 1 | -0.0048 | nan | nan |
+| last_active | 1 | 0.0057 | nan | nan |
+| uniform_probability | 1 | -0.0029 | nan | nan |
 
 ## Every deployment outcome
 
@@ -36,5 +41,8 @@ Both controls use the same DistilBERT backbone and fixed hidden pre-classifier. 
 | 2027 | b_first | private | frozen_centroid | 0.0601 |
 | 2027 | b_first | private | last_active | 0.0149 |
 | 2027 | b_first | private | uniform_probability | 0.0137 |
+| 2027 | b_first | head_only | frozen_centroid | 0.0638 |
+| 2027 | b_first | head_only | last_active | 0.0206 |
+| 2027 | b_first | head_only | uniform_probability | 0.0149 |
 
 Intervals are descriptive over paired training seeds and fixed repeatedly examined development examples. Neither agreement nor disagreement establishes a universal capacity principle. Existing controls with trainable hidden classifiers must not be described as having no learned hidden representation capacity.

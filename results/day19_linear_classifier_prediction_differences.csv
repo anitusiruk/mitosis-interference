@@ -1,1 +1,4 @@
 rule,seed_clusters,mean,ci_low,ci_high
+frozen_centroid,1,-0.0047925211543435875,,
+last_active,1,0.005738462106935683,,
+uniform_probability,1,-0.0028636884306987515,,

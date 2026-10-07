@@ -1,6 +1,6 @@
 # BERT allocation transfer diagnostic
 
-Complete trajectories 9/20; complete private/head-only pairs 4/10. Partial attempts: [].
+Complete trajectories 10/20; complete private/head-only pairs 5/10. Partial attempts: [].
 
 This transfer check replaces the backbone, representations, tokenizer, pooler and classifier. It does not isolate classifier design alone or compare against a tuned static BERT baseline. All deployment rules and both allocation controls are retained.
 
@@ -12,6 +12,7 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2027 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
 | 2028 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
 | 2028 | b_first | 0 | [18, 50] | [18, 50] | 80 | 80 |
+| 2029 | canonical | 0 | [18, 50] | [18, 50] | 80 | 80 |
 
 ## Descriptive cross-backbone accuracy differences
 
@@ -55,5 +56,8 @@ This transfer check replaces the backbone, representations, tokenizer, pooler an
 | 2029 | canonical | private | frozen_centroid | 0.0618 | 0.1902 | -0.1284 | 80 | 3 | 1062375 | 510 |
 | 2029 | canonical | private | last_active | 0.0376 | 0.1129 | -0.0753 | 80 | 3 | 1062375 | 510 |
 | 2029 | canonical | private | uniform_probability | 0.0478 | 0.1612 | -0.1134 | 80 | 3 | 1062375 | 510 |
+| 2029 | canonical | head_only | frozen_centroid | 0.0526 | 0.1477 | -0.0950 | 80 | 3 | 1062375 | 510 |
+| 2029 | canonical | head_only | last_active | 0.0355 | 0.1086 | -0.0731 | 80 | 3 | 1062375 | 510 |
+| 2029 | canonical | head_only | uniform_probability | 0.0378 | 0.0933 | -0.0555 | 80 | 3 | 1062375 | 510 |
 
 Intervals average both orders within each independent seed. The fixed development examples have been repeatedly examined; this is development evidence. Scope is the BANKING label-group stress test, the frozen training recipe and the declared memory budget. Neither allocation equivalence nor disagreement alone establishes competitive utility or a general capacity principle.

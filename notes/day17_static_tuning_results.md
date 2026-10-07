@@ -52,17 +52,27 @@ The full equal-budget learning-rate grid and its pilot-only selection rule were 
 
 Selected rates: {"8": 0.0002, "96": 0.0001}.
 
-Completed paired-development static trajectories: 2/20; incomplete attempts: [].
+Completed paired-development static trajectories: 3/20; incomplete attempts: [].
 
 ## Every rule and rank
 
-|  |
-|  |
+| rank | adaptive_rule | seed_clusters | mean | ci_low | ci_high |
+| --- | --- | --- | --- | --- | --- |
+| 8 | frozen_centroid | 1 | -0.0071 | nan | nan |
+| 8 | last_active | 1 | -0.0582 | nan | nan |
+| 8 | linear_hard | 1 | 0.0727 | nan | nan |
+| 8 | linear_probability_mixture | 1 | 0.0690 | nan | nan |
+| 8 | uniform_probability | 1 | -0.0815 | nan | nan |
 
 ## Every trajectory and actual resource count
 
 | rank | learning_rate | seed | order | adaptive_rule | static_accuracy | adaptive_accuracy | adaptive_minus_static | static_adaptation_parameters | adaptive_adaptation_parameters | static_optimizer_bytes | adaptive_optimizer_bytes | static_training_texts | adaptive_training_texts | static_training_seconds | static_evaluation_seconds | static_gpu_peak_allocated_bytes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 8 | 0.0002 | 2027 | b_first | frozen_centroid | 0.1136 | 0.1532 | 0.0396 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2988 | 4.6516 | 538011648 |
+| 8 | 0.0002 | 2027 | b_first | last_active | 0.1136 | 0.0641 | -0.0495 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2988 | 4.6516 | 538011648 |
+| 8 | 0.0002 | 2027 | b_first | linear_hard | 0.1136 | 0.2180 | 0.1044 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2988 | 4.6516 | 538011648 |
+| 8 | 0.0002 | 2027 | b_first | linear_probability_mixture | 0.1136 | 0.2114 | 0.0978 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2988 | 4.6516 | 538011648 |
+| 8 | 0.0002 | 2027 | b_first | uniform_probability | 0.1136 | 0.0778 | -0.0358 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2988 | 4.6516 | 538011648 |
 | 8 | 0.0002 | 2027 | canonical | frozen_centroid | 0.2131 | 0.1593 | -0.0538 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
 | 8 | 0.0002 | 2027 | canonical | last_active | 0.2131 | 0.1462 | -0.0669 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |
 | 8 | 0.0002 | 2027 | canonical | linear_hard | 0.2131 | 0.2542 | 0.0411 | 797261 | 2391783 | 6378200 | 19134600 | 512 | 510 | 2.2570 | 4.6091 | 538142720 |

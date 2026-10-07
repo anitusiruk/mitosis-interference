@@ -1,4 +1,20 @@
 {
+  "results/day17_confirm_rank8_lr200_seed2027_b_first/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day17_confirm_rank8_lr200_seed2027_b_first/checkpoint/adapters/adapter_config.json": {
+    "bytes": 1127,
+    "sha256": "e795b3b4ff7292b17399bd54ffda12ee138a37d7adc0a2af0e79d218d23b6ec8"
+  },
+  "results/day17_confirm_rank8_lr200_seed2027_b_first/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "a9f9f4395beecd13dd239d45c8ae65176ad667ed6dffb39e7a58c70659368c22"
+  },
+  "results/day17_confirm_rank8_lr200_seed2027_b_first/checkpoint/learner_state.pt": {
+    "bytes": 11658657,
+    "sha256": "479223fc22fe6dcc0aa84e37cd34652c3f79984d96f12efbbe9a7e07727febad"
+  },
   "results/day17_confirm_rank8_lr200_seed2027_canonical/checkpoint/adapters/README.md": {
     "bytes": 5170,
     "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"

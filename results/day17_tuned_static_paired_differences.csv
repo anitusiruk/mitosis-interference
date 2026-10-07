@@ -1,1 +1,6 @@
-
+rank,adaptive_rule,seed_clusters,mean,ci_low,ci_high
+8,frozen_centroid,1,-0.007129660421978351,,
+8,last_active,1,-0.05816243579795291,,
+8,linear_hard,1,0.07273734099474038,,
+8,linear_probability_mixture,1,0.06895351627642947,,
+8,uniform_probability,1,-0.08146546946014856,,

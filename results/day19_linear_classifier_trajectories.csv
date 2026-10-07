@@ -1,3 +1,4 @@
 seed,order,architecture,allocation_disagreements_vs_trainable_stack,spawn_steps,learning_updates,adapters,stored_lora_parameters,stored_output_classifier_parameters,stored_frozen_preclassifier_parameters,optimizer_bytes,maximum_training_texts
 2027,canonical,private,0,"[18, 50]",80,3,442368,177639,1771776,4960368,510
 2027,canonical,head_only,0,"[18, 50]",80,3,442368,177639,1771776,1421136,510
+2027,b_first,private,0,"[18, 50]",80,3,442368,177639,1771776,4960368,510

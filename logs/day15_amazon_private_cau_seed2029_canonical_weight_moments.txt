@@ -1,0 +1,43 @@
+DAY15_FROZEN_OBSERVER {"all_mature_batches": true, "audit_implementation_sha256": {"experiments/day15_weight_moment_recurrence.py": "dbabffef271fcfb08fec552b77823a9d94f521efee94158d055bafc91db187a0", "experiments/day8_fixed_memory_recurrence.py": "1b06714da58986c7a2094b93a08004ab040f79cf93c457f672f1116b8a6fdf37", "src/moment_component_audit.py": "6afac4d3cd1453638a45aeaa04144ec2b569a408b5459037e60606754900ec2a"}, "audit_kind": "observational_four_factor_weight_optimizer_state", "audit_spec_sha256": "3921c7fbbfc29992611129515a734aa987af1d86093cb57dce3687bef697a4c5", "official_test_used": false, "reference": "results/day8_amazon_private_cau_seed2029_canonical_fixed512"}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5205.34it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=15.9
+step=10 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=39.1
+step=15 segment(eval)=A1 decision=reuse adapter=default pool=1 elapsed=68.0
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.7266, 'uniform_probability:A': 0.7266, 'frozen_centroid:A': 0.7266, 'last_active:B': 0.6562, 'uniform_probability:B': 0.6562, 'frozen_centroid:B': 0.6562, 'last_active:C': 0.7266, 'uniform_probability:C': 0.7266, 'frozen_centroid:C': 0.7266}
+step=20 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=103.3
+step=25 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=144.6
+step=30 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=191.7
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.8516, 'uniform_probability:A': 0.8516, 'frozen_centroid:A': 0.8516, 'last_active:B': 0.8516, 'uniform_probability:B': 0.8516, 'frozen_centroid:B': 0.8516, 'last_active:C': 0.8047, 'uniform_probability:C': 0.8047, 'frozen_centroid:C': 0.8047}
+step=35 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=246.0
+step=40 segment(eval)=A2 decision=reuse adapter=default pool=1 elapsed=305.0
+step=45 segment(eval)=A2 decision=defer adapter=default pool=1 elapsed=370.0
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.8828, 'uniform_probability:A': 0.8828, 'frozen_centroid:A': 0.8828, 'last_active:B': 0.8359, 'uniform_probability:B': 0.8359, 'frozen_centroid:B': 0.8359, 'last_active:C': 0.8125, 'uniform_probability:C': 0.8125, 'frozen_centroid:C': 0.8125}
+step=50 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=441.7
+step=55 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=517.0
+step=60 segment(eval)=C1 decision=reuse adapter=default pool=1 elapsed=597.9
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.8594, 'uniform_probability:A': 0.8594, 'frozen_centroid:A': 0.8594, 'last_active:B': 0.8203, 'uniform_probability:B': 0.8203, 'frozen_centroid:B': 0.8203, 'last_active:C': 0.7812, 'uniform_probability:C': 0.7812, 'frozen_centroid:C': 0.7812}
+step=65 segment(eval)=B2 decision=defer adapter=default pool=1 elapsed=684.9
+step=67 segment(eval)=B2 decision=spawn adapter=adapter_1 pool=2 elapsed=721.6
+step=70 segment(eval)=B2 decision=warmup adapter=adapter_1 pool=2 elapsed=721.7
+step=75 segment(eval)=B2 decision=reuse adapter=adapter_1 pool=2 elapsed=822.0
+step=80 segment(eval)=B2 decision=reuse adapter=adapter_1 pool=2 elapsed=928.6
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.5156, 'uniform_probability:A': 0.8281, 'frozen_centroid:A': 0.8125, 'last_active:B': 0.5, 'uniform_probability:B': 0.8359, 'frozen_centroid:B': 0.6719, 'last_active:C': 0.5, 'uniform_probability:C': 0.7812, 'frozen_centroid:C': 0.7656}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 75, "decisions": {"warmup": 7, "reuse": 67, "defer": 5, "spawn": 1}, "final_adapters": ["default", "adapter_1"], "pool_summary": {"default": {"updates": 62, "memory": 256}, "adapter_1": {"updates": 13, "memory": 208}}, "resources": {"lora_parameters": 294912, "private_head_parameters": 1184260, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 68434182, "currently_trainable_parameters": 739586, "optimizer_state_bytes": 11833600, "replay_items": 464, "elapsed_seconds": 929.8357826571446, "gpu_peak_allocated_bytes": 584881152}, "timing": {"component_audit_seconds": 842.5627583132591, "live_training_seconds": 71.76581104518846, "evaluation_seconds": 3.0947951930575073}, "component_trial_rows": 2336, "official_test_used": false}
+DAY15_OBSERVER_REPLAY_PASS amazon 2029 canonical

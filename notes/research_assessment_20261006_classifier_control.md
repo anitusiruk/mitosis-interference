@@ -11,8 +11,8 @@ All ten frozen-pre-classifier pairs retain identical allocation sequences,
 including spawn steps 18 and 50. These observed decisions require neither LoRA
 updates nor hidden pre-classifier learning under this recipe. This does not
 establish sufficient representation capacity generally or erase the storage
-cost of multiple output classifiers. The centroid prediction difference is
-negative; other rule intervals include zero. Do not generalize the original
+cost of multiple output classifiers. All three intervals include zero. Point estimates differ in sign. No consistent
+LoRA advantage or penalty is established under this frozen-stack recipe. Do not generalize the original
 trainable-stack LoRA benefit to this frozen-stack recipe.
 
 Private LoRA-minus-output-classifier-only accuracy differences follow. Orders

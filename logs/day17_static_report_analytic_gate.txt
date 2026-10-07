@@ -1,0 +1,2 @@
+STATIC_TUNING_REPORT_SAVED 0 pilots 19 confirmations
+STATIC_REPORT_ANALYTIC_GATE_PASS pilot-only ties, missing grids, paired-seed exclusion

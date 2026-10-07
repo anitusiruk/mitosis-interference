@@ -2,7 +2,7 @@
 
 Development-stage matched interventions. Positive contrasts mean lower post-update query loss, lower initial query loss, or more local improvement when resetting the named factor. All conditional cells and interactions are retained. Intervals are descriptive and are not multiplicity-adjusted hypothesis tests.
 
-Verified trajectories: 4/20. Incomplete or unverified attempts: [].
+Verified trajectories: 5/20. Incomplete or unverified attempts: [].
 
 ## All marginal effects
 

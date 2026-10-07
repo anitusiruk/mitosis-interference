@@ -575,6 +575,38 @@
     "bytes": 29672091,
     "sha256": "9b843797e43f88e35bc4ad8a2ffef6a0a07ed764950b4d50cd7cc7c9bd39e805"
   },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/README.md": {
+    "bytes": 5170,
+    "sha256": "2b4d8034f9a7f349065e502461d3c56f5ca0b1963641d456322f88307f232cb8"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_1/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "5eda1ffbbe8e0d2935881199864523267d5d7b0420d3b0c201290ad990079e54"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_2/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "a2a4d9b745c21a389244dce71c4206ee520267e9e482986f7bbf8688a5d6252c"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_config.json": {
+    "bytes": 74969,
+    "sha256": "87e8092e6c52d3b32c7e5e3bd3fd7f6063d6709fc6203a719842f8f938b99d0d"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/adapters/adapter_model.safetensors": {
+    "bytes": 3192908,
+    "sha256": "37ea43899f36543a3950a7a55643a0a9625b29a10ec94ae43f38909679ee1633"
+  },
+  "results/day15_banking_private_cau_seed2028_canonical_weight_moments/checkpoint/learner_state.pt": {
+    "bytes": 29671963,
+    "sha256": "c29052b2825bde7aea7155e870344a7a1d1f799fffa3dd2b17c80fbfc715d1e6"
+  },
   "results/day16_banking_head_only_seed2027_b_first_bert/checkpoint/adapters/README.md": {
     "bytes": 5182,
     "sha256": "6f3524ffb05f0c91ff2784f213e33722668a52bcd397bdb9f2d4bd0ba9a0ad35"

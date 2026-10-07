@@ -407,9 +407,33 @@
       ],
       "returncode": 0,
       "finished_utc": "2026-10-07T00:16:13.611089+00:00"
+    },
+    {
+      "name": "day16_banking_head_only_seed2031_canonical_bert",
+      "study": 16,
+      "status": "completed",
+      "started_utc": "2026-10-07T00:16:25.584458+00:00",
+      "command": [
+        "/usr/local/bin/python",
+        "-u",
+        "-m",
+        "experiments.day16_bert_allocation",
+        "--architecture",
+        "head_only",
+        "--seed",
+        "2031",
+        "--order",
+        "canonical",
+        "--output",
+        "results/day16_banking_head_only_seed2031_canonical_bert",
+        "--deadline-utc",
+        "2026-10-07T03:15:00+00:00"
+      ],
+      "returncode": 0,
+      "finished_utc": "2026-10-07T00:18:08.496398+00:00"
     }
   ],
   "planned_jobs": 40,
-  "generated_utc": "2026-10-07T00:16:15.378369+00:00",
+  "generated_utc": "2026-10-07T00:18:10.278296+00:00",
   "github_save_pending": true
 }

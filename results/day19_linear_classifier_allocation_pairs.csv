@@ -2,3 +2,4 @@ seed,order,allocation_disagreements,private_spawn_steps,head_only_spawn_steps,pr
 2027,canonical,0,"[18, 50]","[18, 50]",80,80
 2027,b_first,0,"[18, 50]","[18, 50]",80,80
 2028,canonical,0,"[18, 50]","[18, 50]",80,80
+2028,b_first,0,"[18, 50]","[18, 50]",80,80

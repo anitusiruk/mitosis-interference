@@ -1173,7 +1173,9 @@
     }
   ],
   "planned_research_jobs": 44,
-  "github_save_pending": true,
+  "github_save_pending": false,
+  "github_save_verified": true,
   "failed": false,
+  "complete": true,
   "administratively_stopped": false
 }

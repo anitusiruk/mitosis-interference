@@ -1,0 +1,416 @@
+{
+  "batch_size": 8,
+  "seed": 17,
+  "status": "passed",
+  "buffer_updates": [
+    {
+      "completed_update": 1,
+      "entries": 1,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 8,
+      "input_tensor_bytes": 768
+    },
+    {
+      "completed_update": 2,
+      "entries": 2,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 16,
+      "input_tensor_bytes": 1536
+    },
+    {
+      "completed_update": 3,
+      "entries": 3,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 24,
+      "input_tensor_bytes": 2304
+    },
+    {
+      "completed_update": 4,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 5,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 6,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 7,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 8,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 9,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 10,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 11,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    },
+    {
+      "completed_update": 12,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 32,
+      "input_tensor_bytes": 3072
+    }
+  ],
+  "importance_call_shapes": [
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        24
+      ],
+      "target_shape": [
+        1
+      ]
+    }
+  ],
+  "final_retained_examples": 32,
+  "maximum_retained_examples": 32
+}

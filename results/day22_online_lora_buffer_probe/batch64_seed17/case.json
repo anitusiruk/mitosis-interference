@@ -1,0 +1,425 @@
+{
+  "batch_size": 64,
+  "seed": 17,
+  "status": "passed",
+  "buffer_updates": [
+    {
+      "completed_update": 1,
+      "entries": 1,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 64,
+      "input_tensor_bytes": 6144
+    },
+    {
+      "completed_update": 2,
+      "entries": 2,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 128,
+      "input_tensor_bytes": 12288
+    },
+    {
+      "completed_update": 3,
+      "entries": 3,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 192,
+      "input_tensor_bytes": 18432
+    },
+    {
+      "completed_update": 4,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 5,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 6,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 7,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 8,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 9,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 10,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 11,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    },
+    {
+      "completed_update": 12,
+      "entries": 4,
+      "entry_shapes": [
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ],
+        [
+          64,
+          3,
+          8
+        ]
+      ],
+      "retained_examples": 256,
+      "input_tensor_bytes": 24576
+    }
+  ],
+  "importance_call_shapes": [
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    },
+    {
+      "input_shape": [
+        1,
+        192
+      ],
+      "target_shape": [
+        1
+      ]
+    }
+  ],
+  "final_retained_examples": 256,
+  "maximum_retained_examples": 256
+}

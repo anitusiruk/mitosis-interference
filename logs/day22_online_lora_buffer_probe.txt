@@ -1,0 +1,364 @@
+Averaged stats: Lr: 0.000200  Loss: 1.3272
+loss window mean: 1.327, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.5216
+loss window mean: 1.924, loss window variance: 0.357
+importance weights update
+MAS loss: 9.953401436391118e-10
+Averaged stats: Lr: 0.000200  Loss: 3.7850
+loss window mean: 2.545, loss window variance: 1.007
+importance weights update
+MAS loss: 2.4024471301231642e-09
+Averaged stats: Lr: 0.000200  Loss: 4.8744
+loss window mean: 3.127, loss window variance: 1.773
+MAS loss: 3.975011431123221e-09
+Averaged stats: Lr: 0.000200  Loss: 6.0925
+loss window mean: 3.720, loss window variance: 2.825
+importance weights update
+MAS loss: 7.376637967126953e-09
+Averaged stats: Lr: 0.000200  Loss: 6.2406
+loss window mean: 4.703, loss window variance: 1.985
+MAS loss: 1.0395861060885636e-08
+Averaged stats: Lr: 0.000200  Loss: 6.3127
+loss window mean: 5.461, loss window variance: 0.977
+importance weights update
+MAS loss: 1.6490572463112585e-08
+Averaged stats: Lr: 0.000200  Loss: 6.3127
+loss window mean: 5.967, loss window variance: 0.305
+MAS loss: 2.0727242144857883e-08
+Averaged stats: Lr: 0.000200  Loss: 6.4422
+loss window mean: 6.280, loss window variance: 0.013
+MAS loss: 2.5604743214557857e-08
+Averaged stats: Lr: 0.000200  Loss: 6.4554
+loss window mean: 6.353, loss window variance: 0.007
+MAS loss: 3.109872892537169e-08
+Averaged stats: Lr: 0.000200  Loss: 6.1934
+loss window mean: 6.343, loss window variance: 0.009
+MAS loss: 3.724235853042046e-08
+Averaged stats: Lr: 0.000200  Loss: 6.2487
+loss window mean: 6.330, loss window variance: 0.011
+Averaged stats: Lr: 0.000200  Loss: 1.2448
+loss window mean: 1.245, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.4402
+loss window mean: 1.843, loss window variance: 0.357
+importance weights update
+MAS loss: 1.610501243476392e-08
+Averaged stats: Lr: 0.000200  Loss: 3.4427
+loss window mean: 2.376, loss window variance: 0.807
+MAS loss: 1.7264973450892285e-08
+Averaged stats: Lr: 0.000200  Loss: 4.5322
+loss window mean: 2.915, loss window variance: 1.477
+importance weights update
+MAS loss: 4.288465760282634e-08
+Averaged stats: Lr: 0.000200  Loss: 5.4803
+loss window mean: 3.428, loss window variance: 2.235
+MAS loss: 4.497140793091603e-08
+Averaged stats: Lr: 0.000200  Loss: 5.9314
+loss window mean: 4.365, loss window variance: 1.656
+importance weights update
+MAS loss: 8.093042680457074e-08
+Averaged stats: Lr: 0.000200  Loss: 6.2295
+loss window mean: 5.123, loss window variance: 1.036
+MAS loss: 8.389288552734797e-08
+Averaged stats: Lr: 0.000200  Loss: 6.1022
+loss window mean: 5.655, loss window variance: 0.380
+importance weights update
+MAS loss: 1.7643823468915798e-07
+Averaged stats: Lr: 0.000200  Loss: 6.1681
+loss window mean: 5.982, loss window variance: 0.073
+MAS loss: 1.7977433230953466e-07
+Averaged stats: Lr: 0.000200  Loss: 6.4204
+loss window mean: 6.170, loss window variance: 0.026
+MAS loss: 1.8288525893694896e-07
+Averaged stats: Lr: 0.000200  Loss: 6.5074
+loss window mean: 6.286, loss window variance: 0.024
+importance weights update
+MAS loss: 2.8411398034222657e-07
+Averaged stats: Lr: 0.000200  Loss: 7.1344
+loss window mean: 6.467, loss window variance: 0.134
+importance weights update
+Averaged stats: Lr: 0.000200  Loss: 1.3360
+loss window mean: 1.336, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.5402
+loss window mean: 1.938, loss window variance: 0.363
+importance weights update
+MAS loss: 5.4062523346942726e-09
+Averaged stats: Lr: 0.000200  Loss: 3.8614
+loss window mean: 2.579, loss window variance: 1.064
+importance weights update
+MAS loss: 1.419611805886234e-08
+Averaged stats: Lr: 0.000200  Loss: 5.2167
+loss window mean: 3.239, loss window variance: 2.102
+MAS loss: 2.0788686327932737e-08
+Averaged stats: Lr: 0.000200  Loss: 6.6916
+loss window mean: 3.929, loss window variance: 3.589
+importance weights update
+MAS loss: 3.188564789979864e-08
+Averaged stats: Lr: 0.000200  Loss: 6.8071
+loss window mean: 5.023, loss window variance: 2.704
+MAS loss: 4.100735395695665e-08
+Averaged stats: Lr: 0.000200  Loss: 6.5431
+loss window mean: 5.824, loss window variance: 1.291
+importance weights update
+MAS loss: 6.032396271393736e-08
+Averaged stats: Lr: 0.000200  Loss: 6.7039
+loss window mean: 6.392, loss window variance: 0.353
+MAS loss: 6.639795913088165e-08
+Averaged stats: Lr: 0.000200  Loss: 7.0419
+loss window mean: 6.758, loss window variance: 0.027
+MAS loss: 7.043232130854449e-08
+Averaged stats: Lr: 0.000200  Loss: 7.1667
+loss window mean: 6.853, loss window variance: 0.051
+MAS loss: 7.381517264093418e-08
+Averaged stats: Lr: 0.000200  Loss: 7.3439
+loss window mean: 6.960, loss window variance: 0.087
+MAS loss: 7.450054795299366e-08
+Averaged stats: Lr: 0.000200  Loss: 7.5831
+loss window mean: 7.168, loss window variance: 0.087
+importance weights update
+Averaged stats: Lr: 0.000200  Loss: 1.2035
+loss window mean: 1.203, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.2487
+loss window mean: 1.726, loss window variance: 0.273
+importance weights update
+MAS loss: 1.9951492902237078e-08
+Averaged stats: Lr: 0.000200  Loss: 3.3842
+loss window mean: 2.279, loss window variance: 0.793
+importance weights update
+MAS loss: 3.3236140950521076e-08
+Averaged stats: Lr: 0.000200  Loss: 4.5124
+loss window mean: 2.837, loss window variance: 1.530
+MAS loss: 3.600226960998043e-08
+Averaged stats: Lr: 0.000200  Loss: 5.5700
+loss window mean: 3.384, loss window variance: 2.419
+importance weights update
+MAS loss: 5.3585019088586705e-08
+Averaged stats: Lr: 0.000200  Loss: 5.7261
+loss window mean: 4.288, loss window variance: 1.747
+MAS loss: 5.826922588880734e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8065
+loss window mean: 5.000, loss window variance: 0.870
+importance weights update
+MAS loss: 6.92585544470603e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8005
+loss window mean: 5.483, loss window variance: 0.243
+MAS loss: 7.500418064410042e-08
+Averaged stats: Lr: 0.000200  Loss: 5.7566
+loss window mean: 5.732, loss window variance: 0.007
+MAS loss: 8.077569191300427e-08
+Averaged stats: Lr: 0.000200  Loss: 5.7307
+loss window mean: 5.764, loss window variance: 0.001
+MAS loss: 8.690926023291468e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8962
+loss window mean: 5.798, loss window variance: 0.003
+MAS loss: 9.36836030973609e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8808
+loss window mean: 5.813, loss window variance: 0.004
+Averaged stats: Lr: 0.000200  Loss: 1.0269
+loss window mean: 1.027, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.1334
+loss window mean: 1.580, loss window variance: 0.306
+importance weights update
+MAS loss: 1.102463613733562e-07
+Averaged stats: Lr: 0.000200  Loss: 3.3051
+loss window mean: 2.155, loss window variance: 0.865
+importance weights update
+MAS loss: 1.123931383517629e-07
+Averaged stats: Lr: 0.000200  Loss: 4.4159
+loss window mean: 2.720, loss window variance: 1.607
+MAS loss: 1.4046361229702597e-07
+Averaged stats: Lr: 0.000200  Loss: 5.7943
+loss window mean: 3.335, loss window variance: 2.798
+importance weights update
+MAS loss: 2.179369005261833e-07
+Averaged stats: Lr: 0.000200  Loss: 6.1673
+loss window mean: 4.363, loss window variance: 2.279
+MAS loss: 2.3378294145004475e-07
+Averaged stats: Lr: 0.000200  Loss: 6.2785
+loss window mean: 5.192, loss window variance: 1.331
+importance weights update
+MAS loss: 2.641847061113367e-07
+Averaged stats: Lr: 0.000200  Loss: 6.3456
+loss window mean: 5.800, loss window variance: 0.515
+MAS loss: 2.741755906754406e-07
+Averaged stats: Lr: 0.000200  Loss: 6.4293
+loss window mean: 6.203, loss window variance: 0.049
+MAS loss: 2.885923606754659e-07
+Averaged stats: Lr: 0.000200  Loss: 6.4505
+loss window mean: 6.334, loss window variance: 0.011
+MAS loss: 3.088861433298007e-07
+Averaged stats: Lr: 0.000200  Loss: 6.2020
+loss window mean: 6.341, loss window variance: 0.009
+MAS loss: 3.3673376265141997e-07
+Averaged stats: Lr: 0.000200  Loss: 6.2214
+loss window mean: 6.330, loss window variance: 0.011
+Averaged stats: Lr: 0.000200  Loss: 1.1548
+loss window mean: 1.155, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.2844
+loss window mean: 1.720, loss window variance: 0.319
+importance weights update
+MAS loss: 5.177295925307135e-09
+Averaged stats: Lr: 0.000200  Loss: 3.4657
+loss window mean: 2.302, loss window variance: 0.890
+importance weights update
+MAS loss: 1.4715215712612917e-08
+Averaged stats: Lr: 0.000200  Loss: 4.6677
+loss window mean: 2.893, loss window variance: 1.717
+MAS loss: 2.0199051320446415e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8219
+loss window mean: 3.479, loss window variance: 2.746
+importance weights update
+MAS loss: 3.8595395324136916e-08
+Averaged stats: Lr: 0.000200  Loss: 5.9075
+loss window mean: 4.429, loss window variance: 1.942
+MAS loss: 4.7607365161184134e-08
+Averaged stats: Lr: 0.000200  Loss: 5.7969
+loss window mean: 5.132, loss window variance: 0.902
+MAS loss: 5.7991066171325656e-08
+Averaged stats: Lr: 0.000200  Loss: 5.9053
+loss window mean: 5.620, loss window variance: 0.229
+importance weights update
+MAS loss: 8.053475397673537e-08
+Averaged stats: Lr: 0.000200  Loss: 5.7935
+loss window mean: 5.845, loss window variance: 0.003
+MAS loss: 9.220635632800622e-08
+Averaged stats: Lr: 0.000200  Loss: 5.8817
+loss window mean: 5.857, loss window variance: 0.003
+MAS loss: 1.050183016104711e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9050
+loss window mean: 5.856, loss window variance: 0.003
+MAS loss: 1.1927265575195634e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9285
+loss window mean: 5.883, loss window variance: 0.002
+Averaged stats: Lr: 0.000200  Loss: 1.1447
+loss window mean: 1.145, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.2532
+loss window mean: 1.699, loss window variance: 0.307
+importance weights update
+MAS loss: 4.329989167217718e-08
+Averaged stats: Lr: 0.000200  Loss: 3.3393
+loss window mean: 2.246, loss window variance: 0.803
+MAS loss: 4.922405594243173e-08
+Averaged stats: Lr: 0.000200  Loss: 4.4450
+loss window mean: 2.796, loss window variance: 1.509
+importance weights update
+MAS loss: 1.429320803936207e-07
+Averaged stats: Lr: 0.000200  Loss: 5.5705
+loss window mean: 3.351, loss window variance: 2.439
+MAS loss: 1.5187301016794663e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6264
+loss window mean: 4.247, loss window variance: 1.699
+importance weights update
+MAS loss: 2.917101085131435e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6808
+loss window mean: 4.932, loss window variance: 0.845
+MAS loss: 3.050074894872523e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6711
+loss window mean: 5.399, loss window variance: 0.229
+MAS loss: 3.1957620194589254e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6928
+loss window mean: 5.648, loss window variance: 0.002
+importance weights update
+MAS loss: 4.6303046019602334e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6535
+loss window mean: 5.665, loss window variance: 0.001
+MAS loss: 4.807652658200823e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6335
+loss window mean: 5.666, loss window variance: 0.000
+MAS loss: 4.997436349185591e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6776
+loss window mean: 5.666, loss window variance: 0.000
+Averaged stats: Lr: 0.000200  Loss: 1.0722
+loss window mean: 1.072, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.1740
+loss window mean: 1.623, loss window variance: 0.304
+importance weights update
+MAS loss: 6.846846645203186e-08
+Averaged stats: Lr: 0.000200  Loss: 3.3210
+loss window mean: 2.189, loss window variance: 0.843
+importance weights update
+MAS loss: 2.1336732913823653e-07
+Averaged stats: Lr: 0.000200  Loss: 4.4538
+loss window mean: 2.755, loss window variance: 1.594
+MAS loss: 2.3607431387517863e-07
+Averaged stats: Lr: 0.000200  Loss: 5.6902
+loss window mean: 3.342, loss window variance: 2.653
+importance weights update
+MAS loss: 2.939165426596446e-07
+Averaged stats: Lr: 0.000200  Loss: 5.8114
+loss window mean: 4.290, loss window variance: 1.944
+MAS loss: 3.2870661925699096e-07
+Averaged stats: Lr: 0.000200  Loss: 5.7689
+loss window mean: 5.009, loss window variance: 0.969
+importance weights update
+MAS loss: 3.6204892239766195e-07
+Averaged stats: Lr: 0.000200  Loss: 5.8780
+loss window mean: 5.520, loss window variance: 0.288
+MAS loss: 3.7908165495537105e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9282
+loss window mean: 5.815, loss window variance: 0.007
+MAS loss: 4.0985543137139757e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9502
+loss window mean: 5.867, loss window variance: 0.005
+MAS loss: 4.5270877535585896e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9547
+loss window mean: 5.896, loss window variance: 0.005
+MAS loss: 5.036483230469457e-07
+Averaged stats: Lr: 0.000200  Loss: 5.9234
+loss window mean: 5.927, loss window variance: 0.001
+Averaged stats: Lr: 0.000200  Loss: 1.1226
+loss window mean: 1.123, loss window variance: 0.000
+importance weights update
+MAS loss: 0.0
+Averaged stats: Lr: 0.000200  Loss: 2.2481
+loss window mean: 1.685, loss window variance: 0.317
+importance weights update
+MAS loss: 2.936247156526406e-08
+Averaged stats: Lr: 0.000200  Loss: 3.3512
+loss window mean: 2.241, loss window variance: 0.828
+MAS loss: 2.4940293386066514e-08
+Averaged stats: Lr: 0.000200  Loss: 4.4797
+loss window mean: 2.800, loss window variance: 1.561
+importance weights update
+MAS loss: 2.1746734191196992e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6250
+loss window mean: 3.365, loss window variance: 2.525
+MAS loss: 2.024088452401429e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6159
+loss window mean: 4.264, loss window variance: 1.725
+importance weights update
+MAS loss: 2.0605410711027616e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6436
+loss window mean: 4.943, loss window variance: 0.831
+MAS loss: 2.3319575603863996e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6388
+loss window mean: 5.401, loss window variance: 0.212
+MAS loss: 2.6600247338137706e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6403
+loss window mean: 5.633, loss window variance: 0.000
+importance weights update
+MAS loss: 2.7846876804460408e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6269
+loss window mean: 5.633, loss window variance: 0.000
+MAS loss: 3.0986718968506466e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6300
+loss window mean: 5.636, loss window variance: 0.000
+MAS loss: 3.3848536418190633e-08
+Averaged stats: Lr: 0.000200  Loss: 5.6177
+loss window mean: 5.631, loss window variance: 0.000
+AUTHOR_LOOP_BUFFER_UNIT_CPU_CHECK 9 cases 1.452 seconds

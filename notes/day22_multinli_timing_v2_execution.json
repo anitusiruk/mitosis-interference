@@ -1,0 +1,28 @@
+{
+  "name": "day22_multinli_timing_v2",
+  "status": "failed",
+  "started_utc": "2026-10-08T03:56:32.356196+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day22_multinli_pilot_v2",
+    "--mode",
+    "timing",
+    "--learning-rate",
+    "0.0002",
+    "--order",
+    "canonical",
+    "--output",
+    "results/day22_multinli_timing_v2"
+  ],
+  "external_process_group_limit_seconds": 1500,
+  "spec_sha256": "a0eac29fed474ca12b7605e757ab3820e21a85d6f93bfee41ad44b4bb2221536",
+  "git_commit": "ba726fbd6dc6d62bba615fc9f06669ccbb1bfa1c",
+  "gpu_memory_total_mib": 24564,
+  "gpu_memory_used_before_mib": 1,
+  "pid": 9465,
+  "returncode": 1,
+  "seconds": 6.428716908209026,
+  "finished_utc": "2026-10-08T03:56:38.787723+00:00"
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot_v2.py", line 303, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot_v2.py", line 299, in main
+    run(args)
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot_v2.py", line 192, in run
+    assert actual['input_ids'].shape[1] > 64, 'Context override smoke check needs a long first batch'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Context override smoke check needs a long first batch

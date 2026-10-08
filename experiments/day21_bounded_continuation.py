@@ -26,7 +26,11 @@ def write(path, value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--phase', choices=['replay', 'audit'], required=True)
+    parser.add_argument('--regime', choices=['banking', 'amazon'], default='banking')
     args = parser.parse_args()
+    replay_name = REPLAY.replace('banking', args.regime)
+    audit_name = AUDIT.replace('banking', args.regime)
+    note_prefix = 'day21_' if args.regime == 'banking' else 'day21_amazon_'
     os.chdir(ROOT)
     lock = open('/workspace/mitosis-restart-worker.lock', 'a')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -40,22 +44,22 @@ def main():
     assert not previous.get('failed')
     assert all(x['status'] == 'completed' for x in previous['jobs'])
     if args.phase == 'audit':
-        replay = Path('results') / REPLAY
+        replay = Path('results') / replay_name
         assert json.loads((replay / 'observer_verification.json').read_text())['status'] == 'passed'
-        calibration = json.loads(Path('notes/day21_replay_execution.json').read_text())
+        calibration = json.loads(Path('notes/' + note_prefix + 'replay_execution.json').read_text())
         assert calibration['status'] == 'completed'
         assert calibration['seconds'] < 240, 'Replayed trainer too slow for the bounded audit budget'
-        assert not any(x['name'] == AUDIT for x in previous['jobs'])
-    name = REPLAY if args.phase == 'replay' else AUDIT
+        assert not any(x['name'] == audit_name for x in previous['jobs'])
+    name = replay_name if args.phase == 'replay' else audit_name
     output = Path('results') / name
     assert not output.exists(), 'Refusing to overwrite an attempt'
-    receipt_path = Path('notes/day21_' + args.phase + '_execution.json')
+    receipt_path = Path('notes/' + note_prefix + args.phase + '_execution.json')
     assert not receipt_path.exists()
     budget = 300 if args.phase == 'replay' else 1380
     external_limit = budget + 120
     deadline = datetime.now(timezone.utc) + timedelta(seconds=budget)
     command = [sys.executable, '-u', '-m', 'experiments.day21_checked_trajectory',
-               '--output', str(output), '--deadline-utc', deadline.isoformat()]
+               '--output', str(output), '--deadline-utc', deadline.isoformat(), '--regime', args.regime]
     if args.phase == 'audit':
         command.append('--factorial')
     env = os.environ.copy()
@@ -64,7 +68,8 @@ def main():
            'status': 'running', 'started_utc': datetime.now(timezone.utc).isoformat(),
            'command': command, 'training_budget_seconds': budget,
            'external_process_group_limit_seconds': external_limit,
-           'spec_sha256': hashlib.sha256(Path('notes/day21_bounded_continuation_spec.md').read_bytes()).hexdigest(),
+           'spec_sha256': hashlib.sha256(Path('notes/day21_bounded_continuation_spec.md' if args.regime == 'banking'
+                                             else 'notes/day21_amazon_continuation_spec.md').read_bytes()).hexdigest(),
            'git_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()}
     write(receipt_path, row)
     started = time.monotonic()

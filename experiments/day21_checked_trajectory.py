@@ -9,6 +9,7 @@ import sys
 from huggingface_hub import HfApi
 from experiments import day8_fixed_memory_recurrence as trainer
 from experiments import day15_weight_moment_recurrence as observer
+from experiments import domain_recurrence_data
 
 
 def main():
@@ -16,18 +17,20 @@ def main():
     parser.add_argument('--output', required=True)
     parser.add_argument('--deadline-utc', required=True)
     parser.add_argument('--factorial', action='store_true')
+    parser.add_argument('--regime', choices=['banking', 'amazon'], default='banking')
     args = parser.parse_args()
-    reference = Path('results/day8_banking_private_cau_seed2029_b_first_fixed512')
+    reference = Path(f'results/day8_{args.regime}_private_cau_seed2029_b_first_fixed512')
     old = json.loads((reference / 'provenance.json').read_text())
     revision = json.loads(Path('notes/restart_20261006_preflight.json').read_text())['backbone_revision']
     assert old['model_revision'] == revision
     os.environ['MITOSIS_MODEL_REVISION'] = revision
-    dataset_revision = HfApi().dataset_info('PolyAI/banking77').sha
+    dataset_name = 'PolyAI/banking77' if args.regime == 'banking' else 'goosmanlei/amazon_reviews_multi'
+    dataset_revision = HfApi().dataset_info(dataset_name).sha
     assert dataset_revision
-    load_dataset = trainer.load_dataset
+    load_dataset = trainer.load_dataset if args.regime == 'banking' else domain_recurrence_data.load_dataset
 
     def pinned_dataset(name, *positional, **keywords):
-        assert name == 'PolyAI/banking77'
+        assert name == dataset_name
         keywords['revision'] = dataset_revision
         return load_dataset(name, *positional, **keywords)
 
@@ -48,9 +51,12 @@ def main():
         print('RESTORED_STREAM_IDENTITY_PASS', digest, dataset_revision, flush=True)
         return result, boundaries
 
-    trainer.load_dataset = pinned_dataset
+    if args.regime == 'banking':
+        trainer.load_dataset = pinned_dataset
+    else:
+        domain_recurrence_data.load_dataset = pinned_dataset
     trainer.reorder_stream = checked_stream
-    common = ['--regime', 'banking', '--seed', '2029', '--order', 'b_first',
+    common = ['--regime', args.regime, '--seed', '2029', '--order', 'b_first',
               '--output', args.output, '--deadline-utc', args.deadline_utc]
     if args.factorial:
         sys.argv = ['day15_weight_moment_recurrence', *common]

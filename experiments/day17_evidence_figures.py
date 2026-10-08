@@ -61,7 +61,7 @@ def frozen_classifier_figure():
     ax.set_yticks(range(3), ['Frozen centroid', 'Last active', 'Uniform mixture'])
     ax.invert_yaxis()
     ax.set_xlabel('LoRA plus output classifier minus output classifier only\nDevelopment accuracy difference (percentage points)')
-    ax.set_title('Frozen hidden pre-classifier | '+str(int(d.seed_clusters.min()))+' paired training seeds')
+    ax.set_title('BANKING | Frozen hidden pre-classifier | '+str(int(d.seed_clusters.min()))+' paired training seeds')
     ax.grid(axis='x', alpha=.2)
     fig.tight_layout()
     save(fig, 'frozen_preclassifier_lora_comparison')
@@ -122,8 +122,10 @@ def main():
                 ax.set_yticks(range(4), LABELS); ax.invert_yaxis()
                 ax.set_title(regime.upper() + ' | ' + ('Before update' if phase == 'initial' else 'After update'))
                 ax.set_xlabel('Reset effect on cross-entropy component')
-                ax.grid(axis='x', alpha=.2); ax.legend(fontsize=8)
-        fig.tight_layout(); save(fig, 'label_group_attribution')
+                ax.grid(axis='x', alpha=.2)
+        handles, labels = axes[0, 0].get_legend_handles_labels()
+        fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.5, 1.02), ncol=2, fontsize=9)
+        fig.tight_layout(rect=(0, 0, 1, .97)); save(fig, 'label_group_attribution')
         captions += ['* `label_group_attribution`: All marginal reset contrasts in label-group '
             'probability loss and conditional within-group loss, before and after the matched '
             'update. Group metadata is evaluator-only and never enters allocation or deployed '
@@ -139,8 +141,11 @@ def main():
             ax.plot(means.index, means, marker='o', color=color, label=f'Rank {rank} paired-order mean')
             ax.scatter(d.learning_rate, d.final_macro_accuracy, color=color, alpha=.5, marker='x', s=30)
         ax.set_xscale('log'); ax.set_xlabel('AdamW learning rate')
+        rates = sorted(grid.learning_rate.unique())
+        ax.set_xticks(rates, [f'{rate:g}' for rate in rates])
+        ax.minorticks_off()
         ax.set_ylabel('Final concept-macro development accuracy')
-        ax.set_title('Seed 2026 tuning grid | both orders retained')
+        ax.set_title('BANKING | Seed 2026 tuning grid | both orders retained')
         ax.grid(alpha=.2); ax.legend(fontsize=8)
         fig.tight_layout(); save(fig, 'static_pilot_grid')
         captions += ['* `static_pilot_grid`: Every declared learning-rate candidate for both ranks '
@@ -159,7 +164,7 @@ def main():
                 ax.plot([100*r.ci_low,100*r.ci_high],[i,i],color=color,lw=1.5)
         ax.axvline(0,color='black',lw=.7);ax.set_yticks(range(len(d)),labels);ax.invert_yaxis()
         ax.set_xlabel('Fixed-memory adaptive minus tuned static accuracy (percentage points)')
-        ax.set_title('Every frozen adaptive rule and both tuned static ranks')
+        ax.set_title('BANKING | Every frozen adaptive rule and both tuned static ranks')
         ax.grid(axis='x',alpha=.2);fig.tight_layout();save(fig,'tuned_static_development_comparison')
         captions += ['* `tuned_static_development_comparison`: Every adaptive routing rule versus '
             'both pilot-selected static ranks. Positive differences favor the adaptive reference. '

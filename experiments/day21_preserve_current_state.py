@@ -65,7 +65,9 @@ def main():
         'attempt names and a short hard process-group cap, and retain unsuccessful attempts.\n')
     Path('notes/day21_session_handoff.md').write_text(handoff)
     subprocess.run(['git', 'add', '-A'], check=True)
-    subprocess.run(['git', 'diff', '--cached', '--check'], check=True)
+    # Preserve raw terminal progress and generated SVG whitespace byte-for-byte.
+    subprocess.run(['git', 'diff', '--cached', '--check', '--', 'experiments/day21_*.py',
+                    'notes/day21_*.md', 'notes/paper_working_draft.md'], check=True)
     subprocess.run(['git', 'commit', '-m', 'Preserve two exact original factorial continuations, full evidence refresh and source audit'], check=True)
     print('LOCAL_COMPLETE_SNAPSHOT', subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
           'CHECKPOINTS', len(manifest), 'BYTES', sum(x['bytes'] for x in manifest.values()), flush=True)

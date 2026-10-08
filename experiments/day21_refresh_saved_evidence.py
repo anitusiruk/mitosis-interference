@@ -12,6 +12,7 @@ import subprocess
 import sys
 
 import pandas as pd
+import numpy as np
 from experiments.day5_report import markdown_table
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +42,38 @@ def main():
                   'experiments/day15_weight_moment_recurrence.py', 'notes/day15_weight_moment_spec.md']
     for name in scientific:
         assert subprocess.check_output(['git', 'show', BASE + ':' + name]) == Path(name).read_bytes()
+    # Additional post-outcome QC of saved aggregates, not a new replication or
+    # a claim that historical per-example evaluation hashes were recorded.
+    development_checks = []
+    for regime in ['banking', 'amazon']:
+        reference = Path(f'results/day8_{regime}_private_cau_seed2029_b_first_fixed512')
+        outputs = [Path(f'results/day21_{regime}_private_cau_seed2029_b_first_replay'),
+                   Path(f'results/day15_{regime}_private_cau_seed2029_b_first_weight_moments')]
+        for output in outputs:
+            for filename in ['eval_matrix.csv', 'label_free_eval.csv']:
+                left, right = [pd.read_csv(p / filename) for p in [reference, output]]
+                assert list(left.columns) == list(right.columns) and left.shape == right.shape
+                assert left.checkpoint.nunique() == right.checkpoint.nunique() == 5
+                errors = {}
+                for column in left:
+                    if column in {'loss', 'concept_prob_mass', 'concept_logit_margin'}:
+                        a, b = left[column].to_numpy(), right[column].to_numpy()
+                        assert np.isfinite(a).all() and np.isfinite(b).all()
+                        errors[column] = float(np.max(np.abs(a-b)))
+                        assert np.allclose(a, b, atol=1e-6, rtol=0), (str(output), filename, column)
+                    else:
+                        assert left[column].equals(right[column]), (str(output), filename, column)
+                development_checks.append({'reference': str(reference), 'output': str(output),
+                    'filename': filename, 'rows_checked': len(left), 'checkpoints_checked': 5,
+                    'non_loss_metadata_and_accuracies_exactly_equal': True,
+                    'continuous_loss_metric_absolute_tolerance': 1e-6, 'maximum_metric_errors': errors,
+                    'reference_sha256': sha(reference / filename), 'output_sha256': sha(output / filename)})
+    write(Path('notes/day21_development_replay_integrity.json'), {
+        'utc': datetime.now(timezone.utc).isoformat(), 'status': 'passed',
+        'scope': 'all saved segment-end aggregate development metrics',
+        'historical_per_example_evaluation_hash_available': False,
+        'per_example_identity_not_claimed': True, 'check_added_after_observer_outcomes': True,
+        'training_outputs_modified': False, 'checks': development_checks})
     draft = Path('notes/paper_working_draft.md')
     original = draft.read_text()
     assert draft.read_bytes() == subprocess.check_output(['git', 'show', BASE + ':' + str(draft)])
@@ -136,6 +169,8 @@ def main():
         'figure_visual_review_pending': True,
         'derived_sha256': {str(p): sha(p) for p in [draft, progress, Path('results/day15_seed_intervals.csv')]},
         'matplotlib_version': __import__('matplotlib').__version__}
+    receipt['refresh_script_sha256'] = sha(Path(__file__))
+    receipt['development_aggregate_replay_check'] = 'notes/day21_development_replay_integrity.json'
     write(Path('notes/day21_evidence_refresh.json'), receipt)
     print('SAVED_EVIDENCE_REFRESH_PASS', len(coverage), 'trajectories; 56 marginal rows; old outputs archived', flush=True)
 

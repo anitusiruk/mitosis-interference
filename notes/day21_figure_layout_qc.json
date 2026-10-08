@@ -1,0 +1,37 @@
+{
+  "first_render_sha256": {
+    "figures/extended_audit/CAPTIONS.md": "73b6caa8b25f2371797e9a5678a774c8a08f9f56cf619c973eefeb41a875db08",
+    "figures/extended_audit/frozen_preclassifier_lora_comparison.pdf": "d1e98f818a6fe801ef277bd6f4d9461bdc18937890cdb1dfede2d5e6f5a436d1",
+    "figures/extended_audit/frozen_preclassifier_lora_comparison.png": "0ed0206b65ec975495a208ee583b1eeaef1ccc9d7ce6ba8b33e275607fa71498",
+    "figures/extended_audit/frozen_preclassifier_lora_comparison.svg": "f117e75fdb456612c42549356e11adda720e7b22e7afa8ebdda20e38fbff0c80",
+    "figures/extended_audit/label_group_attribution.pdf": "62aa22b108595d6cd250fbb338797cf6d225d3a702bf8c14e1638f4c72fc805f",
+    "figures/extended_audit/label_group_attribution.png": "8eb9c19edce8afe538be51ff1d5a841e2dcda79e1640eada4191b157c665b38b",
+    "figures/extended_audit/label_group_attribution.svg": "417a66133aebbd2e097738ab7dc646121a29cc05c6e8801bfb575b57fd7bc58e",
+    "figures/extended_audit/static_pilot_grid.pdf": "80ca97d642f4efbe7c235bc95aa57fde03d78ff4c7f73b0170c342bd5514a016",
+    "figures/extended_audit/static_pilot_grid.png": "09caa5802e930c53675292dce249e70e295d8044f0350737b5bf6e98f37fabca",
+    "figures/extended_audit/static_pilot_grid.svg": "242cb7592c0c064a7d0a5718ce16e47f9658c8324eef14cfcdb42f551f2affc6",
+    "figures/extended_audit/tuned_static_development_comparison.pdf": "1540352eff4afa4691a72ae0ef015e0ec3e4baa3fdeaa5b6d741a6b9dff71402",
+    "figures/extended_audit/tuned_static_development_comparison.png": "1353ef369055ce9c0992fa9bfd6b062825fc4db3814aabece94bb83cb8fd4b5f",
+    "figures/extended_audit/tuned_static_development_comparison.svg": "feec27b665180958f2f13deb177ab5f3868aa3414c91d7e119acea4ce9c98685",
+    "figures/extended_audit/weight_state_attribution.pdf": "ac5471dca8609e01fe77bb7adac0dbd4d4782f967e41a2f7a222c1dc6b047318",
+    "figures/extended_audit/weight_state_attribution.png": "3eb0e0c38d4425d0fb363dad98293b65a1cb63633efa9d1c5f34787bc0ebd00a",
+    "figures/extended_audit/weight_state_attribution.svg": "8a1a7d7fb0ae6bfc6d92c35ec121c958a88ce7daadf940a174c3d11dac2b980e"
+  },
+  "first_render_archive": "figures/extended_audit/day21_first_render",
+  "reason": "Prevent legend overlap with intervals, show all six declared learning rates, and label BANKING scope explicitly",
+  "numeric_data_changed": false,
+  "visual_review_pending": false,
+  "visual_review_utc": "2026-10-08T03:19:06.886327+00:00",
+  "reviewed_format": "PNG",
+  "all_five_figures_visually_reviewed": true,
+  "final_png_sha256": {
+    "static_pilot_grid.png": "535729849edd56e25b2a16fde9a6814065ba7a8abce52a9e166bfdb26cbe0f07",
+    "label_group_attribution.png": "587506cff82520713b30efa2431c418e1e157745adeb54f728d9646a68d72294",
+    "tuned_static_development_comparison.png": "8f338402d9a18c5a062aabdd6074a907a2714a605aaed27701a9dd9b3b1930d5",
+    "frozen_preclassifier_lora_comparison.png": "52dc99c6897a3bdf511a2a65d3efde80a2c58a0321593d9aeb527369961d644d",
+    "weight_state_attribution.png": "3eb0e0c38d4425d0fb363dad98293b65a1cb63633efa9d1c5f34787bc0ebd00a"
+  },
+  "all_declared_grid_rates_labelled": true,
+  "legend_outside_intervention_panels": true,
+  "figure_script_sha256": "0377e5e5138d03e5c5410e27dd422fca150e5d8c9d5dc0c18f2bf3ad16c8ab9a"
+}

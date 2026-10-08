@@ -1,0 +1,127 @@
+{
+  "check_added_after_observer_outcomes": true,
+  "checks": [
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "eval_matrix.csv",
+      "maximum_metric_errors": {
+        "concept_logit_margin": 0.0,
+        "concept_prob_mass": 0.0,
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day21_banking_private_cau_seed2029_b_first_replay",
+      "output_sha256": "c5bf374f7014ddec13e28c8b31df12584c8d8951dc730dca73cf99fb13a32a73",
+      "reference": "results/day8_banking_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "c5bf374f7014ddec13e28c8b31df12584c8d8951dc730dca73cf99fb13a32a73",
+      "rows_checked": 33
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "label_free_eval.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day21_banking_private_cau_seed2029_b_first_replay",
+      "output_sha256": "38935d38dc07c1159b6c26fdbe426a77605b91f9a9a1dca6596029bb3fed4b4a",
+      "reference": "results/day8_banking_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "38935d38dc07c1159b6c26fdbe426a77605b91f9a9a1dca6596029bb3fed4b4a",
+      "rows_checked": 45
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "eval_matrix.csv",
+      "maximum_metric_errors": {
+        "concept_logit_margin": 0.0,
+        "concept_prob_mass": 0.0,
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day15_banking_private_cau_seed2029_b_first_weight_moments",
+      "output_sha256": "c5bf374f7014ddec13e28c8b31df12584c8d8951dc730dca73cf99fb13a32a73",
+      "reference": "results/day8_banking_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "c5bf374f7014ddec13e28c8b31df12584c8d8951dc730dca73cf99fb13a32a73",
+      "rows_checked": 33
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "label_free_eval.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day15_banking_private_cau_seed2029_b_first_weight_moments",
+      "output_sha256": "38935d38dc07c1159b6c26fdbe426a77605b91f9a9a1dca6596029bb3fed4b4a",
+      "reference": "results/day8_banking_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "38935d38dc07c1159b6c26fdbe426a77605b91f9a9a1dca6596029bb3fed4b4a",
+      "rows_checked": 45
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "eval_matrix.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day21_amazon_private_cau_seed2029_b_first_replay",
+      "output_sha256": "44885198a41332bb3f62c99f52b51d3b8f68fb36067a69268e65761aa7ed5995",
+      "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "44885198a41332bb3f62c99f52b51d3b8f68fb36067a69268e65761aa7ed5995",
+      "rows_checked": 15
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "label_free_eval.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day21_amazon_private_cau_seed2029_b_first_replay",
+      "output_sha256": "98e625d24070158738b8f190a615cec3d995676f086211068456486e1577477e",
+      "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "98e625d24070158738b8f190a615cec3d995676f086211068456486e1577477e",
+      "rows_checked": 45
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "eval_matrix.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day15_amazon_private_cau_seed2029_b_first_weight_moments",
+      "output_sha256": "44885198a41332bb3f62c99f52b51d3b8f68fb36067a69268e65761aa7ed5995",
+      "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "44885198a41332bb3f62c99f52b51d3b8f68fb36067a69268e65761aa7ed5995",
+      "rows_checked": 15
+    },
+    {
+      "checkpoints_checked": 5,
+      "continuous_loss_metric_absolute_tolerance": 1e-06,
+      "filename": "label_free_eval.csv",
+      "maximum_metric_errors": {
+        "loss": 0.0
+      },
+      "non_loss_metadata_and_accuracies_exactly_equal": true,
+      "output": "results/day15_amazon_private_cau_seed2029_b_first_weight_moments",
+      "output_sha256": "98e625d24070158738b8f190a615cec3d995676f086211068456486e1577477e",
+      "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+      "reference_sha256": "98e625d24070158738b8f190a615cec3d995676f086211068456486e1577477e",
+      "rows_checked": 45
+    }
+  ],
+  "historical_per_example_evaluation_hash_available": false,
+  "per_example_identity_not_claimed": true,
+  "scope": "all saved segment-end aggregate development metrics",
+  "status": "passed",
+  "training_outputs_modified": false,
+  "utc": "2026-10-08T03:11:12.906127+00:00"
+}

@@ -1,0 +1,9 @@
+# Restored-pod bounded continuation
+
+This scheduling amendment is declared before the next previously unlaunched trajectory. The saved snapshot is b13105d211c013120784e79c38e3e77849e4ccbf. The restored RTX 4090 has 24 GB VRAM. Every restored LFS object and checkpoint-manifest file must pass SHA-256 verification, followed by the existing tiny CPU and CUDA observer-integrity gates.
+
+First run the unchanged 80-step BANKING private-CAU reference, seed 2029, b_first, without the factorial observer. Compare its original data-stream digest before any training update, and compare all final learner-state and adapter tensors bitwise to the saved reference. A mismatch halts continuation; do not relax tolerances. Pin the original backbone revision. Pin the dataset revision recovered during restoration and disclose that the historical full-dataset revision was not recorded; stream equality is narrower evidence than equality of every unused dataset row.
+
+After a successful replay taking less than four minutes, run only the next unlaunched original factorial job, BANKING seed 2029 b_first. Preserve all 16 interventions, two folds, every mature batch, the original training and evaluation protocol, and the original observer noninterference check. The training deadline is 23 minutes from launch, with an external process-group limit of 25 minutes. A replay has a five-minute training deadline and seven-minute external limit. Do not automatically launch another job. Record incomplete and failed attempts without overwriting or treating them as completed evidence.
+
+This completes part of an existing development study. It is not an untouched confirmation or evidence of general method superiority. Preserve earlier reports before regenerating coverage and all declared contrasts. The official test set remains unused. Save all progress to anitusiruk/mitosis-interference on day5-causal-audit.

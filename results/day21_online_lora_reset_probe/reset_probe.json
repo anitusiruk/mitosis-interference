@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "utc": "2026-10-08T02:45:01.128214+00:00",
+  "author_commit": "59b9fd42ea9ca701cb36978709d5bc0e25938d81",
+  "author_lora_source_sha256": "fed2af253625c4f9a28b4258ec5fc6074e4bec329ccd2fb081342d40aceaf572",
+  "script_sha256": "16911eb76552c2ba3dc6e8a0b4e3bf7384e3e55e98383a1eef36f44d366b5885",
+  "torch_version": "2.8.0+cu128",
+  "device": "cpu",
+  "synthetic_network_and_inputs": true,
+  "unchanged_author_forward_reset_construction": true,
+  "ast_extracted_classes": [
+    "_LoRA_qkv_timm",
+    "LoRA_ViT_timm"
+  ],
+  "published_training_loop_executed": false,
+  "full_method_reproduced": false,
+  "accuracy_claim_permitted": false,
+  "seeds_are_toy_checks_not_benchmark_replicates": true,
+  "seconds": 0.9331311471760273,
+  "checks": [
+    {
+      "seed": 17,
+      "dtype": "torch.float32",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013965763903588462,
+          "new_residual_norm_after_step": 4.428592273526198e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.011243723982411457,
+      "second_consolidation_cross_term_norm": 0.011243744791273977,
+      "second_consolidation_identity_max_error": 2.1688174456357956e-07,
+      "equality_tolerance": 1e-06
+    },
+    {
+      "seed": 31,
+      "dtype": "torch.float32",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013968843303854247,
+          "new_residual_norm_after_step": 3.6201990797775176e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.009544912731724427,
+      "second_consolidation_cross_term_norm": 0.009544955868715186,
+      "second_consolidation_identity_max_error": 1.2334203347563744e-07,
+      "equality_tolerance": 1e-06
+    },
+    {
+      "seed": 47,
+      "dtype": "torch.float32",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013914412385851334,
+          "new_residual_norm_after_step": 4.896393181412453e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.011931281041491871,
+      "second_consolidation_cross_term_norm": 0.01193132254107071,
+      "second_consolidation_identity_max_error": 1.3993121683597565e-07,
+      "equality_tolerance": 1e-06
+    },
+    {
+      "seed": 61,
+      "dtype": "torch.float32",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013970725802283964,
+          "new_residual_norm_after_step": 3.1547145348058647e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.008522695665050877,
+      "second_consolidation_cross_term_norm": 0.008522732880587818,
+      "second_consolidation_identity_max_error": 1.177832018584013e-07,
+      "equality_tolerance": 1e-06
+    },
+    {
+      "seed": 79,
+      "dtype": "torch.float32",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013978700408543857,
+          "new_residual_norm_after_step": 2.69313949846031e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.008440560559916155,
+      "second_consolidation_cross_term_norm": 0.008440589759839485,
+      "second_consolidation_identity_max_error": 2.9796501621603966e-07,
+      "equality_tolerance": 1e-06
+    },
+    {
+      "seed": 17,
+      "dtype": "torch.float64",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013864109329412189,
+          "new_residual_norm_after_step": 3.4388473715598227e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.00785490026305142,
+      "second_consolidation_cross_term_norm": 0.007854900263051433,
+      "second_consolidation_identity_max_error": 2.955535122195485e-16,
+      "equality_tolerance": 1e-12
+    },
+    {
+      "seed": 31,
+      "dtype": "torch.float64",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013985093189491974,
+          "new_residual_norm_after_step": 2.8486770986236327e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.008261652003410131,
+      "second_consolidation_cross_term_norm": 0.008261652003410192,
+      "second_consolidation_identity_max_error": 2.1469913520644202e-16,
+      "equality_tolerance": 1e-12
+    },
+    {
+      "seed": 47,
+      "dtype": "torch.float64",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013968197529341856,
+          "new_residual_norm_after_step": 1.9863086429978393e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.009239985409717258,
+      "second_consolidation_cross_term_norm": 0.009239985409717258,
+      "second_consolidation_identity_max_error": 1.9927635930283571e-16,
+      "equality_tolerance": 1e-12
+    },
+    {
+      "seed": 61,
+      "dtype": "torch.float64",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013905525185223437,
+          "new_residual_norm_after_step": 3.0827093714612437e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.008532056892131582,
+      "second_consolidation_cross_term_norm": 0.008532056892131566,
+      "second_consolidation_identity_max_error": 2.1206994493816467e-16,
+      "equality_tolerance": 1e-12
+    },
+    {
+      "seed": 79,
+      "dtype": "torch.float64",
+      "arms": {
+        "inherited_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 4,
+          "new_factor_norm_after_step": 0.0013976306947225332,
+          "new_residual_norm_after_step": 3.2802744828968086e-06
+        },
+        "fresh_adam": {
+          "initial_new_factor_gradient_norm": 0.0,
+          "inherited_state_parameter_count": 0,
+          "new_factor_norm_after_step": 0.0,
+          "new_residual_norm_after_step": 0.0
+        }
+      },
+      "first_consolidation_qkv_max_difference": 0.0,
+      "second_consolidation_qkv_change_norm": 0.008728309079567308,
+      "second_consolidation_cross_term_norm": 0.008728309079567313,
+      "second_consolidation_identity_max_error": 2.641116492174689e-16,
+      "equality_tolerance": 1e-12
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+BOUNDED_NLI day22_multinli_timing_v3 failed 6.33
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day22_bounded_nli_pilot_v3.py", line 107, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/day22_bounded_nli_pilot_v3.py", line 103, in main
+    raise RuntimeError('Preserved pilot failed; inspect before continuing')
+RuntimeError: Preserved pilot failed; inspect before continuing

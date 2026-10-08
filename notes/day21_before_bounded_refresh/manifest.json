@@ -1,0 +1,122 @@
+{
+  "figures/extended_audit/CAPTIONS.md": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/CAPTIONS.md",
+    "bytes": 2605,
+    "sha256": "73b6caa8b25f2371797e9a5678a774c8a08f9f56cf619c973eefeb41a875db08"
+  },
+  "figures/extended_audit/frozen_preclassifier_lora_comparison.pdf": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/frozen_preclassifier_lora_comparison.pdf",
+    "bytes": 14885,
+    "sha256": "f5dcfaf1eb752d4c7e5ccc5c98a59d874a3d281b7372ff3229926845124715fc"
+  },
+  "figures/extended_audit/frozen_preclassifier_lora_comparison.png": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/frozen_preclassifier_lora_comparison.png",
+    "bytes": 71073,
+    "sha256": "0ed0206b65ec975495a208ee583b1eeaef1ccc9d7ce6ba8b33e275607fa71498"
+  },
+  "figures/extended_audit/frozen_preclassifier_lora_comparison.svg": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/frozen_preclassifier_lora_comparison.svg",
+    "bytes": 42291,
+    "sha256": "ebca86adc9fe488f821503c91f7e71710d7334b60ef485b6e0f09958b4f21e8d"
+  },
+  "figures/extended_audit/label_group_attribution.pdf": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/label_group_attribution.pdf",
+    "bytes": 22675,
+    "sha256": "7b17d35c3d6dbb599abee023d4ed14ad4bfa3ff1fd19a1eca53a8edd4dc58a61"
+  },
+  "figures/extended_audit/label_group_attribution.png": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/label_group_attribution.png",
+    "bytes": 182664,
+    "sha256": "8ef6d5fc8b3de0b30faf4de79c68f21ff7b42e0bee60aa13eb7ca747449160d2"
+  },
+  "figures/extended_audit/label_group_attribution.svg": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/label_group_attribution.svg",
+    "bytes": 118050,
+    "sha256": "d2b0324e783c2539e5b27be480665a92a3fcf962a07e03f6c1473e75dd9172f1"
+  },
+  "figures/extended_audit/static_pilot_grid.pdf": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/static_pilot_grid.pdf",
+    "bytes": 17630,
+    "sha256": "de807bfcbd098f1a0ba02cc431dfdb413c64d945e0f8b19ed0a46f483f8a8133"
+  },
+  "figures/extended_audit/static_pilot_grid.png": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/static_pilot_grid.png",
+    "bytes": 145657,
+    "sha256": "09caa5802e930c53675292dce249e70e295d8044f0350737b5bf6e98f37fabca"
+  },
+  "figures/extended_audit/static_pilot_grid.svg": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/static_pilot_grid.svg",
+    "bytes": 49820,
+    "sha256": "5eee758f3c5144557d519de76ea6054e4147f2774421548b2e52c68a6437872b"
+  },
+  "figures/extended_audit/tuned_static_development_comparison.pdf": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/tuned_static_development_comparison.pdf",
+    "bytes": 17027,
+    "sha256": "017569fd4a1dfd5dc0510d51e899fa659ad26adbf5ad1a149b0691de85c4c76c"
+  },
+  "figures/extended_audit/tuned_static_development_comparison.png": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/tuned_static_development_comparison.png",
+    "bytes": 129662,
+    "sha256": "1353ef369055ce9c0992fa9bfd6b062825fc4db3814aabece94bb83cb8fd4b5f"
+  },
+  "figures/extended_audit/tuned_static_development_comparison.svg": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/tuned_static_development_comparison.svg",
+    "bytes": 59291,
+    "sha256": "f57ae8cfb83cbb785b2158146ddc8894579d51edfee619e400a7e2ca52bec276"
+  },
+  "figures/extended_audit/weight_state_attribution.pdf": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/weight_state_attribution.pdf",
+    "bytes": 22081,
+    "sha256": "cfe20a9eaf2b2cd76bcef1c6c4b3d03667dbf6767577458475a9e97d1e787666"
+  },
+  "figures/extended_audit/weight_state_attribution.png": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/weight_state_attribution.png",
+    "bytes": 175696,
+    "sha256": "91d626b1c5f73b7291cf244690fac62d61fcc9ff2e0e053980f8aab45c97463d"
+  },
+  "figures/extended_audit/weight_state_attribution.svg": {
+    "archived_as": "notes/day21_before_bounded_refresh/figures/extended_audit/weight_state_attribution.svg",
+    "bytes": 81320,
+    "sha256": "02da404caf81670b4ef03ab13d69d290dd55dc6af5e3197f49be9d0fd7c35af2"
+  },
+  "notes/day15_weight_moment_results.md": {
+    "archived_as": "notes/day21_before_bounded_refresh/notes/day15_weight_moment_results.md",
+    "bytes": 35458,
+    "sha256": "a29a40670a014c27f75d5c9d05d9b757d1d702ce2b459d257a6f0d514abc9b43"
+  },
+  "notes/paper_working_draft.md": {
+    "archived_as": "notes/day21_before_bounded_refresh/notes/paper_working_draft.md",
+    "bytes": 32230,
+    "sha256": "9c65aa8fe42ec2c09332838d6e2b7635307333e583cbacbd56af940a09da4e3d"
+  },
+  "notes/research_progress.md": {
+    "archived_as": "notes/day21_before_bounded_refresh/notes/research_progress.md",
+    "bytes": 141933,
+    "sha256": "c3eb0f2be90a3787ebbc4c6ddea83515104728d55ff465dde8fed03c7f0b1d0a"
+  },
+  "results/day15_batch_contrasts.csv": {
+    "archived_as": "notes/day21_before_bounded_refresh/results/day15_batch_contrasts.csv",
+    "bytes": 8677536,
+    "sha256": "6210bb229996a9cd272c5a225e87dbd2be3cb07768e4f1ae66e048ba44d435a0"
+  },
+  "results/day15_coverage.csv": {
+    "archived_as": "notes/day21_before_bounded_refresh/results/day15_coverage.csv",
+    "bytes": 940,
+    "sha256": "14b3e35474fac9d6c6eb575d1420f32bb5f3655beb5592388d2b72cc84bff18d"
+  },
+  "results/day15_seed_contrasts.csv": {
+    "archived_as": "notes/day21_before_bounded_refresh/results/day15_seed_contrasts.csv",
+    "bytes": 40873,
+    "sha256": "4a7cc0d9befc1b0596b707af39e53bd236fabca6ac8399baa880fcc3df0c5a2a"
+  },
+  "results/day15_seed_intervals.csv": {
+    "archived_as": "notes/day21_before_bounded_refresh/results/day15_seed_intervals.csv",
+    "bytes": 117771,
+    "sha256": "c4585fc4c5e605ab4bb1c72d37a6e73dfb284aa5eda3a278ffb00bd74370783d"
+  },
+  "results/day15_trajectory_contrasts.csv": {
+    "archived_as": "notes/day21_before_bounded_refresh/results/day15_trajectory_contrasts.csv",
+    "bytes": 130519,
+    "sha256": "a72b39b7bec4d8702fcdbac30d09b2ce5476c2fa8f607d3a3a6151f2bfc6db89"
+  }
+}

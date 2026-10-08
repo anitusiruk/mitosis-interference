@@ -1,0 +1,25 @@
+{
+  "name": "day15_banking_private_cau_seed2029_b_first_weight_moments",
+  "study": 15,
+  "status": "completed",
+  "started_utc": "2026-10-08T02:35:49.810447+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day21_checked_trajectory",
+    "--output",
+    "results/day15_banking_private_cau_seed2029_b_first_weight_moments",
+    "--deadline-utc",
+    "2026-10-08T02:58:49.810363+00:00",
+    "--factorial"
+  ],
+  "training_budget_seconds": 1380,
+  "external_process_group_limit_seconds": 1500,
+  "spec_sha256": "43ecdfcaafcd1162eb6eed080aed1962ce8b3dfc6fa1e62ab3ea7b0ae2ee7612",
+  "git_commit": "f52ff055135c61bed5bd6c3a78da74ce6a4ccaab",
+  "pid": 3748,
+  "returncode": 0,
+  "seconds": 668.8466292023659,
+  "finished_utc": "2026-10-08T02:46:58.661542+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+  "stream_sha256": "c29f668113205ce3557e48ca8b9e2185b8df430d470db1b1ded4bf2482d8e5e8",
+  "expected_stream_sha256": "c29f668113205ce3557e48ca8b9e2185b8df430d470db1b1ded4bf2482d8e5e8",
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "dataset_revision": "a7b1fa9703f1f930d5c8e1a65c5d2774aaab0c85",
+  "stream_check_before_any_training_update": true,
+  "dataset_revision_recovered_at_restore": true,
+  "historical_full_dataset_revision_not_recorded": true
+}

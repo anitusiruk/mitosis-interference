@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-08T02:31:11.218060+00:00",
+  "status": "passed",
+  "restored_commit": "b13105d211c013120784e79c38e3e77849e4ccbf",
+  "lfs_unique_objects_verified": 580,
+  "lfs_working_files_verified": 783,
+  "checkpoint_manifest_files_verified": 1566,
+  "all_sha256_verified": true,
+  "checkpoint_bytes": 6347145119,
+  "integrity_gates": {
+    "cpu": {
+      "returncode": 0,
+      "seconds": 8.27413127105683,
+      "log": "logs/day21_moment_integrity_cpu.txt"
+    },
+    "cuda": {
+      "returncode": 0,
+      "seconds": 9.143497756216675,
+      "log": "logs/day21_moment_integrity_cuda.txt"
+    }
+  },
+  "finished_utc": "2026-10-08T02:31:47.727615+00:00",
+  "seconds": 36.509579656179994,
+  "free_disk_bytes": 19867119616
+}

@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-08T03:10:42.808262+00:00",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.18.0",
+    "datasets": "3.6.0",
+    "peft": "0.21.0",
+    "accelerate": "1.15.0",
+    "numpy": "2.1.2",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.10.7"
+  },
+  "training_requirements_sha256": "174687217c2473471eb8696c54b2d828c8e565fdd083ffe558e075e8518e4d38",
+  "plotting_requirements_sha256": "8be425bda43e02a42885b61c6f4acd03fea278bffc9428ddd982930d9a58855b",
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 595.91.07",
+  "restored_commit": "b13105d211c013120784e79c38e3e77849e4ccbf"
+}

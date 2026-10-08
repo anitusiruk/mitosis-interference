@@ -1,0 +1,26 @@
+{
+  "name": "day21_amazon_private_cau_seed2029_b_first_replay",
+  "study": "restore_replay",
+  "status": "completed",
+  "started_utc": "2026-10-08T02:49:55.787244+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day21_checked_trajectory",
+    "--output",
+    "results/day21_amazon_private_cau_seed2029_b_first_replay",
+    "--deadline-utc",
+    "2026-10-08T02:54:55.787114+00:00",
+    "--regime",
+    "amazon"
+  ],
+  "training_budget_seconds": 300,
+  "external_process_group_limit_seconds": 420,
+  "spec_sha256": "c7e9a127c4e65318a3040c3333207738f62a59f5cf0f459e5bb7dc2c260a3b28",
+  "git_commit": "5a70231a47aa9c07e87d3b316b9b10c8471a70a2",
+  "pid": 4310,
+  "returncode": 0,
+  "seconds": 46.86338533600792,
+  "finished_utc": "2026-10-08T02:50:42.653476+00:00"
+}

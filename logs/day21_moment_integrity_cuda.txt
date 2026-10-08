@@ -1,0 +1,59 @@
+(False, False, False, False) restores complete live state PASS
+(False, False, False, True) restores complete live state PASS
+(False, False, True, False) restores complete live state PASS
+(False, False, True, True) restores complete live state PASS
+(False, True, False, False) restores complete live state PASS
+(False, True, False, True) restores complete live state PASS
+(False, True, True, False) restores complete live state PASS
+(False, True, True, True) restores complete live state PASS
+(True, False, False, False) restores complete live state PASS
+(True, False, False, True) restores complete live state PASS
+(True, False, True, False) restores complete live state PASS
+(True, False, True, True) restores complete live state PASS
+(True, True, False, False) restores complete live state PASS
+(True, True, False, True) restores complete live state PASS
+(True, True, True, False) restores complete live state PASS
+(True, True, True, True) restores complete live state PASS
+all 16 cells exist exactly once PASS
+head matched initializer False PASS
+head matched initializer True PASS
+head optimizer transport is independent of weights PASS
+head empty optimizer state is empty in every cell PASS
+head inherited state is present even with reset weights PASS
+lora matched initializer False PASS
+lora matched initializer True PASS
+lora optimizer transport is independent of weights PASS
+lora empty optimizer state is empty in every cell PASS
+lora inherited state is present even with reset weights PASS
+moments do not affect initial prediction PASS
+old coupled cell matches reuse_lora_inherit_head PASS
+moments do not affect initial prediction PASS
+old coupled cell matches reuse_lora_fresh_head PASS
+moments do not affect initial prediction PASS
+old coupled cell matches fresh_lora_inherit_head PASS
+moments do not affect initial prediction PASS
+old coupled cell matches fresh_lora_fresh_head PASS
+full loss separates class-group mass and conditional loss before PASS
+full loss separates class-group mass and conditional loss after PASS
+label-group measurement is non-invasive PASS
+fully inherited cell equals real optimizer update PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+odd crossfit query partition PASS
+crossfit is non-invasive PASS
+cell order does not change losses or receipts PASS
+reverse crossfit is non-invasive PASS
+DAY15_WEIGHT_MOMENT_INTEGRITY_PASS cuda

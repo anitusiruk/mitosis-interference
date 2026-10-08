@@ -1,0 +1,33 @@
+{
+  "all_56_marginal_metric_rows_retained": true,
+  "command_returncodes": {
+    "factorial_integrity": 0,
+    "factorial_report": 0,
+    "figures": 0,
+    "progress_report": 0
+  },
+  "complete_factorial_observers": 12,
+  "derived_sha256": {
+    "notes/paper_working_draft.md": "66a3af068716f92768828b3b60031f34c82df01aba725bcd541e940560682531",
+    "notes/research_progress.md": "6bdad18eca8214520a02a6d7c4fd698701b9df6c85aa858318190ae459947dad",
+    "results/day15_seed_intervals.csv": "d1a6d417ecd6bface49d624835cc37b72b01e61b11043b54874829a7699ffc8f"
+  },
+  "development_aggregate_replay_check": "notes/day21_development_replay_integrity.json",
+  "figure_visual_review_pending": false,
+  "independent_saved_receipt_check": "notes/day21_factorial_integrity.json",
+  "manuscript_after_sha256": "66a3af068716f92768828b3b60031f34c82df01aba725bcd541e940560682531",
+  "manuscript_before_sha256": "9c65aa8fe42ec2c09332838d6e2b7635307333e583cbacbd56af940a09da4e3d",
+  "matplotlib_version": "3.10.7",
+  "new_test_access": false,
+  "original_scientific_source_unchanged": true,
+  "paired_training_seeds_by_regime": {
+    "amazon": 3,
+    "banking": 3
+  },
+  "planned_factorial_observers": 20,
+  "prior_derived_archive": "notes/day21_before_bounded_refresh",
+  "refresh_script_sha256": "52ed8a32e04478e0d4f85bbec6e24c5757614efb79527c9d605154f76e06f8cc",
+  "utc": "2026-10-08T03:12:25.045234+00:00",
+  "figure_visual_review_receipt": "notes/day21_figure_layout_qc.json",
+  "final_figure_script_sha256": "0377e5e5138d03e5c5410e27dd422fca150e5d8c9d5dc0c18f2bf3ad16c8ab9a"
+}

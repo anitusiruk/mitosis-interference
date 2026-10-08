@@ -1,0 +1,5 @@
+DERIVED_PASS factorial_report
+DERIVED_PASS factorial_integrity
+DERIVED_PASS progress_report
+DERIVED_PASS figures
+SAVED_EVIDENCE_REFRESH_PASS 12 trajectories; 56 marginal rows; old outputs archived

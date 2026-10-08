@@ -124,6 +124,8 @@ def main():
     updated = updated.replace('10/20 verified trajectories', '12/20 verified trajectories (three paired seeds per regime)')
     updated = updated.replace('A read-only check of 10 completed observer trajectories',
                               'A read-only check of 12 completed observer trajectories')
+    updated = updated.replace('The larger static rank-96 baseline remains untuned: its final accuracy is lower',
+                              'Under the original untuned fixed recipe, the larger static rank-96 baseline has final accuracy lower')
     anchor = 'Primary source links and precise scope are in `notes/novelty_audit_20261006.md` and `notes/classifier_prior_audit_20261006.md`.'
     assert updated.count(anchor) == 1
     new_prior = ('Huh et al. (2024, LoRA-the-Explorer) already ablate LoRA-factor and optimizer resets. '
@@ -152,7 +154,23 @@ def main():
     assert '## Secondary deployed-retention analysis' in updated
     draft.write_text(updated)
     progress = Path('notes/research_progress.md')
-    progress.write_text(progress.read_text() + '\n\n## October 8 bounded continuation\n\n'
+    progress_text = progress.read_text()
+    progress_text = progress_text.replace(
+        'baseline-specific tuning with pilot/confirmation separation remains necessary.',
+        'the subsequent Day-17 equal-grid study completed 24/24 pilot and 20/20 confirmation trajectories '
+        'with a rate selected per rank before fresh-seed outcomes. This addresses the declared rate grid; '
+        'broader tuning and complete-method confirmation remain open.')
+    progress_text = progress_text.replace(
+        'The saved GitHub snapshot and all 738 checkpoint files were successfully restored on the new pod; '
+        'notes/github_save_verification.json records the earlier authenticated save.',
+        'The October 8 restart SHA256-verified 580 unique LFS objects, 783 LFS working files and '
+        'all 1566 checkpoint-manifest files before the bounded continuation. '
+        'notes/day21_restore_integrity.json records that restoration; '
+        'the current snapshot requires its own day21_github_save_verification.json receipt.')
+    progress_text = progress_text.replace(
+        '4. Separate head-weight reset from moment reset and test an intervention whose structural interpretation ',
+        '4. Finish the remaining eight original weight/state factorial cells and test an intervention whose structural interpretation ')
+    progress.write_text(progress_text + '\n\n## October 8 bounded continuation\n\n'
         'The original factorial queue now has 12/20 independently verified trajectories and three '
         'paired training seeds in each regime. Two additional original seed-2029 B-first cells '
         'passed exact replay gates; no contrast was changed. `notes/day21_factorial_integrity.json` '

@@ -1,0 +1,233 @@
+{
+  "repository": "https://github.com/Christina200/Online-LoRA-official",
+  "commit": "59b9fd42ea9ca701cb36978709d5bc0e25938d81",
+  "tracked_files": 56,
+  "all_source_sha256": {
+    "Disjoint/base_vit.py": {
+      "bytes": 17243,
+      "sha256": "6d1a86d4c6e4279d5dbc55e89f37f119923469aac9c81f721ed62adbcb4ee631"
+    },
+    "Disjoint/configs/cifar100_online_lora.py": {
+      "bytes": 7979,
+      "sha256": "6efc8b7b7f9ccdf8f1a98c3904925251ee13b596399e454867b2d076937e9aca"
+    },
+    "Disjoint/configs/core50_online_lora.py": {
+      "bytes": 7968,
+      "sha256": "b9fa8e5d130a9784dfb55cb65f4827b2ef3860beba292bd143002179fb41a754"
+    },
+    "Disjoint/configs/cub200_online_lora.py": {
+      "bytes": 7977,
+      "sha256": "e47cfd81f5d594cdee7c0e4c355b9438ea8e5dc0de79caaa0d59d55b3ee04d02"
+    },
+    "Disjoint/configs/imagenetR_online_lora.py": {
+      "bytes": 7982,
+      "sha256": "f78626caece37e2d07bc9504d822d3415d526a9b838caf36f44de4b37bbaa00d"
+    },
+    "Disjoint/configs/sketch_online_lora.py": {
+      "bytes": 8008,
+      "sha256": "5586996e7dc7ac497c49fb008f6914037a18d17c0176b01123b09ed067176fcd"
+    },
+    "Disjoint/continual_datasets/continual_datasets.py": {
+      "bytes": 30804,
+      "sha256": "7778e5978ebe5d92eb25872796663a45f93434cfe3a71ad565b3ea8596c83b08"
+    },
+    "Disjoint/continual_datasets/dataset_utils.py": {
+      "bytes": 11036,
+      "sha256": "c7ae781c2417be27a3b84fcc9c946c4215711b92405c26722020bd1a8a86bf2d"
+    },
+    "Disjoint/datasets.py": {
+      "bytes": 9787,
+      "sha256": "3fa902a666e71807c2b15cd8ecef4fe493f43de07de03779ba5a57dcec675a04"
+    },
+    "Disjoint/engine.py": {
+      "bytes": 13269,
+      "sha256": "511b59ded7f657094957e3e8556e55e196f8ed06a77c25579640f8616976541f"
+    },
+    "Disjoint/lora.py": {
+      "bytes": 31064,
+      "sha256": "fed2af253625c4f9a28b4258ec5fc6074e4bec329ccd2fb081342d40aceaf572"
+    },
+    "Disjoint/main.py": {
+      "bytes": 3835,
+      "sha256": "af3a584fd5596de2a426929a159c5a982c8de4c575364bb04d5f658137802f71"
+    },
+    "Disjoint/scripts/disjoint_cil.sh": {
+      "bytes": 437,
+      "sha256": "9d7e209729eb064550f68249cec559128d9c3f065daab209d1bb6620edc54384"
+    },
+    "Disjoint/scripts/domain.sh": {
+      "bytes": 293,
+      "sha256": "eaf51737ffd718e238c36ecbddf8b2ceb5eaf3ea078ec53e81ba55143964ca87"
+    },
+    "Disjoint/utils.py": {
+      "bytes": 8342,
+      "sha256": "a0e2a75b3ed48e01406120d0b60c6ccac018dae51725d2effca09d1f43c915e2"
+    },
+    "README.md": {
+      "bytes": 7330,
+      "sha256": "c98076ba3d48d18589ac4b9d8dfaf182b660de205c1c2ac0efbb39d4cf77aade"
+    },
+    "Si-blurry/configuration/config_blurry.py": {
+      "bytes": 6488,
+      "sha256": "1dbf7eaab4073006149b5f3d19546f8847568f19520d196afdfac0abc77a44d7"
+    },
+    "Si-blurry/datasets/CORe50.py": {
+      "bytes": 3465,
+      "sha256": "fd16926ae88f43233c9298319fea1d91390d27b298d1baa6ea6065c9973a5b30"
+    },
+    "Si-blurry/datasets/CUB200.py": {
+      "bytes": 2456,
+      "sha256": "6d802d29c91019398061e0e106bf6b241e49d191f070bc57bf7c809fe5ac6e5f"
+    },
+    "Si-blurry/datasets/FashionMNIST.py": {
+      "bytes": 985,
+      "sha256": "7830e43a162280ccaadcc9d64e88c822d300bd26283efeb33991e1f5c277798e"
+    },
+    "Si-blurry/datasets/Flowers102.py": {
+      "bytes": 1022,
+      "sha256": "f5ff44d6a27a43f6bba673632ea7dda26bb6bd94c0b40642c4ef4257d20992e9"
+    },
+    "Si-blurry/datasets/Imagenet_R.py": {
+      "bytes": 2892,
+      "sha256": "e10d8695a860c0cb4f0808b0441f99aa828edd695447289cc7cb980c826278ed"
+    },
+    "Si-blurry/datasets/Imagenet_sketch.py": {
+      "bytes": 2754,
+      "sha256": "48a4d292d4fd966eb78ce5b5fca182311a84da85aed34cc983072475f718d8a6"
+    },
+    "Si-blurry/datasets/MNIST.py": {
+      "bytes": 964,
+      "sha256": "e1acf10f8ecfca2d359b050c0c6b7a9d8c00285af129d643fe2b5c3da3598faf"
+    },
+    "Si-blurry/datasets/NotMNIST.py": {
+      "bytes": 1360,
+      "sha256": "c30a09adfe89c8a5766d561d462b20a6359ace5dc3ec0d760dc71f49f264c7bf"
+    },
+    "Si-blurry/datasets/SVHN.py": {
+      "bytes": 924,
+      "sha256": "1f8ed0fed851826be2bfb2033e64c9ad28c49af49612550d946de7a38fbd1555"
+    },
+    "Si-blurry/datasets/TinyImageNet.py": {
+      "bytes": 3131,
+      "sha256": "561a0720201d5a118f624350d7e5a556f6f7220de38920d5f2e6f10c548a161c"
+    },
+    "Si-blurry/datasets/__init__.py": {
+      "bytes": 1945,
+      "sha256": "3e0ac29f294f89ec43d6cb7592c180945a217fc735077e2e297a6b9f39a57a3f"
+    },
+    "Si-blurry/datasets/continual_datasets.py": {
+      "bytes": 45849,
+      "sha256": "44d304ee7257ea2455ff5952033e7482dd85e5a424830df36bff5ec24d5feb86"
+    },
+    "Si-blurry/datasets/dataset_utils.py": {
+      "bytes": 11036,
+      "sha256": "c7ae781c2417be27a3b84fcc9c946c4215711b92405c26722020bd1a8a86bf2d"
+    },
+    "Si-blurry/datasets/find_mean_std.py": {
+      "bytes": 1291,
+      "sha256": "47716fc83905b595639cd409a80bcd449e82bb7e97fd7fd0ba265bb578878258"
+    },
+    "Si-blurry/datasets/multiDatasets.py": {
+      "bytes": 1556,
+      "sha256": "3a4c2680b2a2db2e60400130451ee5da42b2d07ecb82ff2357799c9e931c2c7b"
+    },
+    "Si-blurry/datasets/my_datasets.py": {
+      "bytes": 9541,
+      "sha256": "d8c023bae5ed69ef0697fa3f133d87985f0196c9b82314089d0addc67917758d"
+    },
+    "Si-blurry/main_blurry.py": {
+      "bytes": 730,
+      "sha256": "02201b1414bef3567c35f1f964b03ea428e698a152b46cf80f44a69ffb02825e"
+    },
+    "Si-blurry/methods/__init__.py": {
+      "bytes": 308,
+      "sha256": "0bcfaa373e9b7af0758bc454da43dd1b175b5d08c8af6f85f1d6b97ed7d3ea58"
+    },
+    "Si-blurry/methods/_trainer.py": {
+      "bytes": 23354,
+      "sha256": "7015306fad9826ff4ee8bcd968c0ceab8d25c19cf387059ab587ddcaa4511734"
+    },
+    "Si-blurry/methods/er_baseline.py": {
+      "bytes": 7018,
+      "sha256": "1ba202fe5c9beef61798fafbb8459933a376f78a809e0ba9681bb91c6658b502"
+    },
+    "Si-blurry/methods/mvp.py": {
+      "bytes": 10753,
+      "sha256": "5ca9fe7f433335e3fbcd215abad87636c1321f5bd187b31b5a1a145d659d3e8c"
+    },
+    "Si-blurry/models/__init__.py": {
+      "bytes": 1205,
+      "sha256": "a009879620a28dac1e9b96eec5d80cbc5a558dda98cc596d7f876d07d10fcadb"
+    },
+    "Si-blurry/models/l2p.py": {
+      "bytes": 7363,
+      "sha256": "e5e2540ad3188867515a58b3e9d4a0a12251c96a909e1e8329d1e0d43735a1a2"
+    },
+    "Si-blurry/models/mvp.py": {
+      "bytes": 10579,
+      "sha256": "2f7142f7ded0eb9ece1e8d6100e6df81da01d6332d4cfd290b8558b5c142b690"
+    },
+    "Si-blurry/online_lora.py": {
+      "bytes": 32713,
+      "sha256": "c4acc4e8e65a347b30bcac0b9c12593b281bbddb096aaaeed3e6bef01bcecfd9"
+    },
+    "Si-blurry/scripts/blurry.sh": {
+      "bytes": 1406,
+      "sha256": "51f6a810d4e8a98b6ca31dfdc2b6ebe12f86c54f33486e7f51dca9c9c74a4a8b"
+    },
+    "Si-blurry/utils/augment.py": {
+      "bytes": 15837,
+      "sha256": "8c2618d4ccb1de73009cbb51af7904ed37f18abd305c2efcfee05dc13acd5ca2"
+    },
+    "Si-blurry/utils/base_vit.py": {
+      "bytes": 17243,
+      "sha256": "6d1a86d4c6e4279d5dbc55e89f37f119923469aac9c81f721ed62adbcb4ee631"
+    },
+    "Si-blurry/utils/datasets.py": {
+      "bytes": 13165,
+      "sha256": "ef827b8c193de48ee89d53184acef8aced25d039a3316531c42ce4bc53c5e33c"
+    },
+    "Si-blurry/utils/indexed_dataset.py": {
+      "bytes": 398,
+      "sha256": "c46de02ffe49f7618451c99806e6a13cc391934a072832d22939364f42cdae9e"
+    },
+    "Si-blurry/utils/lora.py": {
+      "bytes": 27461,
+      "sha256": "3c80ce0f47a637ff35e5a4154cba8c4ddd3562a06f978c459406d150ec800111"
+    },
+    "Si-blurry/utils/lora_utils.py": {
+      "bytes": 976,
+      "sha256": "260b65d9fee91e530cbadaac9e3bea6edc2bdace132604d73b12f7beb2dd1441"
+    },
+    "Si-blurry/utils/memory.py": {
+      "bytes": 7573,
+      "sha256": "c40c7ad117eac8a450f366f826bf9728912c20bd7e26aea34fe1530798f807f7"
+    },
+    "Si-blurry/utils/metric.py": {
+      "bytes": 3549,
+      "sha256": "d26860a4ec70c34ff14efed62ddbedbb28715aac4af078f76bfdb56dc116ea2b"
+    },
+    "Si-blurry/utils/online_sampler.py": {
+      "bytes": 20790,
+      "sha256": "d2803e8427e194854150e9671cfa5d87ebcf214b64bbbf6bfa8570b66c321be7"
+    },
+    "Si-blurry/utils/tensor_dataset.py": {
+      "bytes": 587,
+      "sha256": "e38d08b76b6623d3b1c1f1af9244428fda1404cb502792298e3cba9a14f3f706"
+    },
+    "Si-blurry/utils/train_utils.py": {
+      "bytes": 1573,
+      "sha256": "ae7b4482fad1d0fd2cfa96af5aacdce6c1ca22cd08ea57c77cbb96c35f2f3996"
+    },
+    "environment.yml": {
+      "bytes": 1992,
+      "sha256": "824c3c6282018c69f45d2ed403e2592930e69afc703722d3c6be91845896a86d"
+    },
+    "method_v10-1.png": {
+      "bytes": 376021,
+      "sha256": "3bcb23d9790d1b22ca485c95e57e3442bd9fdfbb273c4a8063830fd41c5f4cc5"
+    }
+  },
+  "implementation_executed": false,
+  "performance_reproduced": false
+}

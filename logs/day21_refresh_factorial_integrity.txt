@@ -1,0 +1,13 @@
+FACTORIAL_RECEIPT_INTEGRITY 12 passed 0 pending 0 failed
+day15_amazon_private_cau_seed2027_b_first_weight_moments 76 mature batches; all checks passed
+day15_amazon_private_cau_seed2027_canonical_weight_moments 76 mature batches; all checks passed
+day15_amazon_private_cau_seed2028_b_first_weight_moments 76 mature batches; all checks passed
+day15_amazon_private_cau_seed2028_canonical_weight_moments 76 mature batches; all checks passed
+day15_amazon_private_cau_seed2029_b_first_weight_moments 76 mature batches; all checks passed
+day15_amazon_private_cau_seed2029_canonical_weight_moments 73 mature batches; all checks passed
+day15_banking_private_cau_seed2027_b_first_weight_moments 70 mature batches; all checks passed
+day15_banking_private_cau_seed2027_canonical_weight_moments 70 mature batches; all checks passed
+day15_banking_private_cau_seed2028_b_first_weight_moments 70 mature batches; all checks passed
+day15_banking_private_cau_seed2028_canonical_weight_moments 70 mature batches; all checks passed
+day15_banking_private_cau_seed2029_b_first_weight_moments 70 mature batches; all checks passed
+day15_banking_private_cau_seed2029_canonical_weight_moments 70 mature batches; all checks passed

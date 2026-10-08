@@ -1,0 +1,47 @@
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease [1578 B]
+Get:3 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:4 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  Packages [1890 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1323 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1943 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1545 kB]
+Get:9 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease [17.8 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:12 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 Packages [52.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [67.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2165 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2177 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1701 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Fetched 35.2 MB in 2s (15.5 MB/s)
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  gh git-lfs
+0 upgraded, 2 newly installed, 0 to remove and 270 not upgraded.
+Need to get 12.7 MB of archives.
+After this operation, 57.1 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 gh amd64 2.45.0-1ubuntu0.3 [8836 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 git-lfs amd64 3.4.1-1ubuntu0.4 [3908 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 12.7 MB in 0s (46.4 MB/s)
+Selecting previously unselected package gh.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 49062 files and directories currently installed.)
+Preparing to unpack .../gh_2.45.0-1ubuntu0.3_amd64.deb ...
+Unpacking gh (2.45.0-1ubuntu0.3) ...
+Selecting previously unselected package git-lfs.
+Preparing to unpack .../git-lfs_3.4.1-1ubuntu0.4_amd64.deb ...
+Unpacking git-lfs (3.4.1-1ubuntu0.4) ...
+Setting up gh (2.45.0-1ubuntu0.3) ...
+Setting up git-lfs (3.4.1-1ubuntu0.4) ...

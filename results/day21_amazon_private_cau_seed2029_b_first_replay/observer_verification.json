@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "reference": "results/day8_amazon_private_cau_seed2029_b_first_fixed512",
+  "reference_learner_sha256": "06ba9c8d293c4fcfa0721b3b4133651dc97a9acc36fd0441d5b4fa63e723f006",
+  "output_learner_sha256": "06ba9c8d293c4fcfa0721b3b4133651dc97a9acc36fd0441d5b4fa63e723f006",
+  "bitwise_learner_state_equal": true,
+  "bitwise_adapter_tensors_equal": true,
+  "adapter_files_checked": 1,
+  "training_loss_absolute_tolerance": 1e-06,
+  "maximum_training_loss_difference": 0.0,
+  "stream_sha256": "c29f668113205ce3557e48ca8b9e2185b8df430d470db1b1ded4bf2482d8e5e8"
+}

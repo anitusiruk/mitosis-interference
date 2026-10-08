@@ -1,0 +1,11 @@
+notes/day21_before_bounded_refresh/figures/extended_audit/CAPTIONS.md:14: new blank line at EOF.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day21_preserve_current_state.py", line 77, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/day21_preserve_current_state.py", line 69, in main
+    subprocess.run(['git', 'diff', '--cached', '--check', '--', 'experiments/day21_*.py',
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'diff', '--cached', '--check', '--', 'experiments/day21_*.py', 'notes/day21_*.md', 'notes/paper_working_draft.md']' returned non-zero exit status 2.

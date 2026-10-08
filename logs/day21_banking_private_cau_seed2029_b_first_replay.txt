@@ -1,0 +1,51 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9/banking77.py:23: SyntaxWarning: invalid escape sequence '\~'
+  _CITATION = """\
+Downloading data:   0%|          | 0.00/839k [00:00<?, ?B/s]Downloading data: 100%|██████████| 839k/839k [00:00<00:00, 20.9MB/s]
+Downloading data:   0%|          | 0.00/240k [00:00<?, ?B/s]Downloading data: 100%|██████████| 240k/240k [00:00<00:00, 281MB/s]
+Generating train split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating train split:  99%|█████████▊| 9862/10003 [00:00<00:00, 98377.80 examples/s]Generating train split: 100%|██████████| 10003/10003 [00:00<00:00, 97394.09 examples/s]
+Generating test split:   0%|          | 0/3080 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 3080/3080 [00:00<00:00, 104287.91 examples/s]
+balanced examples/class: 23
+balanced examples/segment: 253
+RESTORED_STREAM_IDENTITY_PASS c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8 90d4e2ee5521c04fc1488f065b8b083658768c57
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8521.20it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+step=5 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=4.2
+step=10 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=5.7
+step=15 segment(eval)=B1 decision=reuse adapter=default pool=1 elapsed=7.3
+CHECKPOINT B1 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0, 'frozen_centroid:A': 0.0, 'last_active:B': 0.1806, 'uniform_probability:B': 0.1806, 'frozen_centroid:B': 0.1806, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=18 segment(eval)=A1 decision=spawn adapter=adapter_1 pool=2 elapsed=9.0
+step=20 segment(eval)=A1 decision=warmup adapter=adapter_1 pool=2 elapsed=9.0
+step=25 segment(eval)=A1 decision=reuse adapter=adapter_1 pool=2 elapsed=11.2
+step=30 segment(eval)=A1 decision=reuse adapter=adapter_1 pool=2 elapsed=13.8
+CHECKPOINT A1 label-free full-space accuracy {'last_active:A': 0.1856, 'uniform_probability:A': 0.0, 'frozen_centroid:A': 0.1753, 'last_active:B': 0.0, 'uniform_probability:B': 0.1742, 'frozen_centroid:B': 0.1516, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=35 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=17.6
+step=40 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=20.2
+step=45 segment(eval)=B2 decision=reuse adapter=default pool=2 elapsed=22.9
+CHECKPOINT B2 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0, 'frozen_centroid:A': 0.1753, 'last_active:B': 0.2387, 'uniform_probability:B': 0.2194, 'frozen_centroid:B': 0.1839, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0}
+step=50 segment(eval)=C1 decision=spawn adapter=adapter_2 pool=3 elapsed=26.6
+step=55 segment(eval)=C1 decision=reuse adapter=adapter_2 pool=3 elapsed=28.2
+step=60 segment(eval)=C1 decision=reuse adapter=adapter_2 pool=3 elapsed=32.1
+CHECKPOINT C1 label-free full-space accuracy {'last_active:A': 0.0, 'uniform_probability:A': 0.0, 'frozen_centroid:A': 0.1546, 'last_active:B': 0.0, 'uniform_probability:B': 0.2065, 'frozen_centroid:B': 0.1581, 'last_active:C': 0.2454, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.1099}
+step=65 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=37.9
+step=70 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=41.8
+step=75 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=45.7
+step=80 segment(eval)=A2 decision=reuse adapter=adapter_1 pool=3 elapsed=49.7
+CHECKPOINT A2 label-free full-space accuracy {'last_active:A': 0.3849, 'uniform_probability:A': 0.2199, 'frozen_centroid:A': 0.2337, 'last_active:B': 0.0, 'uniform_probability:B': 0.1226, 'frozen_centroid:B': 0.1645, 'last_active:C': 0.0, 'uniform_probability:C': 0.0, 'frozen_centroid:C': 0.0989}
+FINAL_SUMMARY {"status": "completed", "steps": 80, "learning_updates": 80, "decisions": {"warmup": 10, "reuse": 68, "spawn": 2}, "final_adapters": ["default", "adapter_1", "adapter_2"], "pool_summary": {"default": {"updates": 33, "memory": 170}, "adapter_1": {"updates": 32, "memory": 170}, "adapter_2": {"updates": 15, "memory": 170}}, "resources": {"lora_parameters": 442368, "private_head_parameters": 1949415, "unwrapped_shared_head_parameters": 0, "total_unique_parameters": 69404468, "currently_trainable_parameters": 797261, "optimizer_state_bytes": 19134600, "replay_items": 510, "elapsed_seconds": 51.58198208268732, "gpu_peak_allocated_bytes": 583407104}, "timing": {"component_audit_seconds": 0.0, "live_training_seconds": 40.87367588793859, "evaluation_seconds": 6.544887775089592}, "component_trial_rows": 0, "official_test_used": false}
+RESTORED_BASELINE_BITWISE_REPLAY_PASS

@@ -1,0 +1,24 @@
+{
+  "name": "day21_banking_private_cau_seed2029_b_first_replay",
+  "study": "restore_replay",
+  "status": "completed",
+  "started_utc": "2026-10-08T02:34:14.891571+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day21_checked_trajectory",
+    "--output",
+    "results/day21_banking_private_cau_seed2029_b_first_replay",
+    "--deadline-utc",
+    "2026-10-08T02:39:14.891481+00:00"
+  ],
+  "training_budget_seconds": 300,
+  "external_process_group_limit_seconds": 420,
+  "spec_sha256": "43ecdfcaafcd1162eb6eed080aed1962ce8b3dfc6fa1e62ab3ea7b0ae2ee7612",
+  "git_commit": "f52ff055135c61bed5bd6c3a78da74ce6a4ccaab",
+  "pid": 3614,
+  "returncode": 0,
+  "seconds": 58.683889848180115,
+  "finished_utc": "2026-10-08T02:35:13.577434+00:00"
+}

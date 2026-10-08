@@ -1,34 +1,35 @@
 {
-  "timestamp_utc": "2026-10-06T05:44:00.056251+00:00",
-  "snapshot_commit": "d23779b40c3205941d010d316ea46f3077796a2f",
-  "github_push_returncode": 0,
   "branch": "day5-causal-audit",
-  "checkpoint_files": 1566,
-  "checkpoint_bytes": 6347145119,
+  "checkpoint_bytes": 6453495355,
+  "checkpoint_files": 1590,
+  "earlier_github_push_returncode": 128,
   "full_state_storage": "Git LFS tensors plus ordinary Git source/results/cache",
+  "github_push_returncode": 0,
+  "github_ref_verified": false,
+  "github_verification_receipt": "notes/github_save_verification.json",
+  "last_successful_github_save_verified_utc": "2026-10-07T06:45:21.056930+00:00",
+  "last_successful_github_snapshot_commit": "ab155541450ee6f00283d1f68f6d0a3d506d327f",
+  "local_checkpoint_sha256_verified": true,
+  "new_snapshot_push_pending": true,
+  "remote_checkpoints_sha256_verified": false,
+  "snapshot_commit": "d23779b40c3205941d010d316ea46f3077796a2f",
   "study_coverage": [
     {
-      "study": 8,
       "completed": 12,
-      "planned": 44
+      "planned": 44,
+      "study": 8
     },
     {
-      "study": 10,
       "completed": 8,
-      "planned": 12
+      "planned": 12,
+      "study": 10
     },
     {
-      "study": 12,
       "completed": 2,
-      "planned": 11
+      "planned": 11,
+      "study": 12
     }
   ],
-  "unlaunched_live_jobs": 45,
-  "earlier_github_push_returncode": 128,
-  "github_ref_verified": true,
-  "last_successful_github_snapshot_commit": "ab155541450ee6f00283d1f68f6d0a3d506d327f",
-  "last_successful_github_save_verified_utc": "2026-10-07T06:45:21.056930+00:00",
-  "github_verification_receipt": "notes/github_save_verification.json",
-  "remote_checkpoints_sha256_verified": true,
-  "new_snapshot_push_pending": false
+  "timestamp_utc": "2026-10-08T03:21:32.480360+00:00",
+  "unlaunched_live_jobs": 45
 }

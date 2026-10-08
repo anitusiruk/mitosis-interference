@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "reference": "results/day8_banking_private_cau_seed2029_b_first_fixed512",
+  "stream_sha256": "c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8",
+  "expected_stream_sha256": "c7ced95d0e956ac47bc35d4950ec4c7a381e313dbf554e9422857d61953f31a8",
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "dataset_revision": "90d4e2ee5521c04fc1488f065b8b083658768c57",
+  "stream_check_before_any_training_update": true,
+  "dataset_revision_recovered_at_restore": true,
+  "historical_full_dataset_revision_not_recorded": true
+}

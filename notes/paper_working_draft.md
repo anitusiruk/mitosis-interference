@@ -71,7 +71,7 @@ The auxiliary learned-router study is complete for all 110 checkpoints. Over fiv
 
 All 44 fixed-memory trajectories, all 44 fixed-memory router reloads, and all 11 rank-96 capacity trajectories are complete. The 512-total-text budget controls retained training examples and caps pools at eight; it does not equalize model parameters, optimizer state or prediction compute. Fixed versus per-adapter memory changes the private BANKING centroid accuracy by +0.38 points (descriptive interval [0.12, 0.64]); Amazon changes are small and uncertain. With this fixed text budget, private learned hard routing exceeds the fixed rank-8 single by +5.35 points on BANKING ([0.82, 9.88]); probability mixture gives +5.40 ([0.67, 10.14]). Amazon differences are -2.24 ([-5.97, 1.49]) and -1.80 ([-4.40, 0.81]). All are development-stage descriptive five-seed comparisons, with orders averaged inside seeds. The routing extension was introduced after earlier deployment failure.
 
-The larger static rank-96 baseline remains untuned: its final accuracy is lower than rank 8 by 9.46 points ([-14.06, -4.86]) under the fixed recipe. Rank 96 has 2,419,277 adaptation parameters, compared with 2,391,783 for three rank-8 private packages; this is a particular storage scale, not universal resource matching. Poor untuned performance cannot support superiority over a properly tuned static alternative. The subsequent equal-grid rate study below addresses this tuning gap within its declared development protocol. Broader hyperparameter choices and final complete-method confirmation remain untested.
+Under the original untuned fixed recipe, the larger static rank-96 baseline has final accuracy lower than rank 8 by 9.46 points ([-14.06, -4.86]) under the fixed recipe. Rank 96 has 2,419,277 adaptation parameters, compared with 2,391,783 for three rank-8 private packages; this is a particular storage scale, not universal resource matching. Poor untuned performance cannot support superiority over a properly tuned static alternative. The subsequent equal-grid rate study below addresses this tuning gap within its declared development protocol. Broader hyperparameter choices and final complete-method confirmation remain untested.
 
 ## 6. Reproducibility and limitations
 
@@ -85,7 +85,7 @@ The earlier strict Day-2 robustness gate failed, and the original v0 controller 
 
 ## 7. Preregistered development extensions
 
-The separate weight/state audit has 10/20 verified trajectories. The BERT allocation transfer study has 20/20 completed trajectories. Every failed or incomplete attempt remains recorded. Empty comparisons are pending and unpaired orders are excluded from seed intervals.
+The separate weight/state audit has 12/20 verified trajectories (three paired seeds per regime). The BERT allocation transfer study has 20/20 completed trajectories. Every failed or incomplete attempt remains recorded. Empty comparisons are pending and unpaired orders are excluded from seed intervals.
 
 The BERT check changes the backbone, tokenizer, representations, frozen pooler and classifier together. It uses a single linear classifier rather than the DistilBERT trainable pre-classifier/classifier stack, but is not a causal isolation of classifier design or a tuned BERT performance comparison.
 
@@ -119,62 +119,62 @@ The all-mature-batch marginal effects average all eight settings of the other th
 
 | regime | factor | metric | n_seeds | mean | ci_low | ci_high |
 | --- | --- | --- | --- | --- | --- | --- |
-| amazon | reset_head_optimizer | post_update_loss_decrease | 2 | 0.0017 | -0.0248 | 0.0283 |
-| amazon | reset_head_optimizer | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_optimizer | local_improvement_increase | 2 | 0.0017 | -0.0248 | 0.0283 |
-| amazon | reset_head_optimizer | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_optimizer | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_optimizer | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_optimizer | post_within_group_decrease | 2 | 0.0017 | -0.0248 | 0.0283 |
-| amazon | reset_head_weights | post_update_loss_decrease | 2 | -0.1462 | -0.2975 | 0.0052 |
-| amazon | reset_head_weights | initial_loss_decrease | 2 | -0.1499 | -0.3312 | 0.0313 |
-| amazon | reset_head_weights | local_improvement_increase | 2 | 0.0038 | -0.0261 | 0.0336 |
-| amazon | reset_head_weights | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_weights | initial_within_group_decrease | 2 | -0.1499 | -0.3312 | 0.0313 |
-| amazon | reset_head_weights | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_head_weights | post_within_group_decrease | 2 | -0.1462 | -0.2975 | 0.0052 |
-| amazon | reset_lora_optimizer | post_update_loss_decrease | 2 | 0.0001 | -0.0081 | 0.0083 |
-| amazon | reset_lora_optimizer | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_optimizer | local_improvement_increase | 2 | 0.0001 | -0.0081 | 0.0083 |
-| amazon | reset_lora_optimizer | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_optimizer | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_optimizer | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_optimizer | post_within_group_decrease | 2 | 0.0001 | -0.0081 | 0.0083 |
-| amazon | reset_lora_weights | post_update_loss_decrease | 2 | -0.0585 | -0.0649 | -0.0522 |
-| amazon | reset_lora_weights | initial_loss_decrease | 2 | -0.0552 | -0.0719 | -0.0384 |
-| amazon | reset_lora_weights | local_improvement_increase | 2 | -0.0033 | -0.0137 | 0.0070 |
-| amazon | reset_lora_weights | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_weights | initial_within_group_decrease | 2 | -0.0552 | -0.0719 | -0.0384 |
-| amazon | reset_lora_weights | post_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| amazon | reset_lora_weights | post_within_group_decrease | 2 | -0.0585 | -0.0649 | -0.0522 |
-| banking | reset_head_optimizer | post_update_loss_decrease | 2 | -0.0032 | -0.0313 | 0.0250 |
-| banking | reset_head_optimizer | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_head_optimizer | local_improvement_increase | 2 | -0.0032 | -0.0313 | 0.0250 |
-| banking | reset_head_optimizer | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_head_optimizer | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_head_optimizer | post_group_mass_decrease | 2 | -0.0010 | -0.0059 | 0.0039 |
-| banking | reset_head_optimizer | post_within_group_decrease | 2 | -0.0021 | -0.0254 | 0.0211 |
-| banking | reset_head_weights | post_update_loss_decrease | 2 | -0.8533 | -0.8825 | -0.8242 |
-| banking | reset_head_weights | initial_loss_decrease | 2 | -0.8495 | -0.8897 | -0.8093 |
-| banking | reset_head_weights | local_improvement_increase | 2 | -0.0038 | -0.0149 | 0.0072 |
-| banking | reset_head_weights | initial_group_mass_decrease | 2 | -0.8213 | -0.8271 | -0.8156 |
-| banking | reset_head_weights | initial_within_group_decrease | 2 | -0.0281 | -0.0741 | 0.0178 |
-| banking | reset_head_weights | post_group_mass_decrease | 2 | -0.8251 | -0.8458 | -0.8045 |
-| banking | reset_head_weights | post_within_group_decrease | 2 | -0.0282 | -0.0780 | 0.0216 |
-| banking | reset_lora_optimizer | post_update_loss_decrease | 2 | 0.0022 | 0.0020 | 0.0024 |
-| banking | reset_lora_optimizer | initial_loss_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_lora_optimizer | local_improvement_increase | 2 | 0.0022 | 0.0020 | 0.0024 |
-| banking | reset_lora_optimizer | initial_group_mass_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_lora_optimizer | initial_within_group_decrease | 2 | 0.0000 | 0.0000 | 0.0000 |
-| banking | reset_lora_optimizer | post_group_mass_decrease | 2 | 0.0019 | 0.0019 | 0.0020 |
-| banking | reset_lora_optimizer | post_within_group_decrease | 2 | 0.0002 | -0.0000 | 0.0005 |
-| banking | reset_lora_weights | post_update_loss_decrease | 2 | -0.0869 | -0.1809 | 0.0071 |
-| banking | reset_lora_weights | initial_loss_decrease | 2 | -0.0769 | -0.1521 | -0.0017 |
-| banking | reset_lora_weights | local_improvement_increase | 2 | -0.0100 | -0.0288 | 0.0088 |
-| banking | reset_lora_weights | initial_group_mass_decrease | 2 | -0.0710 | -0.1081 | -0.0338 |
-| banking | reset_lora_weights | initial_within_group_decrease | 2 | -0.0059 | -0.0440 | 0.0321 |
-| banking | reset_lora_weights | post_group_mass_decrease | 2 | -0.0804 | -0.1198 | -0.0411 |
-| banking | reset_lora_weights | post_within_group_decrease | 2 | -0.0065 | -0.0611 | 0.0482 |
+| amazon | reset_head_optimizer | post_update_loss_decrease | 3 | 0.0028 | -0.0040 | 0.0096 |
+| amazon | reset_head_optimizer | initial_loss_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_optimizer | local_improvement_increase | 3 | 0.0028 | -0.0040 | 0.0096 |
+| amazon | reset_head_optimizer | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_optimizer | initial_within_group_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_optimizer | post_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_optimizer | post_within_group_decrease | 3 | 0.0028 | -0.0040 | 0.0096 |
+| amazon | reset_head_weights | post_update_loss_decrease | 3 | -0.1473 | -0.1774 | -0.1173 |
+| amazon | reset_head_weights | initial_loss_decrease | 3 | -0.1493 | -0.1849 | -0.1138 |
+| amazon | reset_head_weights | local_improvement_increase | 3 | 0.0020 | -0.0077 | 0.0116 |
+| amazon | reset_head_weights | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_weights | initial_within_group_decrease | 3 | -0.1493 | -0.1849 | -0.1138 |
+| amazon | reset_head_weights | post_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_head_weights | post_within_group_decrease | 3 | -0.1473 | -0.1774 | -0.1173 |
+| amazon | reset_lora_optimizer | post_update_loss_decrease | 3 | 0.0006 | -0.0019 | 0.0030 |
+| amazon | reset_lora_optimizer | initial_loss_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_optimizer | local_improvement_increase | 3 | 0.0006 | -0.0019 | 0.0030 |
+| amazon | reset_lora_optimizer | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_optimizer | initial_within_group_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_optimizer | post_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_optimizer | post_within_group_decrease | 3 | 0.0006 | -0.0019 | 0.0030 |
+| amazon | reset_lora_weights | post_update_loss_decrease | 3 | -0.0632 | -0.0834 | -0.0430 |
+| amazon | reset_lora_weights | initial_loss_decrease | 3 | -0.0595 | -0.0784 | -0.0406 |
+| amazon | reset_lora_weights | local_improvement_increase | 3 | -0.0037 | -0.0062 | -0.0012 |
+| amazon | reset_lora_weights | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_weights | initial_within_group_decrease | 3 | -0.0595 | -0.0784 | -0.0406 |
+| amazon | reset_lora_weights | post_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| amazon | reset_lora_weights | post_within_group_decrease | 3 | -0.0632 | -0.0834 | -0.0430 |
+| banking | reset_head_optimizer | post_update_loss_decrease | 3 | -0.0028 | -0.0085 | 0.0029 |
+| banking | reset_head_optimizer | initial_loss_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_head_optimizer | local_improvement_increase | 3 | -0.0028 | -0.0085 | 0.0029 |
+| banking | reset_head_optimizer | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_head_optimizer | initial_within_group_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_head_optimizer | post_group_mass_decrease | 3 | -0.0011 | -0.0021 | -0.0001 |
+| banking | reset_head_optimizer | post_within_group_decrease | 3 | -0.0018 | -0.0066 | 0.0031 |
+| banking | reset_head_weights | post_update_loss_decrease | 3 | -0.8551 | -0.8645 | -0.8457 |
+| banking | reset_head_weights | initial_loss_decrease | 3 | -0.8515 | -0.8632 | -0.8398 |
+| banking | reset_head_weights | local_improvement_increase | 3 | -0.0036 | -0.0060 | -0.0011 |
+| banking | reset_head_weights | initial_group_mass_decrease | 3 | -0.8221 | -0.8255 | -0.8187 |
+| banking | reset_head_weights | initial_within_group_decrease | 3 | -0.0294 | -0.0399 | -0.0189 |
+| banking | reset_head_weights | post_group_mass_decrease | 3 | -0.8254 | -0.8297 | -0.8212 |
+| banking | reset_head_weights | post_within_group_decrease | 3 | -0.0296 | -0.0412 | -0.0181 |
+| banking | reset_lora_optimizer | post_update_loss_decrease | 3 | 0.0021 | 0.0020 | 0.0023 |
+| banking | reset_lora_optimizer | initial_loss_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_lora_optimizer | local_improvement_increase | 3 | 0.0021 | 0.0020 | 0.0023 |
+| banking | reset_lora_optimizer | initial_group_mass_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_lora_optimizer | initial_within_group_decrease | 3 | 0.0000 | 0.0000 | 0.0000 |
+| banking | reset_lora_optimizer | post_group_mass_decrease | 3 | 0.0019 | 0.0017 | 0.0021 |
+| banking | reset_lora_optimizer | post_within_group_decrease | 3 | 0.0002 | 0.0002 | 0.0003 |
+| banking | reset_lora_weights | post_update_loss_decrease | 3 | -0.0818 | -0.1104 | -0.0532 |
+| banking | reset_lora_weights | initial_loss_decrease | 3 | -0.0718 | -0.0981 | -0.0456 |
+| banking | reset_lora_weights | local_improvement_increase | 3 | -0.0100 | -0.0136 | -0.0063 |
+| banking | reset_lora_weights | initial_group_mass_decrease | 3 | -0.0666 | -0.0868 | -0.0463 |
+| banking | reset_lora_weights | initial_within_group_decrease | 3 | -0.0053 | -0.0132 | 0.0027 |
+| banking | reset_lora_weights | post_group_mass_decrease | 3 | -0.0758 | -0.0971 | -0.0546 |
+| banking | reset_lora_weights | post_within_group_decrease | 3 | -0.0060 | -0.0169 | 0.0049 |
 
 ## 8. Related work and contribution boundary
 
@@ -182,7 +182,9 @@ Classifier recency bias is established in Supervised Contrastive Replay (Mai et 
 
 Wang et al. (2026, Predicting Plasticity) already distinguish initial loss from normalized future optimization gain. Lyle et al. (2025) study multiple causes of plasticity loss; Hernandez-Garcia et al. (2026) compare weight and unit reinitialization. Prospective optimization consequences, factorial diagnosis, and reset benefits are established. The candidate contribution is an operational empirical audit of how classifier-bearing allocation packages select resources, with optimizer-state attribution, cross-backbone checks, deployment/resource controls, and explicit failure conditions. Novelty remains provisional without the comparator and stronger-regime evidence.
 
-Primary source links and precise scope are in `notes/novelty_audit_20261006.md` and `notes/classifier_prior_audit_20261006.md`.
+Huh et al. (2024, LoRA-the-Explorer) already ablate LoRA-factor and optimizer resets. Wang, Su and Ma (2026, Bilinear Optimization Divergence) analyze bilinear learned anchors and realized optimizer displacements. Neither the bilinear cross terms nor a general gradient-versus-momentum distinction is claimed here as new theory. The possible distinction is the controlled attribution of classifier-bearing package allocation; its generality and practical value still require the missing comparators and stronger learning regime.
+
+Primary source links and precise scope are in `notes/novelty_audit_20261006.md` and `notes/classifier_prior_audit_20261006.md`. The focused October 8 update is `notes/day21_novelty_and_next_evidence.md`.
 
 ## 9. Equal-grid tuning of static baselines
 
@@ -205,7 +207,7 @@ All static ranks and adaptive rules are retained, with both orders averaged with
 
 ## Independent saved-receipt quality control
 
-A read-only check of 10 completed observer trajectories verified every eligible mature batch, the actual active source, all sixteen intervention cells and both query folds, weight/state receipt isolation, bitwise invariance of initial predictions to optimizer-state interventions, and query-loss/component identities. This additional quality-control check was added after the first observer outcomes. It changes neither the frozen experiments nor their contrast definitions and is not a new scientific replication. Earlier and final receipts are preserved.
+A read-only check of 12 completed observer trajectories verified every eligible mature batch, the actual active source, all sixteen intervention cells and both query folds, weight/state receipt isolation, bitwise invariance of initial predictions to optimizer-state interventions, and query-loss/component identities. This additional quality-control check was added after the first observer outcomes. It changes neither the frozen experiments nor their contrast definitions and is not a new scientific replication. Earlier and final receipts are preserved.
 
 ## Secondary deployed-retention analysis
 
@@ -254,6 +256,10 @@ The extension completed 20/20 research trajectories and 10/10 allocation pairs. 
 | uniform_probability | 5 | 0.0017 | -0.0067 | 0.0101 |
 
 All deviations from the trainable-stack references, each trajectory and stored frozen versus output-classifier parameters are in `notes/day19_linear_classifier_results.md`.
+
+## Source-path implementation diagnostic
+
+An auxiliary CPU check uses unchanged forward and reset classes from the official Online-LoRA repository at commit `59b9fd42ea9ca701cb36978709d5bc0e25938d81`, inside a synthetic QKV/classifier enclosure. All ten declared seed/dtype checks were retained. After the inspected reset zeros both fresh factors, their gradients are zero while inherited Adam state can move them; an empty optimizer leaves them zero in the matched step. A later factorwise consolidation changes the local Q/V result by the expected bilinear cross terms. The classifier remains learnable. These are implementation diagnostics, not image-benchmark performance, a complete published-method reproduction, new algebra, or ten independent benchmark replicates. The complete training loop, plateau detector, MAS and hard-buffer logic were not executed. Scope, source hashes and full numeric checks are in `notes/day21_online_lora_source_review.md`.
 
 ## Figures and result sources
 

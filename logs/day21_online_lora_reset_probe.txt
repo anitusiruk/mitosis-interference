@@ -1,0 +1,4 @@
+/workspace/mitosis-interference/experiments/day21_online_lora_reset_probe.py:129: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  'second_consolidation_identity_max_error': float((delta-predicted).abs().max()),
+AUTHOR_RESET_CPU_PROBE_PASS 10 seed/dtype checks

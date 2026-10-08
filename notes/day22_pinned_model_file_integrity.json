@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "utc": "2026-10-08T04:05:41.979695+00:00",
+  "model": "distilbert-base-uncased",
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "author_commit_verified": true,
+  "model_snapshot_directory": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "files": [
+    {
+      "filename": "config.json",
+      "cache_path": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/config.json",
+      "bytes": 483,
+      "sha256": "69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83",
+      "author_git_blob_id": "150367d8744161cd17b3f6462a14f3a9648752da",
+      "verification_mode": "git_blob_sha1_matches_pinned_author_commit",
+      "status": "passed"
+    },
+    {
+      "filename": "model.safetensors",
+      "cache_path": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/model.safetensors",
+      "bytes": 267954768,
+      "sha256": "5e3f1108e3cb34ee048634875d8482665b65ac713291a7e32396fb18f6ff0063",
+      "author_git_blob_id": "afbfcf4f39a1b9f0b61852b19209c7d0b141bffc",
+      "verification_mode": "sha256_matches_pinned_author_lfs_metadata",
+      "status": "passed"
+    },
+    {
+      "filename": "tokenizer.json",
+      "cache_path": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/tokenizer.json",
+      "bytes": 466062,
+      "sha256": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+      "author_git_blob_id": "949a6f013d67eb8a5b4b5b46026217b888021b88",
+      "verification_mode": "git_blob_sha1_matches_pinned_author_commit",
+      "status": "passed"
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "cache_path": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/tokenizer_config.json",
+      "bytes": 48,
+      "sha256": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10",
+      "author_git_blob_id": "e5c73d8a50df1f56fb5b0b8002d7cf4010afdccb",
+      "verification_mode": "git_blob_sha1_matches_pinned_author_commit",
+      "status": "passed"
+    },
+    {
+      "filename": "vocab.txt",
+      "cache_path": "/workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be/vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "author_git_blob_id": "fb140275c155a9c7c5a3b3e0e77a9e839594a938",
+      "verification_mode": "git_blob_sha1_matches_pinned_author_commit",
+      "status": "passed"
+    }
+  ],
+  "historical_unpinned_backbone_identity_claimed": false,
+  "verifier_sha256": "663bcced8301f673e400dca3093dfdbd90e0e541aa93a72cfe4d51f64c7dcd66"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "figure": "figures/nli_learnability_pilot/all_rates_and_orders.png",
+  "sha256": "9b312a3f529b3ae6b6fa4fd0af8e7e968095237a2a78ac3ad658b6d83bdffe65",
+  "visual_checks": [
+    "All rates and both orders visible",
+    "Labels and legends readable without overlap",
+    "One-seed development scope explicit",
+    "No confidence interval treating orders as seeds"
+  ]
+}

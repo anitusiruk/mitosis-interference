@@ -1,0 +1,113 @@
+{
+  "actual_max_length": 256,
+  "args": {
+    "learning_rate": 0.0002,
+    "mode": "pilot",
+    "order": "b_first",
+    "output": "results/day22_multinli_v4_single_seed2026_lr0.0002_b_first"
+  },
+  "config_commit_hash_observed": null,
+  "data_manifest": {
+    "ambiguous_normalized_pairs_excluded": 58,
+    "ambiguous_pairs_receipt_sha256": "12ff19fd3fbb16f2f26fd129899164fc1abc6d8ec57a57e212ecc3422767842e",
+    "ambiguous_rows_excluded": 127,
+    "dataset": "nyu-mll/multi_nli",
+    "dataset_fingerprint": "ebe6e99747a54052",
+    "dataset_payload_sha256": "7e3f7eceba5344d68fbf76a1054366e57cc68203a8834b3e830120c62dd6bbef",
+    "dataset_revision": "da70db2af9d09693783c3320c4249840212ee221",
+    "development_examples": 576,
+    "development_previously_viewed": true,
+    "development_sha256": "e6ef86a242a5d6cc1ec1ba89dd98b4837d5dff018f1af4b4add13101ab7262a0",
+    "duplicate_normalized_pairs_beyond_first_by_genre": {
+      "fiction": 24,
+      "government": 39,
+      "telephone": 23
+    },
+    "earlier_failed_preparation": "results/day22_multinli_pilot_data/failed_preparation.json",
+    "length_summary": {
+      "dev": {
+        "fractions_exceeding": {
+          "128": 0.010416666666666666,
+          "256": 0.0,
+          "64": 0.0798611111111111
+        },
+        "maximum": 186,
+        "n": 576,
+        "quantiles_0_25_50_75_100": [
+          10.0,
+          24.0,
+          34.0,
+          47.0,
+          186.0
+        ]
+      },
+      "train": {
+        "fractions_exceeding": {
+          "128": 0.0036458333333333334,
+          "256": 0.0,
+          "64": 0.07378472222222222
+        },
+        "maximum": 214,
+        "n": 5760,
+        "quantiles_0_25_50_75_100": [
+          7.0,
+          24.0,
+          34.0,
+          47.0,
+          214.0
+        ]
+      }
+    },
+    "max_length": 256,
+    "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+    "official_validation_or_test_loaded": false,
+    "pilot_seed": 2026,
+    "source_sha256": "4018ce7613fb890d385c395d58555f5dfb042c6960b59ac2da06dcd42b547592",
+    "spec_sha256": "a0eac29fed474ca12b7605e757ab3820e21a85d6f93bfee41ad44b4bb2221536",
+    "split": "train",
+    "status": "passed",
+    "stream_sha256": "2da679997240d68491ba2f77fd539bf9e662b9b5bf0ae08da125edbb40c69e21",
+    "token_lengths_sha256": "4721ad334136866d6ce4804b227da6d5f43256fff9b7b9f5a5138aa053e38d44",
+    "train_dev_premise_overlap": 0,
+    "train_dev_source_overlap": 0,
+    "train_examples": 5760,
+    "train_only_parquet_sources": [
+      {
+        "filename": "data/train-00000-of-00001.parquet",
+        "sha256": "1c1de03640b168e410aabfca19e7cc2f3dfcd7f0e126e935674e56fb102c4529"
+      }
+    ],
+    "training_unique_source_ids": 5760
+  },
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "model_file_integrity_receipt": "notes/day22_pinned_model_file_integrity.json",
+  "model_file_integrity_receipt_sha256": "6dda51d57e89e0e3ea392e276828b7f943835cbdeb187225045fc974cf7ec6a8",
+  "model_loaded_from_verified_local_files": true,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "lr": 0.0002,
+    "weight_decay": 0.01
+  },
+  "packages": {
+    "datasets": "3.6.0",
+    "numpy": "2.1.2",
+    "pandas": "3.0.6",
+    "peft": "0.21.0",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.18.0"
+  },
+  "pair_tokenization_smoke_passed": true,
+  "prepared_data_producer_source": "experiments/day22_multinli_pilot_v2.py",
+  "rehearsal_updates": 0,
+  "single_fixed_package": true,
+  "smoke_does_not_modify_training_stream": true,
+  "smoke_long_source_id": "119364c",
+  "source_sha256": "b3bee71340668814052d466d13ee129f97ff23c7d78410cc5bca8d01eae32b91",
+  "spec_sha256": "de06a84f80e808adbed570ac6a0a5a4a85370b5cacf367d19e746a44fe0c2ec7",
+  "three_class_full_space": true,
+  "training_seed": 2026
+}

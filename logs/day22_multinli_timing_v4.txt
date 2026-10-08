@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8077.62it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: /workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be
+Key                     | Status     | 
+------------------------+------------+-
+vocab_projector.bias    | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+PILOT_STEP 16 elapsed 1.71
+PILOT_STEP 32 elapsed 1.99
+NLI_SINGLE_PILOT_COMPLETE {"status": "completed", "steps": 32, "expected_steps": 32, "learning_updates": 32, "training_examples": 512, "train_seconds": 0.6614062897861004, "evaluation_seconds": 0.7501645758748055, "elapsed_seconds": 2.309510810300708, "gpu_peak_allocated_bytes": 673922560, "adapters": ["default"], "official_validation_or_test_loaded": false, "pilot_not_confirmation": true, "predictions_sha256": "dde29312d8116f80686000301e1bde6aa1ea7f8cde800aa93477f78c9ea649ae", "projected_full_seconds_with_margin": 15.883881648536772, "compute_admitted": true, "admission_uses_learning_outcomes": false}

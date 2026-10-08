@@ -176,24 +176,6 @@ The all-mature-batch marginal effects average all eight settings of the other th
 | banking | reset_lora_weights | post_group_mass_decrease | 3 | -0.0758 | -0.0971 | -0.0546 |
 | banking | reset_lora_weights | post_within_group_decrease | 3 | -0.0060 | -0.0169 | 0.0049 |
 
-## 7b. Longer-context MultiNLI learnability pilot
-
-
-Completed candidates: 6/6. Pending: []. Failed: [].
-
-| rate | orders | pilot_training_seeds | final_macro_accuracy | untrained_macro_accuracy | learning_gain | A_accuracy | B_accuracy | C_accuracy | learnability_gate_passed |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0.0001 | 2 | 1 | 0.5043 | 0.3524 | 0.1519 | 0.5208 | 0.5599 | 0.4323 | True |
-| 0.0002 | 2 | 1 | 0.6042 | 0.3524 | 0.2517 | 0.5911 | 0.6745 | 0.5469 | True |
-| 0.0008 | 2 | 1 | 0.6085 | 0.3524 | 0.2561 | 0.6146 | 0.6667 | 0.5443 | True |
-
-Selected rate: 0.0008; operational learnability gate passed: True.
-
-All candidates use seed 2026 and the same 5760 fit examples and 576 development examples, with both orders paired before rate selection. These examples and this seed are development material. Orders, checkpoints and examples are not independent training replicates; no pilot significance interval is reported. The fixed learning-rate grid and thresholds were declared before pilot learning outcomes. A passing single learner would establish learnability of this development recipe, not an allocation benefit, a new mechanism or comparative superiority. A failed gate is retained without expanding the grid. Source-level preparation failures and amendments remain preserved. A separate fresh-seed comparison specification and complete published-method reproduction are still needed.
-
-
-The selected learning rate is 8e-4. The final genre-macro accuracy is 0.608507, compared with 0.352431 at initialization. The changed recipe jointly modifies context length, fit exposure, and duplicate handling; this does not isolate the effect of any single modification. No adaptive allocation advantage or held-out confirmation follows from this pilot. Figure: figures/nli_learnability_pilot/all_rates_and_orders.png.
-
 ## 8. Related work and contribution boundary
 
 Classifier recency bias is established in Supervised Contrastive Replay (Mai et al., 2021), which studies replacing softmax classifiers with nearest-class-mean prediction. Logit and parameter calibration are also established in NLP continual learning (Li et al., 2022, LPC). Kim et al. (2022) decompose class-incremental prediction into within-task and task-id prediction; Kim et al. (2023), Eq.1, restate that factorization. Neither recognizing classifier bias nor the label-group loss identity is our contribution.

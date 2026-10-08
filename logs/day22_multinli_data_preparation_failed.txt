@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/392702 [00:00<?, ? examples/s]Generating train split:   8%|▊         | 30000/392702 [00:00<00:01, 284598.85 examples/s]Generating train split:  16%|█▌        | 62000/392702 [00:00<00:01, 292877.25 examples/s]Generating train split:  29%|██▉       | 113000/392702 [00:00<00:00, 384982.46 examples/s]Generating train split:  40%|███▉      | 157000/392702 [00:00<00:00, 403232.47 examples/s]Generating train split:  54%|█████▍    | 213000/392702 [00:00<00:00, 430932.24 examples/s]Generating train split:  69%|██████▉   | 272000/392702 [00:00<00:00, 397594.44 examples/s]Generating train split:  85%|████████▍ | 333000/392702 [00:00<00:00, 388203.18 examples/s]Generating train split:  98%|█████████▊| 384000/392702 [00:00<00:00, 415590.86 examples/s]Generating train split: 100%|██████████| 392702/392702 [00:01<00:00, 389951.06 examples/s]
+Generating validation_matched split:   0%|          | 0/9815 [00:00<?, ? examples/s]Generating validation_matched split: 100%|██████████| 9815/9815 [00:00<00:00, 507340.05 examples/s]
+Generating validation_mismatched split:   0%|          | 0/9832 [00:00<?, ? examples/s]Generating validation_mismatched split: 100%|██████████| 9832/9832 [00:00<00:00, 246686.87 examples/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot.py", line 282, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot.py", line 275, in main
+    prepare()
+  File "/workspace/mitosis-interference/experiments/day22_multinli_pilot.py", line 47, in prepare
+    assert pairs[pair] == label, 'Conflicting labels for an identical normalized pair'
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: Conflicting labels for an identical normalized pair

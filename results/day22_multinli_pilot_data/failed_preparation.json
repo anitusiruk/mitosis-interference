@@ -1,0 +1,11 @@
+{
+  "status": "failed_before_training",
+  "utc": "2026-10-08T03:52:26.221206+00:00",
+  "error": "Conflicting labels for an identical normalized pair",
+  "source_sha256": "308ed365befe6de63502425b35a7d35021483b9e452c6e29b94702779a6e283a",
+  "spec_sha256": "a5f4d2ecc2200456774bf50a8027c146c7b4c4389092dad54373bbb6178c8239",
+  "log_sha256": "41ed82993110ae2e16190a61fdecf51abb132228329023a64dd53379c7471d08",
+  "loader_prepared_official_validation_arrow_caches": true,
+  "official_validation_predictions_or_metrics_examined": false,
+  "training_updates": 0
+}

@@ -1,0 +1,16 @@
+{
+  "all_current_lfs_sha256_verified": true,
+  "branch": "day5-causal-audit",
+  "checkpoint_bytes": 6453495355,
+  "checkpoint_files": 1590,
+  "checkpoint_manifest_sha256": "78a584d83ad5047c689bf1bbc32bc3b4b137f90b581ad0695c569213f29735a5",
+  "github_snapshot_commit_verified": true,
+  "historical_download_cache_reused": false,
+  "lfs_files": 795,
+  "preserved_snapshot_commit": "2c9017b37dfc967030adb3ec40e4b7184cb710e9",
+  "repository": "anitusiruk/mitosis-interference",
+  "unique_lfs_objects_verified": 580,
+  "verification_mode": "independent_remote_download_into_new_empty_lfs_storage",
+  "verification_storage": "/workspace/mitosis-day21-lfs-verify-20261008T033828735224Z",
+  "verified_utc": "2026-10-08T03:39:30.184016+00:00"
+}

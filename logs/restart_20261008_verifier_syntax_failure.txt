@@ -1,0 +1,4 @@
+  File "/workspace/mitosis-interference/experiments/restart_20261008_verify.py", line 8
+    def save(): out.write_text(json.dumps(r,indent=2)+'
+                                                      ^
+SyntaxError: unterminated string literal (detected at line 8)

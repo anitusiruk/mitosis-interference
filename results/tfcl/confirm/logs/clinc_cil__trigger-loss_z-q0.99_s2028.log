@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 7175.76it/s]
+[clinc_cil trigger:loss_z s2028] step 37 seg A packages 1 A:0.970
+[clinc_cil trigger:loss_z s2028] step 75 seg B packages 2 A:0.953 B:0.880
+[clinc_cil trigger:loss_z s2028] step 113 seg C packages 3 A:0.947 B:0.870 C:0.940

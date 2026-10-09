@@ -235,3 +235,15 @@
 [234/1200] ok results/tfcl/confirm/banking_cil/trigger-loss_z-q0.99_s2036.json
 [235/1200] ok results/tfcl/confirm/banking_cil/trigger-repr_z-q0.99_s2036.json
 [236/1200] ok results/tfcl/confirm/banking_cil/trigger-interf_logit-q0.99_s2036.json
+[237/1200] ok results/tfcl/confirm/banking_cil/trigger-fresh_util-q0.99_s2036.json
+[238/1200] ok results/tfcl/confirm/banking_cil/trigger-interf_proto-q0.99_s2036.json
+[239/1200] ok results/tfcl/confirm/banking_cil/trigger-conflict_z-q0.99_s2036.json
+[240/1200] ok results/tfcl/confirm/banking_cil/trigger-label_surprise-q0.99_s2036.json
+[241/1200] ok results/tfcl/confirm/clinc_cil/frozen_s2027.json
+[242/1200] ok results/tfcl/confirm/clinc_cil/single_s2027.json
+[243/1200] ok results/tfcl/confirm/clinc_cil/oracle_s2027.json
+[244/1200] ok results/tfcl/confirm/clinc_cil/random_s2027.json
+[245/1200] ok results/tfcl/confirm/clinc_cil/trigger-label_novel-q0.99_s2027.json
+[246/1200] ok results/tfcl/confirm/clinc_cil/trigger-loss_z-q0.99_s2027.json
+[247/1200] ok results/tfcl/confirm/clinc_cil/trigger-repr_z-q0.99_s2027.json
+[248/1200] ok results/tfcl/confirm/clinc_cil/trigger-interf_logit-q0.99_s2027.json

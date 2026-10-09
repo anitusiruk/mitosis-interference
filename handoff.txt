@@ -1,0 +1,147 @@
+PROJECT HANDOFF — mitosis-interference — written 2026-10-09 (end of Claude session 1)
+==========================================================================================
+
+Read this first in the next session. GitHub is the ONLY persistent storage: the RunPod pod is
+assumed wiped (files, pip packages, HF cache, running jobs all lost).
+
+Repo:    github.com/anitusiruk/mitosis-interference   (private; gh CLI auth was used to push)
+Branch:  tmlr-reframe   <-- all current work. (Old work: day5-causal-audit, fully pushed, untouched.)
+Goal:    a TMLR submission; decently novel, methodologically robust, honest about failures.
+User:    high-school student (TAMS); wants continuous autonomous work until told to stop;
+         give exact shell commands; keep negative results; pre-declare before running.
+
+------------------------------------------------------------------------------------------
+1. WHAT HAPPENED BEFORE THIS SESSION (GPT, "days 1-22")
+------------------------------------------------------------------------------------------
+Built "CAU" (counterfactual action utility), a task-free LoRA adapter allocator with exact
+optimizer-faithful virtual updates, and ~20 days of audits. Key surviving evidence:
+ - CAU spawned exactly at label-group arrivals (BANKING steps 18, 50) in 10/10 seed/orders;
+   a HEAD-ONLY variant (LoRA held at zero) made IDENTICAL decisions in 10/10; same with frozen
+   pre-classifier. ~87% of fresh-vs-reuse advantage existed before the update (= head reset).
+ - Never spawned on same-label Amazon.
+FATAL problem found this session: that learner reached only ~16% accuracy on BANKING
+(22% with learned router), while a training-free frozen-DistilBERT mean-pool NCM gets 70.6%
+(logistic probe 86%). So all of its accuracy comparisons are unusable. Its DECISION evidence
+is kept only as an appendix case study (paper Appendix B).
+
+------------------------------------------------------------------------------------------
+2. THE REFRAME (this session)
+------------------------------------------------------------------------------------------
+Paper title: "Capacity or Classifier? What Expansion Triggers Detect in Task-Free Continual
+Adapter Learning"  (paper/main.tex, TMLR template, compiles with latexmk).
+
+Thesis:
+ (a) Proposition: at a label-novelty event, with untrained (zero) rows for new labels, the
+     loss of an existing package = log|N| + log(1 + sum_o exp(z_o(x))/|N|); the excess depends
+     on x only through OLD-label logits. So loss-spike triggers and fresh-module utility are
+     label-novelty detectors, not capacity-need detectors.
+ (b) Measured value of expansion (oracle expansion at true boundaries vs single package):
+     HURTS in class-incremental (CIL), helps slightly in same-label domain shift (DIL),
+     helps most under concept drift (labels flipped in a domain = positive control).
+ (c) Common triggers fire at class arrivals (where expansion hurts) and miss drift.
+ (d) Proposed LabelSurprise: mean over batch of [loss(x,y) - baseline_y], baseline_y = mean
+     of last 20 batch-mean losses of label y under current package; needs >=3 prior records
+     per label and >=4 qualifying examples, else undefined (no fire). Label-conditional
+     version of DDM/ADWIN-style error drift detection. Related prior: Masud et al. 2011
+     (novel class vs concept drift in stream mining) — cited; our novelty is showing adapter-
+     expansion triggers conflate them and that it costs accuracy.
+
+Code (all new, compact): src/tfcl/
+  model.py     frozen HF encoder + own multi-LoRA (Q/V, r8, a16), mean-pooled features
+  learner.py   expand-and-freeze pool; only newest package trains; 2 AdamW steps/batch, lr 1e-3,
+               replay 16 from own memory, global reservoir 512 (fixed total), seen-label CE,
+               inference: proto_mean (primary), proto_max, proto_own, linear_last
+  data.py      streams: banking_rec, banking_cil, clinc_cil, amazon_rec, amazon_dil,
+               amazon_conflict, amazon_dilconf (dev); news_cil, senti_dil, senti_conf (HELD-OUT);
+               "<name>_iid" = shuffled no-shift null. Train splits only; official tests untouched.
+  triggers.py  label_novel, loss_z, repr_z, interf_logit, fresh_util, interf_proto (failed),
+               conflict_z (failed), label_surprise (proposed). warmup 8, confirm 2, window 20,
+               alarmed values excluded from baselines.
+experiments/tfcl_run.py (one run), tfcl_grid.py (parallel grid, never overwrites),
+  tfcl_shadow_report.py (AUROCs, null thresholds), tfcl_confirm_report.py (PRE-REGISTERED
+  analysis H1-H4, committed before results), tfcl_confirm.sh, tfcl_explore.sh,
+  tfcl_table.py, tfcl_fig_mechanism.py
+tests/test_tfcl_probe_restoration.py  (bitwise state restoration of all probes: PASS)
+
+Threshold calibration: q-quantile (0.99 primary, 0.95 sensitivity) of each statistic on the
+i.i.d.-shuffled version of the same stream, seed 2026 only, same backbone:
+results/tfcl/shadow/report_seed2026.json, results/tfcl/shadow_bert/report_seed2026.json
+
+------------------------------------------------------------------------------------------
+3. DEVELOPMENT RESULTS (seed 2026 only — NOT confirmatory)
+------------------------------------------------------------------------------------------
+Single vs oracle (proto_mean): banking_rec .864 vs .785; banking_cil .726 vs .612;
+clinc_cil .832 vs .728; amazon_rec .867 vs .880; amazon_dil .848 vs .864;
+amazon_conflict .578 vs .638; amazon_dilconf .500 vs .589. Frozen NCM: .674/.481/.588/.818/.812.
+AUROC for detecting segment changes: CIL -> label_novel, loss_z, fresh_util all 1.00;
+Amazon DIL -> everything ~0.5; drift -> loss_z .73, fresh_util .78, label_surprise .61-.66.
+Boundary loss label-group share in CIL: 0.36-0.52.
+Closed loop q=0.99: label_surprise = single in all CIL (1 package), ~oracle in drift
+(.638, .584), single in DIL. loss_z/fresh_util/label_novel spawn 5-17 packages in CIL and
+lose 8-12 points.
+Failures kept: interf_proto doesn't detect drift; conflict_z v1/v2 fire in CIL; window fix.
+
+------------------------------------------------------------------------------------------
+4. CONFIRMATION STUDY — PRE-REGISTERED, IN PROGRESS
+------------------------------------------------------------------------------------------
+Spec: notes/tmlr_confirmation_prereg.md (frozen code sha256 listed; verify before analysis:
+  sha256sum src/tfcl/*.py experiments/tfcl_run.py experiments/tfcl_grid.py
+  expected prefixes: data 830c4a67, learner 4e792d72, model 79d4907e, triggers b55a7fdb,
+  tfcl_run cec0a21f, tfcl_grid e1e998dd)
+Seeds 2027-2036 (BERT: 2027-2031). Hypotheses:
+  H1 loss_z/fresh_util spawns in CIL within 2 batches of label novelty >=80%; group share >.3
+  H2 in CIL: oracle, loss_z, fresh_util, label_novel < single
+  H3 in drift: oracle > single, label_surprise > single; label_novel never spawns in DIL/drift
+  H4 label_surprise non-inferior to single (margin 1pt) in CIL and DIL
+Paired seed-level t-CI + Wilcoxon, Holm within family.
+Exploratory (declared before results): notes/tmlr_exploratory_spec.md (expansion design
+variants: lora/head init fresh vs inherit; learner hparams).
+
+STATUS AT HANDOFF: ~250 / 1200 primary runs saved in results/tfcl/confirm/ (banking_rec,
+banking_cil done-ish). NOT yet run: rest of primary grid, q=0.95 sweep (800), BERT (550),
+attribution shadows (lora vs --no-lora, 40), exploratory (~160). Estimated ~1 day of 4090 time
+for everything (GPU-bound; 6 workers). Do NOT change frozen code to speed up (would break
+pre-registration); if you must, record it as a deviation.
+
+------------------------------------------------------------------------------------------
+5. RESTART COMMANDS (new pod)
+------------------------------------------------------------------------------------------
+  cd /workspace
+  gh auth login            # user must do this interactively (or set GH_TOKEN)
+  gh repo clone anitusiruk/mitosis-interference && cd mitosis-interference
+  git checkout tmlr-reframe
+  git lfs install && git lfs pull      # only needed for old-branch checkpoints
+  pip install transformers==5.18.0 datasets==3.6.0 peft==0.21.0 accelerate==1.15.0 \
+      scikit-learn scipy matplotlib
+  python tests/test_tfcl_probe_restoration.py          # must print PASS
+  # optional sanity: reproduce a saved run exactly before resuming
+  PYTHONPATH=$PWD python -m experiments.tfcl_run --stream banking_rec --policy single \
+      --seed 2027 --out /tmp/check.json && python -c "import json;print(json.load(open('/tmp/check.json'))['final_mean'], json.load(open('results/tfcl/confirm/banking_rec/single_s2027.json'))['final_mean'])"
+  nohup experiments/tfcl_confirm.sh > results/tfcl/confirm_pipeline.log 2>&1 &
+  nohup experiments/tfcl_explore.sh > results/tfcl/explore_pipeline.log 2>&1 &
+  # periodically: git add -A results/tfcl && git commit -m checkpoint && git push
+Scripts skip completed outputs; interrupted runs restart (deterministic -> no selection bias).
+LaTeX: apt-get install -y texlive-latex-recommended texlive-latex-extra
+       texlive-fonts-recommended texlive-bibtex-extra latexmk ; cd paper && latexmk -pdf main.tex
+Note: if a different GPU/driver/library version is used, small numeric differences vs the
+saved runs are possible; check the sanity reproduction above and report any mismatch as a
+deviation (re-run affected cells under the new environment rather than mixing silently).
+
+------------------------------------------------------------------------------------------
+6. NEXT STEPS AFTER RUNS FINISH
+------------------------------------------------------------------------------------------
+ 1. python -m experiments.tfcl_confirm_report  (q 0.99) and --q 0.95; BERT: --dir results/tfcl/confirm_bert
+ 2. Attribution: AUROC/group-share from results/tfcl/attribution/{lora,nolora} (shadow report
+    per seed) -> shows loss_z/fresh_util detection survives without LoRA (head-driven).
+ 3. Write paper Section 6 (results), abstract numbers, conclusion; tables via script into
+    paper/tables/; heatmap figure (trigger x stream, Δ vs single) and spawn raster.
+ 4. Report honestly whatever happens: if H3/H4 fail on held-out streams, say so and narrow.
+ 5. Compute/cost table (seconds per run by trigger; label_surprise needs no virtual update).
+ 6. Polish related work; verify every bib entry (CABLE verified via Crossref: Julian, Koh,
+    Bifet, npj AI 1:26, 2025). Anonymize; add AI-assistance disclosure per TMLR policy; the
+    user must read and understand the whole paper before submitting.
+
+Honest assessment at handoff: novelty ~6.5/10; TMLR odds roughly 40-55% IF confirmation holds
+(10-15% for the pre-session state). Main risks: drift positive control is synthetic (label
+flips); small encoders/short streams; triggers are stylised, not full reproductions of
+SEMA/CABLE/LACE/Online-LoRA; "expansion hurts in CIL" may depend on pool design (E1 tests it).

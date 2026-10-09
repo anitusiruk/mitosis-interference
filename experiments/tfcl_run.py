@@ -73,6 +73,11 @@ def main(argv=None):
         from src.tfcl.triggers import make_trigger
         name = a.policy.split(":", 1)[1] if a.policy != "shadow" else "shadow"
         trig = make_trigger(name, L, **json.loads(a.trigger_args))
+    # random: as many spawns as true segment changes (= oracle count), at uniformly random
+    # steps >= 8 (the trigger warmup), drawn from a dedicated generator.
+    n_changes = sum(1 for i in range(1, len(stream)) if stream[i]["seg"] != stream[i - 1]["seg"])
+    random_steps = set(np.random.default_rng(a.seed + 555).choice(
+        np.arange(8, len(stream)), size=n_changes, replace=False).tolist())
     seg_order, checkpoints, events, records = [], [], [], []
     for i, b in enumerate(stream):
         prev = stream[i - 1]["seg"] if i else None
@@ -82,6 +87,8 @@ def main(argv=None):
         if a.policy == "oracle" and i > 0 and b["seg"] != prev:
             spawn = True
         elif a.policy.startswith("periodic:") and i > 0 and i % int(a.policy.split(":")[1]) == 0:
+            spawn = True
+        elif a.policy == "random" and i in random_steps:
             spawn = True
         elif trig is not None:
             rec = trig.decide(b["x"], b["y"])

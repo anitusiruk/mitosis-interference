@@ -14,7 +14,7 @@ import numpy as np
 from scipy.stats import spearmanr
 from sklearn.metrics import roc_auc_score
 
-STATS = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z"]
+STATS = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z", "label_surprise"]
 
 
 def load(path):
@@ -70,15 +70,16 @@ def main():
     a = ap.parse_args()
     d = Path(a.dir)
     report = {}
-    for f in sorted(d.glob(f"*_s{a.seed}.json")):
-        if "_iid_" in f.name:
-            continue
-        name = f.name.replace(f"_s{a.seed}.json", "")
-        recs = load(f)
+    names = sorted({f.name.replace(f"_s{a.seed}.json", "").replace("_iid", "")
+                    for f in d.glob(f"*_s{a.seed}.json")})
+    for name in names:
+        f = d / f"{name}_s{a.seed}.json"
         iid = d / f"{name}_iid_s{a.seed}.json"
-        report[name] = analyse(recs)
+        report[name] = analyse(load(f)) if f.exists() else {}  # held-out streams: null only
         if iid.exists():
             report[name]["null_tau"] = thresholds(load(iid), a.q)
+            for q in (0.9, 0.95, 0.99, 0.999):
+                report[name][f"null_tau_q{q}"] = thresholds(load(iid), q)
     print(json.dumps(report, indent=1))
     (d / f"report_seed{a.seed}.json").write_text(json.dumps(report, indent=1))
 

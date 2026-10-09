@@ -20,6 +20,12 @@ Statistics (stylised versions of published signals; not full reproductions):
                  is *established*: first observed >= MATURE (= warmup) batches
                  earlier (label-novelty-corrected loss spike; proposed).
                  Undefined (no fire) with < 4 such examples.
+  label_surprise mean over the batch of [loss(x, y) - baseline_y], where baseline_y
+                 is the mean of the last WINDOW batch-mean losses of label y under
+                 the current package (needs >= 3 prior occurrences of y; batch
+                 needs >= 4 such examples, otherwise undefined = no fire).
+                 Label-conditional, so newly learned labels (falling loss) do not
+                 register; known labels whose mapping changes do (proposed v3).
   interf_proto   prospective increase of protected-memory *prototype* loss
                  after a virtual update; prototypes are recomputed from the
                  updated features, so the statistic is invariant to the
@@ -35,7 +41,8 @@ import torch.nn.functional as F
 
 from src.tfcl.learner import Package
 
-ALL = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z"]
+ALL = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z",
+       "label_surprise"]
 PROBE = 64
 PROTO_TEMP = 0.05
 MATURE = 8  # equal to the default warmup; not tuned
@@ -46,6 +53,8 @@ class Stats:
         self.L = L
         self.win = {"loss": deque(maxlen=window), "repr": deque(maxlen=window),
                     "conflict": deque(maxlen=window)}
+        self.window = window
+        self.label_hist = {}
         self.mu = None
         self.var = None
         self.n = 0
@@ -147,6 +156,18 @@ class Stats:
                 self._last_conflict = c
             else:
                 out["conflict_loss"] = out["conflict_z"] = float("nan")
+            # label-conditional surprise
+            per_label = {}
+            for i, yy in enumerate(ys):
+                per_label.setdefault(yy, []).append(float(nll[i]))
+            sur = []
+            for yy, vals in per_label.items():
+                h = self.label_hist.get(yy)
+                if h is not None and len(h) >= 3:
+                    base = sum(h) / len(h)
+                    sur += [v - base for v in vals]
+            out["label_surprise"] = sum(sur) / len(sur) if len(sur) >= 4 else float("nan")
+            self._last_label_means = {yy: sum(v) / len(v) for yy, v in per_label.items()}
         if "repr_z" in which:
             with torch.no_grad():
                 f = L.enc.features(xs, p.lora)
@@ -205,19 +226,23 @@ class Stats:
             us.append(reuse_after - fresh_after)
         return sum(us) / len(us)
 
-    def update(self, xs, ys):
-        """Update sliding windows/feature moments after the real update."""
+    def update(self, xs, ys, alarmed=()):
+        """Update sliding windows/feature moments after the real update. Values of a
+        statistic that is currently in alarm are not added to its own baseline window
+        (standard change-detection practice; otherwise a spike masks its confirmation)."""
         L, p = self.L, self.L.active
-        if hasattr(self, "_last_loss"):
-            self.win["loss"].append(self._last_loss)
-            del self._last_loss
-        if hasattr(self, "_last_conflict"):
-            self.win["conflict"].append(self._last_conflict)
-            del self._last_conflict
-        if hasattr(self, "_last_repr"):
-            if not math.isnan(self._last_repr):
-                self.win["repr"].append(self._last_repr)
-            del self._last_repr
+        for key, attr, stat in (("loss", "_last_loss", "loss_z"), ("conflict", "_last_conflict", "conflict_z"),
+                                ("repr", "_last_repr", "repr_z")):
+            if hasattr(self, attr):
+                v = getattr(self, attr)
+                if not math.isnan(v) and stat not in alarmed:
+                    self.win[key].append(v)
+                delattr(self, attr)
+        if hasattr(self, "_last_label_means"):
+            if "label_surprise" not in alarmed:
+                for yy, v in self._last_label_means.items():
+                    self.label_hist.setdefault(yy, deque(maxlen=self.window)).append(v)
+            del self._last_label_means
         with torch.no_grad():
             f = L.enc.features(xs, p.lora)
         m, v = f.mean(0), f.var(0, unbiased=False)
@@ -231,6 +256,7 @@ class Stats:
     def reset(self):
         for w in self.win.values():
             w.clear()
+        self.label_hist = {}
         self.mu = self.var = None
 
 
@@ -239,7 +265,7 @@ class Trigger:
         self.L, self.name, self.tau, self.confirm, self.warmup = L, name, tau, confirm, warmup
         self.stats = Stats(L)
         self.record = record or ([name] if name != "shadow" else ALL)
-        self.which = set(self.record) | {"loss_z", "repr_z", "conflict_z"}  # windows always maintained
+        self.which = set(self.record) | {"loss_z", "repr_z", "conflict_z", "label_surprise"}  # windows always maintained
         self.streak = 0
 
     def decide(self, xs, ys):
@@ -252,6 +278,7 @@ class Trigger:
             return rec
         v = rec.get(self.name, float("nan"))
         fire = eligible and not math.isnan(v) and v > self.tau
+        self._alarm = (self.name,) if fire else ()
         self.streak = self.streak + 1 if fire else 0
         if fire and self.streak >= self.confirm:
             rec["spawn"] = True
@@ -263,7 +290,7 @@ class Trigger:
         if getattr(self, "_spawned", False):
             self.stats.reset()
             self._spawned = False
-        self.stats.update(xs, ys)
+        self.stats.update(xs, ys, alarmed=getattr(self, "_alarm", ()))
 
 
 def make_trigger(name, L, **kw):

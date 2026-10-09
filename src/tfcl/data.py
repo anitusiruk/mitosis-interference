@@ -162,6 +162,59 @@ def amazon(kind, seed, bs=16):
     return stream, dev, 2
 
 
+def news(kind, seed, bs=16):
+    """HELD-OUT CIL: 20 Newsgroups (train split only), 5 groups of 4 classes."""
+    d = load_dataset("SetFit/20_newsgroups", split="train")
+    rows = [(t, y) for t, y in zip(d["text"], d["label"]) if t and len(t.split()) >= 5]
+    by = _by_class(*zip(*rows))
+    rng = np.random.default_rng(424242)
+    train_by, dev_by = {}, {}
+    for c, ts in by.items():
+        idx = rng.permutation(len(ts))
+        dev_by[c] = [ts[i] for i in idx[:50]]
+        train_by[c] = [ts[i] for i in idx[50:]]
+    perm = np.random.default_rng(777).permutation(20)
+    groups = [sorted(perm[i * 4:(i + 1) * 4].tolist()) for i in range(5)]
+    return _class_incremental(train_by, dev_by, groups, 80, bs, seed) + (20,)
+
+
+SENTI = [("A", "stanfordnlp/sst2", None, "sentence"), ("B", "fancyzhx/yelp_polarity", None, "text"),
+         ("C", "cardiffnlp/tweet_eval", "sentiment", "text"), ("D", "stanfordnlp/imdb", None, "text")]
+
+
+def senti(kind, seed, bs=16):
+    """HELD-OUT same-label shift across four sentiment datasets (train splits only).
+    senti_dil: SST-2 -> Yelp -> tweets -> IMDB. senti_conf: same with Yelp and IMDB flipped."""
+    flip = {"B", "D"} if kind == "senti_conf" else set()
+    rng = np.random.default_rng(seed + 9000)
+    dev_rng = np.random.default_rng(424242)
+    stream, dev = [], {}
+    for name, path, cfg, col in SENTI:
+        ds = load_dataset(path, cfg, split="train")
+        lab = ds["label"]
+        txt = ds[col]
+        pools = {0: [], 1: []}
+        for t, y in zip(txt, lab):
+            if path.startswith("cardiffnlp"):
+                if y == 1:
+                    continue
+                y = 0 if y == 0 else 1
+            if t and len(t.split()) >= 3:
+                pools[int(y)].append(t)
+        rows, xs, ys = [], [], []
+        for y in (0, 1):
+            didx = dev_rng.permutation(len(pools[y]))
+            dev_part, train_part = didx[:64], didx[64:]
+            yy = (1 - y) if name in flip else y
+            xs += [pools[y][i] for i in dev_part]
+            ys += [yy] * 64
+            pick = rng.choice(train_part, 160, replace=False)
+            rows += [(pools[y][i], yy) for i in pick]
+        stream += _batches(rows, bs, name, rng)
+        dev[name] = {"x": xs, "y": ys}
+    return stream, dev, 2
+
+
 def make_stream(kind, seed, bs=16):
     """``<kind>_iid``: identical examples, globally shuffled (no-shift null stream)."""
     if kind.endswith("_iid"):
@@ -174,4 +227,8 @@ def make_stream(kind, seed, bs=16):
         return clinc(kind, seed, bs)
     if kind.startswith("amazon"):
         return amazon(kind, seed, bs)
+    if kind.startswith("news"):
+        return news(kind, seed, bs)
+    if kind.startswith("senti"):
+        return senti(kind, seed, bs)
     raise ValueError(kind)

@@ -13,7 +13,7 @@ from pathlib import Path
 
 STREAMS = ["banking_rec", "banking_cil", "clinc_cil", "amazon_rec", "amazon_dil",
            "amazon_conflict", "amazon_dilconf"]
-TRIGGERS = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z"]
+TRIGGERS = ["label_novel", "loss_z", "repr_z", "interf_logit", "fresh_util", "interf_proto", "conflict_z", "label_surprise"]
 
 
 def jobs(a, taus):
@@ -22,9 +22,9 @@ def jobs(a, taus):
             extra = []
             if pol.startswith("trigger:"):
                 name = pol.split(":", 1)[1]
-                tau = taus[stream]["null_tau"][name]
+                tau = taus[stream][f"null_tau_q{a.q}"][name]
                 extra = ["--trigger-args", json.dumps({"tau": tau})]
-            tag = pol.replace(":", "-")
+            tag = pol.replace(":", "-") + (f"-q{a.q}" if pol.startswith("trigger:") else "")
             out = Path(a.outdir) / stream / f"{tag}_s{seed}.json"
             cmd = [sys.executable, "-m", "experiments.tfcl_run", "--stream", stream, "--policy", pol,
                    "--seed", str(seed), "--model", a.model, "--max-length", str(a.max_length),
@@ -53,6 +53,7 @@ def main():
     ap.add_argument("--model", default="distilbert-base-uncased")
     ap.add_argument("--max-length", type=int, default=64)
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--q", type=float, default=0.99, help="null quantile used as threshold")
     ap.add_argument("--extra", nargs=argparse.REMAINDER, default=[])
     a = ap.parse_args()
     taus = json.loads(Path(a.taus).read_text())

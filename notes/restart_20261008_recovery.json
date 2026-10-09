@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-08T23:11:11.348634+00:00",
+  "restored_commit": "15db01c6fd79e3f7b67980cfe8db968d7d36080e",
+  "prior_pod_unsaved_outputs_available": false,
+  "checkpoint_files_verified": 1590,
+  "checkpoint_bytes": 6453495355,
+  "all_sha256_verified": true,
+  "model_files_verified": 5,
+  "finished_utc": "2026-10-08T23:11:53.897315+00:00"
+}

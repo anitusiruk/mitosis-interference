@@ -1,0 +1,156 @@
+\documentclass[10pt]{article}
+\usepackage[preprint]{tmlr}
+% \usepackage{tmlr}            % anonymous submission version
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{multirow}
+\input{math_commands.tex}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\title{Capacity or Classifier? What Expansion Triggers Detect\\in Task-Free Continual Adapter Learning}
+\author{Anonymous authors}
+
+\newcommand{\ls}{\textsc{LabelSurprise}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dynamic-expansion continual learners add adapter capacity when a trigger signal---a loss spike, a representation shift, a prospective-forgetting estimate, or the counterfactual utility of a fresh module---indicates that existing capacity is inadequate. We ask what these triggers actually detect. In classifier-bearing adapter pools, we show analytically that at the arrival of a new label the excess incoming loss is a function of the old head's confidence on old labels and not of the representation, so loss-based signals and one-step fresh-module utility become label-novelty detectors. We then measure whether expansion is actually useful with oracle expansion at true segment boundaries, across class-incremental streams, same-label domain shift and concept drift, using a common, competently trained task-free learner (frozen encoder, LoRA packages, replay, fixed total memory, prototype inference). Expansion at true boundaries reduces accuracy under class-incremental learning, helps slightly under domain shift and helps most under concept drift---yet the common triggers fire chiefly at class arrivals and are silent under concept drift once labels are established. A label-conditional surprise statistic, which compares each example's loss with its own label's recent loss and is undefined for newly introduced labels, separates the two cases. In a pre-registered study with ten seeds, ten streams (three held out) and a second backbone, [RESULTS SUMMARY TO BE FILLED FROM THE CONFIRMATION STUDY]. Our results suggest that expansion triggers should be evaluated against the measured value of expansion, not boundary-detection precision, and that label novelty should be absorbed by the classifier rather than by new adapter capacity.
+\end{abstract}
+
+\section{Introduction}
+
+Parameter-efficient continual learning commonly grows a pool of adapters around a frozen pre-trained model \citep{zhou2024ease,wang2025sema,wei2025onlinelora}. When task identities are unavailable---the task-free setting \citep{aljundi2019taskfree}---the learner must itself decide \emph{when} to allocate a new module. Published decision rules monitor training-loss spikes or plateaus \citep{wei2025onlinelora,tathe2026lace}, distribution-shift descriptors of intermediate representations \citep{wang2025sema}, prospective forgetting after a virtual update \citep{julian2025cable}, or the hindrance a new task places on forward learning \citep{feng2024lw2g}. These signals are usually validated by their \emph{boundary precision}: whether expansions coincide with the (hidden) task boundaries of a benchmark.
+
+Boundary precision and the \emph{value} of expansion are different quantities. A new module helps only if one shared module cannot fit the incoming and the remembered data together. Many boundaries in standard benchmarks are class-incremental: new labels arrive with new inputs. A learner whose classifier can grow new output rows---and whose pre-trained representation already separates the new classes reasonably well---may need no new adapter at all. Conversely, under concept drift the same inputs and labels acquire a new mapping \citep{gama2014survey}, and a single shared mapping cannot be correct for both regimes.
+
+This paper asks what common expansion triggers detect, and whether what they detect is the need for capacity. Our contributions are:
+\begin{enumerate}
+\item \textbf{Mechanism.} We decompose the incoming cross-entropy into a label-group term and a within-group term and show (Proposition~\ref{prop:novelty}) that at a label-novelty event the excess loss of an existing package depends on the input only through its old-label logits. Loss-spike triggers and the one-step counterfactual utility of a fresh classifier-bearing module therefore respond to old-head confidence, not to representational inadequacy.
+\item \textbf{Measured value of expansion.} Using a common, competently trained task-free learner, we measure the value of expansion directly with oracle expansion at true boundaries and a count-matched random-timing control, across class-incremental (CIL), same-label domain-incremental (DIL) and concept-drift streams. Expansion hurts in CIL, helps slightly in DIL and helps most under drift.
+\item \textbf{What triggers detect.} Eight trigger statistics, calibrated to a common false-alarm rate on a shift-free null, are evaluated as change detectors and as closed-loop expansion policies. Triggers that detect boundaries well detect label novelty; their expansions are concentrated where expansion is harmful.
+\item \textbf{A label-conditional alternative.} \ls{} compares each example's loss with the recent loss of its own label and is undefined for newly introduced labels. It is a direct transfer of error-based drift detection \citep{gama2004ddm,bifet2007adwin} to the expansion decision, made label-conditional so that class arrivals do not register.
+\item \textbf{Methodology.} All thresholds are calibrated on shift-free nulls, never on outcomes. The confirmation study was pre-registered with frozen code hashes, uses ten seeds as the unit of analysis, three held-out streams and a held-out backbone, and reports all failed candidates from development.
+\end{enumerate}
+
+We do not claim a new continual-learning method that is competitive with the state of the art; our learner is deliberately simple so that the expansion decision is the only moving part. The distinction between novel-class emergence and concept drift is classical in data-stream mining \citep{masud2011novel}; our contribution is to show that it is missing from adapter-expansion triggers and that the omission has a measurable cost.
+
+\section{Related work}
+
+\paragraph{Expansion in continual learning.} Architectural approaches add capacity per task \citep{rusu2016pnn,yoon2018den} or on demand in task-free streams \citep{lee2020cndpm,ye2023sedem}. With pre-trained models, adapter or prompt pools are expanded per task \citep{zhou2024ease} or when a shift is detected: SEMA uses autoencoder-based representation descriptors \citep{wang2025sema}, Online-LoRA monitors loss plateaus \citep{wei2025onlinelora}, LACE expands on loss spikes with a recent-loss baseline \citep{tathe2026lace}, CABLE scores prospective forgetting after a virtual update \citep{julian2025cable}, and LW2G learns whether to grow from a hindrance metric \citep{feng2024lw2g}. We stylise the signals of these families (Section~\ref{sec:triggers}); we do not reproduce the complete systems.
+
+\paragraph{Classifier effects in class-incremental learning.} Output-layer bias toward recent classes is well documented \citep{wu2019bic,hou2019lucir,caccia2022ace}, and nearest-class-mean classifiers on pre-trained features are strong baselines \citep{rebuffi2017icarl,mai2021scr,zhou2024aper,mcdonnell2023ranpac}. The factorisation of class-incremental prediction into task-identity and within-task prediction is established \citep{kim2022theoretical}. We use the corresponding loss identity as a diagnostic of expansion signals; the identity itself is not new.
+
+\paragraph{Drift and novelty detection in streams.} Error-rate drift detectors \citep{page1954cusum,gama2004ddm,bifet2007adwin} and novel-class detection under concept drift \citep{masud2011novel} distinguish concept change from class emergence in classical stream mining. \ls{} transfers this distinction to adapter expansion.
+
+\section{Setting and learner}
+\label{sec:setting}
+
+\paragraph{Stream.} A task-free learner observes batches $(\mathbf{x}_t,\mathbf{y}_t)$, $t=1,\dots,T$, of 16 labelled examples. Segment identities are evaluation metadata and are never shown to the learner, except by the oracle reference policy.
+
+\paragraph{Packages.} A frozen encoder $f$ (DistilBERT \citep{sanh2019distilbert}; BERT-base \citep{devlin2019bert} as held-out backbone) is shared. A package $k$ consists of LoRA factors \citep{hu2022lora} on query/value projections (rank 8) and a linear head over the global label space, giving features $f_k(x)$ (mean-pooled) and logits $z_k(x)$. Only the newest package trains; earlier packages are frozen, as in expand-and-freeze adapter pools \citep{zhou2024ease,wang2025sema}. A new package starts from zero-output LoRA and a zero head.
+
+\paragraph{Training.} For every incoming batch the newest package takes two AdamW steps on the batch plus 16 items replayed from its own memory \citep{chaudhry2019tiny}, with cross-entropy over the labels observed so far (rows of never-observed labels are masked and therefore stay exactly zero).
+
+\paragraph{Memory.} A single global reservoir \citep{vitter1985reservoir} of 512 examples is shared by the whole pool, so expansion never increases the replay budget. Items are tagged with the package that observed them.
+
+\paragraph{Inference.} Predictions use cosine prototypes computed from memory under each package; class scores are averaged over packages (equivalently, nearest-class-mean on the normalised concatenation of package features, as in EASE \citep{zhou2024ease}). A max-over-packages rule and per-package owned-prototype routing are reported as secondary rules.
+
+\paragraph{Learner competence.} The learner is intentionally simple, but not weak: a single package reaches 86\% on the BANKING77 recurrence stream versus 67\% for training-free frozen-feature prototypes (Table~\ref{tab:main}). An earlier version of this project used a learner that took one step per batch into a 77-way head and reached only 16\%---below the training-free baseline---and we discarded its accuracy comparisons for that reason (Appendix~\ref{app:history}).
+
+\section{What a loss signal measures at a label-novelty event}
+\label{sec:mechanism}
+
+Let $S$ be the labels that may be predicted, partitioned into labels $O$ already trained and labels $N$ appearing for the first time in the current batch. For an example with label $y$ in group $G(y)\in\{O,N\}$,
+\begin{equation}
+\ell(x,y) = \underbrace{-\log \textstyle\sum_{c\in G(y)} p(c\mid x)}_{\text{label-group term}}\;\underbrace{-\;\log p\big(y \mid x, G(y)\big)}_{\text{within-group term}} .
+\label{eq:decomp}
+\end{equation}
+
+\begin{proposition}
+\label{prop:novelty}
+Suppose the head rows of labels in $N$ have never been updated and are zero, so $z_c(x)=0$ for $c\in N$. For $y\in N$ the loss of an existing package is
+\[
+\ell(x,y) = \log|N| \;+\; \log\Big(1+\tfrac{1}{|N|}\textstyle\sum_{o\in O} e^{z_o(x)}\Big),
+\]
+where the first term is the within-group term and the second is the label-group term. A fresh package with a zero head incurs $\log(|N|+|O|)$. Hence the fresh-minus-reuse loss gap before any update is $\log\big((|N|+\sum_{o}e^{z_o(x)})/(|N|+|O|)\big)$, which is positive whenever the mean of $e^{z_o(x)}$ over old labels exceeds one, and which depends on $x$ only through the old-label logits.
+\end{proposition}
+\begin{proof}
+With $z_c=0$ for $c\in N$, $p(y\mid x)=1/(|N|+\sum_o e^{z_o})$ and $p(y\mid x,N)=1/|N|$; the identity follows from \eqref{eq:decomp}. A zero head assigns $1/|S|$ to every label.
+\end{proof}
+
+The proposition is elementary, but its consequence for expansion triggers is direct. A loss-spike detector at a class arrival measures how confidently the old head predicts old labels; a fresh-versus-reuse utility comparison before or shortly after one update rewards discarding that confident head. Neither quantity asks whether the representation can separate the new labels---a question a growing head and a prototype classifier answer without new adapter capacity. Section~\ref{sec:results} shows that this mechanism dominates trigger behaviour in practice, and that the label-group term is 36--52\% of the boundary loss in our class-incremental streams even after several steps of learning.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/mechanism.pdf}
+\caption{Per-batch statistics of a single package on a class-incremental stream (left) and a concept-drift stream (right); development seed 2026. Top: incoming loss split as in \eqref{eq:decomp}. Middle: loss-spike $z$-score. Bottom: \ls{}. Dashed lines: null-calibrated thresholds ($q=0.99$ on the i.i.d.-shuffled stream). The loss spike crosses its threshold at every class arrival; \ls{} stays far below its threshold under class arrivals and crosses it when established labels flip.}
+\label{fig:mechanism}
+\end{figure}
+
+\subsection{A label-conditional alternative}
+\label{sec:surprise}
+If label novelty is to be absorbed by the classifier, expansion should respond to evidence that an \emph{established} label's mapping has changed. Let $B_y$ be the mean of the last 20 batch-mean losses of label $y$ under the current package.
+\begin{definition}[\ls]
+For a batch, $\mathrm{LS} = \frac{1}{|\mathcal{E}|}\sum_{i\in\mathcal{E}} \big(\ell(x_i,y_i) - B_{y_i}\big)$, where $\mathcal{E}$ contains the examples whose label has at least three prior batch-loss records under the current package. LS is undefined (cannot trigger) if $|\mathcal{E}|<4$.
+\end{definition}
+Newly introduced labels are excluded by construction, and while a label is being learned its loss falls, so LS is typically negative under class-incremental arrivals. Under concept drift, an established label's loss rises above its own history. LS is an error-based drift statistic \citep{gama2004ddm} computed per label; it needs no virtual update and adds negligible cost. Two earlier variants---a pooled $z$-score over all examples with previously observed labels, and the same restricted to labels first seen at least eight batches earlier---failed during development because newly learned labels still have higher loss than long-established ones (Appendix~\ref{app:history}).
+
+\section{Triggers, calibration and protocol}
+\label{sec:triggers}
+
+\paragraph{Trigger statistics.} All triggers are computed on the newest package before it trains on the incoming batch. \textsc{LabelNovel}: fraction of batch labels never observed (a trivial reference). \textsc{LossZ}: $z$-score of the incoming loss against a 20-batch window (loss-spike triggers; \citealp{tathe2026lace,wei2025onlinelora}). \textsc{ReprZ}: $z$-score of a label-free diagonal-Mahalanobis feature distance (distribution-shift descriptors; \citealp{wang2025sema}). \textsc{InterfLogit}: increase in protected-memory cross-entropy after a virtual update on the incoming batch (prospective forgetting; \citealp{julian2025cable}). \textsc{FreshUtil}: cross-fitted query-loss advantage of a fresh package over updating the current one after one virtual update (counterfactual utility; the CAU allocator of Appendix~\ref{app:cau}). \textsc{InterfProto}: the prospective change of a leave-one-out prototype loss on memory, which is invariant to the linear head (a first, head-equalised proposal that failed; Appendix~\ref{app:history}). \textsc{ConflictZ}: a loss $z$-score restricted to labels first seen at least eight batches earlier (second failed proposal). \ls{} (Section~\ref{sec:surprise}). Virtual updates use exact snapshot/restore of package parameters, optimiser moments and private random states; a test verifies bitwise restoration of the learner, and shadow runs reproduce the single-package trajectory exactly.
+
+\paragraph{Decision rule.} Common to all triggers: after the newest package has at least eight updates, spawn when the statistic exceeds its threshold on two consecutive eligible batches. Values in alarm are not added to their own baseline windows.
+
+\paragraph{Null calibration.} Each statistic's threshold is the $q$-quantile of its values on an i.i.d.-shuffled version of the same stream (same examples, no shift), with the same backbone, using only the development seed 2026. This equalises the false-alarm rate across triggers and uses no outcome. $q=0.99$ is primary and $q=0.95$ a sensitivity analysis.
+
+\paragraph{Streams.} Class-incremental: BANKING77 \citep{casanueva2020banking} class-group recurrence (A B A C B, 33 classes) and seven disjoint groups (77 classes), CLINC150 \citep{larson2019clinc} (ten groups of 15), and \emph{held-out} 20 Newsgroups \citep{lang1995newsweeder} (five groups of four). Same-label domain shift: Amazon reviews \citep{keung2020marc} binary sentiment across three recurring or five domains, and \emph{held-out} SST-2 $\to$ Yelp $\to$ tweets $\to$ IMDB \citep{socher2013sst,zhang2015charcnn,barbieri2020tweeteval,maas2011imdb}. Concept drift (positive controls): the Amazon streams with one or two domains' labels flipped, and the \emph{held-out} sentiment stream with Yelp and IMDB flipped. Development examples are drawn from training splits only; official test splits were never used.
+
+\paragraph{Policies.} \emph{Frozen}: training-free prototypes. \emph{Single}: one package throughout. \emph{Oracle}: spawn at every true segment change. \emph{Random}: the oracle's number of spawns at uniformly random steps. \emph{Triggers}: the eight statistics above.
+
+\paragraph{Statistics and pre-registration.} The confirmation study (seeds 2027--2036; BERT seeds 2027--2031) was specified, with code hashes and hypotheses, before any confirmation run (repository file \texttt{notes/tmlr\_confirmation\_prereg.md}). The seed is the unit of analysis: it changes stream sampling and order, initialisation, replay and reservoir randomness. We report paired seed-level mean differences with 95\% $t$-intervals and two-sided Wilcoxon signed-rank tests with Holm correction within each hypothesis family.
+
+\section{Results}
+\label{sec:results}
+
+\input{tables/main_table.tex}
+
+[RESULTS TEXT TO BE WRITTEN FROM THE CONFIRMATION STUDY.]
+
+\section{Discussion and limitations}
+
+\paragraph{Scope.} Our encoders are small, our streams are short (80--250 batches) and our drift streams use synthetic label flips, the canonical construction of real concept drift but not a naturally occurring one. Our triggers are stylised versions of published signals inside a common learner; full systems (e.g.\ SEMA's mixture router or CABLE's reinforcement-learned policy) may behave differently, and we make no claim about their reported benchmark numbers. Expand-and-freeze with prototype inference is one of several ways to use a pool; whether expansion helps in class-incremental streams under other inference rules (e.g.\ learned routers) is a separate question.
+
+\paragraph{Implications.} When an expansion trigger is proposed, its evaluation should include (i) a measurement of whether expansion helps in the evaluated regime, e.g.\ oracle and count-matched random expansion; (ii) separation of label novelty from changes in established labels; and (iii) thresholds calibrated on shift-free nulls rather than tuned on outcomes.
+
+\section{Conclusion}
+
+[TO BE WRITTEN AFTER CONFIRMATION.]
+
+\bibliography{refs}
+\bibliographystyle{tmlr}
+
+\appendix
+\section{Development history and failed candidates}
+\label{app:history}
+This project began as the design of a task-free allocator (Appendix~\ref{app:cau}). Its learner took a single AdamW step per 16-example batch into a 77-way head and reached about 16\% final accuracy on the BANKING recurrence stream with label-free routing (22\% with a learned router), whereas training-free frozen-feature prototypes reached 71\% on the same stream (logistic probe on frozen features: 86\%). We therefore discarded all of its accuracy comparisons and built the learner of Section~\ref{sec:setting}. All development of the new testbed used seed 2026 only and is preserved in the repository:
+\begin{enumerate}
+\item \textsc{InterfProto} (head-equalised prospective interference) was our first proposal. On the seed-2026 shadow traces it did not detect concept drift (AUROC 0.54 and 0.22 on the two development drift streams) and was retained only as a reported negative.
+\item \textsc{ConflictZ} v1 restricted the loss $z$-score to examples with previously observed labels. It detected class-incremental boundaries (AUROC 1.00) because labels observed one batch earlier are still untrained. v2 required labels to be first observed at least eight batches earlier; after the window fix below it still fired in class-incremental streams (2--6 spurious packages), because newly learned labels have higher loss than long-established ones. This motivated the label-conditional baseline of \ls{}.
+\item The first closed-loop pilot added alarmed values to the $z$-score baseline windows, so a genuine spike inflated its own baseline and failed the two-batch confirmation. Excluding alarmed values (standard in change detection) applies identically to all $z$-type triggers.
+\end{enumerate}
+The thresholds ($q=0.99$ primary), learner hyperparameters (learning rate $10^{-3}$, two steps per batch, replay 16, memory 512) and all trigger constants were fixed before the confirmation study and were not changed afterwards.
+
+\section{Case study: an exact counterfactual allocator}
+\label{app:cau}
+Before this study, we developed and audited an allocator, CAU (counterfactual action utility), that compares an exact, optimiser-faithful one-step update of each existing package and of a fresh classifier-bearing package against a common no-update reference on cross-fitted query halves, subject to a separate protected-memory feasibility check, and spawns after two consecutive windows of positive fresh utility. Its implementation restores parameters, AdamW moments, random states and memory exactly after every counterfactual. On a BANKING77 class-group recurrence stream (A B A C B), CAU spawned exactly at the arrivals of the B and C label groups (steps 18 and 50) in all ten seed/order development trajectories (seeds 2027--2031, two orders). A \emph{head-only} variant---identical, except that LoRA outputs are held exactly at zero and only the classifier stack trains---made identical allocation decisions in all ten trajectories, as did a variant that additionally freezes the hidden pre-classifier layer. At the original spawn windows, about 87\% of the fresh-versus-best-reuse utility advantage was already present before the prospective update, i.e.\ it reflected the replacement of the old classifier rather than learning. On the same-label Amazon stream CAU never spawned. These observations, made with the weaker learner described in Appendix~\ref{app:history} and therefore reported only for decisions and not for accuracy, motivated Proposition~\ref{prop:novelty} and the present study. The complete CAU audit, including its failed robustness gates and a discarded starving variant, is preserved in the repository.
+
+\end{document}

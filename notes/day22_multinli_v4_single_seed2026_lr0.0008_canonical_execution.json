@@ -1,0 +1,28 @@
+{
+  "name": "day22_multinli_v4_single_seed2026_lr0.0008_canonical",
+  "status": "completed",
+  "started_utc": "2026-10-08T23:15:22.031931+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day22_multinli_pilot_v4",
+    "--mode",
+    "pilot",
+    "--learning-rate",
+    "0.0008",
+    "--order",
+    "canonical",
+    "--output",
+    "results/day22_multinli_v4_single_seed2026_lr0.0008_canonical"
+  ],
+  "external_process_group_limit_seconds": 1500,
+  "spec_sha256": "de06a84f80e808adbed570ac6a0a5a4a85370b5cacf367d19e746a44fe0c2ec7",
+  "git_commit": "fc807bf00f67af0390c5bbb57ccb170f49314d09",
+  "gpu_memory_total_mib": 24564,
+  "gpu_memory_used_before_mib": 1,
+  "pid": 3007,
+  "returncode": 0,
+  "seconds": 15.994582601822913,
+  "finished_utc": "2026-10-08T23:15:38.028702+00:00"
+}

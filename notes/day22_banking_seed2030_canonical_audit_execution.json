@@ -1,0 +1,33 @@
+{
+  "name": "day15_banking_private_cau_seed2030_canonical_weight_moments",
+  "study": 15,
+  "status": "completed",
+  "started_utc": "2026-10-08T23:21:34.713662+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day22_checked_trajectory",
+    "--output",
+    "results/day15_banking_private_cau_seed2030_canonical_weight_moments",
+    "--deadline-utc",
+    "2026-10-08T23:44:34.713550+00:00",
+    "--regime",
+    "banking",
+    "--seed",
+    "2030",
+    "--order",
+    "canonical",
+    "--factorial"
+  ],
+  "training_budget_seconds": 1380,
+  "external_process_group_limit_seconds": 1500,
+  "spec_sha256": "8542126fe0de2494e6100be293c4384da34fa5d56156206c1c06154aa1421d08",
+  "git_commit": "e12eeee9eb72eac15e651630315ab7f9dcaa689c",
+  "gpu_memory_total_mib": 24564,
+  "gpu_memory_used_before_mib": 1,
+  "pid": 4089,
+  "returncode": 0,
+  "seconds": 679.8768892111257,
+  "finished_utc": "2026-10-08T23:32:54.593665+00:00"
+}

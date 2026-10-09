@@ -1,0 +1,103 @@
+{
+  "utc": "2026-10-08T23:16:55.349918+00:00",
+  "scope": "one-seed repeatedly viewed development learnability pilot",
+  "complete_candidates": 6,
+  "planned_candidates": 6,
+  "all_candidates_complete": true,
+  "pending": [],
+  "failed": [],
+  "rate_rows": [
+    {
+      "rate": 5e-05,
+      "orders": 2,
+      "pilot_training_seeds": 1,
+      "final_macro_accuracy": 0.5043402777777778,
+      "untrained_macro_accuracy": 0.3524305555555555,
+      "learning_gain": 0.15190972222222227,
+      "A_accuracy": 0.5208333333333334,
+      "B_accuracy": 0.5598958333333333,
+      "C_accuracy": 0.43229166666666663,
+      "learnability_gate_passed": true
+    },
+    {
+      "rate": 0.0002,
+      "orders": 2,
+      "pilot_training_seeds": 1,
+      "final_macro_accuracy": 0.6041666666666666,
+      "untrained_macro_accuracy": 0.3524305555555555,
+      "learning_gain": 0.2517361111111111,
+      "A_accuracy": 0.5911458333333333,
+      "B_accuracy": 0.6744791666666667,
+      "C_accuracy": 0.546875,
+      "learnability_gate_passed": true
+    },
+    {
+      "rate": 0.0008,
+      "orders": 2,
+      "pilot_training_seeds": 1,
+      "final_macro_accuracy": 0.6085069444444444,
+      "untrained_macro_accuracy": 0.3524305555555555,
+      "learning_gain": 0.2560763888888889,
+      "A_accuracy": 0.6145833333333333,
+      "B_accuracy": 0.6666666666666667,
+      "C_accuracy": 0.5442708333333333,
+      "learnability_gate_passed": true
+    }
+  ],
+  "selected": {
+    "rate": 0.0008,
+    "orders": 2,
+    "pilot_training_seeds": 1,
+    "final_macro_accuracy": 0.6085069444444444,
+    "untrained_macro_accuracy": 0.3524305555555555,
+    "learning_gain": 0.2560763888888889,
+    "A_accuracy": 0.6145833333333333,
+    "B_accuracy": 0.6666666666666667,
+    "C_accuracy": 0.5442708333333333,
+    "learnability_gate_passed": true
+  },
+  "all_initial_per_example_logits_equal": true,
+  "all_completed_saved_logit_metrics_independently_recomputed": true,
+  "confirmation_authorized_by_report": false,
+  "official_validation_or_test_evaluated": false,
+  "no_training_outputs_modified": true,
+  "sources": {
+    "day22_multinli_v4_single_seed2026_lr5e-05_canonical": {
+      "summary_sha256": "401708ae59b20aa35cad76f3922f48576131a3b3578a070826a3a86baf669144",
+      "metrics_sha256": "91dfebc8449181cd6d0ae89fbb98bab012b8c6b1acd794ec076bd0f024246d31",
+      "predictions_sha256": "238875f3c1e8d80a2c23b37481c3f4c417882932fc29003b08717ea2ec65abf3",
+      "execution_sha256": "f2cfc9c32dac94f0a986a6f8c86d2d1d523cec41321ec1487887e39c2d5a6439"
+    },
+    "day22_multinli_v4_single_seed2026_lr5e-05_b_first": {
+      "summary_sha256": "17aef858b9fbe0a27ae04d3a46524a26187685755817eae62f5f8efaee895aa7",
+      "metrics_sha256": "01604da427298be8e03703c1504089e9285cde96e23266adc352bad5819b4682",
+      "predictions_sha256": "7b0bf4bf8ee2a00ad9febfda1cf17955fe71169c9ee514d7c69429c55867ac76",
+      "execution_sha256": "f421ced0c9acc71ff80fdcb049e14c35a2e8f4067052314f52beb07daedb5980"
+    },
+    "day22_multinli_v4_single_seed2026_lr0.0002_canonical": {
+      "summary_sha256": "d1e587d569736b9a1ada17d330717d30ac9b30d0c42bf4273fc7cfd0a2773420",
+      "metrics_sha256": "6b454c8de29493c6f98c837f30fd12e4b3c252a5b6d5cd51821d2dd940a215c6",
+      "predictions_sha256": "9d351ddbee57cf9266008c01f317406a6fc8d0151819883a637d3e367f5ca2ff",
+      "execution_sha256": "101cf29a95a5f5b1d47117e964707736ddb61f0be898b50325fa0bfca0795c24"
+    },
+    "day22_multinli_v4_single_seed2026_lr0.0002_b_first": {
+      "summary_sha256": "e43432a3400d0e7fa6121497e9dbee305563636c086df567199fd2c4432912f2",
+      "metrics_sha256": "9cab7b490fb806ef392a315fae984ae4fa4e68614e395ac70ed7a06383f55eb3",
+      "predictions_sha256": "d622928d47a4071d2e175a36a92780d10b31ec8d144b2a6f964b4252e471a0be",
+      "execution_sha256": "c25ef597887e2e53ae51dd5fece6bffe84350cd044d9e560ecf0d35fa72b547a"
+    },
+    "day22_multinli_v4_single_seed2026_lr0.0008_canonical": {
+      "summary_sha256": "0dc36f0be450c4e03b2814d8745330919d11b3adf8a9b6427c0dce224f535d44",
+      "metrics_sha256": "c9cff2943f0c3e00bd927918d5f5741f9f0a4575757fccbc8b6ed9d830e55f92",
+      "predictions_sha256": "b7b61c3486d5c69ae9274e4f71a46540d4f687e32c5368ce8ea8945db39f83dc",
+      "execution_sha256": "54303429789d593cd79e6b359304afe13fcbfb1a960869ada797cf836f94c8de"
+    },
+    "day22_multinli_v4_single_seed2026_lr0.0008_b_first": {
+      "summary_sha256": "1530946912a9ad0677216259482bc43ac2cb6a11d477b97f2fb848192e4be495",
+      "metrics_sha256": "73c29c44b8eacf288c5b534b2d4bc5e578d0de83c86b918b41e67895dd0925b7",
+      "predictions_sha256": "8b7e3f7b52d2fcd22218a9c21aaac20efb4fe13d2861d3b38c2938243c8bee1b",
+      "execution_sha256": "a3acaea742b2090670acbbbb7a2698dd7e554e422a23d205502df60d92202cfd"
+    }
+  },
+  "reporter_sha256": "f82825409a7af7e9088369e9ab88e2d65be151286fe397dff24fe94d60757a10"
+}

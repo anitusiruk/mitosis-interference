@@ -1,0 +1,28 @@
+{
+  "name": "day22_multinli_v4_single_seed2026_lr5e-05_b_first",
+  "status": "completed",
+  "started_utc": "2026-10-08T23:13:40.462345+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "-u",
+    "-m",
+    "experiments.day22_multinli_pilot_v4",
+    "--mode",
+    "pilot",
+    "--learning-rate",
+    "5e-05",
+    "--order",
+    "b_first",
+    "--output",
+    "results/day22_multinli_v4_single_seed2026_lr5e-05_b_first"
+  ],
+  "external_process_group_limit_seconds": 1500,
+  "spec_sha256": "de06a84f80e808adbed570ac6a0a5a4a85370b5cacf367d19e746a44fe0c2ec7",
+  "git_commit": "fc807bf00f67af0390c5bbb57ccb170f49314d09",
+  "gpu_memory_total_mib": 24564,
+  "gpu_memory_used_before_mib": 1,
+  "pid": 2823,
+  "returncode": 0,
+  "seconds": 15.443955017253757,
+  "finished_utc": "2026-10-08T23:13:55.908967+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "all_working_lfs_sha256_verified": true,
+  "checkpoint_bytes": 6549965494,
+  "checkpoint_files": 1618,
+  "new_lfs_storage": "/workspace/verified-lfs-20261008T231911589890",
+  "new_unique_lfs_objects_independently_downloaded": 14,
+  "restored_old_objects_verified_by": "notes/restart_20261008_recovery.json",
+  "scope": "Old objects verified on restoration; new object bytes independently downloaded from GitHub.",
+  "snapshot_commit": "e4d591ddadb388eae25bf63ac71c9e85e2b7f5d3",
+  "status": "passed",
+  "utc": "2026-10-08T23:19:13.139463+00:00"
+}

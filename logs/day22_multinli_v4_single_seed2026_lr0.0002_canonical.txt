@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8707.11it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: /workspace/.cache/huggingface/hub/models--distilbert-base-uncased/snapshots/12040accade4e8a0f71eabdb258fecc2e7e948be
+Key                     | Status     | 
+------------------------+------------+-
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+classifier.weight       | MISSING    | 
+classifier.bias         | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+PILOT_STEP 16 elapsed 1.72
+PILOT_STEP 32 elapsed 1.97
+PILOT_STEP 48 elapsed 2.23
+PILOT_STEP 64 elapsed 2.48
+PILOT_STEP 80 elapsed 3.03
+PILOT_STEP 96 elapsed 3.33
+PILOT_STEP 112 elapsed 3.61
+PILOT_STEP 128 elapsed 3.89
+PILOT_STEP 144 elapsed 4.15
+PILOT_STEP 160 elapsed 4.71
+PILOT_STEP 176 elapsed 4.98
+PILOT_STEP 192 elapsed 5.24
+PILOT_STEP 208 elapsed 5.49
+PILOT_STEP 224 elapsed 6.05
+PILOT_STEP 240 elapsed 6.34
+PILOT_STEP 256 elapsed 6.66
+PILOT_STEP 272 elapsed 6.96
+PILOT_STEP 288 elapsed 7.24
+PILOT_STEP 304 elapsed 7.81
+PILOT_STEP 320 elapsed 8.09
+PILOT_STEP 336 elapsed 8.37
+PILOT_STEP 352 elapsed 8.64
+NLI_SINGLE_PILOT_COMPLETE {"status": "completed", "steps": 360, "expected_steps": 360, "learning_updates": 360, "training_examples": 5760, "train_seconds": 6.241515550762415, "evaluation_seconds": 1.863636021502316, "elapsed_seconds": 9.097778365015984, "gpu_peak_allocated_bytes": 1111897088, "adapters": ["default"], "official_validation_or_test_loaded": false, "pilot_not_confirmation": true, "predictions_sha256": "9d351ddbee57cf9266008c01f317406a6fc8d0151819883a637d3e367f5ca2ff"}

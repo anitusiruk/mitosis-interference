@@ -1,0 +1,3 @@
+# One-seed learnability pilot figure
+
+Every declared rate and both orders are retained. Circles/lines average both orders; crosses show individual orders. The grey series is the untrained mean. The dashed line marks balanced chance, and dotted lines mark the predefined operational macro and every-genre gates. The separate learning-gain requirement is checked in the selection table. There is one pilot training seed, so no seed-confidence interval is shown. These repeatedly viewed development examples are not final confirmation. This combined context/exposure/data-cleaning recipe tests learnability, not the isolated effect of context length, an adaptive allocation benefit or named-method superiority.

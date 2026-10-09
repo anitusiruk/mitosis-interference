@@ -1,0 +1,17 @@
+{
+  "adapters": [
+    "default"
+  ],
+  "elapsed_seconds": 9.852969738654792,
+  "evaluation_seconds": 1.8614886533468962,
+  "expected_steps": 360,
+  "gpu_peak_allocated_bytes": 1112150016,
+  "learning_updates": 360,
+  "official_validation_or_test_loaded": false,
+  "pilot_not_confirmation": true,
+  "predictions_sha256": "d622928d47a4071d2e175a36a92780d10b31ec8d144b2a6f964b4252e471a0be",
+  "status": "completed",
+  "steps": 360,
+  "train_seconds": 7.031047796830535,
+  "training_examples": 5760
+}

@@ -88,6 +88,13 @@ With $z_c=0$ for $c\in N$, $p(y\mid x)=1/(|N|+\sum_o e^{z_o})$ and $p(y\mid x,N)
 
 The proposition is elementary, but its consequence for expansion triggers is direct. A loss-spike detector at a class arrival measures how confidently the old head predicts old labels; a fresh-versus-reuse utility comparison before or shortly after one update rewards discarding that confident head. Neither quantity asks whether the representation can separate the new labels---a question a growing head and a prototype classifier answer without new adapter capacity. Section~\ref{sec:results} shows that this mechanism dominates trigger behaviour in practice, and that the label-group term is 36--52\% of the boundary loss in our class-incremental streams even after several steps of learning.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/mechanism.pdf}
+\caption{Per-batch statistics of a single package on a class-incremental stream (left) and a concept-drift stream (right); development seed 2026. Top: incoming loss split as in \eqref{eq:decomp}. Middle: loss-spike $z$-score. Bottom: \ls{}. Dashed lines: null-calibrated thresholds ($q=0.99$ on the i.i.d.-shuffled stream). The loss spike crosses its threshold at every class arrival; \ls{} stays far below its threshold under class arrivals and crosses it when established labels flip.}
+\label{fig:mechanism}
+\end{figure}
+
 \subsection{A label-conditional alternative}
 \label{sec:surprise}
 If label novelty is to be absorbed by the classifier, expansion should respond to evidence that an \emph{established} label's mapping has changed. Let $B_y$ be the mean of the last 20 batch-mean losses of label $y$ under the current package.

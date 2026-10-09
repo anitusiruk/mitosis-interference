@@ -10,3 +10,10 @@ __pycache__/
 *$py.class
 
 # Model and optimizer tensors are versioned through Git LFS.
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.blg
+paper/*.bbl

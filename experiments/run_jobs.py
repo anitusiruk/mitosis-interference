@@ -7,10 +7,25 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 
-def run(args, module):
+def gpu_free_mb():
+    try:
+        return int(subprocess.check_output(["nvidia-smi", "--query-gpu=memory.free", "--format=csv,noheader,nounits"]).split()[0])
+    except Exception:
+        return 10 ** 6
+
+
+_LAUNCH = __import__("threading").Lock()
+
+
+def run(args, module, need_mb=6000):
     out = Path(args[args.index("--out") + 1])
     if out.exists():
         return None
+    import time
+    with _LAUNCH:  # wait for GPU headroom, then give the job time to allocate before the next launch
+        while gpu_free_mb() < need_mb:
+            time.sleep(20)
+        time.sleep(30)
     out.parent.mkdir(parents=True, exist_ok=True)
     log = out.with_suffix(".log")
     with open(log, "w") as fh:

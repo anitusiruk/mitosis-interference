@@ -9,3 +9,9 @@ Using the latest cached version of the dataset since stanfordnlp/imdb couldn't b
 Found the latest cached dataset configuration 'plain_text' at /workspace/.cache/huggingface/datasets/stanfordnlp___imdb/plain_text/0.0.0/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 (last modified on Sat Oct 10 00:42:36 2026).
 HTTP Error 429 thrown while requesting GET https://huggingface.co/api/models/distilbert-base-uncased/tree/main/additional_chat_templates
 Rate limited. Waiting 20.0s before retry [Retry 1/5].
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 8392.30it/s]
+[senti_dil trigger:interf_proto s2028] step 19 seg A packages 3 A:0.875
+[senti_dil trigger:interf_proto s2028] step 39 seg B packages 3 A:0.883 B:0.891
+[senti_dil trigger:interf_proto s2028] step 59 seg C packages 3 A:0.875 B:0.898 C:0.836
+[senti_dil trigger:interf_proto s2028] step 79 seg D packages 3 A:0.859 B:0.867 C:0.836 D:0.703
+FINAL senti_dil trigger:interf_proto 2028 {"proto_mean": 0.81640625, "proto_max": 0.80859375, "proto_own": 0.81640625, "linear_last": 0.822265625} 147s

@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 5183.02it/s]
+[imnr_cil oracle s2026] step 49 seg A packages 1 A:0.855
+[imnr_cil oracle s2026] step 99 seg B packages 2 A:0.793 B:0.687
+[imnr_cil oracle s2026] step 149 seg C packages 3 A:0.746 B:0.649 C:0.688

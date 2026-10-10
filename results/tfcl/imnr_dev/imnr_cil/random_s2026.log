@@ -1,0 +1,28 @@
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 2572.95it/s]
+[imnr_cil random s2026] step 49 seg A packages 3 A:0.862
+[imnr_cil random s2026] step 99 seg B packages 3 A:0.771 B:0.737
+[imnr_cil random s2026] step 149 seg C packages 3 A:0.736 B:0.720 C:0.752
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x3.py", line 29, in <module>
+    X2.main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x2.py", line 35, in main
+    X.main(argv)
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
+    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
+    ^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
+    L.observe(b["x"], b["y"])
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
+    self.step(p, xs, ys)
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 134, in step
+    loss.backward()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 39.31 MiB is free. Process 235493 has 1.98 GiB memory in use. Process 243591 has 1.61 GiB memory in use. Including non-PyTorch memory, this process has 2.60 GiB memory in use. Process 245144 has 1.61 GiB memory in use. Process 245299 has 1.67 GiB memory in use. Process 245426 has 2.32 GiB memory in use. Process 247011 has 1.94 GiB memory in use. Process 246483 has 1.59 GiB memory in use. Process 246928 has 1.40 GiB memory in use. Process 247399 has 1.12 GiB memory in use. Process 247695 has 1.13 GiB memory in use. Process 248165 has 1.12 GiB memory in use. Process 247762 has 1.35 GiB memory in use. Process 247993 has 1.07 GiB memory in use. Process 248089 has 902.00 MiB memory in use. Of the allocated memory 2.09 GiB is allocated by PyTorch, and 54.36 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,6 +1,6 @@
 #!/bin/bash
 set -u
-export PYTHONPATH=/workspace/mitosis-interference TRANSFORMERS_VERBOSITY=error
+export PYTHONPATH=/workspace/mitosis-interference TRANSFORMERS_VERBOSITY=error HF_DATASETS_TRUST_REMOTE_CODE=1
 cd /workspace/mitosis-interference
 until grep -q CONFIRM_PIPELINE_DONE results/tfcl/confirm_pipeline.log; do sleep 60; done
 {

@@ -103,3 +103,18 @@ Deviations will be recorded in notes/tmlr_extension_results.md.
     625bdc96347e4e887ec4e76a329061483e0700b0f3791c454a3c52ce924aaa9c  experiments/tfcl_extension.sh
     556dcfe7d5cc44c02bc66546b53cd35214a50ea3785c6d02cdeb9d1b6d054e72  results/tfcl/vision_dev/shadow/report_seed2026.json
     8836a8ab10f4cd6d1cfc5108aa1ee1658a2052695e82dd1c4ef4eb1d49201ab1  results/tfcl/tweet_dev/shadow/report_seed2026.json
+
+## Addendum A1 — declared 2026-10-10 ~03:10 UTC, before any ext_vision run had started
+
+Development observation (seed 2026, cifar_conf): with the pre-registered proto_mean rule,
+oracle expansion is BELOW single (.672 vs .800), but with ownership routing (proto_own: each
+package scores only the classes in its own memory items, best package-class pair wins)
+oracle is ABOVE single (.845 vs .800); cifar_dil similarly .906 (own) vs .872.
+The text primary results had been partially seen at this point (amazon drift streams:
+oracle - single small; proto_own did not help there), so this addendum concerns vision only.
+
+* XV3 is unchanged and remains as declared (proto_mean; now expected to fail).
+* XV3-own (added): in cifar_conf, oracle > single under proto_own (paired, same tests).
+* XV-own-dil (descriptive): oracle - single under proto_own in cifar_dil.
+These are computed by running experiments/tfcl_extension_report.py logic with
+metric = proto_own (load(..., metric="proto_own")); no other change.

@@ -1,0 +1,88 @@
+{
+ "cifar_cil": {
+  "label_novel": {
+   "auroc_shift": 0.9698660714285715,
+   "spearman_with_label_novel": 1.0
+  },
+  "loss_z": {
+   "auroc_shift": 0.9997519841269842,
+   "spearman_with_label_novel": 0.475330980195673
+  },
+  "repr_z": {
+   "auroc_shift": 0.8931051587301587,
+   "spearman_with_label_novel": 0.38029865776591437
+  },
+  "interf_logit": {
+   "auroc_shift": 0.4635416666666667,
+   "spearman_with_label_novel": -0.04046300181760119
+  },
+  "fresh_util": {
+   "auroc_shift": 0.998015873015873,
+   "spearman_with_label_novel": 0.4745586264321542
+  },
+  "interf_proto": {
+   "auroc_shift": 0.5602678571428571,
+   "spearman_with_label_novel": 0.009107744552356552
+  },
+  "conflict_z": {
+   "auroc_shift": 0.13169642857142855,
+   "spearman_with_label_novel": -0.35992030636785066
+  },
+  "label_surprise": {
+   "auroc_shift": 0.0200892857142857,
+   "spearman_with_label_novel": -0.46169302806029827
+  },
+  "boundary_loss_group_share": 0.33352544348005586,
+  "boundary_loss_mean": 4.4681874679194555,
+  "null_tau": {
+   "label_novel": 0.2243750000000002,
+   "loss_z": 2.083006225616446,
+   "repr_z": 2.55106649994498,
+   "interf_logit": 0.007462980300188066,
+   "fresh_util": -0.23863279819488495,
+   "interf_proto": 0.05758591532707217,
+   "conflict_z": 2.0871246199370517,
+   "label_surprise": 0.383667370997783
+  },
+  "null_tau_q0.9": {
+   "label_novel": 0.0,
+   "loss_z": 1.0322184244247963,
+   "repr_z": 1.058275632702745,
+   "interf_logit": 0.0017123505473136905,
+   "fresh_util": -1.4096456289291381,
+   "interf_proto": 0.012551626563072207,
+   "conflict_z": 1.097530623103618,
+   "label_surprise": -0.06096727187449399
+  },
+  "null_tau_q0.95": {
+   "label_novel": 0.05937499999999929,
+   "loss_z": 1.533019450827236,
+   "repr_z": 1.681166708086611,
+   "interf_logit": 0.004003594815731048,
+   "fresh_util": -0.6878388643264775,
+   "interf_proto": 0.024570911377668352,
+   "conflict_z": 1.5524060597643285,
+   "label_surprise": 0.13471899704012485
+  },
+  "null_tau_q0.99": {
+   "label_novel": 0.2243750000000002,
+   "loss_z": 2.083006225616446,
+   "repr_z": 2.55106649994498,
+   "interf_logit": 0.007462980300188066,
+   "fresh_util": -0.23863279819488495,
+   "interf_proto": 0.05758591532707217,
+   "conflict_z": 2.0871246199370517,
+   "label_surprise": 0.383667370997783
+  },
+  "null_tau_q0.999": {
+   "label_novel": 0.375,
+   "loss_z": 3.279445456561528,
+   "repr_z": 3.4511412470047254,
+   "interf_logit": 0.012719962716102541,
+   "fresh_util": -0.13292182397842453,
+   "interf_proto": 0.06410876582562917,
+   "conflict_z": 3.2822458140954724,
+   "label_surprise": 0.6225883744960043
+  }
+ }
+}

@@ -2,6 +2,7 @@
 
 Runs the frozen experiments/tfcl_run.py logic unchanged, adding only:
   * vision streams (src/tfcl/vision.py) with a frozen ViT-B/16 encoder;
+  * natural concept-drift text stream tweet_conc (src/tfcl/data_x.py);
   * policy ``firstseg``: one package trained on the first segment only, then
     frozen (memory and seen labels keep updating, so prototype inference still
     covers every class). This is the first-session-adaptation baseline that
@@ -24,6 +25,9 @@ def make_stream(kind, seed, bs=16):
     if kind.split("_iid")[0] in vision.VISION_KINDS:
         STATE["vision"] = True
         out = vision.make_stream_v(kind, seed, bs)
+    elif kind.split("_iid")[0] in ("tweet_conc",):
+        from src.tfcl.data_x import make_stream_t
+        out = make_stream_t(kind, seed, bs)
     else:
         out = text_data.make_stream(kind, seed, bs)
     stream = out[0]

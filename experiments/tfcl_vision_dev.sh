@@ -11,5 +11,5 @@ for s in cifar_cil cifar_dil cifar_conf; do
   for p in frozen single oracle firstseg; do o=$D/$s/${p}_s2026.json; [ -f $o ] || echo "--stream $s --policy $p --seed 2026 --out $o"; done
   for p in single oracle; do o=$D/$s/${p}-noreplay_s2026.json; [ -f $o ] || echo "--stream $s --policy $p --replay 0 --seed 2026 --out $o"; done
 done
-} | xargs -P 2 -I{} sh -c 'python -m experiments.tfcl_run_x {} > /dev/null 2>&1 || echo FAIL {}'
+} | xargs -P 1 -I{} sh -c 'python -m experiments.tfcl_run_x {} > /dev/null 2>&1 || echo FAIL {}'
 echo VISION_DEV_DONE

@@ -5,8 +5,8 @@ export PYTHONPATH=/workspace/mitosis-interference TRANSFORMERS_VERBOSITY=error H
 cd /workspace/mitosis-interference
 ALL="banking_rec banking_cil clinc_cil amazon_rec amazon_dil amazon_conflict amazon_dilconf news_cil senti_dil senti_conf"
 TR="trigger:label_novel trigger:loss_z trigger:repr_z trigger:interf_logit trigger:fresh_util trigger:interf_proto trigger:conflict_z trigger:label_surprise"
-python -m experiments.tfcl_grid --outdir results/tfcl/confirm --streams $ALL --workers 10 --q 0.99 --policies frozen single oracle random $TR
-python -m experiments.tfcl_grid --outdir results/tfcl/confirm --streams $ALL --workers 10 --q 0.95 --policies $TR
+python -m experiments.tfcl_grid --outdir results/tfcl/confirm --streams $ALL --workers 8 --q 0.99 --policies frozen single oracle random $TR
+python -m experiments.tfcl_grid --outdir results/tfcl/confirm --streams $ALL --workers 8 --q 0.95 --policies $TR
 python -m experiments.tfcl_grid --outdir results/tfcl/confirm_bert --streams $ALL --workers 6 --q 0.99 --seeds 2027 2028 2029 2030 2031 --model bert-base-uncased --taus results/tfcl/shadow_bert/report_seed2026.json --policies single oracle random $TR
 for nl in "" "--no-lora"; do
   tag=$([ -z "$nl" ] && echo lora || echo nolora)

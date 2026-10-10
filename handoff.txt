@@ -1,0 +1,178 @@
+PROJECT HANDOFF — mitosis-interference — written 2026-10-10 ~06:00 UTC (end of Claude session 2)
+=====================================================================================================
+
+READ THIS FIRST. GitHub is the ONLY persistent storage; assume the pod is wiped (files outside
+the repo, pip packages, HF cache, /workspace/imnr, running jobs: all gone). All jobs were
+stopped cleanly before this commit; every completed run is saved in results/tfcl/.
+
+Repo:    github.com/anitusiruk/mitosis-interference (private)   Branch: tmlr-reframe
+Paper:   paper/main.tex (TMLR template; `cd paper && latexmk -pdf main.tex`)
+Git identity used: anitusiruk <samdwu12@gmail.com> (repo-local config; set it again on a new pod)
+
+-----------------------------------------------------------------------------------------------------
+0. GOAL AND HOW TO WORK (user's standing instructions)
+-----------------------------------------------------------------------------------------------------
+* Goal: a TMLR submission. Keep working autonomously ("grind") until the estimated acceptance
+  probability is >= 80% or the user says stop. Periodically audit methodology and novelty; do
+  literature research when needed.
+* Methods may be novel, but every choice must be LOGICALLY justified (by literature or first
+  principles). No made-up methods without a good reason. Verify every claim about prior work
+  against the actual paper (we verified SEMA's ablation by reading its PDF text).
+* Respect the hardware: one RTX 4090 (24 GB), 96 CPU, 251 GB RAM, ~11 GB free disk last time.
+* Keep pre-registration discipline: declare (commit) hypotheses + code hashes BEFORE running
+  confirmation seeds; dev uses seed 2026 only; never modify frozen files (add new files /
+  wrappers instead); record deviations; report negative results honestly.
+* User: high-school student (TAMS), casual tone, wants exact shell commands and short status
+  updates. TMLR facts (verified on jmlr.org/tmlr): acceptance = (1) claims supported by accurate,
+  convincing, clear evidence, (2) of interest to some of the audience; novelty is explicitly NOT
+  required; unclear writing can be rejected; authors are fully responsible, LLMs only assistive.
+  => The user must read, understand and substantially write the final paper themselves.
+
+-----------------------------------------------------------------------------------------------------
+1. THE PAPER'S STORY (current, evidence-backed)
+-----------------------------------------------------------------------------------------------------
+Title: "Capacity or Classifier? What Expansion Triggers Detect in Task-Free Continual Adapter
+Learning" (consider adding "...and When Expansion Pays").
+
+"Capacity-or-Classifier" framework = evaluation framework + findings (not a SOTA method):
+ (1) Diagnostic (Prop. 1): when the current package's head has never trained on some batch labels
+     (PACKAGE-level label novelty: new to the stream OR returning after a spawn), excess loss depends
+     on x only through old-label logits => loss-spike and fresh-module-utility triggers are
+     classifier-novelty detectors, not capacity-need detectors.
+ (2) Value-of-expansion protocol: judge triggers by measured value (oracle expansion, count-matched
+     random expansion) against TWO references (single package that keeps learning; first-session
+     adaptation = SEMA/APER ablation reference), thresholds calibrated on i.i.d.-shuffled nulls.
+ (3) Regime map: value of expansion depends on whether the learner can REFRESH its classifier
+     statistics (exemplars) — exemplar-based: expansion hurts in CIL; exemplar-free (prototypes
+     stored once, as in SEMA/EASE/APER): expansion at classifier novelty helps (dev; extension 2
+     is testing it). Under drift: small/mixed; in vision depends on routing (proto_own).
+ (4) LabelSurprise: label-conditional loss surprise (label-conditional DDM/DDM-OCI-style). Correct
+     diagnostic of *established-label degradation*; never spawns in CIL/DIL. But detection != value:
+     it hurts where expansion hurts (senti_conf) and is wrong in the exemplar-free regime.
+
+-----------------------------------------------------------------------------------------------------
+2. PRE-REGISTRATIONS (all committed before their confirmation runs)
+-----------------------------------------------------------------------------------------------------
+P0 Primary:     notes/tmlr_confirmation_prereg.md  (frozen code: src/tfcl/{data,learner,model,
+                triggers}.py, experiments/tfcl_run.py, tfcl_grid.py; sha256 prefixes 830c4a67,
+                4e792d72, 79d4907e, b55a7fdb, cec0a21f, e1e998dd — re-verified session 2)
+                Analysis: experiments/tfcl_confirm_report.py
+P0 Exploratory: notes/tmlr_exploratory_spec.md (E1 lora/head init, E2 hparams) — NOT RUN YET
+P1 Extension 1: notes/tmlr_extension_prereg.md (commit 24c095f) + Addendum A1 (e41d45d):
+                XV vision replication (ViT-B/16 in21k, CIFAR-100 streams cifar_cil/cifar_dil/
+                cifar_conf, seeds 2027-2034, bf16), XR baseline dependence (firstseg; --replay 0),
+                tweet_conc natural drift, XL LACE-style open-loop rule. Analysis:
+                experiments/tfcl_extension_report.py (A1: XV3-own = proto_own metric for cifar_conf)
+P2 Extension 2: notes/tmlr_extension2_prereg.md (commit 377d99f): exemplar-free regime
+                (--replay 0 --ef, endpoint proto_ef), R1 oracle>single in CIL, R2 DiD within same
+                runs (proto_ef vs proto_mean) > 0, R3 loss_z > label_surprise, R4 oracle>random
+                (text CIL only). Thresholds: results/tfcl/ef_dev/shadow/report_seed2026.json.
+                Analysis: experiments/tfcl_extension2_report.py
+P3 Extension 3: NOT YET WRITTEN. ImageNet-R (canonical PTM-CL benchmark) — code ready
+                (src/tfcl/vision_imnr.py, experiments/tfcl_run_x3.py, prep_imagenet_r.py);
+                dev partially run (results/tfcl/imnr_dev; single s2026 = 56.5% proto_mean).
+                Plan: finish dev (shadows for thresholds, frozen/oracle/firstseg/random, EF
+                variants), then write notes/tmlr_extension3_prereg.md (imnr_cil, seeds 2027-2034,
+                policies as XV + EF variants; hypotheses mirroring XV2/XR1/R1), freeze, run.
+
+-----------------------------------------------------------------------------------------------------
+3. RESULTS SO FAR (details: notes/tmlr_confirmation_results.md; reports in results/tfcl/*.json)
+-----------------------------------------------------------------------------------------------------
+PRIMARY q=0.99: COMPLETE 1200/1200 (24 OOM failures re-run; deterministic). Report:
+results/tfcl/confirm_report_q0.99.json; table paper/tables/main_table.tex.
+ H2 CONFIRMED all 4 CIL streams (incl. held-out news): oracle - single = -8.2 banking_rec,
+    -11.4 banking_cil, -9.9 clinc, -7.1 news (10/10 seeds each); loss_z/fresh_util similar.
+ H4 CONFIRMED: label_surprise never/rarely spawns in CIL/DIL (= single; senti_dil +0.04).
+ H3 MIXED/FAILED: amazon_dilconf oracle +1.9, LS +2.1 (sig); amazon_conflict +0.8/+1.0 (n.s.);
+    held-out senti_conf oracle -17.5, LS -16.7 (sig, OPPOSITE direction). Mechanism: single package
+    with replay learns the domain-conditional mapping (Yelp-flipped acc .82 at end) while pooled
+    frozen packages out-vote it under prototype averaging (Yelp .16).
+ H1: 100% of loss_z/fresh_util spawns at stream-level novelty in banking_cil, clinc, news; FAILS
+    banking_rec (45%/50%). Exploratory (experiments/tfcl_pkg_novelty.py): 100% at PACKAGE-level
+    novelty in all CIL streams; base rate 15-30%.
+ Also: banking_rec random (79.2) > oracle (77.1). Drift: random == oracle.
+EXTENSION 1 (partial):
+ XR1 oracle > firstseg: +7.2, +5.5, +6.9 (10/10), news +0.9 (n.s.). single > firstseg by 15-17.
+ XR2 (no replay: oracle < single in every CIL) MOSTLY NOT SUPPORTED: banking_rec -4.3 (sig),
+    banking_cil -3.3, clinc -0.6, news -0.6 (n.s.); DiD (noreplay - replay effect) +3.9..+9.3
+    (sig) => expansion's harm in CIL depends on rehearsal/exemplars. (Consistent with regime map.)
+ tweet_conc runs done for firstseg + full policy set in ext_recon (not yet analysed).
+ Vision (ext_vision 0/240) NOT STARTED; ext_shadow 14/64; ext_recon_noreplay 184/220.
+EXTENSION 2: 5/728 runs (just launched). Dev (seed 2026, proto_ef; single/oracle/random/firstseg/
+ loss_z/LS): banking_cil .262/.566/.349/.606/.564/.262; clinc .502/.775/.688/.698/.780/.502;
+ cifar_cil .457/.764/.804/.698/.767/.457 => regime flip in dev. Vision: random > oracle.
+DEV vision (seed 2026): cifar_cil single .848 frozen .773 oracle .739 firstseg .580;
+ cifar_conf single .800 oracle .672 (proto_own .845); cifar_dil single .872 oracle .864 (own .906).
+ LACE-style rule: 9/9 cifar_cil boundaries = all at label novelty.
+
+-----------------------------------------------------------------------------------------------------
+4. REMAINING GPU WORK (~1-1.5 days on one 4090), in priority order
+-----------------------------------------------------------------------------------------------------
+ a. Extension 2 (724 runs)         experiments/tfcl_extension2.sh      <- decides the paper
+ b. Extension 1 remainder          experiments/tfcl_extension.sh (vision 240 + noreplay 36 +
+                                   shadows 50 + vision noreplay 48 + vision shadows 9)
+ c. Extension 3 ImageNet-R         finish dev, write+freeze prereg, run
+ d. Primary q=0.95 (658 left), BERT (550), attribution (40)   experiments/tfcl_confirm.sh
+ e. Exploratory E1/E2 (~160)       experiments/tfcl_explore.sh (waits for CONFIRM_PIPELINE_DONE)
+GPU MEMORY: >~12 concurrent jobs => CUDA OOM failures (happened repeatedly). Keep total
+concurrency ~10: e.g. confirm 5 workers + EXT2_WORKERS=3 + extension 2 workers (EXT_WORKERS=2,
+EXT_VWORKERS=1). Vision jobs ~4 GB each. Failures are harmless (deterministic; re-run), and
+experiments/retry_until_done.sh re-runs a script until no FAIL lines.
+
+-----------------------------------------------------------------------------------------------------
+5. RESTART COMMANDS (new pod)
+-----------------------------------------------------------------------------------------------------
+  cd /workspace && gh auth login        # user does this (or export GH_TOKEN)
+  gh repo clone anitusiruk/mitosis-interference && cd mitosis-interference && git checkout tmlr-reframe
+  git config user.name anitusiruk && git config user.email samdwu12@gmail.com
+  pip install transformers==5.18.0 datasets==3.6.0 peft==0.21.0 accelerate==1.15.0 scikit-learn scipy matplotlib
+  export HF_DATASETS_TRUST_REMOTE_CODE=1 PYTHONPATH=$PWD TRANSFORMERS_VERBOSITY=error   # banking77 needs it
+  python tests/test_tfcl_probe_restoration.py                       # must print PASS
+  sha256sum src/tfcl/{data,learner,model,triggers}.py experiments/tfcl_run.py experiments/tfcl_grid.py | cut -c1-8
+  # sanity: exact reproduction of a saved run (got bit-identical 0.8544746041297913 in session 2)
+  python -m experiments.tfcl_run --stream banking_rec --policy single --seed 2027 --out /tmp/check.json
+  # ImageNet-R (only for extension 3; 4.5 GB memmap, not in git; ~5 min with 24 procs)
+  mkdir -p /workspace/imnr && python experiments/prep_imagenet_r.py /workspace/imnr
+  # then delete the HF imagenet-r cache to save disk:
+  rm -rf /workspace/.cache/huggingface/datasets/axiong___imagenet-r ~/.cache/huggingface/datasets/axiong___imagenet-r
+  # LaTeX
+  apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra latexmk
+  # launch (each skips finished outputs)
+  EXT2_WORKERS=3 nohup experiments/retry_until_done.sh experiments/tfcl_extension2.sh results/tfcl/extension2_pipeline.log >/dev/null 2>&1 &
+  EXT_WORKERS=2 EXT_VWORKERS=1 nohup experiments/retry_until_done.sh experiments/tfcl_extension.sh results/tfcl/extension_pipeline.log >/dev/null 2>&1 &
+  nohup experiments/tfcl_confirm.sh >> results/tfcl/confirm_pipeline.log 2>&1 &     # 5 workers
+  nohup experiments/tfcl_explore.sh >> results/tfcl/explore_pipeline.log 2>&1 &
+  # ImageNet-R dev leftovers: python experiments/run_jobs.py <jobs.jsonl> 1 experiments.tfcl_run_x3
+  #   (job list format: one JSON argv list per line; see how /tmp jobs were built in session 2:
+  #    shadow + shadow --replay 0 for imnr_cil and imnr_cil_iid; frozen/oracle/firstseg/random;
+  #    --replay 0 --ef single/oracle/firstseg/random; outputs results/tfcl/imnr_dev/...)
+  # periodic checkpoint: git add -A results/tfcl && git commit -m checkpoint && git push
+NOTE: never `pkill -f <pattern>` from a shell whose own command line contains the pattern
+(kills the shell, exit 144). Use `ps -eo pid,args | grep ... | awk '{print $1}' | xargs kill`.
+NOTE: xargs mangles JSON quotes; use experiments/run_jobs.py for jobs with --trigger-args.
+
+-----------------------------------------------------------------------------------------------------
+6. ANALYSIS + PAPER TODO
+-----------------------------------------------------------------------------------------------------
+ 1. When ext2 finishes: python -m experiments.tfcl_extension2_report  -> fill [EXT2 RESULT] in the
+    abstract; add regime-map figure (oracle-single, exemplar vs exemplar-free x CIL/DIL/drift,
+    text+vision) — write experiments/tfcl_fig_regime.py; heatmap via experiments/tfcl_fig_heatmap.py.
+ 2. When ext1 finishes: python -m experiments.tfcl_extension_report (XV1-4, XR1-2) and the A1
+    proto_own variant for cifar_conf; LACE open-loop: python -m experiments.tfcl_lace_openloop
+    --glob "results/tfcl/ext_shadow/*/*.json" --out results/tfcl/lace_openloop.json
+ 3. q=0.95 / BERT: tfcl_confirm_report --q 0.95 ; --dir results/tfcl/confirm_bert
+ 4. Paper (paper/main.tex): results section drafted with [placeholders]: XL, NEWS, CIFAR, XR2,
+    held-out, BERT, q=0.95, vision. Rewrite contributions around the 4-part framework (section 1
+    above); update Discussion (already covers calibration, LabelSurprise scope, baselines,
+    routing); compute/cost table: experiments/tfcl_cost_table.py; appendix tables for all inference
+    rules; anonymize; AI-assistance statement; user must read/rewrite.
+ 5. Do NOT cite external benchmark numbers unless verified from the source PDF (an APER/SimpleCIL
+    ImageNet-R number could not be verified in session 2).
+
+Honest assessment at handoff: ~60% acceptance odds now. Strong: CIL harm (every seed, held-out),
+mechanism (100% package-level novelty), baseline reconciliation with SEMA (verified), rigorous
+pre-registration with reported failures. Weak: drift positive control failed (senti_conf), XR2
+mostly unsupported, triggers are stylised. Path to 80%: ext2 confirms the regime flip (text +
+vision), ImageNet-R replication, clean writing by the user, regime-map figure.
+
+Claude memory files (preferences/context) are copied in notes/claude_memory/.

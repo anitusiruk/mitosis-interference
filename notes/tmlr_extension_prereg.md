@@ -75,4 +75,31 @@ expansion effect with vs. without replay; XL firing counts (fraction of firings 
 batches of label novelty in CIL, firings within 2 batches of a segment change in DIL/DRIFT);
 open-loop AUROCs on confirmation seeds; all other contrasts.
 
+## Development observations recorded before freezing (seed 2026; not confirmatory)
+
+* Vision shadow AUROCs (k = 2 batches after a segment change): cifar_cil loss_z 1.00,
+  fresh_util 1.00, label_surprise 0.02; cifar_dil loss_z 0.96, label_surprise 0.92;
+  cifar_conf loss_z 1.00, label_surprise 0.97. LACE-style ratio rule (tau 2.5) fired at
+  9/9 class-group arrivals of cifar_cil.
+* Therefore XV4 for cifar_dil is AT RISK: LabelSurprise also responds to within-label
+  subpopulation shift (a new CIFAR subclass under an existing superclass label), and
+  oracle expansion is slightly below single on cifar_dil in development (.864 vs .872).
+  The hypothesis is kept as declared; a failure will be reported as a limitation
+  (label-conditional loss rises under P(x|y) shift as well as under P(y|x) shift).
+* Vision CIL development: single .848, frozen .773, oracle .739, firstseg .580;
+  no replay: single .764, oracle .752. Text CIL development: oracle > firstseg and
+  oracle < single, with and without replay, on all three development CIL streams.
+
 Deviations will be recorded in notes/tmlr_extension_results.md.
+
+## Frozen extension code (sha256)
+
+    033cac7ef39b69990e96b8c63c19ed801efd0d1426976568cab1b5441cf7428f  src/tfcl/vision.py
+    97c45ecb78e1838c8af1865b716e16b663428921f2852bc073ccf65b5e393e0f  src/tfcl/data_x.py
+    e417a386b37b2ebea7a7f045bdec3178713ba1fb906b0eebb19abe4add98c593  experiments/tfcl_run_x.py
+    6de767813109689d51b669e92001aa63200d17569ed195d4eb249972e8e4cb36  experiments/tfcl_grid_x.py
+    3a74126ced7675ed8b990af51a44efe01e646b635eff33609262be41e813b10a  experiments/tfcl_extension_report.py
+    c3ba7a075681339654ac45bef7d34fd0f024689e9c42e82fccd358cf0a00f096  experiments/tfcl_lace_openloop.py
+    625bdc96347e4e887ec4e76a329061483e0700b0f3791c454a3c52ce924aaa9c  experiments/tfcl_extension.sh
+    556dcfe7d5cc44c02bc66546b53cd35214a50ea3785c6d02cdeb9d1b6d054e72  results/tfcl/vision_dev/shadow/report_seed2026.json
+    8836a8ab10f4cd6d1cfc5108aa1ee1658a2052695e82dd1c4ef4eb1d49201ab1  results/tfcl/tweet_dev/shadow/report_seed2026.json

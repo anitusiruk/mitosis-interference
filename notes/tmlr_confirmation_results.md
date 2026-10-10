@@ -32,3 +32,25 @@ Environment deviations (no effect on results; verified):
   spawned since they were last seen.
 * Also notable: banking_rec random (.792) > oracle (.771): spawning exactly at label arrivals
   is worse than random timing.
+
+## Primary q = 0.99 complete (2026-10-10 04:35 UTC) — 24 runs failed (GPU OOM from concurrent
+extension jobs) and are being re-run unchanged (deterministic; results/tfcl/confirm_rerun_failed.log).
+Numbers below are pre-rerun for clinc_cil (n = 8-9) and senti_conf (n = 6-8); final numbers will replace them.
+
+* H2 holds in all four CIL streams incl. held-out news_cil (oracle -7.1, loss_z -7.3,
+  fresh_util -7.3; all 10/10 seeds). label_novel on news_cil: -0.3 (n.s.; it spawned once).
+* H4 holds in all 7 CIL/DIL streams (label_surprise spawns ~never; senti_dil +0.04).
+* H3 FAILS on held-out senti_conf in the OPPOSITE direction: oracle -18.5 [-21.9,-15.1],
+  label_surprise -17.1. Mechanism (per-segment trace): after the unflipped tweet segment,
+  accuracy on the flipped Yelp segment collapses for the pool (0.16 with oracle) while the
+  single package, trained with replay, fits the domain-conditional mapping (0.82 on Yelp at the
+  end). The domains are distinguishable, so concept drift across them is not a capacity problem
+  for one LoRA package with replay; frozen packages trained on unflipped data out-vote the
+  correct one under prototype averaging.
+* H1 as before: holds on banking_cil, clinc_cil, news_cil (100%); fails on banking_rec
+  (45%/50%); exploratory package-level novelty explains 100% everywhere.
+
+Implication for the paper: in exemplar-based pools the measured value of expansion is
+negative in CIL, ~0 in DIL and mixed under drift (+1.9, +0.8 n.s., -18.5); LabelSurprise
+detects the right *kind* of shift but detection is not value. The regime in which expansion
+pays is tested by extension 2 (exemplar-free).

@@ -9,3 +9,5 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 [clinc_cil trigger:fresh_util s2035] step 265 seg G packages 7 A:0.853 B:0.827 C:0.817 D:0.733 E:0.777 F:0.840 G:0.753
 [clinc_cil trigger:fresh_util s2035] step 303 seg H packages 8 A:0.870 B:0.817 C:0.767 D:0.727 E:0.730 F:0.813 G:0.727 H:0.763
 [clinc_cil trigger:fresh_util s2035] step 341 seg I packages 9 A:0.813 B:0.837 C:0.713 D:0.693 E:0.693 F:0.780 G:0.727 H:0.763 I:0.737
+[clinc_cil trigger:fresh_util s2035] step 379 seg J packages 10 A:0.743 B:0.790 C:0.580 D:0.687 E:0.633 F:0.733 G:0.723 H:0.780 I:0.713 J:0.660
+FINAL clinc_cil trigger:fresh_util 2035 {"proto_mean": 0.7043333351612091, "proto_max": 0.6940000057220459, "proto_own": 0.7163333356380462, "linear_last": 0.09700000286102295} 409s

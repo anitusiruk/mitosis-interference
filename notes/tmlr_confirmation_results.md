@@ -54,3 +54,13 @@ Implication for the paper: in exemplar-based pools the measured value of expansi
 negative in CIL, ~0 in DIL and mixed under drift (+1.9, +0.8 n.s., -18.5); LabelSurprise
 detects the right *kind* of shift but detection is not value. The regime in which expansion
 pays is tested by extension 2 (exemplar-free).
+
+## Final primary q = 0.99 (all 1200 runs, after re-runs)
+clinc_cil oracle -9.9 [-10.3,-9.5] 10/10; senti_conf oracle -17.5 [-20.5,-14.5], label_surprise
+-16.7 [-20.2,-13.1] (0/10 wins). Other numbers unchanged from the interim entry.
+
+## Extension 1 partial (2026-10-10 ~06:00)
+XR1: oracle > firstseg banking_rec +7.2, banking_cil +5.5, clinc +6.9 (all 10/10, Holm), news +0.9 (n.s.).
+XR2 (rehearsal-free oracle < single): banking_rec -4.3 (sig); banking_cil -3.3, clinc -0.6, news -0.6
+(n.s.) -> mostly NOT supported. DiD (no-replay effect minus replay effect): +3.9, +8.1, +9.3, +6.8
+(all sig): the harm of expansion in CIL is largely a consequence of rehearsal with exemplars.

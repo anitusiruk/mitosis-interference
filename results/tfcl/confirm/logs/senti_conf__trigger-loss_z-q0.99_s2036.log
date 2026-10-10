@@ -1,69 +1,7 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6022.92it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
-    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
-    f = self.enc.features(xs, p.lora, grad=True)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 96, in features
-    h = self.backbone(**enc).last_hidden_state
-        ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 287, in wrapper
-    outputs = func(self, *args, **kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 417, in forward
-    return self.transformer(
-           ^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 276, in forward
-    hidden_states = layer_module(
-                    ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_layers.py", line 110, in __call__
-    return super().__call__(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 253, in forward
-    attention_output = self.sa_layer_norm(attention_output + hidden_states)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/normalization.py", line 217, in forward
-    return F.layer_norm(
-           ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/functional.py", line 2905, in layer_norm
-    return torch.layer_norm(
-           ^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 16.00 MiB is free. Process 248884 has 1.82 GiB memory in use. Process 250525 has 1.95 GiB memory in use. Process 251510 has 1.58 GiB memory in use. Process 252747 has 4.34 GiB memory in use. Process 253457 has 1.94 GiB memory in use. Process 252876 has 1.73 GiB memory in use. Process 253597 has 1.82 GiB memory in use. Process 252056 has 1.20 GiB memory in use. Process 252134 has 1.20 GiB memory in use. Process 251751 has 1.20 GiB memory in use. Process 254701 has 1.11 GiB memory in use. Process 254830 has 926.00 MiB memory in use. Process 254765 has 1.11 GiB memory in use. Including non-PyTorch memory, this process has 1.04 GiB memory in use. Process 254962 has 486.00 MiB memory in use. Process 255028 has 18.00 MiB memory in use. Of the allocated memory 525.02 MiB is allocated by PyTorch, and 70.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 1890.67it/s]
+[senti_conf trigger:loss_z s2036] step 19 seg A packages 1 A:0.852
+[senti_conf trigger:loss_z s2036] step 39 seg B packages 2 A:0.828 B:0.680
+[senti_conf trigger:loss_z s2036] step 59 seg C packages 3 A:0.844 B:0.180 C:0.852
+[senti_conf trigger:loss_z s2036] step 79 seg D packages 4 A:0.734 B:0.352 C:0.750 D:0.562
+FINAL senti_conf trigger:loss_z 2036 {"proto_mean": 0.599609375, "proto_max": 0.41015625, "proto_own": 0.728515625, "linear_last": 0.466796875} 76s

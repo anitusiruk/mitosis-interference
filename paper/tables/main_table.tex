@@ -1,1 +1,20 @@
-\begin{table}[t]\centering\caption{Placeholder.}\label{tab:main}\end{table}
+\begin{table}[t]\centering\small
+\caption{Final mean development accuracy (\%, prototype-mean inference) over ten seeds in the exemplar-based regime; mean number of packages in parentheses. $^\dagger$held-out stream. First-seg.: one package adapted on the first segment, then frozen.}\label{tab:main}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrr}\toprule
+Stream & Frozen & Single & First-seg. & Oracle & Random & LabelNovel & LossZ & ReprZ & InterfLogit & FreshUtil & \textsc{LS}\\\midrule
+\multicolumn{12}{l}{\emph{CIL}}\\
+banking\_rec & 65.0 & 85.3 & 69.9 & 77.1\,{\scriptsize(5.0)} & 79.2\,{\scriptsize(5.0)} & 81.1\,{\scriptsize(2.9)} & 79.5\,{\scriptsize(4.1)} & 83.2\,{\scriptsize(2.8)} & 83.1\,{\scriptsize(2.4)} & 77.3\,{\scriptsize(5.0)} & 85.3\,{\scriptsize(1.0)}\\
+banking\_cil & 46.4 & 72.7 & 55.8 & 61.3\,{\scriptsize(7.0)} & 62.8\,{\scriptsize(7.0)} & 64.2\,{\scriptsize(5.1)} & 62.2\,{\scriptsize(6.5)} & 70.5\,{\scriptsize(1.7)} & 67.0\,{\scriptsize(3.3)} & 62.2\,{\scriptsize(6.5)} & 72.7\,{\scriptsize(1.0)}\\
+clinc\_cil & 58.5 & 80.8 & 64.0 & 70.9\,{\scriptsize(10.0)} & 71.4\,{\scriptsize(10.0)} & 74.5\,{\scriptsize(5.2)} & 71.0\,{\scriptsize(10.0)} & 77.8\,{\scriptsize(2.3)} & 74.8\,{\scriptsize(4.9)} & 71.2\,{\scriptsize(9.2)} & 80.8\,{\scriptsize(1.0)}\\
+news\_cil$^\dagger$ & 44.7 & 56.7 & 48.7 & 49.5\,{\scriptsize(5.0)} & 50.4\,{\scriptsize(5.0)} & 56.4\,{\scriptsize(1.1)} & 49.4\,{\scriptsize(5.0)} & 55.1\,{\scriptsize(1.5)} & 49.8\,{\scriptsize(4.7)} & 49.4\,{\scriptsize(5.0)} & 56.7\,{\scriptsize(1.0)}\\
+\multicolumn{12}{l}{\emph{DIL}}\\
+amazon\_rec & 81.9 & 87.0 & 84.6 & 86.4\,{\scriptsize(5.0)} & 86.9\,{\scriptsize(5.0)} & 87.0\,{\scriptsize(1.0)} & 87.0\,{\scriptsize(1.0)} & 86.6\,{\scriptsize(1.5)} & 86.9\,{\scriptsize(1.2)} & 87.0\,{\scriptsize(1.0)} & 87.0\,{\scriptsize(1.0)}\\
+amazon\_dil & 82.0 & 86.3 & 85.6 & 86.6\,{\scriptsize(5.0)} & 86.5\,{\scriptsize(5.0)} & 86.3\,{\scriptsize(1.0)} & 86.3\,{\scriptsize(1.0)} & 86.1\,{\scriptsize(2.5)} & 86.3\,{\scriptsize(1.0)} & 86.3\,{\scriptsize(1.0)} & 86.3\,{\scriptsize(1.0)}\\
+senti\_dil$^\dagger$ & 77.1 & 81.8 & 80.1 & 81.8\,{\scriptsize(4.0)} & 81.9\,{\scriptsize(4.0)} & 81.8\,{\scriptsize(1.0)} & 82.1\,{\scriptsize(1.6)} & 82.1\,{\scriptsize(2.8)} & 81.9\,{\scriptsize(1.2)} & 81.8\,{\scriptsize(1.0)} & 81.9\,{\scriptsize(1.5)}\\
+\multicolumn{12}{l}{\emph{Drift}}\\
+amazon\_conflict & 59.0 & 60.7 & 60.7 & 61.5\,{\scriptsize(5.0)} & 61.5\,{\scriptsize(5.0)} & 60.7\,{\scriptsize(1.0)} & 61.0\,{\scriptsize(3.2)} & 61.3\,{\scriptsize(2.2)} & 61.4\,{\scriptsize(1.1)} & 61.8\,{\scriptsize(3.8)} & 61.7\,{\scriptsize(4.0)}\\
+amazon\_dilconf & 57.0 & 56.3 & 57.6 & 58.2\,{\scriptsize(5.0)} & 58.2\,{\scriptsize(5.0)} & 56.3\,{\scriptsize(1.0)} & 58.3\,{\scriptsize(5.0)} & 58.0\,{\scriptsize(3.1)} & 57.8\,{\scriptsize(3.0)} & 58.4\,{\scriptsize(4.7)} & 58.3\,{\scriptsize(5.0)}\\
+senti\_conf$^\dagger$ & 55.1 & 76.3 & 54.2 & 58.8\,{\scriptsize(4.0)} & 62.2\,{\scriptsize(4.0)} & 76.3\,{\scriptsize(1.0)} & 61.9\,{\scriptsize(3.4)} & 64.4\,{\scriptsize(2.6)} & 70.4\,{\scriptsize(1.9)} & 63.3\,{\scriptsize(2.8)} & 59.6\,{\scriptsize(4.0)}\\
+\bottomrule\end{tabular}}
+\end{table}

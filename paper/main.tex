@@ -68,7 +68,7 @@ We do not claim a new continual-learning method that is competitive with the sta
 \section{What a loss signal measures at a label-novelty event}
 \label{sec:mechanism}
 
-Let $S$ be the labels that may be predicted, partitioned into labels $O$ already trained and labels $N$ appearing for the first time in the current batch. For an example with label $y$ in group $G(y)\in\{O,N\}$,
+Let $S$ be the labels that may be predicted, partitioned into labels $O$ already trained \emph{by the current package} and labels $N$ in the current batch whose head rows in that package have never been updated. $N$ contains labels that are new to the stream, but also labels seen before the package was created (in an expand-and-freeze pool, a returning label group is new to the package spawned since it was last seen); we call both \emph{package-level label novelty}. For an example with label $y$ in group $G(y)\in\{O,N\}$,
 \begin{equation}
 \ell(x,y) = \underbrace{-\log \textstyle\sum_{c\in G(y)} p(c\mid x)}_{\text{label-group term}}\;\underbrace{-\;\log p\big(y \mid x, G(y)\big)}_{\text{within-group term}} .
 \label{eq:decomp}
@@ -80,10 +80,10 @@ Suppose the head rows of labels in $N$ have never been updated and are zero, so 
 \[
 \ell(x,y) = \log|N| \;+\; \log\Big(1+\tfrac{1}{|N|}\textstyle\sum_{o\in O} e^{z_o(x)}\Big),
 \]
-where the first term is the within-group term and the second is the label-group term. A fresh package with a zero head incurs $\log(|N|+|O|)$. Hence the fresh-minus-reuse loss gap before any update is $\log\big((|N|+\sum_{o}e^{z_o(x)})/(|N|+|O|)\big)$, which is positive whenever the mean of $e^{z_o(x)}$ over old labels exceeds one, and which depends on $x$ only through the old-label logits.
+where the first term is the within-group term and the second is the label-group term. A fresh package with a zero head incurs $\log(|N|+|O|)$. Hence the advantage of the fresh package before any update (reuse loss minus fresh loss) is $\log\big((|N|+\sum_{o}e^{z_o(x)})/(|N|+|O|)\big)$, which is positive whenever the mean of $e^{z_o(x)}$ over old labels exceeds one, and which depends on $x$ only through the old-label logits.
 \end{proposition}
 \begin{proof}
-With $z_c=0$ for $c\in N$, $p(y\mid x)=1/(|N|+\sum_o e^{z_o})$ and $p(y\mid x,N)=1/|N|$; the identity follows from \eqref{eq:decomp}. A zero head assigns $1/|S|$ to every label.
+With $z_c=0$ for $c\in N$ (rows and biases never updated), $p(y\mid x)=1/(|N|+\sum_o e^{z_o})$ and $p(y\mid x,N)=1/|N|$; the identity follows from \eqref{eq:decomp}. A zero head assigns $1/|S|$ to every label.
 \end{proof}
 
 The proposition is elementary, but its consequence for expansion triggers is direct. A loss-spike detector at a class arrival measures how confidently the old head predicts old labels; a fresh-versus-reuse utility comparison before or shortly after one update rewards discarding that confident head. Neither quantity asks whether the representation can separate the new labels---a question a growing head and a prototype classifier answer without new adapter capacity. Section~\ref{sec:results} shows that this mechanism dominates trigger behaviour in practice, and that the label-group term is 36--52\% of the boundary loss in our class-incremental streams even after several steps of learning.

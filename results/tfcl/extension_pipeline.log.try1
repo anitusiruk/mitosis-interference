@@ -430,3 +430,11 @@ FAILED: ['results/tfcl/ext_recon/tweet_conc/frozen_s2027.json', 'results/tfcl/ex
 [3/55] ok results/tfcl/ext_shadow/banking_rec/shadow_s2029.json
 [4/55] ok results/tfcl/ext_shadow/banking_rec/shadow_s2030.json
 [5/55] ok results/tfcl/ext_shadow/banking_rec/shadow_s2031.json
+[6/55] ok results/tfcl/ext_shadow/banking_cil/shadow_s2027.json
+[7/55] ok results/tfcl/ext_shadow/banking_cil/shadow_s2028.json
+[8/55] ok results/tfcl/ext_shadow/banking_cil/shadow_s2029.json
+[9/55] ok results/tfcl/ext_shadow/banking_cil/shadow_s2030.json
+[10/55] ok results/tfcl/ext_shadow/banking_cil/shadow_s2031.json
+[11/55] ok results/tfcl/ext_shadow/clinc_cil/shadow_s2027.json
+[12/55] ok results/tfcl/ext_shadow/clinc_cil/shadow_s2028.json
+[13/55] ok results/tfcl/ext_shadow/clinc_cil/shadow_s2029.json

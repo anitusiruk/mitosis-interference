@@ -1,81 +1,7 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6852.09it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
-    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
-    f = self.enc.features(xs, p.lora, grad=True)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 96, in features
-    h = self.backbone(**enc).last_hidden_state
-        ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 287, in wrapper
-    outputs = func(self, *args, **kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 417, in forward
-    return self.transformer(
-           ^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 276, in forward
-    hidden_states = layer_module(
-                    ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_layers.py", line 110, in __call__
-    return super().__call__(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 256, in forward
-    ffn_output = self.ffn(attention_output)
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 217, in forward
-    return apply_chunking_to_forward(self.ff_chunk, self.chunk_size_feed_forward, self.seq_len_dim, input)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/pytorch_utils.py", line 199, in apply_chunking_to_forward
-    return forward_fn(*input_tensors)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/distilbert/modeling_distilbert.py", line 221, in ff_chunk
-    x = self.activation(x)
-        ^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/activations.py", line 89, in forward
-    return self.act(input)
-           ^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 11.31 MiB is free. Process 230202 has 2.00 GiB memory in use. Process 235493 has 1.97 GiB memory in use. Process 236154 has 1.58 GiB memory in use. Process 237442 has 1.62 GiB memory in use. Process 240310 has 1.61 GiB memory in use. Process 240563 has 1.14 GiB memory in use. Process 241744 has 1.58 GiB memory in use. Process 240722 has 2.15 GiB memory in use. Process 241246 has 2.15 GiB memory in use. Process 241512 has 1.58 GiB memory in use. Process 240499 has 1.58 GiB memory in use. Process 241027 has 1.21 GiB memory in use. Process 241378 has 1.14 GiB memory in use. Process 240243 has 1.21 GiB memory in use. Including non-PyTorch memory, this process has 934.00 MiB memory in use. Of the allocated memory 434.96 MiB is allocated by PyTorch, and 43.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 5357.87it/s]
+[senti_conf oracle s2033] step 19 seg A packages 1 A:0.852
+[senti_conf oracle s2033] step 39 seg B packages 2 A:0.773 B:0.773
+[senti_conf oracle s2033] step 59 seg C packages 3 A:0.844 B:0.133 C:0.828
+[senti_conf oracle s2033] step 79 seg D packages 4 A:0.766 B:0.484 C:0.641 D:0.555
+FINAL senti_conf oracle 2033 {"proto_mean": 0.611328125, "proto_max": 0.521484375, "proto_own": 0.62890625, "linear_last": 0.5078125} 51s

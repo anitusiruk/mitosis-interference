@@ -1,4 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Using the latest cached version of the dataset since uoft-cs/cifar100 couldn't be found on the Hugging Face Hub
-Found the latest cached dataset configuration 'cifar100' at /workspace/.cache/huggingface/datasets/uoft-cs___cifar100/cifar100/0.0.0/aadb3af77e9048adbea6b47c21a81e47dd092ae5 (last modified on Sat Oct 10 00:45:48 2026).
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 5981.57it/s]

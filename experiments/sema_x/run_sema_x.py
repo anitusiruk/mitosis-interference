@@ -74,6 +74,35 @@ def main():
 
     torch.backends.cuda.matmul.allow_tf32 = True
     torch.backends.cudnn.allow_tf32 = True
+    def _detect_outlier(self, detect_loader, train_loader, test_loader, added):
+        # SEMA's own logic verbatim, except that the detection forward runs under no_grad
+        # (its outputs only decide whether to expand; this avoids a ~14 GB autograd graph).
+        is_added = False
+        for i, (_, inputs, targets) in enumerate(detect_loader):
+            inputs, targets = inputs.to(self._device), targets.to(self._device)
+            with torch.no_grad():
+                model_outcome = self._network(inputs)
+            added_record = model_outcome["added_record"]
+            if sum(added_record) > 0:
+                added += 1
+                is_added = True
+                for module in self._network.backbone.modules():
+                    if isinstance(module, SEMAModules):
+                        module.detecting_outlier = False
+                self._train_new(train_loader, test_loader)
+                for module in self._network.backbone.modules():
+                    if isinstance(module, SEMAModules):
+                        module.detecting_outlier = True
+                for module in self._network.backbone.modules():
+                    if isinstance(module, SEMAModules):
+                        module.freeze_functional()
+                        module.freeze_rd()
+                        module.reset_newly_added_status()
+        if is_added:
+            return self._detect_outlier(detect_loader, train_loader, test_loader, added)
+        return added
+    SEMALearner._detect_outlier = _detect_outlier
+
     T._set_random(a.seed)
     T._set_device(args)
     dm = DataManager(args["dataset"], args["shuffle"], args["seed"], args["init_cls"], args["increment"], args)

@@ -1,8 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 4849.21it/s]
-[cifar_cil trigger:label_novel s2031] step 24 seg A packages 1 A:0.960
-[cifar_cil trigger:label_novel s2031] step 49 seg B packages 2 A:0.973 B:0.947
-[cifar_cil trigger:label_novel s2031] step 74 seg C packages 2 A:0.953 B:0.883 C:0.900
-[cifar_cil trigger:label_novel s2031] step 99 seg D packages 2 A:0.960 B:0.893 C:0.893 D:0.923
-[cifar_cil trigger:label_novel s2031] step 124 seg E packages 2 A:0.947 B:0.830 C:0.843 D:0.820 E:0.870
-[cifar_cil trigger:label_novel s2031] step 149 seg F packages 3 A:0.923 B:0.813 C:0.807 D:0.840 E:0.830 F:0.857

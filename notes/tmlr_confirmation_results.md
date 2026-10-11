@@ -64,3 +64,15 @@ XR1: oracle > firstseg banking_rec +7.2, banking_cil +5.5, clinc +6.9 (all 10/10
 XR2 (rehearsal-free oracle < single): banking_rec -4.3 (sig); banking_cil -3.3, clinc -0.6, news -0.6
 (n.s.) -> mostly NOT supported. DiD (no-replay effect minus replay effect): +3.9, +8.1, +9.3, +6.8
 (all sig): the harm of expansion in CIL is largely a consequence of rehearsal with exemplars.
+
+## Session 3 deviations (2026-10-11) — compute, secondary analyses only
+* q = 0.95 sensitivity grid (secondary/descriptive in the pre-registration): NOT run.
+* BERT held-out backbone (secondary/descriptive): run as a strict subset of the declared grid —
+  policies single, oracle, trigger:loss_z, trigger:label_surprise; all 10 streams; seeds
+  2027-2031; same thresholds (experiments/tfcl_bert_reduced.sh). random and the other six
+  triggers are not run.
+* Attribution (--no-lora shadows) and exploratory E1/E2: deferred; run only if the GPU idles.
+* Extension 2: at session start a second copy of the extension-2 pipeline was accidentally
+  launched for ~2 minutes; three runs were written by the duplicate and the original then
+  logged "refusing to overwrite" FAIL lines for them. Runs are deterministic (bit-exact
+  reproduction verified), so outputs are unaffected.

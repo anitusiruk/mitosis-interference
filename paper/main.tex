@@ -155,7 +155,7 @@ With exemplar-free prototypes, the sign of the value of expansion reverses (ten 
 
 \subsection{A canonical benchmark and a published system}
 \label{sec:res-external}
-\paragraph{ImageNet-R.} \pend{EXT3: I1--I4.}
+\paragraph{ImageNet-R.} On the standard pre-trained-model benchmark (200 classes in ten groups of 20; six seeds), both regimes reproduce. With exemplar-refreshed prototypes, oracle expansion lost 18.3 points [16.2, 20.3] to the single package (I1) yet beat first-session adaptation by 5.5 [4.5, 6.6] (I2), every seed. Without exemplars the sign reversed: oracle expansion beat the single package by 8.1 points [3.8, 12.4] (I3), and within the same runs the value of expansion was 16.4 points [15.2, 17.7] higher under exemplar-free than under exemplar-refreshed prototypes (I4). Drift compensation did not rescue the single package here either (oracle $-$ single $+22.1$ points under SDC). As on CIFAR-CIL, the exemplar-free first-segment policy was the best policy, beating oracle expansion by 9.6 points [6.8, 12.3]: once statistics cannot be refreshed, freezing early beats adapting further.
 
 \paragraph{SEMA.} We ran SEMA's official implementation with its published CIFAR-100 configuration and varied only the expansion decision: the official rule; never expanding (adapters frozen after the first task, the reference of SEMA's own ablation); never expanding while the adapters keep training on every task; and expanding at every task. \pend{SEMA results: linear head / exemplar-free NCM vs exemplar NCM.}
 

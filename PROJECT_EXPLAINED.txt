@@ -1,0 +1,348 @@
+=====================================================================
+ THE WHOLE PROJECT, EXPLAINED IN PLAIN ENGLISH
+ (with pointers to the files where each piece lives)
+=====================================================================
+
+Read this first. When you want the exact numbers, go to the paper
+(paper/main.tex, compiled as paper/main.pdf) and the report files
+named below.
+
+---------------------------------------------------------------------
+1. THE BIG PICTURE: WHAT PROBLEM IS THIS ABOUT?
+---------------------------------------------------------------------
+
+"Continual learning" means teaching an AI model new things over time
+without it forgetting the old things. Picture a chatbot for a bank. In
+January it learns to recognise 10 kinds of customer question. In
+February 10 new kinds appear, then 10 more in March, and so on. You
+want it to handle all of them at the end, not just the newest.
+
+The problem is "catastrophic forgetting". When a neural network trains
+on new material, it tends to overwrite what it learned before.
+
+One popular fix is "dynamic expansion". The model has a big pretrained
+core that never changes (here DistilBERT, BERT or a Vision
+Transformer). On top of it sits a small add-on module called an
+"adapter". We use LoRA adapters plus a classifier head, and the paper
+calls each adapter a "package". When the system decides that something
+new is happening, it freezes the current package (so its knowledge is
+locked in) and starts a fresh package for the new material.
+
+Two questions follow:
+  (a) WHEN should it start a new package? Something has to raise the
+      alarm. Published methods use "triggers": a sudden jump in the
+      loss (the model suddenly gets lots wrong), a change in what the
+      inputs look like, a prediction of upcoming forgetting, or a test
+      of whether a fresh module would do better.
+  (b) IS IT EVEN WORTH IT? Does adding packages actually beat keeping
+      one package and letting it keep learning?
+
+This project studies both questions. The headline answers:
+
+  * The triggers mostly detect one thing: "labels this package has
+    never seen just showed up". We call this CLASSIFIER NOVELTY. This
+    is why they look so precise on standard benchmarks. A short piece
+    of math in the paper (Section 3, "What a loss signal measures")
+    shows why.
+
+  * Whether expanding helps depends on one property of the learner:
+    whether it can REFRESH its memory of what each class looks like.
+      - If it keeps a few stored examples ("exemplars") and can
+        recompute its class summaries, expansion HURTS. One package
+        that keeps learning wins by roughly 5-18 points of accuracy.
+      - If it cannot store examples ("exemplar-free"), its class
+        summaries go stale while it keeps training. Freezing old
+        packages keeps those summaries valid, and expansion HELPS by
+        roughly 8-31 points.
+    Same streams, same triggers; this one property flips the sign.
+
+  * Many papers test expansion only against a weak baseline ("train
+    once on the first chunk, then freeze"), and that makes expansion
+    look good. Against a learner that keeps training, the picture can
+    reverse. Our recommendation is to report both comparisons.
+
+---------------------------------------------------------------------
+2. VOCABULARY YOU WILL SEE EVERYWHERE
+---------------------------------------------------------------------
+
+Stream     The sequence of data the model sees over time, in batches of
+           16 examples. It is "task-free": the model is never told when
+           the topic changes.
+Segment    One chunk of the stream (for example "the 10 new question
+           types for March"). Only the evaluation code knows the
+           segment boundaries.
+CIL        Class-incremental: each segment brings brand-new labels
+           (BANKING77 groups, CLINC150, 20 Newsgroups, CIFAR-100,
+           ImageNet-R).
+DIL        Domain-incremental: the labels stay the same but the style
+           of input changes (for example movie reviews, then tweets).
+Drift      Concept drift: the meaning of a label changes (we flip some
+           labels on purpose, or use TweetEval tasks).
+Package    One adapter plus classifier head. "Single" means one package
+           forever.
+Policies   The rules for when to add packages:
+             single    never add one
+             oracle    add one exactly at every true segment change
+                       (cheating, as a best-case reference)
+             random    add the same number as oracle, at random times
+             firstseg  train on the first segment only, then freeze
+                       ("first-session adaptation", the usual weak
+                       baseline)
+             frozen    no training at all
+             triggers  LossZ, ReprZ, InterfLogit, FreshUtil, LabelNovel,
+                       and our own LS (label-conditional), which decide
+                       on their own when to add a package
+Prototype  The average feature vector of a class. Predictions go to the
+           nearest prototype.
+  proto_mean / exemplar-based: prototypes recomputed from stored
+           examples, so they are always fresh.
+  proto_ef / exemplar-free: prototypes saved when the data went by and
+           never recomputed, so they go stale.
+  proto_own: each input is routed to the package whose own prototypes
+           fit best.
+SDC        Semantic Drift Compensation (Yu et al. 2020), a published
+           way to fix stale prototypes without stored examples. We
+           tested whether it removes the need to expand. It does not.
+Seed       One repetition of an experiment with different randomness.
+           Most main results use 10 seeds (8 for CIFAR, 6 for
+           ImageNet-R, 5 for BERT and SDC, 3 for SEMA).
+Pre-registration  Writing down the hypotheses, code and analysis
+           BEFORE running the real experiments, so nobody can say we
+           moved the goalposts. The documents are notes/tmlr_*prereg.md.
+           Each one records the SHA-256 fingerprints of the frozen code.
+
+---------------------------------------------------------------------
+3. HOW THE PROJECT EVOLVED (WHY THERE ARE SO MANY OLD FILES)
+---------------------------------------------------------------------
+
+The repo's name, "mitosis-interference", and README.md come from the
+ORIGINAL idea: build a smarter trigger that splits off a new adapter
+(like a cell dividing, "mitosis") when new data would INTERFERE with
+old knowledge. See notes/RESEARCH_QUESTION.md.
+
+Weeks of experiments followed. The files named day1_ ... day22_ in
+notes/, experiments/ and results/, plus src/adapter_pool_*.py, are
+that history. They tried counterfactual allocators ("CAU"), CABLE-style
+scores, routing, memory variants and MultiNLI pilots. The key lesson:
+the early learner was too weak. It reached only 16% on one stream,
+worse than doing no training at all, so its comparisons were
+meaningless. The paper says this openly in Appendix "Development
+history and failed candidates", and handoff.txt covers it too.
+
+The project was then REFRAMED (notes/tmlr_reframe_20261009.md). The
+paper no longer sells a new trigger. It asks what existing triggers
+detect and when expansion pays off. That is the current paper. The
+active code is in src/tfcl/ ("tfcl" = task-free continual learning)
+and the experiments/tfcl_*.py scripts.
+
+Rule of thumb: anything named day*, controller_*, cable_*, sentinel_*,
+strictback_*, rngsafe_* or restart_* is history, kept for honesty.
+Anything named tfcl* or sema_x is the paper.
+
+---------------------------------------------------------------------
+4. THE CODE THAT PRODUCES THE PAPER
+---------------------------------------------------------------------
+
+src/tfcl/model.py         The model: frozen encoder plus LoRA packages
+                          plus heads.
+src/tfcl/learner.py       The continual learner: trains the newest
+                          package on each batch, keeps a 512-example
+                          memory shared by all packages, adds packages
+                          when the policy says so, and makes
+                          predictions.
+src/tfcl/triggers.py      All the trigger statistics (LossZ, ReprZ,
+                          InterfLogit, FreshUtil, LabelNovel, LS, ...).
+src/tfcl/data.py, data_x.py   Builds the text streams (BANKING77,
+                          CLINC150, 20 Newsgroups, Amazon, sentiment,
+                          TweetEval).
+src/tfcl/vision.py        CIFAR-100 streams with the ViT-B/16 encoder.
+src/tfcl/vision_imnr.py   ImageNet-R stream.
+src/tfcl/exemplar_free.py The exemplar-free prototype rules (proto_ef).
+src/tfcl/drift_comp.py    SDC drift compensation.
+tests/test_tfcl_probe_restoration.py  Checks that "trying an update
+                          and undoing it" (used by some triggers)
+                          restores the model exactly, bit for bit.
+
+Runners (each runs one stream/policy/seed and writes one JSON file):
+  experiments/tfcl_run.py      main text study
+  experiments/tfcl_run_x.py    extension 1 (vision, no-replay, drift)
+  experiments/tfcl_run_x2.py   extension 2 (exemplar-free)
+  experiments/tfcl_run_x3.py   ImageNet-R
+  experiments/tfcl_run_x4.py   SDC plus exemplar-free ImageNet-R
+  experiments/run_jobs.py      runs many jobs in parallel on the GPU
+Batch scripts listing every job: experiments/tfcl_confirm.sh,
+  tfcl_extension.sh, tfcl_extension2.sh, tfcl_ext34.sh,
+  tfcl_bert_reduced.sh
+
+Analysis scripts (they turn the JSON files into statistics):
+  experiments/tfcl_confirm_report.py      main study
+  experiments/tfcl_extension_report.py    extension 1
+  experiments/tfcl_extension2_report.py   extension 2
+  experiments/tfcl_ext34_report.py        ImageNet-R plus SDC
+  experiments/tfcl_lace_openloop.py       LACE threshold check
+  experiments/tfcl_pkg_novelty.py         "were spawns at new labels?"
+  experiments/tfcl_paper_tables.py        builds paper/tables/main_table.tex
+  experiments/tfcl_fig_regime.py, tfcl_fig_mechanism.py   the figures
+
+SEMA check (a published method, run with ITS OWN code):
+  experiments/sema_x/run_sema_x.py  runs SEMA (CVPR 2025, official
+          code cloned separately at /workspace/ext_src/SEMA-CL, commit
+          5a45512) and changes only the expansion decision: official
+          rule / never expand / one adapter keeps training.
+  experiments/sema_x/report.py      the statistics.
+
+---------------------------------------------------------------------
+5. THE EXPERIMENTS, STAGE BY STAGE, AND WHAT CAME OUT
+---------------------------------------------------------------------
+
+Each stage was pre-registered before its real runs. Development and
+tuning used seed 2026 ONLY. The real ("confirmation") seeds were
+2027 and up.
+
+STAGE 1: Main text study
+  Plan:    notes/tmlr_confirmation_prereg.md
+  Data:    results/tfcl/confirm/ (one folder per stream)
+  Report:  results/tfcl/confirm_report_q0.99.json,
+           notes/tmlr_confirmation_results.md
+  Found:   With stored examples, oracle expansion LOSES 7-11 points to
+           a single package on class-incremental text streams. It still
+           beats "firstseg", the weak baseline. Loss triggers fire
+           right where new labels appear.
+
+  BERT replication (a second, held-out encoder):
+  Data:    results/tfcl/confirm_bert/
+  Report:  results/tfcl/bert_report.txt
+  Found:   Same direction. Expansion lost 5.5-9.7 points in every seed.
+  Honest note: the first BERT run was broken. The tokenizer files were
+  missing because a download failed silently, so the model saw garbage
+  and scored at chance. Those outputs are kept, clearly labelled, in
+  results/tfcl/confirm_bert_INVALID_no_tokenizer/. The paper lists
+  this in its "Pre-registration deviations" appendix. The rerun is the
+  valid one.
+
+STAGE 2: Extension 1 (vision, no-replay, natural drift)
+  Plan:    notes/tmlr_extension_prereg.md
+  Data:    results/tfcl/ext_vision/, ext_vision_noreplay/, ext_recon*/,
+           ext_shadow/
+  Report:  results/tfcl/ext1_report.txt, extension_report.json
+  Found:   CIFAR-100 with ViT behaves like text: oracle loses 8.9 to
+           single and beats firstseg by 16.6. Without replay in the
+           training loss, expansion hurts less. Under drift in vision,
+           the answer depends on how packages are combined at
+           prediction time (proto_own vs proto_mean). The LACE paper's
+           own threshold (results/tfcl/lace_openloop.json) is precise
+           at class boundaries simply because those are where new
+           labels appear.
+
+STAGE 3: Extension 2 (exemplar-free, the sign flip)
+  Plan:    notes/tmlr_extension2_prereg.md
+  Data:    results/tfcl/ext2_ef/
+  Report:  results/tfcl/ext2_report.txt
+  Found:   With no stored examples, oracle expansion BEATS the single
+           package by 18-31 points in every class-incremental stream
+           and every seed. Within the very same training runs, switching
+           only the prototype rule flips the result. This is the
+           central evidence. One honest miss: on CIFAR, oracle was not
+           significantly better than random-timing expansion
+           (+3.9, not significant).
+
+STAGE 4: Extensions 3+4 (ImageNet-R benchmark, SDC refresh)
+  Plan:    notes/tmlr_extension34_prereg.md
+  Data:    results/tfcl/ext3_imnr/ (exemplar/ and ef/),
+           results/tfcl/ext4_sdc/
+  Report:  results/tfcl/ext4_report.txt, ext34_report.txt,
+           extension34_report.json; paper table paper/ext4_table.tex
+  Found:   ImageNet-R reproduces both regimes (all 4 predictions held,
+           every seed). SDC helped the single package on some text
+           streams but HURT it on CLINC, CIFAR and ImageNet-R.
+           Expansion stayed ahead in every stream either way.
+
+STAGE 5: SEMA (a real published system)
+  Plan:    notes/tmlr_extension5_prereg.md
+  Data:    results/sema_x/*.json and *.log
+  Report:  results/sema_x/report.json
+  Found:   SEMA's own expansion added nothing over never expanding
+           (86.4% vs 86.2%). Our prediction E1 (expansion beats a
+           single adapter on SEMA's own head) FAILED. Predictions E2
+           and E3 held: with refreshed class means, the single adapter
+           wins by 1.8 points in every seed. The same pattern appears,
+           smaller.
+
+Failed predictions are reported in the paper, not hidden. Reviewers
+tend to trust a paper more when it does this.
+
+---------------------------------------------------------------------
+6. THE PAPER
+---------------------------------------------------------------------
+
+paper/main.tex           The paper source (TMLR format, anonymous).
+paper/main.pdf           Compiled paper. Rebuild it with:
+                           cd paper && latexmk -pdf main.tex
+paper/refs.bib           References.
+paper/tables/main_table.tex   Main results table (auto-generated).
+paper/ext4_table.tex     SDC appendix table.
+paper/figures/regime.*   "Regime map": value of expansion in all 12
+                         streams, with and without exemplars.
+paper/figures/mechanism.*  Figure for the classifier-novelty argument.
+paper/main_session2.tex  An older draft, kept for reference only.
+paper/tmlr.sty, tmlr.bst, fancyhdr.sty, math_commands.tex  TMLR style
+                         files.
+
+Paper layout:
+  1 Introduction           3 What a loss signal measures (the math)
+  2 Related work           4 Triggers, references, protocol
+  5 Results (triggers / with exemplars / without exemplars /
+            ImageNet-R + SEMA / closed-loop triggers)
+  6 Discussion and limitations   7 Conclusion
+  Appendices: development history, pre-registration deviations,
+              counterfactual allocator case study, SDC table, ...
+
+Things YOU must still do before submitting:
+  - Read the paper until you can defend every sentence.
+  - Approve or rewrite the "Use of AI assistants" paragraph
+    (paper/main.tex, around line 185) so it is true.
+  - Make an anonymous copy of the code (e.g. anonymous.4open.science)
+    for reviewers. This GitHub repo shows your username.
+  - Submit on OpenReview under your real name. The PDF stays
+    anonymous.
+
+---------------------------------------------------------------------
+7. OTHER FOLDERS AND FILES
+---------------------------------------------------------------------
+
+handoff.txt            The original technical handoff (more detail,
+                       more jargon).
+notes/                 Every plan, result note and audit, day by day.
+                       Start with tmlr_reframe_20261009.md, the
+                       tmlr_*prereg.md files and
+                       tmlr_confirmation_results.md.
+notes/claude_memory/   Notes the AI assistant kept for itself between
+                       sessions.
+logs/, logs_*.txt      Raw run logs, mostly from the old phase.
+results/tfcl/*.log*    Pipeline logs for the paper's runs. The ".tryN"
+                       files are automatic retries after crashes or
+                       out-of-memory errors.
+figures/               Figures from the old phase (not used in the
+                       paper).
+environment/, requirements-frozen.txt   Exact software versions.
+data/                  A small cached MultiNLI split from the old phase.
+                       The datasets the paper uses live in the Hugging
+                       Face cache, not in the repo.
+Large result files are stored with Git LFS (see .gitattributes).
+
+---------------------------------------------------------------------
+8. THE ONE-PARAGRAPH VERSION (FOR EXPLAINING IT OUT LOUD)
+---------------------------------------------------------------------
+
+"AI systems that learn continually sometimes add new modules when they
+detect something new. I showed that the common alarms for 'something
+new' really just detect 'labels this module has never seen', which is
+why they look so accurate on standard benchmarks. Then I measured
+whether adding modules actually helps. It depends on whether the system
+can refresh its summary of each class. If it keeps a few examples to
+refresh with, adding modules hurts compared with one module that keeps
+learning. If it can't, adding modules helps a lot, because frozen
+modules keep their summaries valid. I pre-registered every experiment,
+tested on text and images, on three different models, and inside a
+published method's own code, and I report the predictions that failed
+as well as the ones that held."

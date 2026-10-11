@@ -9,3 +9,5 @@ FAIL --stream amazon_dil --policy firstseg --replay 0 --ef --seed 2033 --out res
 FAIL --stream clinc_cil --policy trigger:label_surprise --trigger-args {"tau": 0.32907942320671285} --replay 0 --ef --seed 2033 --out results/tfcl/ext2_ef/clinc_cil/trigger-label_surprise-q0.99_s2033.json
 FAIL --stream amazon_dilconf --policy oracle --replay 0 --ef --seed 2032 --out results/tfcl/ext2_ef/amazon_dilconf/oracle_s2032.json
 FAIL --stream news_cil --policy oracle --replay 0 --ef --seed 2032 --out results/tfcl/ext2_ef/news_cil/oracle_s2032.json
+FAIL --stream clinc_cil --policy trigger:label_novel --trigger-args {"tau": 0.33374999999999844} --replay 0 --ef --seed 2032 --out results/tfcl/ext2_ef/clinc_cil/trigger-label_novel-q0.99_s2032.json
+JOBS_DONE

@@ -48,10 +48,10 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6015625,
-     "proto_max": 0.6015625,
-     "proto_own": 0.6015625,
-     "linear_last": 0.5
+     "proto_mean": 0.859375,
+     "proto_max": 0.859375,
+     "proto_own": 0.859375,
+     "linear_last": 0.8515625
     }
    }
   },
@@ -64,16 +64,16 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.609375,
-     "proto_max": 0.46875,
-     "proto_own": 0.359375,
-     "linear_last": 0.5
+     "proto_mean": 0.90625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.890625,
+     "linear_last": 0.8515625
     },
     "B": {
-     "proto_mean": 0.5546875,
-     "proto_max": 0.515625,
-     "proto_own": 0.4453125,
-     "linear_last": 0.5
+     "proto_mean": 0.90625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.90625,
+     "linear_last": 0.8515625
     }
    }
   },
@@ -87,22 +87,22 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6171875,
-     "proto_max": 0.484375,
-     "proto_own": 0.46875,
-     "linear_last": 0.5
+     "proto_mean": 0.9296875,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.890625
     },
     "B": {
-     "proto_mean": 0.5625,
-     "proto_max": 0.484375,
-     "proto_own": 0.5078125,
-     "linear_last": 0.5
+     "proto_mean": 0.90625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.90625,
+     "linear_last": 0.8671875
     },
     "C": {
-     "proto_mean": 0.5546875,
-     "proto_max": 0.4921875,
-     "proto_own": 0.4921875,
-     "linear_last": 0.5
+     "proto_mean": 0.8515625,
+     "proto_max": 0.8359375,
+     "proto_own": 0.84375,
+     "linear_last": 0.8046875
     }
    }
   },
@@ -117,28 +117,28 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6015625,
-     "proto_max": 0.546875,
-     "proto_own": 0.5234375,
-     "linear_last": 0.5078125
+     "proto_mean": 0.8984375,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.890625
     },
     "B": {
-     "proto_mean": 0.53125,
-     "proto_max": 0.5078125,
-     "proto_own": 0.5234375,
-     "linear_last": 0.5078125
+     "proto_mean": 0.9140625,
+     "proto_max": 0.90625,
+     "proto_own": 0.90625,
+     "linear_last": 0.828125
     },
     "C": {
-     "proto_mean": 0.546875,
-     "proto_max": 0.5078125,
-     "proto_own": 0.4140625,
-     "linear_last": 0.515625
+     "proto_mean": 0.8359375,
+     "proto_max": 0.8359375,
+     "proto_own": 0.8359375,
+     "linear_last": 0.8125
     },
     "D": {
-     "proto_mean": 0.5546875,
-     "proto_max": 0.484375,
-     "proto_own": 0.4375,
-     "linear_last": 0.5
+     "proto_mean": 0.8671875,
+     "proto_max": 0.875,
+     "proto_own": 0.875,
+     "linear_last": 0.84375
     }
    }
   },
@@ -154,45 +154,45 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6015625,
-     "proto_max": 0.5078125,
-     "proto_own": 0.5,
-     "linear_last": 0.5
+     "proto_mean": 0.90625,
+     "proto_max": 0.90625,
+     "proto_own": 0.9140625,
+     "linear_last": 0.90625
     },
     "B": {
-     "proto_mean": 0.53125,
-     "proto_max": 0.4921875,
-     "proto_own": 0.453125,
-     "linear_last": 0.5
+     "proto_mean": 0.90625,
+     "proto_max": 0.90625,
+     "proto_own": 0.9140625,
+     "linear_last": 0.8984375
     },
     "C": {
-     "proto_mean": 0.546875,
-     "proto_max": 0.5078125,
-     "proto_own": 0.5390625,
-     "linear_last": 0.5
+     "proto_mean": 0.84375,
+     "proto_max": 0.8359375,
+     "proto_own": 0.8359375,
+     "linear_last": 0.828125
     },
     "D": {
-     "proto_mean": 0.5546875,
-     "proto_max": 0.5390625,
-     "proto_own": 0.4375,
-     "linear_last": 0.5
+     "proto_mean": 0.875,
+     "proto_max": 0.8671875,
+     "proto_own": 0.859375,
+     "linear_last": 0.8671875
     },
     "E": {
-     "proto_mean": 0.609375,
-     "proto_max": 0.5546875,
-     "proto_own": 0.5546875,
-     "linear_last": 0.5
+     "proto_mean": 0.8984375,
+     "proto_max": 0.84375,
+     "proto_own": 0.8359375,
+     "linear_last": 0.8671875
     }
    }
   }
  ],
  "final_mean": {
-  "proto_mean": 0.56875,
-  "proto_max": 0.5203125,
-  "proto_own": 0.496875,
-  "linear_last": 0.5
+  "proto_mean": 0.8859375,
+  "proto_max": 0.871875,
+  "proto_own": 0.871875,
+  "linear_last": 0.8734375
  },
  "trigger_records": [],
- "seconds": 83.21375727653503,
+ "seconds": 59.44305467605591,
  "trainable_params_per_package": 296450
 }

@@ -2,10 +2,23 @@ Using the latest cached version of the dataset since goosmanlei/amazon_reviews_m
 Found the latest cached dataset configuration 'en' at /workspace/.cache/huggingface/datasets/goosmanlei___amazon_reviews_multi/en/0.0.0/a7b1fa9703f1f930d5c8e1a65c5d2774aaab0c85 (last modified on Sun Oct 11 03:32:03 2026).
 Using the latest cached version of the dataset since goosmanlei/amazon_reviews_multi couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'en' at /workspace/.cache/huggingface/datasets/goosmanlei___amazon_reviews_multi/en/0.0.0/a7b1fa9703f1f930d5c8e1a65c5d2774aaab0c85 (last modified on Sun Oct 11 03:32:03 2026).
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7589.12it/s]
-[amazon_dil trigger:label_surprise s2027] step 19 seg A packages 1 A:0.594
-[amazon_dil trigger:label_surprise s2027] step 39 seg B packages 1 A:0.586 B:0.508
-[amazon_dil trigger:label_surprise s2027] step 59 seg C packages 1 A:0.570 B:0.484 C:0.531
-[amazon_dil trigger:label_surprise s2027] step 79 seg D packages 1 A:0.516 B:0.500 C:0.570 D:0.492
-[amazon_dil trigger:label_surprise s2027] step 99 seg E packages 1 A:0.586 B:0.523 C:0.484 D:0.547 E:0.609
-FINAL amazon_dil trigger:label_surprise 2027 {"proto_mean": 0.55, "proto_max": 0.55, "proto_own": 0.5546875, "linear_last": 0.5} 96s
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6643.85it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
+    L.observe(b["x"], b["y"])
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
+    self.step(p, xs, ys)
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 134, in step
+    loss.backward()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 34.44 MiB is free. Process 348387 has 5.01 GiB memory in use. Process 350391 has 5.01 GiB memory in use. Process 377035 has 1.94 GiB memory in use. Process 377344 has 1.75 GiB memory in use. Process 377825 has 1.74 GiB memory in use. Process 377620 has 1.94 GiB memory in use. Process 377556 has 4.34 GiB memory in use. Including non-PyTorch memory, this process has 1.70 GiB memory in use. Of the allocated memory 1.23 GiB is allocated by PyTorch, and 11.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

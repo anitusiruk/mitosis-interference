@@ -48,10 +48,10 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6171875,
-     "proto_max": 0.6171875,
-     "proto_own": 0.6171875,
-     "linear_last": 0.5
+     "proto_mean": 0.8984375,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.890625
     }
    }
   },
@@ -64,16 +64,16 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6015625,
-     "proto_max": 0.59375,
-     "proto_own": 0.578125,
-     "linear_last": 0.5
+     "proto_mean": 0.9140625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.9140625
     },
     "B": {
-     "proto_mean": 0.5390625,
-     "proto_max": 0.5234375,
-     "proto_own": 0.5,
-     "linear_last": 0.5
+     "proto_mean": 0.921875,
+     "proto_max": 0.8828125,
+     "proto_own": 0.890625,
+     "linear_last": 0.8671875
     }
    }
   },
@@ -86,16 +86,16 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.6015625,
-     "proto_max": 0.6015625,
-     "proto_own": 0.3984375,
-     "linear_last": 0.5
+     "proto_mean": 0.9140625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.875
     },
     "B": {
-     "proto_mean": 0.546875,
-     "proto_max": 0.53125,
-     "proto_own": 0.46875,
-     "linear_last": 0.5
+     "proto_mean": 0.8984375,
+     "proto_max": 0.890625,
+     "proto_own": 0.8984375,
+     "linear_last": 0.875
     }
    }
   },
@@ -109,22 +109,22 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.3828125,
-     "proto_max": 0.3984375,
-     "proto_own": 0.3984375,
-     "linear_last": 0.4921875
+     "proto_mean": 0.9140625,
+     "proto_max": 0.9140625,
+     "proto_own": 0.9140625,
+     "linear_last": 0.8984375
     },
     "B": {
-     "proto_mean": 0.4375,
-     "proto_max": 0.46875,
-     "proto_own": 0.4609375,
-     "linear_last": 0.5
+     "proto_mean": 0.9140625,
+     "proto_max": 0.8984375,
+     "proto_own": 0.8984375,
+     "linear_last": 0.890625
     },
     "C": {
-     "proto_mean": 0.4453125,
-     "proto_max": 0.4609375,
-     "proto_own": 0.453125,
-     "linear_last": 0.4921875
+     "proto_mean": 0.828125,
+     "proto_max": 0.8515625,
+     "proto_own": 0.8515625,
+     "linear_last": 0.7890625
     }
    }
   },
@@ -138,33 +138,33 @@
    ],
    "acc": {
     "A": {
-     "proto_mean": 0.3828125,
-     "proto_max": 0.3984375,
-     "proto_own": 0.4921875,
-     "linear_last": 0.5
+     "proto_mean": 0.921875,
+     "proto_max": 0.921875,
+     "proto_own": 0.9140625,
+     "linear_last": 0.8046875
     },
     "B": {
-     "proto_mean": 0.4296875,
-     "proto_max": 0.4609375,
-     "proto_own": 0.4609375,
-     "linear_last": 0.5
+     "proto_mean": 0.8984375,
+     "proto_max": 0.9140625,
+     "proto_own": 0.8984375,
+     "linear_last": 0.8046875
     },
     "C": {
-     "proto_mean": 0.4609375,
-     "proto_max": 0.453125,
-     "proto_own": 0.46875,
-     "linear_last": 0.5
+     "proto_mean": 0.828125,
+     "proto_max": 0.875,
+     "proto_own": 0.8828125,
+     "linear_last": 0.7265625
     }
    }
   }
  ],
  "final_mean": {
-  "proto_mean": 0.4244791666666667,
-  "proto_max": 0.4375,
-  "proto_own": 0.4739583333333333,
-  "linear_last": 0.5
+  "proto_mean": 0.8828125,
+  "proto_max": 0.9036458333333334,
+  "proto_own": 0.8984375,
+  "linear_last": 0.7786458333333334
  },
  "trigger_records": [],
- "seconds": 74.92434811592102,
+ "seconds": 46.536139726638794,
  "trainable_params_per_package": 296450
 }

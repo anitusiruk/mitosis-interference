@@ -1,20 +1,16 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 7250.94it/s]
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 7730.72it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
   File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
     main()
   File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
-    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
-    ^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
-    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    R.main(argv) if "--policy-label" not in a[cifar_dil trigger:label_novel s2029] step 149 seg C packages 1 A:0.953 B:0.893 C:0.930
+[cifar_dil trigger:label_novel s2029] step 199 seg D packages 1 A:0.920 B:0.847 C:0.882 D:0.910
+[cifar_dil trigger:label_novel s2029] step 249 seg E packages 1 A:0.907 B:0.880 C:0.845 D:0.868 E:0.930
+FINAL cifar_dil trigger:label_novel 2029 {"proto_mean": 0.8860000133514404, "proto_max": 0.8860000133514404, "proto_own": 0.8860000133514404, "linear_last": 0.8893333435058594} 203s
+^^^^^^^^^^
   File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
     f = self.enc.features(xs, p.lora, grad=True)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,4 +62,4 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/dist-packages/transformers/activations.py", line 89, in forward
     return self.act(input)
            ^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 5.12 MiB is free. Process 64870 has 6.60 GiB memory in use. Process 126502 has 5.01 GiB memory in use. Process 159750 has 1.91 GiB memory in use. Process 171342 has 2.77 GiB memory in use. Process 171727 has 996.00 MiB memory in use. Process 171935 has 1.82 GiB memory in use. Process 173698 has 1.13 GiB memory in use. Process 173947 has 1.13 GiB memory in use. Including non-PyTorch memory, this process has 2.12 GiB memory in use. Of the allocated memory 1.63 GiB is allocated by PyTorch, and 18.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 16.44 MiB is free. Process 177437 has 8.77 GiB memory in use. Process 295678 has 3.84 GiB memory in use. Process 300126 has 1.84 GiB memory in use. Process 300059 has 1.96 GiB memory in use. Process 300852 has 2.77 GiB memory in use. Process 302154 has 2.76 GiB memory in use. Including non-PyTorch memory, this process has 1.03 GiB memory in use. Process 304111 has 508.00 MiB memory in use. Of the allocated memory 574.32 MiB is allocated by PyTorch, and 9.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -3,3 +3,7 @@ Found the latest cached dataset configuration 'default' at /workspace/.cache/hug
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7783.67it/s]
 [news_cil trigger:loss_z s2028] step 19 seg A packages 1 A:0.295
 [news_cil trigger:loss_z s2028] step 39 seg B packages 2 A:0.055 B:0.205
+[news_cil trigger:loss_z s2028] step 59 seg C packages 3 A:0.045 B:0.030 C:0.190
+[news_cil trigger:loss_z s2028] step 79 seg D packages 4 A:0.230 B:0.010 C:0.005 D:0.050
+[news_cil trigger:loss_z s2028] step 99 seg E packages 5 A:0.220 B:0.000 C:0.000 D:0.020 E:0.030
+FINAL news_cil trigger:loss_z 2028 {"proto_mean": 0.053999999538064, "proto_max": 0.05499999951571226, "proto_own": 0.05000000037252903, "linear_last": 0.05} 117s

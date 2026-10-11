@@ -1,5 +1,6 @@
 Using the latest cached version of the module from /workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9 (last modified on Sun Oct 11 03:31:47 2026) since it couldn't be found locally at PolyAI/banking77
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8462.86it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5952.59it/s]
+[banking_cil oracle s2028] step 19 seg A packages 1 A:0.167
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -57,25 +58,16 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/dist-packages/transformers/pytorch_utils.py", line 199, in apply_chunking_to_forward
     return forward_fn(*input_tensors)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 414, in feed_forward_chunk
-    intermediate_output = self.intermediate(attention_output)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 415, in feed_forward_chunk
+    layer_output = self.output(intermediate_output, attention_output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 336, in forward
-    hidden_states = self.intermediate_act_fn(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/activations.py", line 89, in forward
-    return self.act(input)
-           ^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 13.12 MiB is free. Process 177437 has 5.73 GiB memory in use. Process 224911 has 3.84 GiB memory in use. Process 239723 has 2.77 GiB memory in use. Process 239862 has 2.78 GiB memory in use. Process 240540 has 1.83 GiB memory in use. Process 240371 has 1.94 GiB memory in use. Process 240840 has 1.94 GiB memory in use. Process 241370 has 1.66 GiB memory in use. Including non-PyTorch memory, this process has 982.00 MiB memory in use. Of the allocated memory 517.56 MiB is allocated by PyTorch, and 6.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 350, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 18.44 MiB is free. Process 177437 has 8.77 GiB memory in use. Process 295678 has 3.84 GiB memory in use. Process 300126 has 1.84 GiB memory in use. Process 300059 has 1.96 GiB memory in use. Process 302154 has 2.77 GiB memory in use. Including non-PyTorch memory, this process has 1.53 GiB memory in use. Process 305956 has 1.53 GiB memory in use. Process 306020 has 1.22 GiB memory in use. Of the allocated memory 1.06 GiB is allocated by PyTorch, and 11.42 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

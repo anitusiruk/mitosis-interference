@@ -1,34 +1,14 @@
 Using the latest cached version of the dataset since clinc/clinc_oos couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'plus' at /workspace/.cache/huggingface/datasets/clinc___clinc_oos/plus/0.0.0/155b9c710419136e17307b80d0a13e68cd46b4ec (last modified on Sun Oct 11 03:31:55 2026).
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7342.05it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
-    enc = Encoder(a.model, max_length=a.max_length)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 45, in __init__
-    self.backbone = AutoModel.from_pretrained(name).to(device).eval()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py", line 3713, in to
-    return super().to(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1369, in to
-    return self._apply(convert)
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
-    param_applied = fn(param)
-                    ^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
-    return t.to(
-           ^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 10.44 MiB is free. Process 177437 has 5.73 GiB memory in use. Process 224911 has 5.01 GiB memory in use. Process 240540 has 1.84 GiB memory in use. Process 245175 has 1.82 GiB memory in use. Process 245565 has 2.77 GiB memory in use. Process 246327 has 2.76 GiB memory in use. Process 246820 has 2.76 GiB memory in use. Including non-PyTorch memory, this process has 768.00 MiB memory in use. Of the allocated memory 379.35 MiB is allocated by PyTorch, and 2.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 10122.32it/s]
+[clinc_cil single s2027] step 37 seg A packages 1 A:0.127
+[clinc_cil single s2027] step 75 seg B packages 1 A:0.057 B:0.117
+[clinc_cil single s2027] step 113 seg C packages 1 A:0.080 B:0.080 C:0.023
+[clinc_cil single s2027] step 151 seg D packages 1 A:0.073 B:0.010 C:0.030 D:0.057
+[clinc_cil single s2027] step 189 seg E packages 1 A:0.107 B:0.000 C:0.023 D:0.063 E:0.000
+[clinc_cil single s2027] step 227 seg F packages 1 A:0.037 B:0.000 C:0.023 D:0.037 E:0.000 F:0.063
+[clinc_cil single s2027] step 265 seg G packages 1 A:0.010 B:0.013 C:0.000 D:0.037 E:0.007 F:0.117 G:0.000
+[clinc_cil single s2027] step 303 seg H packages 1 A:0.033 B:0.003 C:0.000 D:0.003 E:0.007 F:0.090 G:0.020 H:0.017
+[clinc_cil single s2027] step 341 seg I packages 1 A:0.037 B:0.003 C:0.000 D:0.000 E:0.007 F:0.080 G:0.000 H:0.010 I:0.000
+[clinc_cil single s2027] step 379 seg J packages 1 A:0.033 B:0.023 C:0.003 D:0.003 E:0.007 F:0.027 G:0.000 H:0.010 I:0.000 J:0.010
+FINAL clinc_cil single 2027 {"proto_mean": 0.011666666902601718, "proto_max": 0.011666666902601718, "proto_own": 0.011666666902601718, "linear_last": 0.00900000035762787} 136s

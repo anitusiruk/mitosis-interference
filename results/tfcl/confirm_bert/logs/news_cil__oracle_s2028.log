@@ -4,3 +4,6 @@ Found the latest cached dataset configuration 'default' at /workspace/.cache/hug
 [news_cil oracle s2028] step 19 seg A packages 1 A:0.295
 [news_cil oracle s2028] step 39 seg B packages 2 A:0.045 B:0.205
 [news_cil oracle s2028] step 59 seg C packages 3 A:0.030 B:0.040 C:0.200
+[news_cil oracle s2028] step 79 seg D packages 4 A:0.220 B:0.005 C:0.010 D:0.055
+[news_cil oracle s2028] step 99 seg E packages 5 A:0.220 B:0.000 C:0.005 D:0.030 E:0.020
+FINAL news_cil oracle 2028 {"proto_mean": 0.05499999951571226, "proto_max": 0.059999999962747096, "proto_own": 0.057999998331069946, "linear_last": 0.05} 86s

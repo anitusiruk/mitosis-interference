@@ -1,24 +1,24 @@
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 4501.56it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 5220.59it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x3.py", line 29, in <module>
-    X2.main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x2.py", line 39, in <module>
+    main()
   File "/workspace/mitosis-interference/experiments/tfcl_run_x2.py", line 35, in main
     X.main(argv)
   File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
     R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
-                                                      ^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 75, in _main_with_label
-    R.main(argv)
+    ^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x2.py", line 33, in r_main
+    return real_main(av)
+           ^^^^^^^^^^^^^
   File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
     enc = Encoder(a.model, max_length=a.max_length)
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x3.py", line 22, in make_encoder
-    return V.MemmapVisionEncoder(images=V.imnr_arrays()[0], **kw)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/vision_imnr.py", line 28, in __init__
-    super().__init__(images=np.zeros((1, 2, 2, 3), np.uint8), **kw)
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 41, in make_encoder
+    return vision.VisionEncoder(images=vision.cifar100()[0], **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/workspace/mitosis-interference/src/tfcl/vision.py", line 52, in __init__
     self.backbone = AutoModel.from_pretrained(name).to(device).eval()
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,14 +34,11 @@ Traceback (most recent call last):
     module._apply(fn)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
     module._apply(fn)
+  [Previous line repeated 1 more time]
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
     param_applied = fn(param)
                     ^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
     return t.to(
            ^^^^^
-torch.AcceleratorError: CUDA error: out of memory
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 15.81 MiB is free. Process 177437 has 8.77 GiB memory in use. Process 290149 has 4.34 GiB memory in use. Process 295288 has 2.77 GiB memory in use. Process 295678 has 3.67 GiB memory in use. Process 295952 has 1.76 GiB memory in use. Process 296535 has 1.49 GiB memory in use. Including non-PyTorch memory, this process has 688.00 MiB memory in use. Of the allocated memory 300.25 MiB is allocated by PyTorch, and 1.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

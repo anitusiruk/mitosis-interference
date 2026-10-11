@@ -1,5 +1,5 @@
 Using the latest cached version of the module from /workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9 (last modified on Sun Oct 11 03:31:47 2026) since it couldn't be found locally at PolyAI/banking77
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7384.14it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6089.34it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -21,13 +21,14 @@ Traceback (most recent call last):
     module._apply(fn)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
     module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
     param_applied = fn(param)
                     ^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
     return t.to(
            ^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 17.81 MiB is free. Process 177437 has 5.01 GiB memory in use. Process 224911 has 3.84 GiB memory in use. Process 229818 has 2.00 GiB memory in use. Process 230022 has 2.00 GiB memory in use. Process 231758 has 1.82 GiB memory in use. Process 233706 has 2.78 GiB memory in use. Process 234946 has 1.55 GiB memory in use. Process 235640 has 2.76 GiB memory in use. Process 235704 has 930.00 MiB memory in use. Including non-PyTorch memory, this process has 788.00 MiB memory in use. Of the allocated memory 397.38 MiB is allocated by PyTorch, and 4.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.AcceleratorError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

@@ -17,3 +17,5 @@ FAIL --stream amazon_dilconf --policy trigger:label_novel --trigger-args {"tau":
 FAIL --stream cifar_cil --policy trigger:loss_z --trigger-args {"tau": 2.210391895553634} --replay 0 --ef --seed 2027 --out results/tfcl/ext2_ef/cifar_cil/trigger-loss_z-q0.99_s2027.json
 FAIL --stream cifar_dil --policy oracle --replay 0 --ef --seed 2027 --out results/tfcl/ext2_ef/cifar_dil/oracle_s2027.json
 FAIL --stream cifar_dil --policy random --replay 0 --ef --seed 2027 --out results/tfcl/ext2_ef/cifar_dil/random_s2027.json
+FAIL --stream cifar_dil --policy firstseg --replay 0 --ef --seed 2027 --out results/tfcl/ext2_ef/cifar_dil/firstseg_s2027.json
+FAIL --stream cifar_dil --policy trigger:loss_z --trigger-args {"tau": 3.029682001219503} --replay 0 --ef --seed 2027 --out results/tfcl/ext2_ef/cifar_dil/trigger-loss_z-q0.99_s2027.json

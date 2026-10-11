@@ -1,0 +1,242 @@
+{
+ "single/exemplar-based/banking_rec": [
+  -8.200778762499493,
+  0.8558365782669404,
+  10.0
+ ],
+ "single/exemplar-free/banking_rec": [
+  24.02230829000473,
+  2.758070817753473,
+  10.0
+ ],
+ "single/exemplar-based/banking_cil": [
+  -11.359504503863198,
+  1.4880040454732093,
+  10.0
+ ],
+ "single/exemplar-free/banking_cil": [
+  29.786534660296248,
+  4.599008693654416,
+  10.0
+ ],
+ "single/exemplar-based/clinc_cil": [
+  -9.899999916553499,
+  0.4015324522374972,
+  10.0
+ ],
+ "single/exemplar-free/clinc_cil": [
+  28.08000011742115,
+  5.616216058412879,
+  10.0
+ ],
+ "single/exemplar-based/news_cil": [
+  -7.139999628067017,
+  1.5971678828431977,
+  10.0
+ ],
+ "single/exemplar-free/news_cil": [
+  18.410000283271074,
+  6.285600029201637,
+  10.0
+ ],
+ "single/exemplar-based/cifar_cil": [
+  -8.920833244919775,
+  1.034040208816874,
+  8.0
+ ],
+ "single/exemplar-free/cifar_cil": [
+  31.374999871477485,
+  4.4093569165401,
+  8.0
+ ],
+ "single/exemplar-based/imnr_cil": [
+  -18.269449174404144,
+  2.038941228151728,
+  6.0
+ ],
+ "single/exemplar-free/imnr_cil": [
+  8.077522913614908,
+  4.325079918462603,
+  6.0
+ ],
+ "single/exemplar-based/amazon_dil": [
+  0.34375000000000155,
+  0.5620923495476171,
+  10.0
+ ],
+ "single/exemplar-free/amazon_dil": [
+  0.171874999999998,
+  0.6441462798602198,
+  10.0
+ ],
+ "single/exemplar-based/senti_dil": [
+  0.01953125,
+  1.439164723427546,
+  10.0
+ ],
+ "single/exemplar-free/senti_dil": [
+  1.03515625,
+  1.6479766966022382,
+  10.0
+ ],
+ "single/exemplar-based/cifar_dil": [
+  -2.5333334505557983,
+  1.1198586532216128,
+  8.0
+ ],
+ "single/exemplar-free/cifar_dil": [
+  0.8791671693325037,
+  0.8288156635319,
+  8.0
+ ],
+ "single/exemplar-based/amazon_dilconf": [
+  1.9374999999999964,
+  1.3992415570585435,
+  10.0
+ ],
+ "single/exemplar-free/amazon_dilconf": [
+  3.765625,
+  2.8200523226973124,
+  10.0
+ ],
+ "single/exemplar-based/senti_conf": [
+  -17.48046875,
+  2.990280237285862,
+  10.0
+ ],
+ "single/exemplar-free/senti_conf": [
+  -0.0390625,
+  3.9291476330923296,
+  10.0
+ ],
+ "single/exemplar-based/cifar_conf": [
+  -13.220833539962765,
+  2.8913044507835726,
+  8.0
+ ],
+ "single/exemplar-free/cifar_conf": [
+  2.566666305065154,
+  2.542505306157861,
+  8.0
+ ],
+ "firstseg/exemplar-based/banking_rec": [
+  7.229254245758057,
+  1.7145232028122173,
+  10.0
+ ],
+ "firstseg/exemplar-free/banking_rec": [
+  4.237812161445618,
+  1.805676849197389,
+  10.0
+ ],
+ "firstseg/exemplar-based/banking_cil": [
+  5.473649161202568,
+  1.6262381233126402,
+  10.0
+ ],
+ "firstseg/exemplar-free/banking_cil": [
+  -1.6133712178894435,
+  1.2604538966534908,
+  10.0
+ ],
+ "firstseg/exemplar-based/clinc_cil": [
+  6.916666775941851,
+  1.164937279132824,
+  10.0
+ ],
+ "firstseg/exemplar-free/clinc_cil": [
+  4.470000147819518,
+  0.9386158550187406,
+  10.0
+ ],
+ "firstseg/exemplar-based/news_cil": [
+  0.8800003528594968,
+  1.0657511990705475,
+  10.0
+ ],
+ "firstseg/exemplar-free/news_cil": [
+  -0.5499996244907379,
+  1.4351778571339873,
+  10.0
+ ],
+ "firstseg/exemplar-based/cifar_cil": [
+  16.60416722297668,
+  3.194515881374101,
+  8.0
+ ],
+ "firstseg/exemplar-free/cifar_cil": [
+  6.5291666984558105,
+  2.784523508595051,
+  8.0
+ ],
+ "firstseg/exemplar-based/imnr_cil": [
+  5.5284444242715844,
+  1.0220255135758192,
+  6.0
+ ],
+ "firstseg/exemplar-free/imnr_cil": [
+  -9.547197793920835,
+  2.7906931687456393,
+  6.0
+ ],
+ "firstseg/exemplar-based/amazon_dil": [
+  1.0468750000000004,
+  0.6345931937745091,
+  10.0
+ ],
+ "firstseg/exemplar-free/amazon_dil": [
+  1.875,
+  1.4819200876969598,
+  10.0
+ ],
+ "firstseg/exemplar-based/senti_dil": [
+  1.73828125,
+  1.175349922128198,
+  10.0
+ ],
+ "firstseg/exemplar-free/senti_dil": [
+  1.71875,
+  1.4650802090538928,
+  10.0
+ ],
+ "firstseg/exemplar-based/cifar_dil": [
+  8.791666626930237,
+  1.1084816633553034,
+  8.0
+ ],
+ "firstseg/exemplar-free/cifar_dil": [
+  6.675001084804533,
+  2.658324944988586,
+  8.0
+ ],
+ "firstseg/exemplar-based/amazon_dilconf": [
+  0.625,
+  0.4886363472747409,
+  10.0
+ ],
+ "firstseg/exemplar-free/amazon_dilconf": [
+  0.3906249999999988,
+  1.5044645090396065,
+  10.0
+ ],
+ "firstseg/exemplar-based/senti_conf": [
+  4.609375,
+  1.870113447727171,
+  10.0
+ ],
+ "firstseg/exemplar-free/senti_conf": [
+  -2.63671875,
+  3.045620567197682,
+  10.0
+ ],
+ "firstseg/exemplar-based/cifar_conf": [
+  6.691666878759861,
+  1.4668890540682828,
+  8.0
+ ],
+ "firstseg/exemplar-free/cifar_conf": [
+  4.875000044703483,
+  3.24616754645616,
+  8.0
+ ]
+}

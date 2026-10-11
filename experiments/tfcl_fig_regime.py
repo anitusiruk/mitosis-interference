@@ -67,10 +67,11 @@ def main():
                 summary[f"{ref}/{name}/{s}"] = r
                 ax.errorbar(r[0], y + off, xerr=r[1], fmt="o", ms=5, color=col, ecolor=col, elinewidth=2,
                             capsize=0, mec="white", mew=1, label=name if y == 0 else None)
-        ax.axvline(0, color="#888", lw=1, zorder=0)
+        ax.axvline(0, color="#555", lw=1.2, zorder=1.8)
         ax.set_title(title, fontsize=10, loc="left")
         ax.set_xlabel("final accuracy difference (points)")
         ax.grid(axis="x", color="#e5e5e5", lw=0.6)
+        ax.set_axisbelow(True)
         for side in ("top", "right"):
             ax.spines[side].set_visible(False)
         start = 0
@@ -80,7 +81,8 @@ def main():
     axes[0].set_yticks(range(len(streams)))
     axes[0].set_yticklabels([LABEL[s] + ("$^\\dagger$" if s in HELD else "") + f"  [{g}]" for g, s in streams], fontsize=8)
     axes[0].invert_yaxis()
-    axes[0].legend(frameon=False, fontsize=8, loc="lower left")
+    h, l = axes[0].get_legend_handles_labels()
+    fig.legend(h, l, frameon=False, fontsize=9, loc="upper center", ncol=2, bbox_to_anchor=(0.5, 1.03))
     fig.tight_layout()
     fig.savefig(a.out, bbox_inches="tight")
     fig.savefig(a.out.replace(".pdf", ".png"), dpi=150, bbox_inches="tight")

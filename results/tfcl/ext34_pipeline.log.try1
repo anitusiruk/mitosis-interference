@@ -7,3 +7,5 @@ JOBS_DONE
 FAIL --stream imnr_cil --policy single --seed 2027 --out results/tfcl/ext3_imnr/exemplar/imnr_cil/single_s2027.json
 FAIL --stream imnr_cil --policy firstseg --seed 2027 --out results/tfcl/ext3_imnr/exemplar/imnr_cil/firstseg_s2027.json
 FAIL --stream imnr_cil --policy single --seed 2028 --out results/tfcl/ext3_imnr/exemplar/imnr_cil/single_s2028.json
+JOBS_DONE
+EXT34_DONE

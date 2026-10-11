@@ -1,0 +1,16 @@
+240 jobs
+[1/240] fail(1) results/tfcl/ext_vision/cifar_conf/trigger-label_surprise-q0.99_s2034.json
+[2/240] fail(1) results/tfcl/ext_vision/cifar_conf/trigger-fresh_util-q0.99_s2034.json
+[3/240] fail(1) results/tfcl/ext_vision/cifar_conf/trigger-repr_z-q0.99_s2034.json
+[4/240] ok results/tfcl/ext_vision/cifar_conf/trigger-loss_z-q0.99_s2034.json
+[5/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_novel-q0.99_s2034.json
+[6/240] fail(1) results/tfcl/ext_vision/cifar_conf/random_s2034.json
+[7/240] fail(1) results/tfcl/ext_vision/cifar_conf/frozen_s2034.json
+[8/240] fail(1) results/tfcl/ext_vision/cifar_conf/firstseg_s2034.json
+[9/240] fail(1) results/tfcl/ext_vision/cifar_conf/oracle_s2034.json
+[10/240] ok results/tfcl/ext_vision/cifar_conf/single_s2034.json
+[11/240] fail(1) results/tfcl/ext_vision/cifar_conf/trigger-label_surprise-q0.99_s2033.json
+[12/240] ok results/tfcl/ext_vision/cifar_conf/trigger-fresh_util-q0.99_s2033.json
+[13/240] ok results/tfcl/ext_vision/cifar_conf/trigger-repr_z-q0.99_s2033.json
+[15/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_novel-q0.99_s2033.json
+[19/240] ok results/tfcl/ext_vision/cifar_conf/oracle_s2033.json

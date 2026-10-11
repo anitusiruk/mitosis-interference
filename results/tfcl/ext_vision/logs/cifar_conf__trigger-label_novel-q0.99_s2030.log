@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 6365.37it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
+    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
+    ^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
+    enc = Encoder(a.model, max_length=a.max_length)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 41, in make_encoder
+    return vision.VisionEncoder(images=vision.cifar100()[0], **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/vision.py", line 66, in __init__
+    self.images = torch.from_numpy(images).to(device)  # N,32,32,3 uint8
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 17.81 MiB is free. Process 177437 has 5.01 GiB memory in use. Process 224911 has 3.84 GiB memory in use. Process 229818 has 2.00 GiB memory in use. Process 230022 has 2.00 GiB memory in use. Process 231758 has 1.82 GiB memory in use. Process 233706 has 2.77 GiB memory in use. Process 233984 has 1.74 GiB memory in use. Process 234946 has 1.43 GiB memory in use. Process 234882 has 2.12 GiB memory in use. Including non-PyTorch memory, this process has 728.00 MiB memory in use. Of the allocated memory 329.55 MiB is allocated by PyTorch, and 12.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

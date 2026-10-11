@@ -392,24 +392,24 @@
   {
    "stream": "cifar_cil",
    "contrast": "proto_ef: firstseg - single",
-   "n": 4,
-   "mean": 0.23758333586156366,
-   "lo": 0.15261166999767534,
-   "hi": 0.322555001725452,
-   "p_wilcoxon": 0.125,
-   "wins": 4,
+   "n": 5,
+   "mean": 0.21786666706204416,
+   "lo": 0.13853198674360806,
+   "hi": 0.29720134738048026,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
    "supported": true
   },
   {
    "stream": "cifar_cil",
    "contrast": "proto_ef: oracle - firstseg",
-   "n": 4,
-   "mean": 0.05966666489839553,
-   "lo": -0.010956610148722581,
-   "hi": 0.13028993994551363,
-   "p_wilcoxon": 0.125,
-   "wins": 4,
-   "supported": false
+   "n": 5,
+   "mean": 0.06853333234786987,
+   "lo": 0.014832581378761478,
+   "hi": 0.12223408331697827,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "cifar_cil",
@@ -425,24 +425,24 @@
   {
    "stream": "cifar_cil",
    "contrast": "proto_ef_sdc: firstseg - single",
-   "n": 4,
-   "mean": 0.43966666685882955,
-   "lo": 0.3686276635269801,
-   "hi": 0.510705670190679,
-   "p_wilcoxon": 0.125,
-   "wins": 4,
+   "n": 5,
+   "mean": 0.41986666729673744,
+   "lo": 0.3468822388958245,
+   "hi": 0.4928510956976504,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
    "supported": true
   },
   {
    "stream": "cifar_cil",
    "contrast": "proto_ef_sdc: oracle - firstseg",
-   "n": 4,
-   "mean": 0.06049999445676807,
-   "lo": -0.01605224967248857,
-   "hi": 0.13705223858602472,
-   "p_wilcoxon": 0.125,
-   "wins": 4,
-   "supported": false
+   "n": 5,
+   "mean": 0.0738666641712189,
+   "lo": 0.010199438937173802,
+   "hi": 0.137533889405264,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "banking_rec",
@@ -559,82 +559,147 @@
   {
    "stream": "imnr_cil",
    "contrast": "I1 exemplar: oracle - single",
-   "n": 0,
-   "supported": null
+   "n": 4,
+   "mean": -0.18489522486925125,
+   "lo": -0.22321155707894996,
+   "hi": -0.14657889265955254,
+   "p_wilcoxon": 0.125,
+   "wins": 0,
+   "supported": true
   },
   {
    "stream": "imnr_cil",
    "contrast": "I2 exemplar: oracle - firstseg",
-   "n": 0,
-   "supported": null
+   "n": 5,
+   "mean": 0.05534831196069719,
+   "lo": 0.04183041966014818,
+   "hi": 0.0688662042612462,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "imnr_cil",
    "contrast": "I3 exemplar-free: oracle - single",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": 0.05613844096660612,
+   "lo": -0.012813163734817189,
+   "hi": 0.12509004566802942,
+   "p_wilcoxon": 0.25,
+   "wins": 3,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "I4 DiD (proto_ef - proto_mean, same runs)",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": 0.1569334397713343,
+   "lo": 0.12670102861965346,
+   "hi": 0.18716585092301516,
+   "p_wilcoxon": 0.25,
+   "wins": 3,
+   "supported": true
   }
  ],
  "I_desc": [
   {
    "stream": "imnr_cil",
    "contrast": "exemplar proto_mean: firstseg - single",
-   "n": 0,
-   "supported": null
+   "n": 4,
+   "mean": -0.23991056568920613,
+   "lo": -0.28817265725243846,
+   "hi": -0.1916484741259738,
+   "p_wilcoxon": 0.125,
+   "wins": 0,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "exemplar proto_mean: oracle - firstseg",
-   "n": 0,
-   "supported": null
+   "n": 5,
+   "mean": 0.05534831196069719,
+   "lo": 0.04183041966014818,
+   "hi": 0.0688662042612462,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "imnr_cil",
    "contrast": "exemplar proto_mean: oracle - single",
-   "n": 0,
-   "supported": null
+   "n": 4,
+   "mean": -0.18489522486925125,
+   "lo": -0.22321155707894996,
+   "hi": -0.14657889265955254,
+   "p_wilcoxon": 0.125,
+   "wins": 0,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef: firstseg - single",
-   "n": 2,
-   "supported": null
+   "n": 5,
+   "mean": 0.18406809806823732,
+   "lo": 0.12221180775865778,
+   "hi": 0.24592438837781685,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef: oracle - firstseg",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": -0.10638837019602458,
+   "lo": -0.14945554006146217,
+   "hi": -0.06332120033058701,
+   "p_wilcoxon": 0.25,
+   "wins": 0,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef: oracle - single",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": 0.05613844096660612,
+   "lo": -0.012813163734817189,
+   "hi": 0.12509004566802942,
+   "p_wilcoxon": 0.25,
+   "wins": 3,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef_sdc: firstseg - single",
-   "n": 2,
-   "supported": null
+   "n": 5,
+   "mean": 0.31448240546043965,
+   "lo": 0.26382709494379675,
+   "hi": 0.36513771597708256,
+   "p_wilcoxon": 0.0625,
+   "wins": 5,
+   "supported": true
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef_sdc: oracle - firstseg",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": -0.09774967879056932,
+   "lo": -0.13974239306168107,
+   "hi": -0.05575696451945757,
+   "p_wilcoxon": 0.25,
+   "wins": 0,
+   "supported": false
   },
   {
    "stream": "imnr_cil",
    "contrast": "ef proto_ef_sdc: oracle - single",
-   "n": 1,
-   "supported": null
+   "n": 3,
+   "mean": 0.21269818358123305,
+   "lo": 0.13100886174530238,
+   "hi": 0.29438750541716374,
+   "p_wilcoxon": 0.25,
+   "wins": 3,
+   "supported": true
   }
  ]
 }

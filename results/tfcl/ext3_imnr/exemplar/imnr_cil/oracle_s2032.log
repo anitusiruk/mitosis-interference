@@ -1,8 +1,0 @@
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 7525.03it/s]
-[imnr_cil oracle s2032] step 49 seg A packages 1 A:0.851
-[imnr_cil oracle s2032] step 99 seg B packages 2 A:0.812 B:0.734
-[imnr_cil oracle s2032] step 149 seg C packages 3 A:0.754 B:0.675 C:0.741
-[imnr_cil oracle s2032] step 199 seg D packages 4 A:0.690 B:0.632 C:0.720 D:0.606
-[imnr_cil oracle s2032] step 249 seg E packages 5 A:0.635 B:0.579 C:0.676 D:0.567 E:0.533
-[imnr_cil oracle s2032] step 299 seg F packages 6 A:0.580 B:0.536 C:0.652 D:0.535 E:0.494 F:0.484
-[imnr_cil oracle s2032] step 349 seg G packages 7 A:0.502 B:0.515 C:0.623 D:0.445 E:0.460 F:0.437 G:0.497

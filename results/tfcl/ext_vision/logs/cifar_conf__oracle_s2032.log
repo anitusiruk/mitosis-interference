@@ -1,0 +1,78 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 9332.91it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
+    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
+    ^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
+    L.observe(b["x"], b["y"])
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
+    self.step(p, xs, ys)
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
+    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
+    f = self.enc.features(xs, p.lora, grad=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/vision.py", line 79, in features
+    h = self.backbone(pixel_values=self.pixels(xs)).last_hidden_state
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 383, in forward
+    hidden_states = layer(hidden_states, attention_mask, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_layers.py", line 110, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 275, in forward
+    hidden_states, _ = self.attention(hidden_states, attention_mask, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 216, in forward
+    query_states = self.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/model.py", line 34, in forward
+    out = self.base(x)
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 9.12 MiB is free. Process 177437 has 5.73 GiB memory in use. Process 224911 has 3.84 GiB memory in use. Process 239723 has 2.77 GiB memory in use. Process 239862 has 2.78 GiB memory in use. Process 240540 has 1.83 GiB memory in use. Process 240371 has 1.94 GiB memory in use. Process 240840 has 1.94 GiB memory in use. Process 241370 has 1.66 GiB memory in use. Including non-PyTorch memory, this process has 984.00 MiB memory in use. Of the allocated memory 516.23 MiB is allocated by PyTorch, and 7.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,87 @@
+Using the latest cached version of the module from /workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9 (last modified on Sun Oct 11 03:31:47 2026) since it couldn't be found locally at PolyAI/banking77
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9878.29it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
+    L.observe(b["x"], b["y"])
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
+    self.step(p, xs, ys)
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
+    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
+    f = self.enc.features(xs, p.lora, grad=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/model.py", line 96, in features
+    h = self.backbone(**enc).last_hidden_state
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 669, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 436, in forward
+    hidden_states = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_layers.py", line 110, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 383, in forward
+    self_attention_output, _ = self.attention(
+                               ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 321, in forward
+    attention_output = self.output(attention_output, hidden_states)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 292, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/normalization.py", line 217, in forward
+    return F.layer_norm(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/functional.py", line 2905, in layer_norm
+    return torch.layer_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 11.12 MiB is free. Process 177437 has 5.01 GiB memory in use. Process 224911 has 3.84 GiB memory in use. Process 229818 has 2.00 GiB memory in use. Process 230022 has 2.00 GiB memory in use. Process 231758 has 1.82 GiB memory in use. Process 233706 has 2.78 GiB memory in use. Process 234946 has 1.76 GiB memory in use. Process 235640 has 2.77 GiB memory in use. Including non-PyTorch memory, this process has 1.46 GiB memory in use. Of the allocated memory 1019.95 MiB is allocated by PyTorch, and 12.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

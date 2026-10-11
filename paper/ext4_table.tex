@@ -1,0 +1,35 @@
+\section{Extension 4: exemplar-free refresh}
+\label{app:ext4}
+Paired differences in final accuracy (points; mean and 95\% $t$-interval over five seeds, 2027--2031), replay 0, exemplar-free prototypes. The refresh rules are inference rules on the same training trajectories.
+\begin{table}[h]\centering\small
+\begin{tabular}{llccc}
+\toprule
+Stream & Refresh & oracle $-$ single & first-seg $-$ single & oracle $-$ first-seg\\
+\midrule
+BANKING-REC & none & +26.0 [21.4, 30.6] & +21.3 [16.2, 26.3] & +4.8 [2.3, 7.2]\\
+ & SDC $\sigma{=}0.3$ & +7.4 [1.9, 12.9] & +2.4 [-1.1, 5.9] & +5.0 [2.8, 7.3]\\
+ & SDC $\sigma{=}0.2$ & +11.0 [5.6, 16.4] & -- & --\\
+ & mean shift & +10.3 [7.4, 13.3] & -- & --\\
+\midrule
+BANKING-CIL & none & +30.2 [18.5, 41.9] & +31.8 [19.9, 43.8] & -1.6 [-4.2, 0.9]\\
+ & SDC $\sigma{=}0.3$ & +30.4 [20.5, 40.2] & +29.4 [18.9, 40.0] & +0.9 [-1.2, 3.1]\\
+ & SDC $\sigma{=}0.2$ & +38.5 [30.5, 46.5] & -- & --\\
+ & mean shift & +26.8 [17.3, 36.4] & -- & --\\
+\midrule
+CLINC-CIL & none & +27.8 [19.2, 36.5] & +23.6 [14.7, 32.4] & +4.3 [2.6, 5.9]\\
+ & SDC $\sigma{=}0.3$ & +36.5 [33.9, 39.2] & +33.3 [31.5, 35.2] & +3.2 [2.2, 4.2]\\
+ & SDC $\sigma{=}0.2$ & +48.5 [45.4, 51.7] & -- & --\\
+ & mean shift & +28.0 [25.9, 30.0] & -- & --\\
+\midrule
+20NG-CIL & none & +18.8 [8.2, 29.5] & +19.3 [7.7, 30.9] & -0.5 [-3.0, 2.1]\\
+ & SDC $\sigma{=}0.3$ & +10.0 [2.8, 17.2] & +10.7 [1.1, 20.2] & -0.7 [-3.7, 2.2]\\
+ & SDC $\sigma{=}0.2$ & +16.9 [6.5, 27.3] & -- & --\\
+ & mean shift & +9.5 [2.1, 16.9] & -- & --\\
+\midrule
+CIFAR-CIL & none & +28.6 [22.7, 34.6] & +21.8 [13.8, 29.7] & +6.8 [1.5, 12.2]\\
+ & SDC $\sigma{=}0.3$ & +49.4 [45.1, 53.6] & +42.0 [34.7, 49.3] & +7.4 [1.0, 13.8]\\
+ & SDC $\sigma{=}0.2$ & +51.0 [46.2, 55.9] & -- & --\\
+ & mean shift & +49.8 [46.4, 53.2] & -- & --\\
+\bottomrule
+\end{tabular}
+\end{table}

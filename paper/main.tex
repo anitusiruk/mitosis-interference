@@ -144,7 +144,7 @@ Newly introduced labels are excluded by construction, and while a label is being
 \label{sec:res-ef}
 \pend{EXT2: R1 oracle vs single under proto\_ef per CIL stream; R2 within-run DiD; R3 loss\_z vs \ls{}; R4 oracle vs random; firstseg.}
 
-\paragraph{Refreshing without exemplars.} \pend{EXT4: S1, S2; sigma sensitivity.}
+\paragraph{Refreshing without exemplars.} If expansion helps exemplar-free learners only because a single package's stored prototypes go stale, an exemplar-free refresh should recover the single package and shrink the value of expansion (five seeds per stream). Drift compensation refreshed the single package in three of five streams (S1: $+19.6$ points [13.2, 26.0] on BANKING-REC, $+10.8$ [4.2, 17.3] on 20 Newsgroups, $+5.4$ [0.7, 10.0] on BANKING-CIL) but \emph{lowered} it on CLINC-CIL ($-8.6$ [$-17.0$, $-0.1$]) and CIFAR-CIL ($-19.8$ [$-22.2$, $-17.4$]), the two streams flagged as at risk in development. It shrank the value of expansion only where it refreshed well (S2 supported on BANKING-REC, $-18.6$ points, and 20 Newsgroups, $-8.9$); on CIFAR-CIL the value of expansion grew by 20.7 points. Whatever the rule, oracle expansion still beat the single package in every stream and every seed: by 7.4--49.4 points under SDC ($\sigma=0.3$), 11.0--51.0 under $\sigma=0.2$, and 9.5--49.8 under a uniform mean shift. Published exemplar-free refresh therefore repairs part of the staleness on text streams with small drift but does not remove the value of freezing; the first-segment policy remained within 7.4 points of oracle expansion under every rule (Appendix~\ref{app:ext4}).
 
 \begin{figure}[t]
 \centering
@@ -186,6 +186,7 @@ Triggers that detect class boundaries spawned 3--5 packages per class-incrementa
 \bibliographystyle{tmlr}
 
 \appendix
+\input{ext4_table}
 \section{Development history and failed candidates}
 \label{app:history}
 This project began as the design of a task-free allocator (Appendix~\ref{app:cau}). Its learner took a single AdamW step per 16-example batch into a 77-way head and reached about 16\% final accuracy on the BANKING recurrence stream with label-free routing (22\% with a learned router), whereas training-free frozen-feature prototypes reached 71\% (logistic probe on frozen features: 86\%). We therefore discarded all of its accuracy comparisons and built the learner of Section~\ref{sec:setting}. All development of the new testbed used seed 2026 only:

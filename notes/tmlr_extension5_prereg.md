@@ -40,3 +40,4 @@ first-session adaptation); ncm_ef; ncm_full; average incremental accuracy; adapt
 ## Frozen code (sha256)
     6213fb480ab4047bbe98373dade5a465c512af9293e7e5cde82ee0524db35e7b  experiments/sema_x/run_sema_x.py
     026b73998355a906545978dadee2ac5ecf3fbd2379bcfb402c562a17366b29f6  experiments/sema_x/run_all.sh
+    5c8a73201555bec2b91788c1a30e7f98558d92e4c66f0de885c06e75de0bd780  experiments/sema_x/report.py  (analysis, committed before any extension-5 result)

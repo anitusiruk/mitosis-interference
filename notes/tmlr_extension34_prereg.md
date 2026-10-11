@@ -1,6 +1,6 @@
 # Extensions 3 + 4 — ImageNet-R and exemplar-free prototype refresh (SDC)
 
-Declared 2026-10-11 (session 3), before any run of these extensions with a confirmation seed.
+Frozen 2026-10-11 ~04:15 UTC (session 3), before any run of these extensions with a confirmation seed.
 At writing time: the primary study (q = 0.99) and extension-1 text results had been inspected;
 extension 2 was running (about 5% of its runs complete; its results had NOT been analysed —
 only the files of the development seed 2026 had been read). Development used seed 2026 only.
@@ -76,4 +76,15 @@ Slow learner (lr 1e-4, banking_cil): single proto_ef .131, sdc .319; oracle .441
   -> a lower learning rate did not reduce staleness; not part of the confirmation.
 ImageNet-R (seed 2026): exemplar-based single .565, frozen .232 (memory prototypes; the
   full-stream frozen NCM is .463), firstseg .307; exemplar-free proto_ef single .365,
-  oracle .397, random .304, firstseg .502. (Exemplar-based oracle: see below if completed.)
+  oracle .397, random .304, firstseg .502. Exemplar-based oracle .377 (10 packages): oracle - single
+  = -18.8, oracle - firstseg = +7.0 in development.
+
+## Frozen code (sha256)
+
+    1ee4839d7ffcdf90ab001a42fbe3669c36356698bdda4d986a4e3759f73f8919  src/tfcl/drift_comp.py
+    fe203f41b109bd9ec7aad48d3a45d6f0195dbd417b94a09b11c727d7c131f007  experiments/tfcl_run_x4.py
+    858f64c74f924d92f9077b3d66b5fe78f7e072e4f446aa090914fd11f1ed5207  experiments/tfcl_ext34.sh
+    8841af2d87e4fa9f9a1bbb55f10db22cc5680901a269d103f0c3bd827c265c84  experiments/tfcl_ext34_report.py
+    290f7ca5011bd525f8df339b6379023a61238a3d51a75176069830015f424929  src/tfcl/vision_imnr.py
+    31598c618ff04bbeb7aa0a465254678caf8131a79d439f2cb363ee646aec37b9  experiments/tfcl_run_x3.py
+    6b740b592c7a21194ba1000f515cb06dd556e4e419ec140c6185069b8ad28d9e  experiments/run_jobs.py

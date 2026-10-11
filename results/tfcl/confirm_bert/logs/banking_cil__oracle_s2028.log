@@ -6,3 +6,5 @@ Using the latest cached version of the module from /workspace/.cache/huggingface
 [banking_cil oracle s2028] step 79 seg D packages 4 A:0.767 B:0.827 C:0.758 D:0.707
 [banking_cil oracle s2028] step 99 seg E packages 5 A:0.724 B:0.830 C:0.742 D:0.687 E:0.663
 [banking_cil oracle s2028] step 119 seg F packages 6 A:0.654 B:0.784 C:0.719 D:0.658 E:0.648 F:0.732
+[banking_cil oracle s2028] step 139 seg G packages 7 A:0.580 B:0.742 C:0.691 D:0.671 E:0.655 F:0.704 G:0.533
+FINAL banking_cil oracle 2028 {"proto_mean": 0.6537684202194214, "proto_max": 0.6294062563351223, "proto_own": 0.616721510887146, "linear_last": 0.12016021353857857} 202s

@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 8731.13it/s]
+[cifar_cil trigger:loss_z s2031] step 24 seg A packages 1 A:0.960
+[cifar_cil trigger:loss_z s2031] step 49 seg B packages 2 A:0.973 B:0.947
+[cifar_cil trigger:loss_z s2031] step 74 seg C packages 3 A:0.967 B:0.927 C:0.913
+[cifar_cil trigger:loss_z s2031] step 99 seg D packages 3 A:0.970 B:0.920 C:0.913 D:0.930
+[cifar_cil trigger:loss_z s2031] step 124 seg E packages 4 A:0.957 B:0.900 C:0.903 D:0.903 E:0.863

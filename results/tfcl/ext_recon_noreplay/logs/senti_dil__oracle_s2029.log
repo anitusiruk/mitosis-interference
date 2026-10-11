@@ -1,39 +1,7 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6009.72it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
-    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
-    ^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
-    enc = Encoder(a.model, max_length=a.max_length)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 42, in make_encoder
-    return Encoder(name, **kw)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 45, in __init__
-    self.backbone = AutoModel.from_pretrained(name).to(device).eval()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py", line 3713, in to
-    return super().to(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1369, in to
-    return self._apply(convert)
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
-    param_applied = fn(param)
-                    ^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
-    return t.to(
-           ^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 3.31 MiB is free. Process 248884 has 1.82 GiB memory in use. Process 250525 has 1.95 GiB memory in use. Process 251510 has 1.58 GiB memory in use. Process 252747 has 4.34 GiB memory in use. Process 253457 has 1.94 GiB memory in use. Process 252876 has 1.72 GiB memory in use. Process 253597 has 1.81 GiB memory in use. Process 252056 has 1.12 GiB memory in use. Process 251984 has 1.09 GiB memory in use. Process 252134 has 1.62 GiB memory in use. Process 251751 has 1.62 GiB memory in use. Process 253278 has 1.11 GiB memory in use. Process 254003 has 636.00 MiB memory in use. Including non-PyTorch memory, this process has 626.00 MiB memory in use. Process 254132 has 494.00 MiB memory in use. Of the allocated memory 235.14 MiB is allocated by PyTorch, and 6.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 7987.63it/s]
+[senti_dil oracle s2029] step 19 seg A packages 1 A:0.891
+[senti_dil oracle s2029] step 39 seg B packages 2 A:0.891 B:0.883
+[senti_dil oracle s2029] step 59 seg C packages 3 A:0.883 B:0.859 C:0.859
+[senti_dil oracle s2029] step 79 seg D packages 4 A:0.883 B:0.844 C:0.875 D:0.633
+FINAL senti_dil oracle 2029 {"proto_mean": 0.80859375, "proto_max": 0.8125, "proto_own": 0.806640625, "linear_last": 0.80859375} 27s

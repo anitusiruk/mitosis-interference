@@ -1,0 +1,1 @@
+FAIL --stream amazon_dilconf --policy trigger:label_surprise --trigger-args {"tau": 0.23411399118348408} --replay 0 --ef --seed 2036 --out results/tfcl/ext2_ef/amazon_dilconf/trigger-label_surprise-q0.99_s2036.json

@@ -1,24 +1,7 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6840.36it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
-    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
-    ^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 134, in step
-    loss.backward()
-  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
-    torch.autograd.backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
-    _engine_run_backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
-    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 20.62 MiB is free. Process 274689 has 4.34 GiB memory in use. Process 285222 has 1.26 GiB memory in use. Process 288986 has 1.60 GiB memory in use. Process 289390 has 1.82 GiB memory in use. Process 289530 has 1.81 GiB memory in use. Process 290476 has 1.95 GiB memory in use. Process 290475 has 1.96 GiB memory in use. Process 291059 has 1.45 GiB memory in use. Process 290802 has 1.49 GiB memory in use. Process 290992 has 1.49 GiB memory in use. Process 291801 has 1.19 GiB memory in use. Process 292375 has 1.04 GiB memory in use. Process 292441 has 1.10 GiB memory in use. Including non-PyTorch memory, this process has 948.00 MiB memory in use. Of the allocated memory 470.23 MiB is allocated by PyTorch, and 13.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6998.79it/s]
+[tweet_conc trigger:loss_z s2027] step 19 seg A packages 1 A:0.727
+[tweet_conc trigger:loss_z s2027] step 39 seg B packages 1 A:0.711 B:0.703
+[tweet_conc trigger:loss_z s2027] step 59 seg C packages 1 A:0.727 B:0.719 C:0.570
+[tweet_conc trigger:loss_z s2027] step 79 seg A packages 1 A:0.750 B:0.711 C:0.531
+FINAL tweet_conc trigger:loss_z 2027 {"proto_mean": 0.6640625, "proto_max": 0.6640625, "proto_own": 0.6640625, "linear_last": 0.6458333333333334} 40s

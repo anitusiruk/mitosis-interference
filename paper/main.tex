@@ -199,7 +199,14 @@ The thresholds, learner hyperparameters (learning rate $10^{-3}$, two steps per 
 
 \section{Pre-registration deviations}
 \label{app:deviations}
-\pend{List from notes: q=0.95 grid not run; BERT subset; H1 failure and post-hoc package-level analysis; A1 addendum; ext2 duplicate-launch note; reduced seeds in extensions 3--4.}
+All pre-registration files, code hashes and results logs are in the repository. Deviations and post-hoc analyses:
+\begin{itemize}
+\item \emph{Primary study.} The package-level novelty analysis of Section~\ref{sec:res-detect} was declared after hypothesis H1 failed on BANKING-REC and is exploratory. The $q=0.95$ sensitivity grid (declared secondary) was not run for compute. The BERT grid (declared secondary) was run as a strict subset: single, oracle, \textsc{LossZ} and \ls{}, all streams, seeds 2027--2031. Twenty-four runs that failed with GPU out-of-memory errors were re-run unchanged; runs are deterministic (a saved run reproduces bit-for-bit).
+\item \emph{Vision extension.} An addendum declared before any vision confirmation run added the owned-prototype rule for the vision drift stream (development had shown oracle below single under prototype averaging but above it under owned prototypes).
+\item \emph{Exemplar-free extension.} Thresholds were re-calibrated on rehearsal-free null traces, as declared. A duplicate copy of its pipeline ran for about two minutes; three outputs were written by the duplicate (identical by determinism).
+\item \emph{ImageNet-R and drift compensation.} Five to six seeds instead of ten, and no triggers on ImageNet-R, for compute (declared). Development observations that \textsc{SDC} lowered the single package's accuracy on CIFAR-100 were recorded in a dated addendum after the freeze, without changes.
+\item \emph{SEMA.} Per-epoch test evaluation disabled, TF32 matrix multiplication, and a no-gradient forward in expansion detection, identical across variants; the expand-at-every-task variant was dropped before launch.
+\end{itemize}
 
 \section{Case study: an exact counterfactual allocator}
 \label{app:cau}

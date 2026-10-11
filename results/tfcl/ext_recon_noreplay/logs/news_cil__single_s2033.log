@@ -1,41 +1,9 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Repo card metadata block was not found. Setting CardData to empty.
-Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 6508.95it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 86, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
-    R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
-    ^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
-    enc = Encoder(a.model, max_length=a.max_length)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 42, in make_encoder
-    return Encoder(name, **kw)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 45, in __init__
-    self.backbone = AutoModel.from_pretrained(name).to(device).eval()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py", line 3713, in to
-    return super().to(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1369, in to
-    return self._apply(convert)
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
-    param_applied = fn(param)
-                    ^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
-    return t.to(
-           ^^^^^
-torch.AcceleratorError: CUDA error: out of memory
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 27895.08it/s]
+[news_cil single s2033] step 19 seg A packages 1 A:0.835
+[news_cil single s2033] step 39 seg B packages 1 A:0.755 B:0.745
+[news_cil single s2033] step 59 seg C packages 1 A:0.640 B:0.620 C:0.715
+[news_cil single s2033] step 79 seg D packages 1 A:0.510 B:0.575 C:0.550 D:0.515
+[news_cil single s2033] step 99 seg E packages 1 A:0.525 B:0.590 C:0.525 D:0.505 E:0.420
+FINAL news_cil single 2033 {"proto_mean": 0.5129999816417694, "proto_max": 0.5129999816417694, "proto_own": 0.5129999816417694, "linear_last": 0.22100000083446503} 15s

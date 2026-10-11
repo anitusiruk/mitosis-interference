@@ -1,21 +1,8 @@
 Using the latest cached version of the module from /workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9 (last modified on Sun Oct 11 03:31:47 2026) since it couldn't be found locally at PolyAI/banking77
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 10056.34it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 134, in step
-    loss.backward()
-  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
-    torch.autograd.backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
-    _engine_run_backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
-    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 11.12 MiB is free. Process 348387 has 3.84 GiB memory in use. Process 350391 has 3.84 GiB memory in use. Process 358509 has 1.96 GiB memory in use. Process 358712 has 4.34 GiB memory in use. Process 358713 has 4.34 GiB memory in use. Process 359022 has 1.96 GiB memory in use. Process 362531 has 1.11 GiB memory in use. Including non-PyTorch memory, this process has 1.20 GiB memory in use. Process 362659 has 892.00 MiB memory in use. Of the allocated memory 754.45 MiB is allocated by PyTorch, and 11.55 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7396.05it/s]
+[banking_rec single s2031] step 15 seg A packages 1 A:0.911
+[banking_rec single s2031] step 31 seg B packages 1 A:0.921 B:0.868
+[banking_rec single s2031] step 47 seg A packages 1 A:0.952 B:0.871
+[banking_rec single s2031] step 63 seg C packages 1 A:0.911 B:0.852 C:0.806
+[banking_rec single s2031] step 79 seg B packages 1 A:0.938 B:0.897 C:0.810
+FINAL banking_rec single 2031 {"proto_mean": 0.8814807732899984, "proto_max": 0.8814807732899984, "proto_own": 0.8814807732899984, "linear_last": 0.8527010083198547} 46s

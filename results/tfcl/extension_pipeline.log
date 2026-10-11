@@ -6,3 +6,4 @@ try 5: 12 failures
 try 6: 12 failures
 try 7: 6 failures
 try 8: 1 failures
+clean after 9 tries

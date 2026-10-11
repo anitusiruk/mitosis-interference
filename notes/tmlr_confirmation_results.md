@@ -76,3 +76,17 @@ XR2 (rehearsal-free oracle < single): banking_rec -4.3 (sig); banking_cil -3.3, 
   launched for ~2 minutes; three runs were written by the duplicate and the original then
   logged "refusing to overwrite" FAIL lines for them. Runs are deterministic (bit-exact
   reproduction verified), so outputs are unaffected.
+
+## Deviation (session 3, 2026-10-11 ~15:30 UTC): BERT runs invalid — missing tokenizer files
+The first execution of the BERT subset (200 runs, 11:12–14:50 UTC) is INVALID and is not analysed.
+Cause: the bert-base-uncased snapshot (revision 86b5e09) in the re-created HF cache contained only
+config.json and model.safetensors; the tokenizer files had failed to download during the HF rate
+limit at 03:36 UTC. In offline mode transformers 5.18 silently built a BertTokenizer with an empty
+vocabulary, mapping every word to [UNK] (accuracy at chance in every stream). Detected because the
+results were at chance; confirmed by re-running the development shadow run (banking_cil_iid,
+seed 2026): 0.0097 with the broken cache vs 0.7879 recorded in development. After downloading
+tokenizer.json, tokenizer_config.json and vocab.txt at the pinned revision, masked-LM sanity check
+returns "paris" and the development run reproduces bit-exactly (0.7878961307661874; per-segment
+values identical). DistilBERT's snapshot was complete, so no other result is affected.
+The invalid outputs are kept in results/tfcl/confirm_bert_INVALID_no_tokenizer/. The BERT subset was
+re-launched unchanged (same command, seeds, thresholds) into results/tfcl/confirm_bert.

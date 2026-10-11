@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 5926.80it/s]
+[cifar_conf oracle s2029] step 49 seg A packages 1 A:0.963
+[cifar_conf oracle s2029] step 99 seg B packages 2 A:0.887 B:0.817
+[cifar_conf oracle s2029] step 149 seg C packages 3 A:0.883 B:0.368 C:0.935
+[cifar_conf oracle s2029] step 199 seg D packages 4 A:0.772 B:0.603 C:0.855 D:0.610

@@ -1,4 +1,4 @@
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 11262.30it/s]
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 7081.50it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -63,16 +63,16 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 252, in forward
-    hidden_states = self.fc2(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 251, in forward
+    hidden_states = self.activation_fn(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
-    return F.linear(input, self.weight, self.bias)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 13.12 MiB is free. Process 64870 has 7.61 GiB memory in use. Process 176014 has 2.77 GiB memory in use. Process 176367 has 1.82 GiB memory in use. Process 176512 has 996.00 MiB memory in use. Process 177281 has 1.13 GiB memory in use. Process 177437 has 3.67 GiB memory in use. Process 177725 has 1.13 GiB memory in use. Process 177661 has 2.76 GiB memory in use. Including non-PyTorch memory, this process has 1.60 GiB memory in use. Of the allocated memory 1.13 GiB is allocated by PyTorch, and 8.55 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  File "/usr/local/lib/python3.12/dist-packages/transformers/activations.py", line 89, in forward
+    return self.act(input)
+           ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 8.44 MiB is free. Process 177437 has 6.60 GiB memory in use. Process 224911 has 5.01 GiB memory in use. Process 266238 has 1.99 GiB memory in use. Process 267401 has 1.94 GiB memory in use. Process 267564 has 1.76 GiB memory in use. Process 267814 has 1.74 GiB memory in use. Process 267750 has 2.76 GiB memory in use. Including non-PyTorch memory, this process has 1.66 GiB memory in use. Of the allocated memory 1.19 GiB is allocated by PyTorch, and 15.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

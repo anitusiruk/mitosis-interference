@@ -14,3 +14,17 @@
 [13/240] ok results/tfcl/ext_vision/cifar_conf/trigger-repr_z-q0.99_s2033.json
 [15/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_novel-q0.99_s2033.json
 [19/240] ok results/tfcl/ext_vision/cifar_conf/oracle_s2033.json
+[20/240] ok results/tfcl/ext_vision/cifar_conf/single_s2033.json
+[21/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_surprise-q0.99_s2032.json
+[22/240] ok results/tfcl/ext_vision/cifar_conf/trigger-fresh_util-q0.99_s2032.json
+[23/240] ok results/tfcl/ext_vision/cifar_conf/trigger-repr_z-q0.99_s2032.json
+[25/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_novel-q0.99_s2032.json
+[28/240] ok results/tfcl/ext_vision/cifar_conf/firstseg_s2032.json
+[29/240] ok results/tfcl/ext_vision/cifar_conf/oracle_s2032.json
+[30/240] ok results/tfcl/ext_vision/cifar_conf/single_s2032.json
+[31/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_surprise-q0.99_s2031.json
+[32/240] ok results/tfcl/ext_vision/cifar_conf/trigger-fresh_util-q0.99_s2031.json
+[33/240] ok results/tfcl/ext_vision/cifar_conf/trigger-repr_z-q0.99_s2031.json
+[34/240] ok results/tfcl/ext_vision/cifar_conf/trigger-loss_z-q0.99_s2031.json
+[35/240] ok results/tfcl/ext_vision/cifar_conf/trigger-label_novel-q0.99_s2031.json
+[40/240] ok results/tfcl/ext_vision/cifar_conf/single_s2031.json

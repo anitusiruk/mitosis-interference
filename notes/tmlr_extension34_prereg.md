@@ -88,3 +88,12 @@ ImageNet-R (seed 2026): exemplar-based single .565, frozen .232 (memory prototyp
     290f7ca5011bd525f8df339b6379023a61238a3d51a75176069830015f424929  src/tfcl/vision_imnr.py
     31598c618ff04bbeb7aa0a465254678caf8131a79d439f2cb363ee646aec37b9  experiments/tfcl_run_x3.py
     6b740b592c7a21194ba1000f515cb06dd556e4e419ec140c6185069b8ad28d9e  experiments/run_jobs.py
+
+## Addendum B1 — 2026-10-11 ~04:25 UTC (after freezing; hypotheses unchanged)
+Development runs (seed 2026) that finished after the freeze, recorded before any
+confirmation result of extensions 3-4 was inspected:
+  cifar_cil single proto_ef .457 -> sdc .282 (sdc02 .237, sdcinf .296); oracle .764 -> .777;
+            firstseg .698 -> .693
+  clinc_cil oracle .775 -> .781
+S1 is therefore also AT RISK on cifar_cil (SDC lowers the single package's accuracy there).
+No hypothesis, design or code is changed.

@@ -22,7 +22,8 @@ Every variant is scored after every task under four inference rules on the offic
              (refresh upper bound; final task only)
 
 Per-epoch test evaluation inside SEMA's training loop is disabled (it only feeds a progress
-bar); nothing else in training is changed.
+bar), and TF32 matrix multiplication is enabled for speed (identically for every variant);
+nothing else in training is changed.
 """
 import argparse
 import json
@@ -71,6 +72,8 @@ def main():
             self.added_for_task = False
         SEMAModules.end_of_task_training = end_of_task_training
 
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
     T._set_random(a.seed)
     T._set_device(args)
     dm = DataManager(args["dataset"], args["shuffle"], args["seed"], args["init_cls"], args["increment"], args)

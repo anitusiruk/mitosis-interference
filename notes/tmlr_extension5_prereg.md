@@ -41,3 +41,11 @@ first-session adaptation); ncm_ef; ncm_full; average incremental accuracy; adapt
     6213fb480ab4047bbe98373dade5a465c512af9293e7e5cde82ee0524db35e7b  experiments/sema_x/run_sema_x.py
     026b73998355a906545978dadee2ac5ecf3fbd2379bcfb402c562a17366b29f6  experiments/sema_x/run_all.sh
     5c8a73201555bec2b91788c1a30e7f98558d92e4c66f0de885c06e75de0bd780  experiments/sema_x/report.py  (analysis, committed before any extension-5 result)
+
+## Addendum C1 — 2026-10-11 ~06:55 UTC (output bug; no effect on results)
+The final json.dump in run_sema_x.py failed (SEMA's _set_device puts torch.device objects in
+args). Every per-task record is printed to the run log as a JSON line before the dump, so
+experiments/sema_x/recover.py rebuilds the result file from the log (marked
+"recovered_from_log"); runs started after this point use json.dump(..., default=str).
+Only the first completed run (single, seed 1993) had been seen: final linear 86.1, ncm_ef 87.2,
+ncm_ex20 87.7, ncm_full 88.8. No hypothesis or analysis is changed.

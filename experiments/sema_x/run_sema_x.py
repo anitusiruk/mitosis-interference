@@ -179,7 +179,7 @@ def main():
     rec["avg_inc"] = {k: float(np.mean([t[k] for t in rec["tasks"]])) for k in ("linear", "ncm_ef", "ncm_ex20")}
     rec["seconds"] = time.time() - t0
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    json.dump(rec, open(out, "w"), indent=1)
+    json.dump(rec, open(out, "w"), indent=1, default=str)
     print("FINAL", a.variant, a.seed, json.dumps(rec["final"]), f"{rec['seconds']:.0f}s", flush=True)
 
 

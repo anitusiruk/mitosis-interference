@@ -6,23 +6,9 @@ Using the latest cached version of the dataset since cardiffnlp/tweet_eval could
 Found the latest cached dataset configuration 'sentiment' at /workspace/.cache/huggingface/datasets/cardiffnlp___tweet_eval/sentiment/0.0.0/b3a375baf0f409c77e6bc7aa35102b7b3534f8be (last modified on Sun Oct 11 03:35:02 2026).
 Using the latest cached version of the dataset since stanfordnlp/imdb couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'plain_text' at /workspace/.cache/huggingface/datasets/stanfordnlp___imdb/plain_text/0.0.0/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 (last modified on Sun Oct 11 03:35:10 2026).
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8004.86it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 134, in step
-    loss.backward()
-  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 647, in backward
-    torch.autograd.backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 354, in backward
-    _engine_run_backward(
-  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
-    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)`
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6379.78it/s]
+[senti_conf oracle s2030] step 19 seg A packages 1 A:0.555
+[senti_conf oracle s2030] step 39 seg B packages 2 A:0.523 B:0.500
+[senti_conf oracle s2030] step 59 seg C packages 3 A:0.523 B:0.578 C:0.500
+[senti_conf oracle s2030] step 79 seg D packages 4 A:0.562 B:0.570 C:0.492 D:0.492
+FINAL senti_conf oracle 2030 {"proto_mean": 0.529296875, "proto_max": 0.515625, "proto_own": 0.513671875, "linear_last": 0.5} 54s

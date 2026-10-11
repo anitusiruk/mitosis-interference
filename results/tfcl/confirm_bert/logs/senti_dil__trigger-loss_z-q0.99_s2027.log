@@ -6,74 +6,9 @@ Using the latest cached version of the dataset since cardiffnlp/tweet_eval could
 Found the latest cached dataset configuration 'sentiment' at /workspace/.cache/huggingface/datasets/cardiffnlp___tweet_eval/sentiment/0.0.0/b3a375baf0f409c77e6bc7aa35102b7b3534f8be (last modified on Sun Oct 11 03:35:02 2026).
 Using the latest cached version of the dataset since stanfordnlp/imdb couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'plain_text' at /workspace/.cache/huggingface/datasets/stanfordnlp___imdb/plain_text/0.0.0/e6281661ce1c48d982bc483cf8a173c1bbeb5d31 (last modified on Sun Oct 11 03:35:10 2026).
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6057.70it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
-    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
-    f = self.enc.features(xs, p.lora, grad=True)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 96, in features
-    h = self.backbone(**enc).last_hidden_state
-        ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 1068, in wrapper
-    output = func(self, *args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/output_capturing.py", line 287, in wrapper
-    outputs = func(self, *args, **kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 669, in forward
-    encoder_outputs = self.encoder(
-                      ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 436, in forward
-    hidden_states = layer_module(
-                    ^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_layers.py", line 110, in __call__
-    return super().__call__(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 408, in forward
-    layer_output = apply_chunking_to_forward(
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/pytorch_utils.py", line 199, in apply_chunking_to_forward
-    return forward_fn(*input_tensors)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 415, in feed_forward_chunk
-    layer_output = self.output(intermediate_output, attention_output)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/bert/modeling_bert.py", line 350, in forward
-    hidden_states = self.LayerNorm(hidden_states + input_tensor)
-                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 19.12 MiB is free. Process 177437 has 10.07 GiB memory in use. Process 295678 has 5.01 GiB memory in use. Process 321621 has 2.77 GiB memory in use. Process 321622 has 2.78 GiB memory in use. Process 322182 has 1.75 GiB memory in use. Including non-PyTorch memory, this process has 1.09 GiB memory in use. Of the allocated memory 644.32 MiB is allocated by PyTorch, and 1.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7002.06it/s]
+[senti_dil trigger:loss_z s2027] step 19 seg A packages 1 A:0.547
+[senti_dil trigger:loss_z s2027] step 39 seg B packages 1 A:0.562 B:0.492
+[senti_dil trigger:loss_z s2027] step 59 seg C packages 1 A:0.500 B:0.516 C:0.516
+[senti_dil trigger:loss_z s2027] step 79 seg D packages 1 A:0.500 B:0.500 C:0.508 D:0.500
+FINAL senti_dil trigger:loss_z 2027 {"proto_mean": 0.501953125, "proto_max": 0.501953125, "proto_own": 0.51953125, "linear_last": 0.5} 50s

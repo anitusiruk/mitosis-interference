@@ -1,5 +1,5 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 6321.58it/s]
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 8361.35it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -73,4 +73,4 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
     return F.linear(input, self.weight, self.bias)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 9.81 MiB is free. Process 177437 has 10.07 GiB memory in use. Process 295678 has 5.01 GiB memory in use. Process 300126 has 1.91 GiB memory in use. Process 319289 has 1.43 GiB memory in use. Process 320144 has 1.29 GiB memory in use. Including non-PyTorch memory, this process has 1.94 GiB memory in use. Process 320633 has 1.82 GiB memory in use. Of the allocated memory 1.47 GiB is allocated by PyTorch, and 9.50 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 5.12 MiB is free. Process 348387 has 3.84 GiB memory in use. Process 350391 has 3.84 GiB memory in use. Process 350715 has 2.00 GiB memory in use. Process 351838 has 1.96 GiB memory in use. Process 352031 has 1.96 GiB memory in use. Process 354168 has 1.94 GiB memory in use. Process 354280 has 4.34 GiB memory in use. Process 354946 has 1.23 GiB memory in use. Including non-PyTorch memory, this process has 2.36 GiB memory in use. Of the allocated memory 1.88 GiB is allocated by PyTorch, and 10.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

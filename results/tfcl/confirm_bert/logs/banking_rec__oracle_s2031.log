@@ -1,33 +1,8 @@
 Using the latest cached version of the module from /workspace/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--banking77/17ffc2ed47c2ed928bee64127ff1dbc97204cb974c2f980becae7c864007aed9 (last modified on Sun Oct 11 03:31:47 2026) since it couldn't be found locally at PolyAI/banking77
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6034.23it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 135, in <module>
-    main()
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 68, in main
-    enc = Encoder(a.model, max_length=a.max_length)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/src/tfcl/model.py", line 45, in __init__
-    self.backbone = AutoModel.from_pretrained(name).to(device).eval()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/modeling_utils.py", line 3713, in to
-    return super().to(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1369, in to
-    return self._apply(convert)
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 928, in _apply
-    module._apply(fn)
-  [Previous line repeated 2 more times]
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 955, in _apply
-    param_applied = fn(param)
-                    ^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1355, in convert
-    return t.to(
-           ^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 12.44 MiB is free. Process 177437 has 8.77 GiB memory in use. Process 295678 has 3.84 GiB memory in use. Process 300126 has 1.84 GiB memory in use. Process 300059 has 1.96 GiB memory in use. Process 300852 has 2.77 GiB memory in use. Process 302154 has 2.76 GiB memory in use. Process 304399 has 870.00 MiB memory in use. Including non-PyTorch memory, this process has 688.00 MiB memory in use. Of the allocated memory 298.24 MiB is allocated by PyTorch, and 3.76 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7110.63it/s]
+[banking_rec oracle s2031] step 15 seg A packages 1 A:0.131
+[banking_rec oracle s2031] step 31 seg B packages 2 A:0.041 B:0.042
+[banking_rec oracle s2031] step 47 seg A packages 3 A:0.065 B:0.039
+[banking_rec oracle s2031] step 63 seg C packages 4 A:0.055 B:0.032 C:0.055
+[banking_rec oracle s2031] step 79 seg B packages 5 A:0.086 B:0.052 C:0.000
+FINAL banking_rec oracle 2031 {"proto_mean": 0.0458411859969298, "proto_max": 0.05773313747098049, "proto_own": 0.042637549340724945, "linear_last": 0.032258063554763794} 53s

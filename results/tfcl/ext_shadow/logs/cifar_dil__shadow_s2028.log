@@ -1,5 +1,5 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 7712.17it/s]
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 8944.32it/s]
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -8,13 +8,21 @@ Traceback (most recent call last):
   File "/workspace/mitosis-interference/experiments/tfcl_run_x.py", line 68, in main
     R.main(argv) if "--policy-label" not in argv else _main_with_label(argv)
     ^^^^^^^^^^^^
-  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 108, in main
-    L.observe(b["x"], b["y"])
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 146, in observe
-    self.step(p, xs, ys)
-  File "/workspace/mitosis-interference/src/tfcl/learner.py", line 133, in step
-    loss = self.loss(p, list(xs) + rx, list(ys) + ry, seen=seen)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/tfcl_run.py", line 94, in main
+    rec = trig.decide(b["x"], b["y"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/triggers.py", line 272, in decide
+    rec = self.stats.compute(xs, ys, self.which)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/triggers.py", line 186, in compute
+    b_logit = float(self.head_loss(p, px, py, pseen))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/src/tfcl/triggers.py", line 77, in head_loss
+    return self.L.loss(p, xs, ys, seen=seen, reduction=reduction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/workspace/mitosis-interference/src/tfcl/learner.py", line 113, in loss
     f = self.enc.features(xs, p.lora, grad=True)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -54,16 +62,16 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 251, in forward
-    hidden_states = self.activation_fn(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/models/vit/modeling_vit.py", line 252, in forward
+    hidden_states = self.fc2(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1784, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/transformers/activations.py", line 89, in forward
-    return self.act(input)
-           ^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 11.81 MiB is free. Process 177437 has 10.07 GiB memory in use. Process 295678 has 5.01 GiB memory in use. Process 300126 has 1.91 GiB memory in use. Process 319289 has 1.43 GiB memory in use. Process 320144 has 1.27 GiB memory in use. Process 320080 has 2.26 GiB memory in use. Including non-PyTorch memory, this process has 1.53 GiB memory in use. Of the allocated memory 1.03 GiB is allocated by PyTorch, and 32.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 9.12 MiB is free. Process 348387 has 3.84 GiB memory in use. Process 350391 has 3.84 GiB memory in use. Process 350715 has 2.00 GiB memory in use. Process 351838 has 1.95 GiB memory in use. Process 352031 has 1.96 GiB memory in use. Process 354168 has 1.94 GiB memory in use. Process 354280 has 3.53 GiB memory in use. Including non-PyTorch memory, this process has 2.90 GiB memory in use. Process 354658 has 1.49 GiB memory in use. Of the allocated memory 2.42 GiB is allocated by PyTorch, and 16.69 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

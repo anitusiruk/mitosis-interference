@@ -26,3 +26,31 @@ FAIL --stream cifar_cil --policy trigger:label_novel --trigger-args {"tau": 0.22
 FAIL --stream cifar_cil --policy trigger:label_surprise --trigger-args {"tau": 0.3767679764676492} --replay 0 --ef --seed 2030 --out results/tfcl/ext2_ef/cifar_cil/trigger-label_surprise-q0.99_s2030.json
 FAIL --stream cifar_dil --policy trigger:label_novel --trigger-args {"tau": 0.0} --replay 0 --ef --seed 2030 --out results/tfcl/ext2_ef/cifar_dil/trigger-label_novel-q0.99_s2030.json
 FAIL --stream cifar_conf --policy random --replay 0 --ef --seed 2031 --out results/tfcl/ext2_ef/cifar_conf/random_s2031.json
+Traceback (most recent call last):
+  File "/workspace/mitosis-interference/experiments/run_jobs.py", line 50, in <module>
+    main()
+  File "/workspace/mitosis-interference/experiments/run_jobs.py", line 43, in main
+    for r in ex.map(lambda j: run(j, module), jobs):
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/run_jobs.py", line 43, in <lambda>
+    for r in ex.map(lambda j: run(j, module), jobs):
+                              ^^^^^^^^^^^^^^
+  File "/workspace/mitosis-interference/experiments/run_jobs.py", line 34, in run
+    log.unlink()
+  File "/usr/lib/python3.12/pathlib.py", line 1344, in unlink
+    os.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: 'results/tfcl/ext2_ef/cifar_conf/trigger-loss_z-q0.99_s2032.log'
+EXTENSION2_DONE

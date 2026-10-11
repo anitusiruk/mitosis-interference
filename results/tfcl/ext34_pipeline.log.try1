@@ -1,0 +1,1 @@
+FAIL --stream cifar_cil --policy firstseg --replay 0 --ef --seed 2028 --out results/tfcl/ext4_sdc/cifar_cil/firstseg_s2028.json

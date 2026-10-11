@@ -346,3 +346,16 @@ modules keep their summaries valid. I pre-registered every experiment,
 tested on text and images, on three different models, and inside a
 published method's own code, and I report the predictions that failed
 as well as the ones that held."
+
+---------------------------------------------------------------------
+9. OFF-REPO BACKUP (EVERYTHING NOT IN THIS REPO)
+---------------------------------------------------------------------
+
+A PRIVATE repo, github.com/anitusiruk/mitosis-interference-backup,
+holds, under Releases > backup-2026-10-11, the Hugging Face cache (all
+datasets and model weights as used), the prepared ImageNet-R arrays,
+SEMA's official code plus its environment, and the AI-assistant session
+transcripts. Its README gives the restore commands. Checksums were
+verified after upload. Exact package versions:
+environment/final_pip_freeze_20261011.txt and
+environment/sema_venv_pip_freeze_20261011.txt.

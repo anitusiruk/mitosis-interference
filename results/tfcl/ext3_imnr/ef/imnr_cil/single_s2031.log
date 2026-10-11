@@ -1,0 +1,6 @@
+Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]Loading weights: 100%|██████████| 200/200 [00:00<00:00, 8463.94it/s]
+[imnr_cil single s2031] step 49 seg A packages 1 A:0.840
+[imnr_cil single s2031] step 99 seg B packages 1 A:0.700 B:0.733
+[imnr_cil single s2031] step 149 seg C packages 1 A:0.628 B:0.609 C:0.779
+[imnr_cil single s2031] step 199 seg D packages 1 A:0.613 B:0.596 C:0.643 D:0.752
+[imnr_cil single s2031] step 249 seg E packages 1 A:0.592 B:0.568 C:0.591 D:0.587 E:0.643

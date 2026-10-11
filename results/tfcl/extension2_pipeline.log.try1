@@ -2,3 +2,5 @@ FAIL --stream banking_cil --policy random --replay 0 --ef --seed 2029 --out resu
 FAIL --stream amazon_dil --policy trigger:label_novel --trigger-args {"tau": 0.0} --replay 0 --ef --seed 2030 --out results/tfcl/ext2_ef/amazon_dil/trigger-label_novel-q0.99_s2030.json
 FAIL --stream senti_dil --policy trigger:label_surprise --trigger-args {"tau": 0.551758951656337} --replay 0 --ef --seed 2030 --out results/tfcl/ext2_ef/senti_dil/trigger-label_surprise-q0.99_s2030.json
 FAIL --stream amazon_dilconf --policy random --replay 0 --ef --seed 2030 --out results/tfcl/ext2_ef/amazon_dilconf/random_s2030.json
+FAIL --stream banking_cil --policy oracle --replay 0 --ef --seed 2031 --out results/tfcl/ext2_ef/banking_cil/oracle_s2031.json
+FAIL --stream banking_cil --policy trigger:label_surprise --trigger-args {"tau": 0.07766460254788396} --replay 0 --ef --seed 2031 --out results/tfcl/ext2_ef/banking_cil/trigger-label_surprise-q0.99_s2031.json

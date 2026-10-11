@@ -1,0 +1,22 @@
+{
+ "args": {
+  "variant": "noexp",
+  "seed": 1993,
+  "config": "exps/sema_cifar.json",
+  "out": "results/sema_x/noexp_s1993.json",
+  "n_ex": 20,
+  "max_tasks": 0
+ },
+ "sema_args": {
+  "prefix": "reproduce",
+  "dataset": "cifar224",
+  "memory_size": 0,
+  "memory_per_class": 0,
+  "fixed_memory": false,
+  "shuffle": true,
+  "init_cls": 10,
+  "increment": 10,
+  "model_name": "sema",
+  "backbone_type": "pretrained_vit_b16_224_adapter",
+  "device": [
+   

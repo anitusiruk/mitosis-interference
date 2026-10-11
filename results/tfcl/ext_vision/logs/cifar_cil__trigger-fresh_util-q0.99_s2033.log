@@ -9,3 +9,5 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 [cifar_cil trigger:fresh_util s2033] step 174 seg G packages 4 A:0.877 B:0.847 C:0.860 D:0.863 E:0.840 F:0.820 G:0.860
 [cifar_cil trigger:fresh_util s2033] step 199 seg H packages 4 A:0.890 B:0.853 C:0.870 D:0.847 E:0.803 F:0.830 G:0.883 H:0.800
 [cifar_cil trigger:fresh_util s2033] step 224 seg I packages 5 A:0.857 B:0.820 C:0.873 D:0.847 E:0.777 F:0.807 G:0.880 H:0.773 I:0.827
+[cifar_cil trigger:fresh_util s2033] step 249 seg J packages 5 A:0.827 B:0.790 C:0.840 D:0.840 E:0.773 F:0.807 G:0.860 H:0.790 I:0.707 J:0.820
+FINAL cifar_cil trigger:fresh_util 2033 {"proto_mean": 0.8053333282470703, "proto_max": 0.760999995470047, "proto_own": 0.7503333330154419, "linear_last": 0.16599999666213988} 613s

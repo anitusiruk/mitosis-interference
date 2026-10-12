@@ -1,8 +1,9 @@
 """EXPLORATORY (post hoc, declared after H1 failed on banking_rec): spawn attribution to
 *package-level* label novelty. A batch is package-novel if it contains a label that the
 current (newest) package has never trained on, i.e. no batch with that label since the
-package was created. Proposition 1 applies to such labels (their head rows are zero in
-the current package). Reported next to the pre-registered stream-level H1 fraction.
+package was created. (Session-4 correction: Proposition 1 applies exactly only to labels new
+to the stream, whose rows are untouched; returning labels' rows have received negative-only
+updates and are not zero; see experiments/tfcl_return_rows.py.) Reported next to the pre-registered stream-level H1 fraction.
 """
 import argparse
 import json

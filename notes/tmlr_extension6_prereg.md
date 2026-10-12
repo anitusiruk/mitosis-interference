@@ -72,3 +72,13 @@ extension 3). Unit of analysis: seed. Endpoint: final mean accuracy over segment
     02f54e0a094cd591b4559bc30a6312550a98d3d44d0197db699a9f38d5083785  experiments/tfcl_ext6.sh
     fade89b28f849dcbf08269f9c57fbce6cae86959da8ea51da1e9945d4e6961a1  experiments/tfcl_ext6_report.py (analysis)
     6ae10e762c6a9df19dbd50666f964890c5113d2580f8de6cc1cb1036d0ca7637  experiments/run_jobs_fast.py (scheduling only)
+
+## Addendum X1 — 2026-10-12 ~03:30 UTC (exploratory, declared after seeing block-F partial results)
+Seen: FreshUtil cascades on shuffled CLINC (5/5 seeds, 41 spawns, every inter-spawn gap = 9 batches,
+i.e. it re-fires at the first eligible window of every new package) and on BANKING-CIL/REC (2-3 of 5
+seeds); 0 spawns on 20 Newsgroups/Amazon. Interpretation to test: each spawn creates package-level label
+novelty (all labels already observed globally, new package's rows untrained or pushed down), which the
+fresh-utility statistic rewards. Exploratory test (not a hypothesis of this stage): rerun the same
+closed-loop null runs with --head-init inherit (new package copies the previous head; existing learner
+option), clinc_cil_iid and banking_cil_iid, seeds 2027-2031, same thresholds. Prediction: cascades
+disappear or shrink. Output results/tfcl/ext6/null_closed_inherit/. Reported as exploratory.

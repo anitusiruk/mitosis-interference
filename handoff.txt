@@ -176,3 +176,18 @@ mostly unsupported, triggers are stylised. Path to 80%: ext2 confirms the regime
 vision), ImageNet-R replication, clean writing by the user, regime-map figure.
 
 Claude memory files (preferences/context) are copied in notes/claude_memory/.
+
+=== SESSION 4 (2026-10-12): external audit ("astra") fixed ===
+Branch tmlr-audit-fixes, PR #8 to master (open). All six audit points addressed:
+ - Prop. 1 restricted to stream-new labels; exploratory returning-row measurement
+   (experiments/tfcl_return_rows.py -> results/tfcl/return_rows.json).
+ - Extension 6 (notes/tmlr_extension6_prereg.md, frozen 0771860), 608 runs, all done:
+   M1/M2 (matched stale vs fresh prototypes) and G1 (oracle with global replay) supported on all
+   six CIL streams; feature age = 75-98% of the stored-vs-refreshed DiD (ImageNet-R ~half).
+   Closed-loop false spawns: five triggers ~0; FreshUtil cascades on shuffled CLINC/CIFAR/BANKING.
+   Exploratory X1 (head inheritance) removes the cascade: CLINC 41 -> 1.4 spawns/run.
+   Report: results/tfcl/ext6_report.json (+ .txt), results/tfcl/x1_inherit.json.
+ - Paper: new Section sec:res-controls, Table controls, Appendix app:ext6, softened sign-flip /
+   calibration / SEMA wording. 12 pages main text, 18 total.
+Not in git (regenerable): /workspace/imnr memmap (experiments/prep_imagenet_r.py), HF caches.
+Odds at handoff: ~80-85% if the user can defend it; remaining risks: scale, length.

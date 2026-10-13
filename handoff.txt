@@ -191,3 +191,12 @@ Branch tmlr-audit-fixes, PR #8 to master (open). All six audit points addressed:
    calibration / SEMA wording. 12 pages main text, 18 total.
 Not in git (regenerable): /workspace/imnr memmap (experiments/prep_imagenet_r.py), HF caches.
 Odds at handoff: ~80-85% if the user can defend it; remaining risks: scale, length.
+
+=== SESSION 5 (2026-10-13): second astra audit fixed ===
+ - tfcl_return_rows.py: label-group term now normalised over ALL eligible labels (seen + batch),
+   not just O u N; restricted term kept as *_restricted. Rerun 10 seeds (all match saved oracle):
+   full 3.4-4.1 nats vs 2.0-2.5 if zero rows (restricted reproduces old 3.1-3.7 / 1.6-2.2).
+ - Paper: abstract/intro Prop. 1 narrowed to stream-new labels (zero rows) before an update;
+   decomposition flagged as ordered; ImageNet-R feature age = 66% (10.87/16.43); CLINC gaps
+   198x9 + 2x11; six pre-registration stages (SEMA listed; SEMA freeze-after-launch noted);
+   "freezing keeps prototypes valid" -> "stops them going further stale".

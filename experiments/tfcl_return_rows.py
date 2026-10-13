@@ -9,8 +9,12 @@ A's row with negative-only gradients. This script replays the oracle policy on a
 labels that are package-novel but not stream-novel, records under the active package (the one
 that decides whether to spawn; before any spawn and before its update):
   * mean logit of the batch's returning labels minus mean logit of package-trained labels,
-  * the label-group term -log P(G(y)|x) with N = package-novel labels in the batch and O = labels
-    the package has trained with positives, and the same term if the N rows were zero.
+  * the label-group term -log P(N|x) = logsumexp(z_E) - logsumexp(z_N), where N = package-novel
+    labels in the batch and E = every label eligible in the training loss at this update (all
+    labels observed so far plus the batch's labels), and the same term if the N rows were zero.
+    This is the full-classifier term (fields *_full). Session-4 versions normalised over O u N only
+    (O = labels the package has trained with positives), omitting other observed labels; that
+    restricted term is kept as *_restricted for comparison (fix after the second audit).
 Output: results/tfcl/return_rows.json
 """
 import argparse
@@ -56,13 +60,23 @@ def main():
                     Rr = torch.tensor(sorted(ret), device=z.device)
                     gap = float((z[:, Rr].mean(1) - z[:, O].mean(1)).mean())
                     lse_O, lse_N = torch.logsumexp(z[:, O], 1), torch.logsumexp(z[:, N], 1)
-                    grp = F.softplus(lse_O - lse_N)            # -log P(N | x) with actual rows
-                    grp0 = F.softplus(lse_O - np.log(len(Nset)))  # same if N rows were zero
+                    grp_r = F.softplus(lse_O - lse_N)            # restricted to O u N (old)
+                    grp0_r = F.softplus(lse_O - np.log(len(Nset)))
+                    E = L.seen.clone()                           # eligible labels in the loss
+                    E[torch.tensor(list(ys), device=z.device)] = True
+                    lse_E = torch.logsumexp(z.masked_fill(~E, float("-inf")), 1)
+                    grp = lse_E - lse_N                          # -log P(N | x), full classifier
+                    z0 = z.clone()
+                    z0[:, N] = 0.0                               # N rows (and biases) zero
+                    grp0 = torch.logsumexp(z0.masked_fill(~E, float("-inf")), 1) - np.log(len(Nset))
                     mask = torch.tensor([y in Nset for y in ys], device=z.device)
                     events.append({"step": i, "seg": b["seg"], "n_returning": len(ret),
                                    "logit_gap_returning_minus_trained": gap,
-                                   "group_term_actual": float(grp[mask].mean()),
-                                   "group_term_if_zero_rows": float(grp0[mask].mean()),
+                                   "n_eligible": int(E.sum()), "n_other_observed": int(E.sum()) - len(trained) - len(Nset),
+                                   "group_term_full": float(grp[mask].mean()),
+                                   "group_term_full_if_zero_rows": float(grp0[mask].mean()),
+                                   "group_term_restricted": float(grp_r[mask].mean()),
+                                   "group_term_restricted_if_zero_rows": float(grp0_r[mask].mean()),
                                    "row_norm_returning": float(p.w[Rr].norm(dim=1).mean()),
                                    "row_norm_trained": float(p.w[O].norm(dim=1).mean())})
             if i > 0 and b["seg"] != stream[i - 1]["seg"]:  # oracle spawn AFTER measuring the deciding package
@@ -77,8 +91,9 @@ def main():
                      "events": events}
         print(seed, "match", abs(final - saved) < 1e-9, "n_events", len(events),
               "gap", np.mean([e["logit_gap_returning_minus_trained"] for e in events]).round(3),
-              "grp", np.mean([e["group_term_actual"] for e in events]).round(3),
-              "grp0", np.mean([e["group_term_if_zero_rows"] for e in events]).round(3), flush=True)
+              "grp_full", np.mean([e["group_term_full"] for e in events]).round(3),
+              "grp0_full", np.mean([e["group_term_full_if_zero_rows"] for e in events]).round(3),
+              "grp_restr", np.mean([e["group_term_restricted"] for e in events]).round(3), flush=True)
     json.dump(res, open(a.out, "w"), indent=1)
 
 

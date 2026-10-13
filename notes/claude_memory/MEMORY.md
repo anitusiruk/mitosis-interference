@@ -1,3 +1,4 @@
 - [TMLR project goal](project-tmlr-goal.md) — paper goal, autonomy, prereg discipline, env gotchas
 - [User profile](user-profile.md) — HS student, wants exact commands + honest negatives
 - [Stop criterion](feedback-stop-criterion.md) — keep going until TMLR odds >=80%; ground methods in verified literature
+- [Audit fixes session 4](project-audit-fixes.md) — audit fixed, ext6 done, PR #8 open
